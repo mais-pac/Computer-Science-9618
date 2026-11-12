@@ -1,0 +1,566 @@
+{
+  "id": "ch3-hardware-hardware-2026-09-30",
+  "title": "Chapter 3 – Hardware",
+  "origin": "teacher",
+  "paper": "paper-1",
+  "chapter": 3,
+  "topics": [
+    "hardware"
+  ],
+  "durationMin": 50,
+  "totalMarks": 40,
+  "examDate": "2026-09-30",
+  "instructions": "Answer all questions. Calculators are not permitted. For logic circuits, write answers as 1 or 0.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "hardware",
+      "section": "3.1",
+      "text": "Which of the following is an example of an **embedded system**?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A laptop running a word processor"
+        },
+        {
+          "id": "B",
+          "text": "A washing machine controller"
+        },
+        {
+          "id": "C",
+          "text": "A desktop PC used in a school office"
+        },
+        {
+          "id": "D",
+          "text": "A file server on a network"
+        }
+      ],
+      "answer": "B",
+      "explanation": "An embedded system is a computer system built into a larger device, dedicated to one specific task (here: controlling a wash cycle). It is not a general-purpose computer."
+    },
+    {
+      "id": "q2",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "hardware",
+      "section": "3.1",
+      "text": "What is the main purpose of a **buffer** in a computer system?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To permanently store data when the power is turned off"
+        },
+        {
+          "id": "B",
+          "text": "To temporarily hold data while it is transferred between devices with different speeds"
+        },
+        {
+          "id": "C",
+          "text": "To convert analogue data into digital data"
+        },
+        {
+          "id": "D",
+          "text": "To increase the clock speed of the processor"
+        }
+      ],
+      "answer": "B",
+      "explanation": "A buffer is temporary storage (often RAM) that compensates for a difference in the rate at which data is produced and consumed — e.g. slow printer vs fast CPU."
+    },
+    {
+      "id": "q3",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "hardware",
+      "section": "3.1",
+      "text": "Which type of memory **loses** its contents when the power is switched off?",
+      "options": [
+        {
+          "id": "A",
+          "text": "ROM"
+        },
+        {
+          "id": "B",
+          "text": "EEPROM"
+        },
+        {
+          "id": "C",
+          "text": "DRAM"
+        },
+        {
+          "id": "D",
+          "text": "PROM"
+        }
+      ],
+      "answer": "C",
+      "explanation": "DRAM (and SRAM) are volatile — they lose data without power. ROM, PROM, EPROM and EEPROM are all non-volatile."
+    },
+    {
+      "id": "q4",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "hardware",
+      "section": "3.2",
+      "text": "A **NAND** gate has inputs A = 1 and B = 1. What is the output?",
+      "options": [
+        {
+          "id": "A",
+          "text": "0"
+        },
+        {
+          "id": "B",
+          "text": "1"
+        }
+      ],
+      "answer": "A",
+      "explanation": "NAND is the inverse of AND. AND gives 1 only when both inputs are 1, so NAND gives 0 when both inputs are 1."
+    },
+    {
+      "id": "q5",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "hardware",
+      "section": "3.2",
+      "text": "Which single logic gate produces the truth table below?\n\n| A | B | Output |\n|---|---|---|\n| 0 | 0 | 1 |\n| 0 | 1 | 0 |\n| 1 | 0 | 0 |\n| 1 | 1 | 1 |",
+      "options": [
+        {
+          "id": "A",
+          "text": "AND"
+        },
+        {
+          "id": "B",
+          "text": "OR"
+        },
+        {
+          "id": "C",
+          "text": "XNOR"
+        },
+        {
+          "id": "D",
+          "text": "NOR"
+        }
+      ],
+      "answer": "C",
+      "explanation": "XNOR outputs 1 when the inputs are the same (0,0 and 1,1) and 0 when they differ. It is the inverse of XOR."
+    },
+    {
+      "id": "q6",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "hardware",
+      "section": "3.1",
+      "text": "Which of these devices is used both as an **input** and an **output** device?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Laser printer"
+        },
+        {
+          "id": "B",
+          "text": "Touch screen"
+        },
+        {
+          "id": "C",
+          "text": "3D printer"
+        },
+        {
+          "id": "D",
+          "text": "Barcode reader"
+        }
+      ],
+      "answer": "B",
+      "explanation": "A touch screen displays output (the UI) and senses touch as input. Printers are output only; a barcode reader is input only."
+    },
+    {
+      "id": "q7",
+      "type": "text",
+      "marks": 3,
+      "topic": "hardware",
+      "section": "3.1",
+      "text": "A greenhouse uses a **monitoring and control system**. Describe the role of the **sensor**, the **microprocessor** and the **actuator** in this system.",
+      "answer": [
+        {
+          "text": "Sensor: measures a physical quantity such as temperature / humidity / light and sends the data to the microprocessor (as an analogue signal converted by an ADC).",
+          "marks": 1
+        },
+        {
+          "text": "Microprocessor: compares the reading to a stored/preset value and decides what action to take (runs the control algorithm).",
+          "marks": 1
+        },
+        {
+          "text": "Actuator: performs a physical action based on the microprocessor's output — e.g. opens a window, turns on a heater or a fan.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "Sensor → ADC → microprocessor (compare with stored value) → DAC → actuator. The actuator is the mechanical part that changes the environment."
+    },
+    {
+      "id": "q8",
+      "type": "text",
+      "marks": 3,
+      "topic": "hardware",
+      "section": "3.1",
+      "text": "Explain why a **buffer** is needed when a computer sends a document to a printer.",
+      "answer": [
+        {
+          "text": "The computer/CPU can produce data much faster than the printer can print it.",
+          "marks": 1
+        },
+        {
+          "text": "The buffer temporarily stores the data waiting to be printed, so the CPU is not kept waiting and can carry on with other tasks.",
+          "marks": 1
+        },
+        {
+          "text": "Data is sent to the printer at the speed the printer can handle (it empties the buffer at the printer's rate), preventing data loss.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "Marks are usually for: difference in speed + temporary storage + processor can continue with other tasks / no data is lost."
+    },
+    {
+      "id": "q9",
+      "type": "text",
+      "marks": 4,
+      "topic": "hardware",
+      "section": "3.1",
+      "text": "Give **two** differences between RAM and ROM.",
+      "answer": [
+        {
+          "text": "RAM is volatile (loses contents when power is lost); ROM is non-volatile (contents kept).",
+          "marks": 1
+        },
+        {
+          "text": "RAM can be read from and written to; ROM is (normally) read-only.",
+          "marks": 1
+        },
+        {
+          "text": "RAM stores currently running programs and data; ROM stores the start-up instructions (BIOS/bootstrap).",
+          "marks": 1
+        },
+        {
+          "text": "RAM is much larger in capacity / can be upgraded easily; ROM is small and fixed.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "maxMarks": 4,
+      "explanation": "Any two clearly stated differences, each stated for both memories, score 2 marks each. Always name BOTH memory types in the comparison."
+    },
+    {
+      "id": "q10",
+      "type": "numeric",
+      "marks": 1,
+      "topic": "hardware",
+      "section": "3.2",
+      "text": "A logic circuit has **three** inputs. How many rows are needed in its complete truth table?",
+      "answer": 8,
+      "unit": "rows",
+      "explanation": "2³ = 8 rows. In general, n inputs need 2ⁿ rows."
+    },
+    {
+      "id": "q11",
+      "type": "trace",
+      "marks": 6,
+      "topic": "hardware",
+      "section": "3.2",
+      "text": "Complete the truth table for the circuit with logic expression:\n\n**X = (A AND B) OR (NOT C)**\n\nWrite 1 or 0 in each empty cell.",
+      "columns": [
+        "A",
+        "B",
+        "C",
+        "X"
+      ],
+      "given": [
+        [
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        [
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "1",
+          "1",
+          "1",
+          "0"
+        ]
+      ],
+      "answer": [
+        [
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "1"
+        ],
+        [
+          "0",
+          "1",
+          "1",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "1"
+        ],
+        [
+          "1",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "1",
+          "1",
+          "0",
+          "1"
+        ],
+        [
+          "1",
+          "1",
+          "1",
+          "0"
+        ]
+      ],
+      "explanation": "NOT C is 1 whenever C is 0. So X = 1 for every row where C = 0; where C = 1, X = A AND B."
+    },
+    {
+      "id": "q12",
+      "type": "trace",
+      "marks": 4,
+      "topic": "hardware",
+      "section": "3.2",
+      "text": "The diagram shows a **half adder** built from an XOR gate (sum) and an AND gate (carry).\n\nComplete the truth table.",
+      "columns": [
+        "A",
+        "B",
+        "Sum",
+        "Carry"
+      ],
+      "given": [
+        [
+          "0",
+          "0",
+          "",
+          ""
+        ],
+        [
+          "0",
+          "1",
+          "",
+          ""
+        ],
+        [
+          "1",
+          "0",
+          "",
+          ""
+        ],
+        [
+          "1",
+          "1",
+          "",
+          ""
+        ]
+      ],
+      "answer": [
+        [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "1",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "1",
+          "1",
+          "0",
+          "1"
+        ]
+      ],
+      "explanation": "Sum = A XOR B (1 when inputs differ); Carry = A AND B (1 only when both are 1). This is binary addition of two single bits."
+    },
+    {
+      "id": "q13",
+      "type": "text",
+      "marks": 5,
+      "topic": "hardware",
+      "section": "3.2",
+      "text": "A logic circuit has the expression **X = NOT (A OR B) AND C**.\n\nState the value of X when:\n\n**(a)** A = 0, B = 0, C = 1\n**(b)** A = 1, B = 0, C = 1\n**(c)** A = 0, B = 1, C = 0",
+      "answer": [
+        {
+          "text": "(a) A OR B = 0 → NOT = 1 → 1 AND 1 = **1**",
+          "marks": 1
+        },
+        {
+          "text": "(b) A OR B = 1 → NOT = 0 → 0 AND 1 = **0**",
+          "marks": 1
+        },
+        {
+          "text": "(c) A OR B = 1 → NOT = 0 → 0 AND 0 = **0**",
+          "marks": 1
+        },
+        {
+          "text": "Correct working shown (order of operations: brackets first, then NOT, then AND)",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "Always evaluate the bracket first, then apply NOT, then the final AND."
+    },
+    {
+      "id": "q14",
+      "type": "text",
+      "marks": 3,
+      "topic": "hardware",
+      "section": "3.1",
+      "text": "Explain what is meant by an **embedded system** and give **one** example.",
+      "answer": [
+        {
+          "text": "A computer system (microprocessor + memory + I/O) built into another device.",
+          "marks": 1
+        },
+        {
+          "text": "It is dedicated to one specific task / performs a limited set of functions, often with a real-time constraint.",
+          "marks": 1
+        },
+        {
+          "text": "Valid example: washing machine, microwave, car engine management unit, digital camera, traffic light controller.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "Definition marks need 'built into a device' + 'dedicated to a single/specific task'. A general-purpose PC is NOT an embedded system."
+    },
+    {
+      "id": "q15",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "hardware",
+      "section": "3.1",
+      "text": "Which statement about **SRAM** and **DRAM** is correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "SRAM needs to be constantly refreshed, DRAM does not"
+        },
+        {
+          "id": "B",
+          "text": "DRAM needs to be constantly refreshed, SRAM does not"
+        },
+        {
+          "id": "C",
+          "text": "Both are non-volatile"
+        },
+        {
+          "id": "D",
+          "text": "SRAM is used for main memory, DRAM for cache"
+        }
+      ],
+      "answer": "B",
+      "explanation": "DRAM stores each bit as a charge on a capacitor, which leaks, so it must be refreshed. SRAM uses flip-flops and holds its value without refreshing. SRAM is faster and used in cache; DRAM is cheaper/denser and used as main memory."
+    },
+    {
+      "id": "q16",
+      "type": "text",
+      "marks": 2,
+      "topic": "hardware",
+      "section": "3.2",
+      "text": "State the logic gate that is equivalent to **NOT (A AND B)** and explain why it is useful when drawing circuits.",
+      "answer": [
+        {
+          "text": "NAND gate",
+          "marks": 1
+        },
+        {
+          "text": "It is a universal gate — any other gate can be built using only NAND gates, which reduces the number of different chips needed in a circuit.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "NAND and NOR are universal gates: AND, OR and NOT can all be made from them."
+    },
+    {
+      "id": "q17",
+      "type": "text",
+      "marks": 2,
+      "topic": "hardware",
+      "section": "3.1",
+      "text": "A school replaces its desktop PCs with **thin-client** terminals. State **two** reasons why this could reduce cost.",
+      "answer": [
+        {
+          "text": "Thin clients need less processing power / memory / storage, so they are cheaper to buy.",
+          "marks": 1
+        },
+        {
+          "text": "Software is installed and managed on the server only, so maintenance/upgrades cost less (no need to upgrade each client).",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "Other valid points: less power consumption, longer lifespan, easier to secure (no local data)."
+    }
+  ]
+}

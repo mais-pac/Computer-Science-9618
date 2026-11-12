@@ -1,0 +1,313 @@
+{
+  "id": "mix-ai-paper2-sections-9-12",
+  "title": "AI Mock — Paper 2 (Sections 9–12)",
+  "origin": "ai",
+  "paper": "paper-2",
+  "chapter": null,
+  "topics": ["algorithms", "data-types", "programming", "software-dev"],
+  "durationMin": 40,
+  "totalMarks": 50,
+  "examDate": null,
+  "instructions": "AI-generated Paper 2 style exam. All answers in Cambridge pseudocode. No programming language syntax. Calculators are not permitted.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "algorithms",
+      "section": "9.1",
+      "text": "Which **computational thinking** skill involves ignoring unnecessary detail to focus on what matters?",
+      "options": [
+        { "id": "A", "text": "Abstraction" },
+        { "id": "B", "text": "Decomposition" },
+        { "id": "C", "text": "Pattern recognition" },
+        { "id": "D", "text": "Algorithm design" }
+      ],
+      "answer": "A",
+      "explanation": "Abstraction removes irrelevant detail. Decomposition = breaking a problem into smaller parts; pattern recognition = spotting similarities."
+    },
+    {
+      "id": "q2",
+      "type": "text",
+      "marks": 3,
+      "topic": "algorithms",
+      "section": "9.1",
+      "text": "A program must calculate the wage of 200 employees. State **three** steps you would take to decompose this problem.",
+      "answer": [
+        { "text": "Identify the sub-tasks: input the employee data (hours worked and rate of pay).", "marks": 1 },
+        { "text": "Calculate the wage for one employee (hours × rate, with overtime rules).", "marks": 1 },
+        { "text": "Repeat for all 200 employees and output/store the totals.", "marks": 1 }
+      ],
+      "selfMark": true,
+      "explanation": "Good answers name distinct sub-tasks that can be written as separate subroutines."
+    },
+    {
+      "id": "q3",
+      "type": "trace",
+      "marks": 4,
+      "topic": "algorithms",
+      "section": "9.2",
+      "text": "Perform a **linear search** for the value **11** in the array:\n\n```\nIndex:   1    2    3    4    5    6\nValue:   4    9    11   11   20   25\n```\n\nComplete the trace for the number of comparisons needed if the search **stops at the first match**.",
+      "columns": ["Comparison 1", "Comparison 2", "Comparison 3", "Value returned"],
+      "given": [
+        ["", "", "", ""]
+      ],
+      "answer": [
+        ["4 ≠ 11", "9 ≠ 11", "11 = 11 (found)", "index 3"]
+      ],
+      "explanation": "A linear search checks each item in order, so 3 comparisons are needed here. Worst case = n comparisons."
+    },
+    {
+      "id": "q4",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "algorithms",
+      "section": "9.2",
+      "text": "A **binary search** is only valid when the data is:",
+      "options": [
+        { "id": "A", "text": "Stored in a text file" },
+        { "id": "B", "text": "Sorted in order" },
+        { "id": "C", "text": "All the same data type" },
+        { "id": "D", "text": "Smaller than 100 items" }
+      ],
+      "answer": "B",
+      "explanation": "Binary search repeatedly halves a sorted list. Unsorted data cannot be split reliably."
+    },
+    {
+      "id": "q5",
+      "type": "text",
+      "marks": 4,
+      "topic": "algorithms",
+      "section": "9.2",
+      "text": "Write pseudocode for a **binary search** that searches for `Target` in a sorted array `Data` with 20 elements, and outputs the index if found or \"Not found\".",
+      "answer": [
+        { "text": "Sets Low ← 1, High ← 20, Found ← FALSE", "marks": 1 },
+        { "text": "WHILE Low <= High AND NOT Found loop with Mid ← (Low + High) DIV 2", "marks": 1 },
+        { "text": "Correct three-way comparison: if Data[Mid] = Target set Found; if Target < Data[Mid] High ← Mid − 1; ELSE Low ← Mid + 1", "marks": 1 },
+        { "text": "Outputs index if Found, otherwise outputs \"Not found\"", "marks": 1 }
+      ],
+      "selfMark": true,
+      "explanation": "Low ← 1\nHigh ← 20\nFound ← FALSE\nREPEAT\n    Mid ← (Low + High) DIV 2\n    IF Data[Mid] = Target THEN\n        Found ← TRUE\n    ELSE\n        IF Target < Data[Mid] THEN\n            High ← Mid - 1\n        ELSE\n            Low ← Mid + 1\n        ENDIF\n    ENDIF\nUNTIL Found OR Low > High\nIF Found THEN OUTPUT Mid ELSE OUTPUT \"Not found\""
+    },
+    {
+      "id": "q6",
+      "type": "numeric",
+      "marks": 1,
+      "topic": "algorithms",
+      "section": "9.2",
+      "text": "A sorted array has **16** elements. What is the **maximum** number of comparisons a binary search needs?",
+      "answer": 4,
+      "unit": "comparisons",
+      "explanation": "16 = 2⁴, so at most 4 halvings are needed (log₂16 = 4)."
+    },
+    {
+      "id": "q7",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "data-types",
+      "section": "10.2",
+      "text": "How many elements does the array `Values : ARRAY[1:10, 1:5] OF INTEGER` contain?",
+      "options": [
+        { "id": "A", "text": "15" },
+        { "id": "B", "text": "50" },
+        { "id": "C", "text": "100" },
+        { "id": "D", "text": "10" }
+      ],
+      "answer": "B",
+      "explanation": "10 × 5 = 50 elements (a 2D array of 10 rows and 5 columns)."
+    },
+    {
+      "id": "q8",
+      "type": "text",
+      "marks": 5,
+      "topic": "data-types",
+      "section": "10.2",
+      "text": "Write pseudocode that reads 10 integers into an array `Nums`, then outputs them in **reverse** order.",
+      "answer": [
+        { "text": "Declares the array: DECLARE Nums : ARRAY[1:10] OF INTEGER", "marks": 1 },
+        { "text": "FOR loop 1 TO 10 (or REPEAT/WHILE) to input each value into Nums[Index]", "marks": 2 },
+        { "text": "Second loop FROM 10 DOWN TO 1 (or FOR Index ← 10 TO 1 STEP −1)", "marks": 1 },
+        { "text": "OUTPUT Nums[Index] inside the second loop", "marks": 1 }
+      ],
+      "selfMark": true,
+      "explanation": "DECLARE Nums : ARRAY[1:10] OF INTEGER\nFOR Index ← 1 TO 10\n    INPUT Nums[Index]\nNEXT Index\nFOR Index ← 10 TO 1 STEP -1\n    OUTPUT Nums[Index]\nNEXT Index"
+    },
+    {
+      "id": "q9",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "data-types",
+      "section": "10.3",
+      "text": "When reading from a text file with `READFILE`, why is `EOF()` used?",
+      "options": [
+        { "id": "A", "text": "To open the file" },
+        { "id": "B", "text": "To detect the end of the file so the loop stops at the right time" },
+        { "id": "C", "text": "To close the file" },
+        { "id": "D", "text": "To write a new line" }
+      ],
+      "answer": "B",
+      "explanation": "EOF() returns TRUE when the end of the file is reached — used in WHILE NOT EOF(file) OR used with READFILE."
+    },
+    {
+      "id": "q10",
+      "type": "text",
+      "marks": 5,
+      "topic": "data-types",
+      "section": "10.3",
+      "text": "A text file `scores.txt` contains one score per line. Write pseudocode to open the file, add up all the scores, and output the total and the number of scores.",
+      "answer": [
+        { "text": "Declares the file and total/count variables; opens with OPENFILE \"scores.txt\" FOR READ", "marks": 1 },
+        { "text": "Loop WHILE NOT EOF with READFILE on the file", "marks": 2 },
+        { "text": "Adds each value to the total and increments the counter", "marks": 1 },
+        { "text": "Closes the file with CLOSEFILE and outputs the total and count", "marks": 1 }
+      ],
+      "selfMark": true,
+      "explanation": "DECLARE MyFile : STRING\nDECLARE Score : INTEGER\nDECLARE Total : INTEGER\nDECLARE Count : INTEGER\nMyFile ← \"scores.txt\"\nOPENFILE MyFile FOR READ\nTotal ← 0\nCount ← 0\nWHILE NOT EOF(MyFile)\n    READFILE MyFile, Score\n    Total ← Total + Score\n    Count ← Count + 1\nENDWHILE\nCLOSEFILE MyFile\nOUTPUT Total, Count"
+    },
+    {
+      "id": "q11",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "programming",
+      "section": "11.2",
+      "text": "Which construct repeats a block of code a **known number of times**?",
+      "options": [
+        { "id": "A", "text": "IF … THEN … ELSE" },
+        { "id": "B", "text": "FOR … NEXT" },
+        { "id": "C", "text": "REPEAT … UNTIL" },
+        { "id": "D", "text": "CASE OF" }
+      ],
+      "answer": "B",
+      "explanation": "FOR … NEXT is definite iteration (count-controlled). REPEAT/WHILE are indefinite (condition-controlled)."
+    },
+    {
+      "id": "q12",
+      "type": "text",
+      "marks": 4,
+      "topic": "programming",
+      "section": "11.2",
+      "text": "Rewrite the following **REPEAT … UNTIL** loop as a **WHILE … ENDWHILE** loop that does exactly the same thing.\n\n```\nREPEAT\n    Sum ← Sum + Count\n    Count ← Count + 1\nUNTIL Count > 10\n```",
+      "answer": [
+        { "text": "WHILE Count <= 10", "marks": 2 },
+        { "text": "    Sum ← Sum + Count", "marks": 1 },
+        { "text": "    Count ← Count + 1\nENDWHILE", "marks": 1 }
+      ],
+      "selfMark": true,
+      "explanation": "REPEAT executes at least once and tests AFTER the body; WHILE tests BEFORE the body. The condition must be inverted."
+    },
+    {
+      "id": "q13",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "software-dev",
+      "section": "12.1",
+      "text": "In the **program development life cycle**, what does the **analysis** stage produce?",
+      "options": [
+        { "id": "A", "text": "The test plan" },
+        { "id": "B", "text": "The requirements specification" },
+        { "id": "C", "text": "The compiled program" },
+        { "id": "D", "text": "The user manual" }
+      ],
+      "answer": "B",
+      "explanation": "Stages: analysis → design → coding → testing → maintenance. Analysis defines client requirements."
+    },
+    {
+      "id": "q14",
+      "type": "text",
+      "marks": 3,
+      "topic": "software-dev",
+      "section": "12.3",
+      "text": "Explain the difference between **normal**, **abnormal** and **extreme** test data, giving one example of each for a program that inputs an exam mark from 0 to 100.",
+      "answer": [
+        { "text": "Normal: data that should be accepted — e.g. 68", "marks": 1 },
+        { "text": "Abnormal: data of the right type but outside the acceptable range — e.g. 120 or -5", "marks": 1 },
+        { "text": "Extreme: the data at the boundaries of the range — e.g. 0 and 100 (also live/erroneous data such as 'abc' should be rejected)", "marks": 1 }
+      ],
+      "selfMark": true,
+      "explanation": "Extreme data = data at the very top/bottom of the valid range, which tests that validation uses > or >= correctly."
+    },
+    {
+      "id": "q15",
+      "type": "text",
+      "marks": 3,
+      "topic": "software-dev",
+      "section": "12.3",
+      "text": "A program is tested with every possible input value. Explain why this is **not** feasible and state what is done instead.",
+      "answer": [
+        { "text": "There are too many possible values (e.g. all integers, all strings), so it would take far too long / is impossible to test every combination.", "marks": 2 },
+        { "text": "Instead, a test plan is used with representative data: normal, abnormal and extreme values.", "marks": 1 }
+      ],
+      "selfMark": true,
+      "explanation": "Also acceptable: it tests the boundaries and edge cases, plus black-box and white-box approaches."
+    },
+    {
+      "id": "q16",
+      "type": "text",
+      "marks": 3,
+      "topic": "software-dev",
+      "section": "12.3",
+      "text": "State what is meant by **maintenance** and give **two** reasons why programs need updating.",
+      "answer": [
+        { "text": "Maintenance is the process of modifying a program after it has been released/implemented.", "marks": 1 },
+        { "text": "Reason 1: the user requirements or business processes change.", "marks": 1 },
+        { "text": "Reason 2: bugs/errors are found, or the system environment (hardware/OS) changes and requires updates.", "marks": 1 }
+      ],
+      "selfMark": true,
+      "explanation": "Types of maintenance: corrective, adaptive, perfective, preventive."
+    },
+    {
+      "id": "q17",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "programming",
+      "section": "11.1",
+      "text": "Which is a **valid identifier** for a variable in Cambridge pseudocode?",
+      "options": [
+        { "id": "A", "text": "2Score" },
+        { "id": "B", "text": "Student Name" },
+        { "id": "C", "text": "StudentName" },
+        { "id": "D", "text": "Student-Name" }
+      ],
+      "answer": "C",
+      "explanation": "Identifiers contain only letters, digits and underscores, must start with a letter, and contain no spaces or hyphens."
+    },
+    {
+      "id": "q18",
+      "type": "trace",
+      "marks": 5,
+      "topic": "programming",
+      "section": "11.2",
+      "text": "Trace the loop and complete the table.\n\n```\nTotal ← 0\nFOR Count ← 1 TO 5\n    Total ← Total + Count * 2\nNEXT Count\nOUTPUT Total\n```",
+      "columns": ["Count", "Count * 2", "Total"],
+      "given": [
+        ["", "", ""],
+        ["", "", ""],
+        ["", "", ""],
+        ["", "", ""],
+        ["", "", ""]
+      ],
+      "answer": [
+        ["1", "2", "2"],
+        ["2", "4", "6"],
+        ["3", "6", "12"],
+        ["4", "8", "20"],
+        ["5", "10", "30"]
+      ],
+      "explanation": "Output Total = 30. This is 2 × (1+2+3+4+5) = 2 × 15."
+    },
+    {
+      "id": "q19",
+      "type": "text",
+      "marks": 3,
+      "topic": "algorithms",
+      "section": "9.2",
+      "text": "Explain why a **binary search** is faster than a **linear search** for a large sorted array.",
+      "answer": [
+        { "text": "Each binary search comparison halves the remaining data (divide and conquer).", "marks": 2 },
+        { "text": "So it needs at most log₂n comparisons, whereas a linear search may need up to n comparisons — far fewer accesses for large n.", "marks": 1 }
+      ],
+      "selfMark": true,
+      "explanation": "For 1 000 000 items: linear ≈ 1 000 000 comparisons worst case, binary ≈ 20."
+    }
+  ]
+}

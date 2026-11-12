@@ -1,0 +1,545 @@
+{
+  "id": "assembly-language-question-paper-2026-10-10",
+  "title": "Assembly Language – Question Paper",
+  "origin": "teacher",
+  "paper": "paper-1",
+  "chapter": 4,
+  "topics": [
+    "processor"
+  ],
+  "durationMin": 40,
+  "totalMarks": 46,
+  "examDate": "2026-10-10",
+  "instructions": "Answer all questions. Use the 9618 assembly instruction set in the back of the paper. Calculators are not permitted.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "processor",
+      "section": "4.2",
+      "text": "In the instruction `LDD 20`, what does **20** represent?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The absolute memory address 20 to load the value from"
+        },
+        {
+          "id": "B",
+          "text": "The value 20 is loaded directly into the accumulator (immediate addressing)"
+        },
+        {
+          "id": "C",
+          "text": "The 20th instruction in the program"
+        },
+        {
+          "id": "D",
+          "text": "Register number 20"
+        }
+      ],
+      "answer": "B",
+      "explanation": "LDD <value> uses immediate addressing — the operand is the data itself. LDM loads the contents of a memory address."
+    },
+    {
+      "id": "q2",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "processor",
+      "section": "4.2",
+      "text": "Which instruction type is `STO 300`?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Direct addressing — stores ACC at the memory address 300"
+        },
+        {
+          "id": "B",
+          "text": "Immediate addressing"
+        },
+        {
+          "id": "C",
+          "text": "Indexed addressing"
+        },
+        {
+          "id": "D",
+          "text": "Indirect addressing"
+        }
+      ],
+      "answer": "A",
+      "explanation": "STO always stores the contents of the accumulator into the stated address."
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 2,
+      "topic": "processor",
+      "section": "4.2",
+      "text": "State the difference between a **register**, a **general purpose register** and the **accumulator**.",
+      "answer": [
+        {
+          "text": "A register is a small, very fast storage location inside the CPU.",
+          "marks": 1
+        },
+        {
+          "text": "General purpose registers (GPRs) are used to hold data/addresses temporarily during processing, whereas the accumulator is a special register that automatically stores the result of arithmetic/logic operations.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "Special purpose registers have a fixed task; GPRs are for temporary general data — Cambridge uses registers numbered 0–7."
+    },
+    {
+      "id": "q4",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "processor",
+      "section": "4.2",
+      "text": "What would be stored in the accumulator after executing `LDD 5` then `INC` then `INC`?",
+      "options": [
+        {
+          "id": "A",
+          "text": "5"
+        },
+        {
+          "id": "B",
+          "text": "6"
+        },
+        {
+          "id": "C",
+          "text": "7"
+        },
+        {
+          "id": "D",
+          "text": "10"
+        }
+      ],
+      "answer": "C",
+      "explanation": "LDD 5 puts 5 in the ACC; each INC adds 1, so 5 → 6 → 7."
+    },
+    {
+      "id": "q5",
+      "type": "text",
+      "marks": 3,
+      "topic": "processor",
+      "section": "4.2",
+      "text": "The instruction `STA 500` is executed on a 9618 machine. Explain what the mnemonic and the operand mean and what the operation does to the memory.",
+      "answer": [
+        {
+          "text": "STA = store accumulator; 500 is the absolute memory address.",
+          "marks": 1
+        },
+        {
+          "text": "The contents of the ACC are copied to memory location 500 (existing contents there are overwritten; the ACC keeps its value).",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "STA is the same operation as STO in the 9618 instruction set."
+    },
+    {
+      "id": "q6",
+      "type": "text",
+      "marks": 4,
+      "topic": "processor",
+      "section": "4.1",
+      "text": "Explain how the **fetch–decode–execute (FDE)** cycle uses the **registers PC, MAR, MDR, CIR and the control unit** during the **fetch** stage.",
+      "answer": [
+        {
+          "text": "PC holds the address of the next instruction; the address is copied to the MAR.",
+          "marks": 1
+        },
+        {
+          "text": "The instruction at that address is fetched from memory into the MDR (via the data bus).",
+          "marks": 1
+        },
+        {
+          "text": "The instruction is copied into the CIR and the PC is incremented.",
+          "marks": 1
+        },
+        {
+          "text": "The control unit decodes the instruction and issues the signals needed to carry it out (execute stage).",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "Order matters: PC → MAR → memory → MDR → CIR, PC + 1, then CU decodes."
+    },
+    {
+      "id": "q7",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "processor",
+      "section": "4.1",
+      "text": "Which of the following is **NOT** part of the Von Neumann architecture?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Control unit"
+        },
+        {
+          "id": "B",
+          "text": "Arithmetic logic unit"
+        },
+        {
+          "id": "C",
+          "text": "GPU shader core"
+        },
+        {
+          "id": "D",
+          "text": "Accumulator"
+        }
+      ],
+      "answer": "C",
+      "explanation": "Von Neumann components: CU, ALU, registers (incl. ACC), buses and the single shared memory for data and instructions."
+    },
+    {
+      "id": "q8",
+      "type": "text",
+      "marks": 3,
+      "topic": "processor",
+      "section": "4.1",
+      "text": "Describe **two** differences between the **address bus** and the **data bus**.",
+      "answer": [
+        {
+          "text": "The address bus is (normally) unidirectional — CPU to memory only; the data bus is bidirectional.",
+          "marks": 1
+        },
+        {
+          "text": "The width of the address bus determines the number of addressable memory locations; the width of the data bus determines how many bits can be transferred at once.",
+          "marks": 1
+        },
+        {
+          "text": "Any further correct difference, e.g. address bus carries where data goes, data bus carries the instruction/data itself.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "If the address bus is n bits then 2ⁿ locations can be addressed."
+    },
+    {
+      "id": "q9",
+      "type": "text",
+      "marks": 2,
+      "topic": "processor",
+      "section": "4.2",
+      "text": "Assembly language cannot be executed directly by a CPU. Explain why, naming the translator used.",
+      "answer": [
+        {
+          "text": "The CPU can only execute machine code (binary opcodes); assembly uses mnemonics.",
+          "marks": 1
+        },
+        {
+          "text": "An assembler translates each assembly instruction into its machine-code equivalent (often one instruction to one opcode).",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "Assembly is a low-level language with a direct 1:1 relationship to machine code, translated by an assembler."
+    },
+    {
+      "id": "q10",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "processor",
+      "section": "4.1",
+      "text": "Which register holds the instruction currently being decoded/executed?",
+      "options": [
+        {
+          "id": "A",
+          "text": "PC"
+        },
+        {
+          "id": "B",
+          "text": "MAR"
+        },
+        {
+          "id": "C",
+          "text": "CIR"
+        },
+        {
+          "id": "D",
+          "text": "ACC"
+        }
+      ],
+      "answer": "C",
+      "explanation": "CIR (current instruction register) holds the instruction under decode. IC is the register-transfer notation synonym in 9618."
+    },
+    {
+      "id": "q11",
+      "type": "text",
+      "marks": 3,
+      "topic": "processor",
+      "section": "4.2",
+      "text": "The program below is run. State the contents of memory address 300 and of the accumulator immediately after the last instruction.\n\n```\nLDD 12\nADD 8\nSTO 300\nLDD 4\nSTA 300\n```",
+      "answer": [
+        {
+          "text": "LDD 12 then ADD 8 → ACC = 20",
+          "marks": 1
+        },
+        {
+          "text": "STO 300 → memory[300] = 20",
+          "marks": 1
+        },
+        {
+          "text": "LDD 4 then STA 300 overwrites → memory[300] = 4 and ACC = 4",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "Final: ACC = 4; memory[300] = 4. Watch for the overwrite — a classic trap."
+    },
+    {
+      "id": "q12",
+      "type": "trace",
+      "marks": 5,
+      "topic": "processor",
+      "section": "4.2",
+      "text": "Trace the program and complete the table for the accumulator after each instruction.\n\n```\nLDD 6\nMUL 3\nSUB 4\nDIV 2\n```\n\n(Use integer division.)",
+      "columns": [
+        "Instruction",
+        "ACC"
+      ],
+      "given": [
+        [
+          "LDD 6",
+          ""
+        ],
+        [
+          "MUL 3",
+          ""
+        ],
+        [
+          "SUB 4",
+          ""
+        ],
+        [
+          "DIV 2",
+          ""
+        ]
+      ],
+      "answer": [
+        [
+          "LDD 6",
+          "6"
+        ],
+        [
+          "MUL 3",
+          "18"
+        ],
+        [
+          "SUB 4",
+          "14"
+        ],
+        [
+          "DIV 2",
+          "7"
+        ]
+      ],
+      "explanation": "6 × 3 = 18; 18 − 4 = 14; 14 ÷ 2 = 7."
+    },
+    {
+      "id": "q13",
+      "type": "text",
+      "marks": 4,
+      "topic": "processor",
+      "section": "4.2",
+      "text": "Write assembly language code to calculate **Y = (A + B) × 2**, where A and B are already stored in memory addresses 200 and 201. Store the result in address 202.",
+      "answer": [
+        {
+          "text": "LDM 200 (loads A into the ACC)",
+          "marks": 1
+        },
+        {
+          "text": "ADD 201 / LDM 201 then ADD — A + B in ACC",
+          "marks": 1
+        },
+        {
+          "text": "SHL 1 (shift left 1 = multiply by 2), or LDD 2 then MUL",
+          "marks": 1
+        },
+        {
+          "text": "STO 202 to store the result",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "LDM 200\nADD 201\nSHL 1\nSTO 202\n\nNote: ADD 201 will not work if 201 is meant as a value — use LDM 201 into a second register or store/load via memory."
+    },
+    {
+      "id": "q14",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "processor",
+      "section": "4.2",
+      "text": "What does the instruction `SHL 1` do to the contents of the accumulator?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Divides it by 2"
+        },
+        {
+          "id": "B",
+          "text": "Multiplies it by 2 (shift left one place)"
+        },
+        {
+          "id": "C",
+          "text": "Reverses the bit order"
+        },
+        {
+          "id": "D",
+          "text": "Clears the accumulator"
+        }
+      ],
+      "answer": "B",
+      "explanation": "Logical shift left by 1 place doubles the value; each place shifted left doubles, right halves."
+    },
+    {
+      "id": "q15",
+      "type": "text",
+      "marks": 3,
+      "topic": "processor",
+      "section": "4.3",
+      "text": "Explain what is meant by **bit manipulation** and give **two** examples of its practical use.",
+      "answer": [
+        {
+          "text": "Performing operations directly on individual bits of a binary value, using AND/OR/XOR/NOT and shifts (masking, setting, clearing, toggling).",
+          "marks": 1
+        },
+        {
+          "text": "Example 1 — masking with AND to check/test/clear specific bits (e.g. colour channels, flags).",
+          "marks": 1
+        },
+        {
+          "text": "Example 2 — shift left/right for fast multiply/divide by powers of 2, or to pack several flags into one byte.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "Bit manipulation is also used for encryption, compression and low-level device control registers."
+    },
+    {
+      "id": "q16",
+      "type": "text",
+      "marks": 3,
+      "topic": "processor",
+      "section": "4.1",
+      "text": "An **interrupt** occurs during program execution. Describe the two possible **classes of interrupt** (in terms of where they come from).",
+      "answer": [
+        {
+          "text": "Hardware interrupt — generated by a hardware device (e.g. keyboard press, printer out of paper, disk ready).",
+          "marks": 1
+        },
+        {
+          "text": "Software interrupt — generated by the running program (e.g. division by zero, an error, or a scheduled service).",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "After the ISR finishes, the previous program state is restored from the stack and execution continues."
+    },
+    {
+      "id": "q17",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "processor",
+      "section": "4.1",
+      "text": "Why does the CPU save the contents of its registers to the **stack** when an interrupt occurs?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To make the processor run faster"
+        },
+        {
+          "id": "B",
+          "text": "So the current state can be restored and the interrupted program can continue correctly"
+        },
+        {
+          "id": "C",
+          "text": "To permanently store the program on disk"
+        },
+        {
+          "id": "D",
+          "text": "To clear the RAM for the ISR"
+        }
+      ],
+      "answer": "B",
+      "explanation": "The stack stores the return address and register values; the ISR runs, then pops them back (LIFO)."
+    },
+    {
+      "id": "q18",
+      "type": "text",
+      "marks": 4,
+      "topic": "processor",
+      "section": "4.2",
+      "text": "Explain the difference between **direct**, **indirect** and **indexed** addressing, giving one instruction from the 9618 set for each.",
+      "answer": [
+        {
+          "text": "Direct: the operand is the memory address holding the data — e.g. LDM 300 / STO 300.",
+          "marks": 1
+        },
+        {
+          "text": "Indirect: the operand is the address of an address (a pointer) — e.g. LDI 300 — the CPU reads 300 to find the real address.",
+          "marks": 1
+        },
+        {
+          "text": "Indexed: the effective address is the operand plus the contents of the index register, used to access array elements — e.g. LDX 300.",
+          "marks": 1
+        },
+        {
+          "text": "Immediate addressing named as the fourth type — the operand IS the value (LDD 20).",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "Use LDM/LDD/LDI/LDX/STX correctly — the exam papers do not forgive a wrong mnemonic."
+    },
+    {
+      "id": "q19",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "processor",
+      "section": "4.1",
+      "text": "Which statement about **RISC** compared with **CISC** is correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "RISC has fewer, simpler instructions that each take one clock cycle"
+        },
+        {
+          "id": "B",
+          "text": "RISC has many complex instructions"
+        },
+        {
+          "id": "C",
+          "text": "CISC processors require more RAM"
+        },
+        {
+          "id": "D",
+          "text": "RISC cannot be pipelined"
+        }
+      ],
+      "answer": "A",
+      "explanation": "RISC = reduced instruction set: few simple instructions, fixed length, one cycle each, more registers, heavy pipelining. CISC = many specialised instructions, variable length."
+    },
+    {
+      "id": "q20",
+      "type": "text",
+      "marks": 2,
+      "topic": "processor",
+      "section": "4.2",
+      "text": "The 9618 instruction set uses register-transfer notation. Write the register-transfer notation for `LDD 5` followed by `ADD 3`.",
+      "answer": [
+        {
+          "text": "LDD 5 → ACC ← 5 (or IX ← 5 where IX is the accumulator/index register)",
+          "marks": 1
+        },
+        {
+          "text": "ADD 3 → ACC ← ACC + 3",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "Cambridge 9618 writes the accumulator as IX. Register-transfer notation shows data movement with arrows, e.g. ACC ← ACC + 3."
+    }
+  ]
+}

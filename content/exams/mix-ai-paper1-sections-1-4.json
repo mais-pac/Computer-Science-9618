@@ -1,0 +1,605 @@
+{
+  "id": "mix-ai-paper1-sections-1-4",
+  "title": "AI Mock — Paper 1 (Sections 1–4)",
+  "origin": "ai",
+  "paper": "paper-1",
+  "chapter": null,
+  "topics": [
+    "info-rep",
+    "communication",
+    "hardware",
+    "processor"
+  ],
+  "durationMin": 45,
+  "totalMarks": 40,
+  "examDate": null,
+  "instructions": "AI-generated progress test in the style of a 9618 Paper 1. Answer all questions. Calculators are not permitted.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "info-rep",
+      "section": "1.1",
+      "text": "Which binary prefix represents **2⁴⁰** bytes?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Gibi"
+        },
+        {
+          "id": "B",
+          "text": "Tebi"
+        },
+        {
+          "id": "C",
+          "text": "Mebi"
+        },
+        {
+          "id": "D",
+          "text": "Kibi"
+        }
+      ],
+      "answer": "B",
+      "explanation": "Ki = 2¹⁰, Mi = 2²⁰, Gi = 2³⁰, Ti = 2⁴⁰. Decimal prefixes (kilo, mega, giga, tera) use powers of 10."
+    },
+    {
+      "id": "q2",
+      "type": "text",
+      "marks": 2,
+      "topic": "info-rep",
+      "section": "1.1",
+      "text": "Convert **-45** to 8-bit two's complement binary. Show your working.",
+      "answer": [
+        {
+          "text": "+45 = 0010 1101",
+          "marks": 1
+        },
+        {
+          "text": "Invert → 1101 0010, +1 → 1101 0011",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "Answer: 1101 0011. Check: -128 + 64 + 16 + 2 + 1 = -45."
+    },
+    {
+      "id": "q3",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "info-rep",
+      "section": "1.1",
+      "text": "Why is **BCD** used in some systems, such as a digital clock display?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It allows faster binary addition"
+        },
+        {
+          "id": "B",
+          "text": "Each denary digit is stored separately, making display of denary digits simple"
+        },
+        {
+          "id": "C",
+          "text": "It stores more values per byte than binary"
+        },
+        {
+          "id": "D",
+          "text": "It is the same as hexadecimal"
+        }
+      ],
+      "answer": "B",
+      "explanation": "In BCD each 4 bits holds one denary digit 0–9, so displaying denary digits needs no conversion — useful for clocks, meters and calculators. It is less efficient for arithmetic."
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "marks": 1,
+      "topic": "info-rep",
+      "section": "1.2",
+      "text": "Sound is sampled at 44.1 kHz with a resolution of 16 bits, for 10 seconds. How many **bits** of data are produced? Give the value in **kilobits (kb, 1 kb = 1000 bits)**, to 1 decimal place.",
+      "answer": 7056.0,
+      "unit": "kb",
+      "explanation": "44 100 × 16 × 10 = 7 056 000 bits = 7056.0 kb (≈ 882 KiB)."
+    },
+    {
+      "id": "q5",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "info-rep",
+      "section": "1.3",
+      "text": "Which pair consists of **only** lossless compression formats?",
+      "options": [
+        {
+          "id": "A",
+          "text": "JPEG and MP3"
+        },
+        {
+          "id": "B",
+          "text": "PNG and FLAC"
+        },
+        {
+          "id": "C",
+          "text": "MP3 and PNG"
+        },
+        {
+          "id": "D",
+          "text": "JPEG and FLAC"
+        }
+      ],
+      "answer": "B",
+      "explanation": "PNG (image) and FLAC (audio) are lossless. JPEG and MP3 are lossy."
+    },
+    {
+      "id": "q6",
+      "type": "text",
+      "marks": 3,
+      "topic": "info-rep",
+      "section": "1.2",
+      "text": "An image 800 × 600 pixels has a colour depth of 24 bits. Calculate the uncompressed file size in **MiB**, to 2 decimal places.",
+      "answer": [
+        {
+          "text": "800 × 600 × 24 = 11 520 000 bits",
+          "marks": 1
+        },
+        {
+          "text": "÷ 8 = 1 440 000 bytes",
+          "marks": 1
+        },
+        {
+          "text": "÷ 1024 ÷ 1024 = 1.37 MiB",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "1 440 000 / 1 048 576 = 1.373 MiB."
+    },
+    {
+      "id": "q7",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "communication",
+      "section": "2.1",
+      "text": "Which protocol is used to **securely** transfer web pages?",
+      "options": [
+        {
+          "id": "A",
+          "text": "HTTP"
+        },
+        {
+          "id": "B",
+          "text": "FTP"
+        },
+        {
+          "id": "C",
+          "text": "HTTPS"
+        },
+        {
+          "id": "D",
+          "text": "SMTP"
+        }
+      ],
+      "answer": "C",
+      "explanation": "HTTPS = HTTP over TLS/SSL, so the data is encrypted in transit."
+    },
+    {
+      "id": "q8",
+      "type": "text",
+      "marks": 4,
+      "topic": "communication",
+      "section": "2.1",
+      "text": "Explain the difference between **bit streaming** (real-time) and **downloading** a video file, and give one advantage of bit streaming.",
+      "answer": [
+        {
+          "text": "Downloading: the whole file is copied to local storage before it can be used.",
+          "marks": 1
+        },
+        {
+          "text": "Bit streaming: data is sent as a continuous stream and played as it arrives, using a buffer.",
+          "marks": 1
+        },
+        {
+          "text": "Real-time streaming sends at the rate needed for playback / with no local file kept; on-demand streaming can be paused and seeked.",
+          "marks": 1
+        },
+        {
+          "text": "Advantage: no need to wait for the full download, no large local storage needed, content can be protected from copying.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "Mentioning the buffer (to absorb variation in network speed) usually earns a mark."
+    },
+    {
+      "id": "q9",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "communication",
+      "section": "2.1",
+      "text": "What is the main function of a **NIC (network interface card)**?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To connect a device to a network and convert data into signals for the transmission medium"
+        },
+        {
+          "id": "B",
+          "text": "To route packets between networks"
+        },
+        {
+          "id": "C",
+          "text": "To resolve domain names into IP addresses"
+        },
+        {
+          "id": "D",
+          "text": "To store web pages locally"
+        }
+      ],
+      "answer": "A",
+      "explanation": "The NIC provides the physical connection and has a unique MAC address."
+    },
+    {
+      "id": "q10",
+      "type": "text",
+      "marks": 3,
+      "topic": "communication",
+      "section": "2.1",
+      "text": "Explain what a **thin client** is and state **two** benefits of thin clients for a business.",
+      "answer": [
+        {
+          "text": "A thin client is a low-specification terminal that relies on a powerful server for processing and storage.",
+          "marks": 1
+        },
+        {
+          "text": "Cheaper hardware, less maintenance/upgrading needed on each client.",
+          "marks": 1
+        },
+        {
+          "text": "Improved security — data is kept on the server, not on the device; easier central backup/management.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "Disadvantages: total dependence on the server/network; heavy server load. Do not confuse with a thick(client) PC."
+    },
+    {
+      "id": "q11",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "hardware",
+      "section": "3.1",
+      "text": "Which of these is an **output** device only?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Touch screen"
+        },
+        {
+          "id": "B",
+          "text": "Plotter"
+        },
+        {
+          "id": "C",
+          "text": "Scanner"
+        },
+        {
+          "id": "D",
+          "text": "Microphone"
+        }
+      ],
+      "answer": "B",
+      "explanation": "A plotter draws large technical drawings/graphs — output only."
+    },
+    {
+      "id": "q12",
+      "type": "text",
+      "marks": 2,
+      "topic": "hardware",
+      "section": "3.2",
+      "text": "A **NOR** gate has inputs A = 0 and B = 0. State the output and explain how it is derived.",
+      "answer": [
+        {
+          "text": "A OR B = 0, and NOR inverts it, so output = 1.",
+          "marks": 2
+        }
+      ],
+      "selfMark": true,
+      "explanation": "NOR gives 1 only when ALL inputs are 0."
+    },
+    {
+      "id": "q13",
+      "type": "trace",
+      "marks": 4,
+      "topic": "hardware",
+      "section": "3.2",
+      "text": "Complete the truth table for **X = NOT (A AND B) OR C**.",
+      "columns": [
+        "A",
+        "B",
+        "C",
+        "X"
+      ],
+      "given": [
+        [
+          "0",
+          "0",
+          "0",
+          ""
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          ""
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          ""
+        ],
+        [
+          "0",
+          "1",
+          "1",
+          ""
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          ""
+        ],
+        [
+          "1",
+          "0",
+          "1",
+          ""
+        ],
+        [
+          "1",
+          "1",
+          "0",
+          ""
+        ],
+        [
+          "1",
+          "1",
+          "1",
+          ""
+        ]
+      ],
+      "answer": [
+        [
+          "0",
+          "0",
+          "0",
+          "1"
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "1"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "1"
+        ],
+        [
+          "0",
+          "1",
+          "1",
+          "1"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "1"
+        ],
+        [
+          "1",
+          "0",
+          "1",
+          "1"
+        ],
+        [
+          "1",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "1",
+          "1",
+          "1"
+        ]
+      ],
+      "explanation": "X is 0 only for the single row A=1, B=1, C=0."
+    },
+    {
+      "id": "q14",
+      "type": "text",
+      "marks": 3,
+      "topic": "hardware",
+      "section": "3.1",
+      "text": "Describe how a **touch screen** detects input, distinguishing between **capacitive** and **resistive** technology.",
+      "answer": [
+        {
+          "text": "Resistive: two layers separated by a small gap; pressing makes them touch and changes the resistance, giving the x/y position. It needs pressure.",
+          "marks": 1
+        },
+        {
+          "text": "Capacitive: a grid/film holds an electrical charge; the finger (a conductor) changes the capacitance at that point, which is detected.",
+          "marks": 1
+        },
+        {
+          "text": "Capacitive is multi-touch and often more responsive; resistive works with a stylus or gloved hand and is cheaper.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "The exam often also expects: the processor converts the coordinates to a screen position and the application responds."
+    },
+    {
+      "id": "q15",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "processor",
+      "section": "4.1",
+      "text": "In the FDE cycle, which register holds the address of the next instruction to be fetched?",
+      "options": [
+        {
+          "id": "A",
+          "text": "MDR"
+        },
+        {
+          "id": "B",
+          "text": "CIR"
+        },
+        {
+          "id": "C",
+          "text": "PC"
+        },
+        {
+          "id": "D",
+          "text": "ACC"
+        }
+      ],
+      "answer": "C",
+      "explanation": "PC → MAR → memory. The MDR holds the data/instruction fetched; CIR holds the instruction being decoded."
+    },
+    {
+      "id": "q16",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "processor",
+      "section": "4.2",
+      "text": "In the 9618 instruction set, which mnemonic loads the **contents of a memory address** into the accumulator?",
+      "options": [
+        {
+          "id": "A",
+          "text": "LDD"
+        },
+        {
+          "id": "B",
+          "text": "LDM"
+        },
+        {
+          "id": "C",
+          "text": "LDI"
+        },
+        {
+          "id": "D",
+          "text": "LDX"
+        }
+      ],
+      "answer": "B",
+      "explanation": "LDD = load immediate data; LDM = load from a direct memory address; LDI = indirect; LDX = indexed."
+    },
+    {
+      "id": "q17",
+      "type": "text",
+      "marks": 4,
+      "topic": "processor",
+      "section": "4.3",
+      "text": "A byte contains **1011 0110**. Perform the following bit manipulations and give each result as an 8-bit binary number.\n\n**(a)** AND with 0000 1111 (mask)\n**(b)** OR with 0000 1111\n**(c)** XOR with 1111 1111\n**(d)** shift left by 2",
+      "answer": [
+        {
+          "text": "(a) 0000 0110",
+          "marks": 1
+        },
+        {
+          "text": "(b) 1011 1111",
+          "marks": 1
+        },
+        {
+          "text": "(c) 0100 1001",
+          "marks": 1
+        },
+        {
+          "text": "(d) 1101 1000",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "(d) shifting left by 2 discards the two most significant bits (10) and fills with 0s: 1101 1000."
+    },
+    {
+      "id": "q18",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "processor",
+      "section": "4.1",
+      "text": "Which statement best describes an **interrupt**?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A signal that causes the processor to temporarily stop the current program and run an interrupt service routine"
+        },
+        {
+          "id": "B",
+          "text": "A permanent error that stops the computer"
+        },
+        {
+          "id": "C",
+          "text": "A type of cache miss"
+        },
+        {
+          "id": "D",
+          "text": "A method of compressing data"
+        }
+      ],
+      "answer": "A",
+      "explanation": "Interrupts allow the CPU to respond to events (e.g. key press, I/O complete) without polling."
+    },
+    {
+      "id": "q19",
+      "type": "text",
+      "marks": 2,
+      "topic": "processor",
+      "section": "4.2",
+      "text": "Write assembly language to compute **Z = X − Y** where X is at address 400 and Y is at address 401, storing the result at address 402.",
+      "answer": [
+        {
+          "text": "LDM 400",
+          "marks": 1
+        },
+        {
+          "text": "SUB 401 (subtracts the contents of address 401)",
+          "marks": 1
+        },
+        {
+          "text": "STO 402",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "LDM 400\nSUB 401\nSTO 402\n\nNote that if address 401 is not a valid operand for SUB in your table, use LDM 401 into another register and subtract registers."
+    },
+    {
+      "id": "q20",
+      "type": "text",
+      "marks": 3,
+      "topic": "processor",
+      "section": "4.1",
+      "text": "Explain **two** advantages of **parallel processing** compared with serial processing.",
+      "answer": [
+        {
+          "text": "Multiple tasks (or parts of a task) are executed at the same time, reducing total processing time.",
+          "marks": 2
+        },
+        {
+          "text": "Better throughput / a large task can be split into independent sub-tasks; or greater resilience (if one processor fails, work can be redistributed).",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "Include 'simultaneously / at the same time' for the first mark. Disadvantages: cost, coordination overhead, not all tasks can be parallelised."
+    }
+  ]
+}
