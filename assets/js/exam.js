@@ -699,6 +699,12 @@
             <div class="small" style="color:var(--fg-dim);margin-top:6px">
               Saved as a graph of parts and wires — drag it around in the exam player to inspect it.
             </div>
+          </div>
+          <div class="msbox"><h4>Mark scheme — tick what you drew (${q.marks} marks)</h4>
+            ${(q.answer || []).map((pt, ti) => `<label class="row" style="align-items:flex-start;gap:9px;margin:6px 0;cursor:pointer">
+              <input type="checkbox" data-qid="${q.id}" data-tick="${ti}" ${((result.ticks[q.id] || [])[ti] ? 'checked' : '')} style="width:auto;margin-top:3px">
+              <span style="font-size:.9rem">${CS.md(pt.text)} <span class="mono small" style="color:var(--fg-dim)">[${pt.marks}]</span></span>
+            </label>`).join('')}
           </div>`;
       } else if (q.type === 'trace') {
         body = '<div class="trace-wrap"><table class="trace"><thead><tr>' + q.columns.map((c) => `<th>${CS.esc(c)}</th>`).join('') + '</tr></thead><tbody>' +

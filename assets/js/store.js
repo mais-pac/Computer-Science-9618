@@ -45,14 +45,26 @@ window.CS = window.CS || {};
     .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 
   /* Tiny inline markdown: **bold**, *italic*, `code`, _sub_, ^sup^, ==mark== */
-  CS.md = (s) => CS.esc(s)
-    .replace(/`([^`]+)`/g, '<code>$1</code>')
-    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
-    .replace(/(^|[\s(])\*([^*\n]+)\*/g, '$1<em>$2</em>')
-    .replace(/==([^=]+)==/g, '<mark>$1</mark>')
-    .replace(/_([^_\n]+)_/g, '<sub>$1</sub>')
-    .replace(/\^([^\^\n]+)\^/g, '<sup>$1</sup>')
-    .replace(/\n/g, '<br>');
+  CS.md = (s) => {
+    // Protect code and math before applying the small Markdown dialect.
+    const saved = [];
+    const hold = html => { const key = '\u0001' + saved.length + '\u0002'; saved.push(html); return key; };
+    const source = String(s == null ? '' : s).replace(/`([^`]+)`|\$\$([\s\S]+?)\$\$|\$([^$\n]+?)\$/g, (match, code, display, inline) => {
+      if (code != null) return hold('<code>' + CS.esc(code) + '</code>');
+      const tex = display != null ? display : inline;
+      if (!window.katex) return hold(CS.esc(match));
+      try { return hold(window.katex.renderToString(tex, { displayMode: display != null, throwOnError: false, trust: false })); }
+      catch (_) { return hold(CS.esc(match)); }
+    });
+    return CS.esc(source)
+      .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+      .replace(/(^|[\s(])\*([^*\n]+)\*/g, '$1<em>$2</em>')
+      .replace(/==([^=]+)==/g, '<mark>$1</mark>')
+      .replace(/_([^_\n]+)_/g, '<sub>$1</sub>')
+      .replace(/\^([^\^\n]+)\^/g, '<sup>$1</sup>')
+      .replace(/\n/g, '<br>')
+      .replace(/\u0001(\d+)\u0002/g, (_, i) => saved[Number(i)]);
+  };
 
   /* ---------- dates ---------- */
   CS.fmtDate = (iso, opts) => {
@@ -308,6 +320,8 @@ window.CS = window.CS || {};
       { href: 'exams.html', label: 'Exams', icon: 'clipboard' },
       { href: 'notes.html', label: 'Notes', icon: 'book' },
       { href: 'code.html', label: 'Pseudo Code', icon: 'code' },
+      { href: 'past-papers.html', label: 'Past papers', icon: 'clipboard' },
+      { href: 'study-plan.html', label: 'Study plan', icon: 'book' },
       { href: 'progress.html', label: 'Progress', icon: 'chart' }
     ];
     const unread = CS.results().length;
