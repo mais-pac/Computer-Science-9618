@@ -12,7 +12,7 @@ function load(pageFile, url) {
   vc.on('jsdomError', (e) => {
     const msg = e.stack || e.message || '';
     // jsdom cannot navigate or scroll — ignore those, they are not app bugs
-    if (/Not implemented: (navigation|Window's scrollTo|Window's scroll)/.test(msg)) return;
+    if (/Not implemented: (navigation|window.scrollTo|Window's scrollTo|Window's scroll)/.test(msg)) return;
     errors.push(pageFile + ' :: ' + msg);
   });
   vc.on('error', (m) => errors.push(pageFile + ' :: console.error ' + m));
