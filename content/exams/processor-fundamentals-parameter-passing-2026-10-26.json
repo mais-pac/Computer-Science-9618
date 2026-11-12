@@ -506,7 +506,7 @@
       "text": "**Question 15 (b)** \u2014 Describe the sequence of actions taken by the processor to **handle an interrupt and resume** the original program.",
       "answer": [
         {
-          "text": "The processor finishes the current F-E cycle and checks the status register / interrupt flags",
+          "text": "The processor finishes the current fetch-execute cycle, then checks the **interrupt register** / interrupt flags (not the status register, which holds ALU flags)",
           "marks": 1
         },
         {
@@ -519,7 +519,7 @@
         }
       ],
       "selfMark": true,
-      "explanation": "Three mark-worthy stages:\n\n1. **Complete the current instruction** (never abandon it mid-execution), then check for interrupts.\n2. **Save state** \u2014 push register contents and the return address onto the stack.\n3. **Identify and service** \u2014 find which device interrupted (highest priority first), run its ISR, then **restore** the registers from the stack and continue.\n\nThe words that earn marks: *current instruction completed*, *stack*, *ISR*, *priority*, *restore*. An answer that jumps straight to \"runs the ISR\" loses the state-saving mark."
+      "explanation": "Three mark-worthy stages:\n\n1. **Complete the current instruction** (never abandon it mid-execution), then check for interrupts.\n2. **Save state** \u2014 push register contents and the return address onto the stack.\n3. **Identify and service** \u2014 find which device interrupted (highest priority first), run its ISR, then **restore** the registers from the stack and continue.\n\nThe words that earn marks: *current instruction completed*, *stack*, *ISR*, *priority*, *restore*. An answer that jumps straight to \"runs the ISR\" loses the state-saving mark.\n\n**Precision matters here:** the interrupt is detected by checking the **interrupt register** at the end of the cycle \u2014 the *status register* holds ALU flags (carry, overflow, zero, sign) and is a different thing. Writing \"status register\" in this answer is the single most common way to lose the first mark."
     },
     {
       "id": "16a",

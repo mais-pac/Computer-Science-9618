@@ -300,6 +300,75 @@ Both can take **parameters**, which make them general-purpose and reusable.
 | "return two or more values" | `BYREF` | a function can only `RETURN` one value |
 | "swap two values" | `BYREF` ×2 | swapping copies swaps nothing |
 
+**The mechanism, stated precisely (this is the 2-mark answer)**
+
+| | `BYVAL` | `BYREF` |
+|---|---|---|
+| What is passed | a **copy of the value** | the **address** of the original variable |
+| Where the procedure works | on its own **local copy** | directly on the original memory location |
+| Effect on the caller's variable | **none** — the original is protected | **written through** — the original changes |
+| Keyword in the header | `BYVAL` | `BYREF` |
+| Use when | the subroutine must **not** change the caller's data | the subroutine must **update** the caller's data, or pass a large array cheaply |
+
+The single sentence that scores both marks: *"BYVAL passes a copy, so changes inside the procedure do not affect the
+original variable; BYREF passes the address, so changes are made directly to the original variable."*
+
+**The same procedure, both ways** — your paper's Question 16 in miniature:
+
+```text
+PROCEDURE ChangeValue(BYVAL Num : INTEGER)
+    Num ← Num + 5
+ENDPROCEDURE
+
+PROCEDURE ChangeValue(BYREF Num : INTEGER)
+    Num ← Num + 5
+ENDPROCEDURE
+
+DECLARE A : INTEGER
+A ← 5
+
+CALL ChangeValue(A)     // BYVAL version → A is still 5
+OUTPUT A                // prints 5
+
+CALL ChangeValue(A)     // BYREF version → A becomes 10
+OUTPUT A                // prints 10
+```
+
+If a question asks you to *state the change required* so a procedure modifies the original, the answer is not a
+paragraph: **change `BYVAL` to `BYREF` in the parameter header**, then explain that the address is passed instead of
+a copy. Two things, two marks.
+
+**Writing a procedure from a bullet list (Q17 style)**
+
+Bullet-list questions are almost mechanical — each bullet is worth a mark, so tick them off:
+
+| The bullet says | What to write |
+|---|---|
+| "accepts an INTEGER parameter named `Score`" | `PROCEDURE Name(Score : INTEGER)` — the **type** is the mark |
+| "must not change the original" | `BYVAL` |
+| "must permanently update the original" | `BYREF` |
+| "adds 5 and outputs the updated score" | `Score ← Score + 5` then `OUTPUT Score` |
+| "does not output a value" | no `OUTPUT` at all — and it is a `PROCEDURE`, not a `FUNCTION` |
+| end of procedure | `ENDPROCEDURE` |
+
+```text
+PROCEDURE DisplayBonus(BYVAL Score : INTEGER)     // must NOT change the original
+    Score ← Score + 5
+    OUTPUT Score
+ENDPROCEDURE
+
+PROCEDURE ApplyBonus(BYREF Score : INTEGER)       // must update the original
+    Score ← Score + 10
+ENDPROCEDURE
+
+// main program
+DECLARE StudentScore : INTEGER
+StudentScore ← 60
+CALL DisplayBonus(StudentScore)   // prints 65, StudentScore is still 60
+CALL ApplyBonus(StudentScore)     // StudentScore becomes 70
+OUTPUT StudentScore               // prints 70
+```
+
 **Trace it — the same code, two answers**
 
 ```
