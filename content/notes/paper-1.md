@@ -251,7 +251,29 @@ sensor → ADC → microprocessor (compares reading with stored value, runs the 
 2. **Decode:** the control unit decodes the opcode in the CIR and works out what to do.
 3. **Execute:** control signals are sent; the ALU performs the operation, the result is stored in a register, and flags/memory may be updated.
 
-**Register transfer notation:** `MAR ← [PC]`, `MDR ← [[MAR]]`, `CIR ← [MDR]`, `PC ← [PC] + 1`, `ACC ← [ACC] + [operand]`.
+**Register transfer notation** — learn the punctuation, it is worth whole marks:
+
+| Notation | Meaning | Fetch step |
+|---|---|---|
+| `MAR ← [PC]` | contents of PC copied into MAR — an **address** moves | 1 |
+| `PC ← [PC] + 1` | PC incremented, ready for the next instruction | 2 |
+| `MDR ← [[MAR]]` | contents of the location **whose address is in the MAR** — double brackets | 3 |
+| `CIR ← [MDR]` | the instruction copied into the CIR, ready to decode | 4 |
+| `PC ← [PC] + 1 ; MDR ← [[MAR]]` | a **semicolon** = two transfers in the *same* clock cycle | — |
+
+`[X]` always means *contents of* X. `[[MAR]]` therefore means *contents of the memory location pointed to by the MAR* — the double bracket is the step most candidates lose. Steps 2 and 3 are independent, so real hardware does them simultaneously, which is why they can be written on one line separated by `;`.
+
+**Registers — the distinction the examiner tests every series**
+
+| Register | Holds | Common wrong answer |
+|---|---|---|
+| PC | the **address** of the **next** instruction | "the current instruction" (that is the CIR) |
+| MAR | the **address** currently being read or written | "the data" (that is the MDR) |
+| MDR / MBR | the **data** read from or about to be written to memory | "the address" |
+| CIR | the **instruction** being decoded/executed | "the address of the instruction" |
+| SR | **flags** from the last ALU operation (carry, overflow, zero, sign) | "the status of the CPU" |
+
+Memory aid: **MAR = address, MDR = data, PC = pointer to next, CIR = the instruction itself.**
 
 **Interrupts**
 
@@ -259,7 +281,28 @@ sensor → ADC → microprocessor (compares reading with stored value, runs the 
 - On interrupt the CPU finishes the current instruction, saves PC and register values to the **stack**, loads the address of the **ISR** from the interrupt vector table, runs the ISR, restores the registers and resumes.
 - Interrupts have **priorities**; a higher priority can interrupt a lower-priority ISR.
 
-**Performance factors:** clock speed, number of cores, cache size, word length, bus width, pipelining, RISC/CISC design.
+**Performance factors — one mark each, and the *mechanism* is the mark**
+
+| Factor | The explanation that scores | The answer that scores nothing |
+|---|---|---|
+| Higher clock speed | more clock cycles per second → more **F-E cycles** completed per second | "the CPU is faster" |
+| Bigger cache | cache is faster than RAM; a **larger cache holds more** frequently used data/instructions, so fewer slow main-memory accesses | "cache is fast" |
+| More cores | several instruction streams execute **in parallel** → higher throughput | "more cores = faster" (not true for non-parallel work) |
+| Wider data bus | more bits transferred per cycle | "more memory" |
+| Wider address bus | more **addressable locations** (2ⁿ) — capacity, not speed | "faster access" |
+| Pipelining | fetch/decode/execute of different instructions overlap → throughput up | "queues instructions" |
+
+**Bus direction — a classic trap**
+
+- **Address bus: unidirectional** (CPU → memory). Nothing comes back on it.
+- **Data bus: bidirectional** — data is both read and written.
+- **Control bus:** individual lines are one-way, but the bus as a whole carries signals **both** ways (read/write out; interrupt request in). If asked "which bus is unidirectional", the answer is the **address bus**.
+
+**Peripherals, ports and USB**
+
+- A **port** is the interface/socket where a peripheral connects — the point where data enters or leaves the system. (In networking it is a numbered logical channel, e.g. 80.)
+- **USB features worth two marks** (always *feature + why it helps*): **plug-and-play/hot-swap** (detected automatically, driver loaded, no reboot), **provides power** (no separate supply), **universal standard** (one connector across devices), **serial asynchronous transfer** (few wires, cheap, reliable), **backwards compatible**.
+- **HDMI** carries **digital video *and* audio** on one cable. **VGA** is analogue **video only** — that contrast is the exam point.
 
 **RISC vs CISC**
 

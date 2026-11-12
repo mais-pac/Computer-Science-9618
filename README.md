@@ -13,9 +13,10 @@ It mirrors the class exam portal ([shalgalt.online](https://www.shalgalt.online)
 > Their wording, marks and mark schemes were written from the class portal's *exam list* (titles,
 > durations, marks, chapters) and the 9618 syllabus — never from the real question papers.
 >
-> Only the **Chapter 4 Assessment** is based on the real thing, and even there what exists is: the
-> **exact question text and part marks** copied from a marked result screen, plus the model answers
-> derived from that. Two figures were **cropped out of those screenshots** and are marked as such in
+> **Two papers are now built from real marked scripts** — the **Chapter 4 Assessment** and
+> **Processor Fundamentals + Parameter Passing (Chapter 5)**. For those, the question text, part labels and
+> per-part marks are transcribed from a marked result screen, and the model answers are written against that
+> marking. Everything else is still a reconstruction. Two figures were **cropped out of those screenshots** and are marked as such in
 > the paper itself. The circuit-drawing parts (2b, 4b, 5c) are now **interactive simulator questions** whose
 > model circuits are verified against every input combination. Two figures were cropped out of the screenshots
 > and are flagged inline: Q3's original expression is unknown (only its truth-table output was visible), and
@@ -89,7 +90,7 @@ Keyboard while sitting an exam: `←` `→` move, `A`–`D` pick an option, `F` 
 | AS Computer Science – Chapters 1 & 2 Test | 1 | 40 | 40 min |
 | Chapter 4 Assessment: Record Data Types, Subroutines and Logic Circuits | 2 | 50 | 45 min |  ← real question text, 2 figures missing
 | Assembly Language – Question Paper | 1 | 46 | 40 min |
-| Processor Fundamentals + Parameter Passing | 1 | 45 | 45 min |
+| Processor Fundamentals + Parameter Passing (**Ch 5**) | 1 | 45 | 45 min |  ← real question text
 
 **AI mocks** — Paper 1 (Sections 1–4, 40 marks) and Paper 2 (Sections 9–12, 50 marks).
 
@@ -104,9 +105,9 @@ Keyboard while sitting an exam: `←` `→` move, `A`–`D` pick an option, `F` 
 
 > The teacher papers are reconstructions built from the class portal's exam list and the 9618 syllabus.
 > Where the original wording or a diagram is not available, the question is a faithful stand-in on the
-> same syllabus point, and every question carries a full mark scheme + explanation. The Chapter 4
-> Assessment is the exception: its question text and part marks come from a real marked result screen,
-> with cropped figures flagged inline. Correct any question you have the exact text for —
+> same syllabus point, and every question carries a full mark scheme + explanation. The Chapter 4 and
+> Chapter 5 papers are the exceptions: their question text and part marks come from real marked result
+> screens, with any cropped figures flagged inline. Correct any question you have the exact text for —
 > see **HOW-TO-ADD-EXAMS.md**, it takes one minute per question.
 
 ---
@@ -224,8 +225,8 @@ docs: README.md · HOW-TO-ADD-EXAMS.md · EXAM-FORMAT.md · SYLLABUS-CHECKLIST.m
 
 - The class portal is login-protected, so its real questions were never downloadable. The teacher tests here
   are **reconstructions** built from the exam list in the portal (titles, marks, durations, chapters) and the
-  9618 syllabus — not leaked originals. The Chapter 4 Assessment is the one paper whose wording comes from a
-  marked result screen (with cropped figures flagged). Overwrite any question with the exact wording; the
+  9618 syllabus — not leaked originals. The Chapter 4 Assessment and Processor Fundamentals papers have wording
+  taken from marked result screens (cropped figures flagged where applicable). Overwrite any question with the exact wording; the
   platform is designed for that.
 - Everything is client-side, so results do not sync between devices by themselves (use backup/restore).
 - Grade bands are indicative; Cambridge boundaries move every series.
