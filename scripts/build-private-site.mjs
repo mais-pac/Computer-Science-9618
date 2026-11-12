@@ -8,7 +8,7 @@ await mkdir(destination, { recursive: true });
 for (const entry of await readdir('.')) {
   if (entry.endsWith('.html')) await cp(entry, join(destination, entry));
 }
-for (const directory of ['assets', 'content']) {
+for (const directory of ['assets', 'content', 'papers']) {
   await cp(directory, join(destination, directory), { recursive: true });
 }
 console.log(`Prepared static assets in ${destination}`);
