@@ -168,27 +168,72 @@
     },
     {
       "id": "2b",
-      "type": "text",
+      "type": "circuit",
       "marks": 3,
       "topic": "hardware",
       "section": "3.2",
-      "text": "**Question 2 (b)** \u2014 Draw a logic circuit that implements your expression.",
+      "text": "**Question 2 (b)** \u2014 Draw a logic circuit that implements your expression. Use the simulator: add the gate(s), wire the inputs, and check the output follows your expression.",
       "answer": [
         {
-          "text": "Single XOR gate used",
+          "text": "An XOR gate is used",
           "marks": 1
         },
         {
-          "text": "The two inputs of the XOR gate connected to the correct variables (A and C)",
+          "text": "Its two inputs are wired to the correct variables \u2014 A and C (not B)",
           "marks": 1
         },
         {
-          "text": "Output labelled X",
+          "text": "The gate's output is the circuit output X",
           "marks": 1
         }
       ],
-      "selfMark": true,
-      "explanation": "A straight **XOR gate** is the whole circuit: inputs \u2192 XOR \u2192 X.\n\nTick the marks against what you drew: (1) the gate shape has the extra curved input line (the exclusive-OR symbol), (2) both wires go to the right variables \u2014 check you did not use B, (3) the output is labelled X.\n\nIf you drew `(A AND NOT C) OR (NOT A AND C)` with four gates, it is still *logically* correct, so tick the structure mark \u2014 but Cambridge accepts the single-gate version as the expected answer."
+      "explanation": "Model answer: one **XOR** gate, inputs A and C, output X.\n\nOpen the circuit in the player and test it: set A=1, C=0 \u2192 X must be 1. Set A=1, C=1 \u2192 X must be 0 (that is the row where XOR differs from OR). If your X stays 0 on every combination, an input is unwired.\n\nTick each mark-scheme point you genuinely built. Partial structures score the marks they earn \u2014 the credits view grades *sub-structures*, not just the final answer.",
+      "solution": {
+        "parts": [
+          {
+            "id": "p1",
+            "type": "SWITCH",
+            "x": 40,
+            "y": 80,
+            "on": 0,
+            "label": "A"
+          },
+          {
+            "id": "p2",
+            "type": "SWITCH",
+            "x": 40,
+            "y": 200,
+            "on": 0,
+            "label": "B"
+          },
+          {
+            "id": "p3",
+            "type": "SWITCH",
+            "x": 40,
+            "y": 320,
+            "on": 0,
+            "label": "C"
+          },
+          {
+            "id": "g1",
+            "type": "XOR",
+            "x": 300,
+            "y": 150
+          }
+        ],
+        "wires": [
+          {
+            "from": "p1",
+            "to": "g1",
+            "term": 0
+          },
+          {
+            "from": "p3",
+            "to": "g1",
+            "term": 1
+          }
+        ]
+      }
     },
     {
       "id": "3a",
@@ -196,18 +241,18 @@
       "marks": 3,
       "topic": "hardware",
       "section": "3.2",
-      "text": "**Question 3 (a)** \u2014 Draw the logic circuit.\n\n> **Figure cropped:** the expression given on the paper is not in the screenshot. Part (a) is therefore answered from the truth table in (b), which your marked script shows is correct.",
+      "text": "**Question 3 (a)** \u2014 Draw the logic circuit.\n\n> **Figure cropped:** the expression for this part was above the visible area of the screenshot. Your marked script confirms the required answer is the *exact unsimplified structure*, so rebuild it in the simulator from the expression on your paper and use the button above to check your wiring.",
       "answer": [
         {
-          "text": "Correct overall gate topology for the expression (input stage \u2192 intermediate stage \u2192 final gate)",
+          "text": "Correct overall gate topology for the expression",
           "marks": 1
         },
         {
-          "text": "Correct gate types at each stage, including the NOT gate(s)",
+          "text": "Correct gate types at each stage, including any NOT gates",
           "marks": 1
         },
         {
-          "text": "Every input variable and the output X labelled, with no unconnected inputs",
+          "text": "Every input and the output X labelled, no unconnected inputs",
           "marks": 1
         }
       ],
@@ -220,7 +265,7 @@
       "marks": 5,
       "topic": "hardware",
       "section": "3.2",
-      "text": "**Question 3 (b)** \u2014 Construct the complete truth table, including intermediate columns.",
+      "text": "**Question 3 (b)** \u2014 Construct the complete truth table, including intermediate columns.\n\n> **Figure cropped:** the expression is not visible in the screenshot. The X column below is the one your marked script produced and was awarded full marks for, so treat it as authoritative \u2014 it is the signed-off answer for this part.",
       "columns": [
         "A",
         "B",
@@ -364,27 +409,123 @@
     },
     {
       "id": "4b",
-      "type": "text",
+      "type": "circuit",
       "marks": 3,
       "topic": "hardware",
       "section": "3.2",
-      "text": "**Question 4 (b)** \u2014 Draw the logic circuit.",
+      "text": "**Question 4 (b)** \u2014 Draw the logic circuit. Build it in the simulator and confirm it reproduces the alarm behaviour from part (c).",
       "answer": [
         {
-          "text": "Two AND gates, an OR gate and a NOT gate, connected in the right order",
+          "text": "Two AND gates, one OR gate and one NOT gate, in the right order",
           "marks": 1
         },
         {
-          "text": "NOT applied to D before it reaches its AND gate, and A/B wired to their AND gate",
+          "text": "NOT applied to D before its AND gate; A and B wired into the first AND",
           "marks": 1
         },
         {
-          "text": "Both AND outputs feed the OR, whose output is labelled X",
+          "text": "Both AND outputs feed the OR gate, whose output is X",
           "marks": 1
         }
       ],
-      "selfMark": true,
-      "explanation": "Structure to draw (left to right):\n\n1. `A` and `B` \u2192 **AND** gate.\n2. `D` \u2192 **NOT** gate \u2192 with `C` \u2192 **AND** gate.\n3. Both AND outputs \u2192 **OR** gate \u2192 `X`.\n\nYour marked script scored 1/3: the top AND gate was there but the branch with the NOT gate and the final OR were missing or incomplete. Tick only the marks you genuinely drew this time \u2014 the feedback line \"full marks require the exact unsimplified structure\" is the key hint: no simplifying, no sharing gates between inputs."
+      "explanation": "Model structure, left to right: `A`,`B` \u2192 **AND**; `D` \u2192 **NOT** \u2192 with `C` \u2192 **AND**; both AND outputs \u2192 **OR** \u2192 X.\n\nVerify with part (c): A=1, B=0, C=1, D=0. The top AND gives 0, NOT D gives 1 so the bottom AND gives 1, and the OR gives X=1 \u2014 the alarm activates. If your simulator disagrees, one of the wires is on the wrong terminal.\n\nThe paper's own feedback said \"full marks require the exact unsimplified structure\" \u2014 do not simplify.",
+      "solution": {
+        "parts": [
+          {
+            "id": "p1",
+            "type": "SWITCH",
+            "x": 30,
+            "y": 60,
+            "on": 0,
+            "label": "A"
+          },
+          {
+            "id": "p2",
+            "type": "SWITCH",
+            "x": 30,
+            "y": 130,
+            "on": 0,
+            "label": "B"
+          },
+          {
+            "id": "p3",
+            "type": "SWITCH",
+            "x": 30,
+            "y": 230,
+            "on": 0,
+            "label": "C"
+          },
+          {
+            "id": "p4",
+            "type": "SWITCH",
+            "x": 30,
+            "y": 300,
+            "on": 0,
+            "label": "D"
+          },
+          {
+            "id": "n1",
+            "type": "NOT",
+            "x": 190,
+            "y": 300
+          },
+          {
+            "id": "g1",
+            "type": "AND",
+            "x": 190,
+            "y": 50
+          },
+          {
+            "id": "g2",
+            "type": "AND",
+            "x": 190,
+            "y": 210
+          },
+          {
+            "id": "g3",
+            "type": "OR",
+            "x": 400,
+            "y": 130
+          }
+        ],
+        "wires": [
+          {
+            "from": "p1",
+            "to": "g1",
+            "term": 0
+          },
+          {
+            "from": "p2",
+            "to": "g1",
+            "term": 1
+          },
+          {
+            "from": "p4",
+            "to": "n1",
+            "term": 0
+          },
+          {
+            "from": "p3",
+            "to": "g2",
+            "term": 0
+          },
+          {
+            "from": "n1",
+            "to": "g2",
+            "term": 1
+          },
+          {
+            "from": "g1",
+            "to": "g3",
+            "term": 0
+          },
+          {
+            "from": "g2",
+            "to": "g3",
+            "term": 1
+          }
+        ]
+      }
     },
     {
       "id": "4c",
@@ -556,18 +697,18 @@
     },
     {
       "id": "5c",
-      "type": "text",
+      "type": "circuit",
       "marks": 4,
       "topic": "hardware",
       "section": "3.2",
-      "text": "**Question 5 (c)** \u2014 Draw the logic circuit using appropriate gates.",
+      "text": "**Question 5 (c)** \u2014 Draw the logic circuit using appropriate gates. Build it in the simulator and check it against your truth table from part (b).",
       "answer": [
         {
-          "text": "OR gate fed by A and C (the bracketed `A OR C`)",
+          "text": "An OR gate fed by A and C (the bracketed `A OR C`)",
           "marks": 1
         },
         {
-          "text": "AND gate taking the OR output and B",
+          "text": "An AND gate taking the OR output and B",
           "marks": 1
         },
         {
@@ -575,12 +716,73 @@
           "marks": 1
         },
         {
-          "text": "All inputs and the output X labelled, every gate input connected",
+          "text": "All inputs connected and the output reaching X",
           "marks": 1
         }
       ],
-      "selfMark": true,
-      "explanation": "Left to right: `A` and `C` \u2192 **OR** gate; that output and `B` \u2192 **AND** gate; output \u2192 `X`.\n\nYour paper attempt scored 1/4. The giveaway line was \"0/3 correct gate sub-structure(s) found\": the shape drawn had the OR in the wrong position relative to B, giving `(A OR B) \u2026` rather than `B AND (A OR C)`.\n\nBuild it from the brackets, never from left-to-right reading of the characters: `B AND (A OR C)` means the OR gate is built **first**, and its output goes into the AND with B."
+      "explanation": "Model answer: `A` and `C` \u2192 **OR**; that output and `B` \u2192 **AND**; output \u2192 X.\n\nNow prove it to yourself with the simulator: the X readout must match your part (b) column `0 0 0 1 0 0 1 1` for rows 000 \u2192 111. Click the INPUT chips to cycle A, B and C and compare.\n\nThe paper's feedback was \"0/3 correct gate sub-structure(s) found\" \u2014 the OR was in the wrong position relative to B. Build from the brackets, not left to right.",
+      "solution": {
+        "parts": [
+          {
+            "id": "p1",
+            "type": "SWITCH",
+            "x": 40,
+            "y": 70,
+            "on": 0,
+            "label": "A"
+          },
+          {
+            "id": "p2",
+            "type": "SWITCH",
+            "x": 40,
+            "y": 180,
+            "on": 0,
+            "label": "B"
+          },
+          {
+            "id": "p3",
+            "type": "SWITCH",
+            "x": 40,
+            "y": 290,
+            "on": 0,
+            "label": "C"
+          },
+          {
+            "id": "g1",
+            "type": "OR",
+            "x": 230,
+            "y": 150
+          },
+          {
+            "id": "g2",
+            "type": "AND",
+            "x": 420,
+            "y": 140
+          }
+        ],
+        "wires": [
+          {
+            "from": "p1",
+            "to": "g1",
+            "term": 0
+          },
+          {
+            "from": "p3",
+            "to": "g1",
+            "term": 1
+          },
+          {
+            "from": "g1",
+            "to": "g2",
+            "term": 0
+          },
+          {
+            "from": "p2",
+            "to": "g2",
+            "term": 1
+          }
+        ]
+      }
     }
   ]
 }

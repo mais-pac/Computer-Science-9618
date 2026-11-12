@@ -68,6 +68,8 @@
       if (!cells) return 0;
       return Math.round((q.marks * (correct / cells)) * 10) / 10;
     }
+    // circuit — structure is judged by the student against the mark scheme
+    if (q.type === 'circuit') return 0;
     // text — self marked
     if (typeof ans === 'object' && Array.isArray(ans.ticks)) {
       const ticks = ans.ticks.filter(Boolean).length;
@@ -80,6 +82,7 @@
   function hasAnswer(q, ans) {
     if (ans == null) return false;
     if (q.type === 'trace') return Array.isArray(ans) && ans.some((r) => (r || []).some((c) => String(c || '').trim() !== ''));
+    if (q.type === 'circuit') return !!(ans && Array.isArray(ans.parts) && ans.wires && ans.wires.length);
     if (q.type === 'text') return String(ans).trim().length > 0 || (Array.isArray(ans.ticks) && ans.ticks.some(Boolean));
     return String(ans).trim() !== '';
   }
@@ -116,10 +119,10 @@
     exam.questions.forEach((q) => {
       const ans = attempt.answers[q.id];
       const ticked = selfTicks ? selfTicks[q.id] : (Array.isArray(ans && ans.ticks) ? ans.ticks : null);
-      const scored = (q.type === 'text') ? selfMarkScore(q, ticked) : scoreQuestion(q, ans);
+      const scored = (q.type === 'text' || q.type === 'circuit') ? selfMarkScore(q, ticked) : scoreQuestion(q, ans);
       scores[q.id] = scored;
       total += q.marks;
-      if (q.type === 'text') { selfTotal += q.marks; selfMarks += scored; }
+      if (q.type === 'text' || q.type === 'circuit') { selfTotal += q.marks; selfMarks += scored; }
       else { autoTotal += q.marks; autoMarks += scored; }
       const t = q.topic || 'other';
       perTopic[t] = perTopic[t] || { got: 0, tot: 0 };
@@ -261,6 +264,17 @@
         const val = typeof ans === 'string' ? ans : '';
         body = `<label class="field"><span>Your answer</span>
           <textarea id="textAns" placeholder="Write your answer in full sentences (Cambridge mark scheme style)…" ${reveal ? 'disabled' : ''}>${CS.esc(val)}</textarea></label>`;
+      } else if (q.type === 'circuit') {
+        body = `<div class="circ-mount" data-qid="${q.id}"${reveal ? ' data-locked="1"' : ''}></div>
+          ${(!reveal && q.solution) ? `<div class="row" style="margin-top:8px">
+            <button type="button" class="btn btn-sm btn-ghost" data-checkcirc="${q.id}">Check my circuit</button>
+            <span class="small circ-checkmsg" data-msg="${q.id}" style="color:var(--fg-dim)"></span>
+          </div>` : ''}
+          <p class="small" style="color:var(--fg-dim);margin:8px 0 0">
+            Build the circuit with the palette, click an INPUT to switch it 0/1, and drag from a
+            gate's output circle to another gate's input circle to wire them.
+            ${reveal ? 'This is your saved circuit — compare it with the model answer below.' : 'Your circuit is saved with the exam.'}
+          </p>`;
       } else if (q.type === 'trace') {
         body = '<div class="trace-wrap"><table class="trace"><thead><tr>' +
           q.columns.map((c) => '<th>' + CS.esc(c) + '</th>').join('') + '</tr></thead><tbody>' +
@@ -385,6 +399,41 @@
         ta.oninput = () => { attempt.answers[qid] = ta.value; saveLight(); };
         ta.onblur = () => save();
       }
+      if (q.type === 'circuit') {
+        const mount = card.querySelector('.circ-mount');
+        if (mount && CS.CircuitEditor) {
+          const editor = CS.CircuitEditor.create(mount, {
+            value: attempt.answers[qid] || null,
+            onChange: (g) => { attempt.answers[qid] = g; saveLight(); }
+          });
+          const checkBtn = card.querySelector('[data-checkcirc]');
+          if (checkBtn && q.solution) {
+            checkBtn.onclick = () => {
+              const msg = card.querySelector('[data-msg="' + q.id + '"]');
+              const mine = editor.value;
+              if (!mine.wires.length) {
+                if (msg) { msg.textContent = 'Wire something up first — the checker needs a connected circuit.'; msg.style.color = 'var(--yellow)'; }
+                return;
+              }
+              const same = CS.CircuitEditor.equivalent(mine, q.solution);
+              if (msg) {
+                msg.textContent = same
+                  ? '✓ Your circuit behaves exactly like the model answer for every input combination.'
+                  : '✗ Not equivalent yet — one of your inputs, gates or wires is in the wrong place. Compare the readout with your truth table.';
+                msg.style.color = same ? 'var(--green)' : 'var(--red)';
+              }
+            };
+          }
+          if (mount.dataset.locked) {
+            mount.querySelectorAll('.circ-palette').forEach((n) => { n.style.display = 'none'; });
+            const svg = mount.querySelector('.circ-svg');
+            if (svg) svg.style.pointerEvents = 'none';
+          } else {
+            // a fresh circuit that the student has not touched still counts as an answer
+            if (!attempt.answers[qid]) { attempt.answers[qid] = editor.value; saveLight(); }
+          }
+        }
+      }
       if (q.type === 'trace') {
         card.querySelectorAll('input[data-r]').forEach((inp) => {
           inp.oninput = () => {
@@ -463,7 +512,8 @@
       const finishedAt = new Date().toISOString();
       const durationUsedSec = Math.round((Date.now() - new Date(attempt.startedAt).getTime()) / 1000);
       const ticks = {};
-      exam.questions.filter((q) => q.type === 'text').forEach((q) => { ticks[q.id] = new Array((q.answer || []).length).fill(false); });
+      exam.questions.filter((q) => q.type === 'text' || q.type === 'circuit')
+        .forEach((q) => { ticks[q.id] = new Array((q.answer || []).length).fill(false); });
       const sum = summarise(attempt, exam, ticks);
       const result = {
         id: attempt.id,
@@ -586,6 +636,22 @@
           <div class="stack" id="reviewList">${exam.questions.map((q, i) => reviewCard(q, i)).join('')}</div>
         </div>`;
 
+      /* read-only rendering of circuits the student drew */
+      host.querySelectorAll('.circ-review').forEach((box) => {
+        if (!CS.CircuitEditor) return;
+        let g = null;
+        try { g = JSON.parse(box.getAttribute('data-json') || '{}'); } catch (e) { g = null; }
+        if (!g || !g.parts || !g.parts.length) {
+          box.innerHTML = '<p class="small" style="color:var(--fg-dim);margin:6px 0 0">No circuit drawn.</p>';
+          return;
+        }
+        const ed = CS.CircuitEditor.create(box, { value: g });
+        box.querySelectorAll('.circ-palette').forEach((n) => { n.style.display = 'none'; });
+        const svg = box.querySelector('.circ-svg');
+        if (svg) svg.style.pointerEvents = 'none';
+        void ed;
+      });
+
       /* self-mark checkboxes */
       host.onchange = (ev) => {
         const cb = ev.target.closest('input[data-tick]');
@@ -625,6 +691,14 @@
                 style="width:auto;margin-top:3px">
               <span style="font-size:.9rem">${CS.md(pt.text)} <span class="mono small" style="color:var(--fg-dim)">[${pt.marks}]</span></span>
             </label>`).join('')}
+          </div>`;
+      } else if (q.type === 'circuit') {
+        body = `<div class="card tight" style="background:var(--bg-2)">
+            <div class="card-meta">YOUR CIRCUIT</div>
+            <div class="circ-review" data-json="${CS.esc(JSON.stringify(ans || {}))}"></div>
+            <div class="small" style="color:var(--fg-dim);margin-top:6px">
+              Saved as a graph of parts and wires — drag it around in the exam player to inspect it.
+            </div>
           </div>`;
       } else if (q.type === 'trace') {
         body = '<div class="trace-wrap"><table class="trace"><thead><tr>' + q.columns.map((c) => `<th>${CS.esc(c)}</th>`).join('') + '</tr></thead><tbody>' +
@@ -724,6 +798,7 @@
         if (q.type === 'mcq' && (!Array.isArray(q.options) || !q.answer)) errs.push(`question ${i + 1}: mcq needs options + answer`);
         if (q.type === 'numeric' && typeof q.answer !== 'number') errs.push(`question ${i + 1}: numeric answer must be a number`);
         if (q.type === 'trace' && (!Array.isArray(q.columns) || !Array.isArray(q.answer))) errs.push(`question ${i + 1}: trace needs columns + answer`);
+        if (q.type === 'circuit' && !Array.isArray(q.answer)) errs.push(`question ${i + 1}: circuit needs an answer array of mark-scheme points`);
       });
       exam.totalMarks = marks;
       return errs;

@@ -385,3 +385,43 @@ table.trace td.bad { background: rgba(255, 126, 119, .15); }
   body { background: #fff; color: #000; }
   .card, .qcard { border-color: #ccc; background: #fff; }
 }
+
+/* ---------------- logic circuit editor (circuit.js) ---------------- */
+.circ { border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; background: var(--bg-2); }
+.circ-palette { padding: 10px 12px; border-bottom: 1px solid var(--border); background: var(--card); }
+.circ-hint { display: block; font-size: .76rem; color: var(--fg-dim); margin-bottom: 8px; }
+.circ-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.circ-chip { font-family: var(--mono); font-size: .74rem; font-weight: 650; letter-spacing: .02em;
+  padding: 6px 10px; border-radius: 7px; cursor: pointer; color: var(--fg);
+  background: var(--bg-2); border: 1px solid var(--border); }
+.circ-chip:hover { border-color: var(--primary); color: var(--primary); }
+.circ-chip-danger { margin-left: auto; color: var(--red); border-color: color-mix(in srgb, var(--red) 40%, transparent); }
+.circ-stage { position: relative; }
+.circ-svg { display: block; width: 100%; height: auto; touch-action: none; cursor: default; }
+.circ-bg { fill: var(--bg-2); }
+.circ-dot { fill: var(--border-strong); }
+.circ-wire { fill: none; stroke: var(--border-strong); stroke-width: 2.4; stroke-linecap: round; }
+.circ-wire.live { stroke: var(--primary); filter: drop-shadow(0 0 4px color-mix(in srgb, var(--primary) 60%, transparent)); }
+.circ-joint { fill: var(--border-strong); }
+.circ-joint.live { fill: var(--primary); }
+.circ-shape, .gate-shape { fill: color-mix(in srgb, var(--card) 92%, var(--primary) 8%); stroke: var(--primary); stroke-width: 2.2; stroke-linejoin: round; }
+.circ-part.sel .gate-shape { stroke: var(--green); }
+.circ-extra { fill: none; }
+.circ-gate-label { fill: var(--fg-dim); font-family: var(--mono); font-size: 10px; letter-spacing: .04em; }
+.circ-term { fill: var(--bg); stroke: var(--primary); stroke-width: 2.2; cursor: crosshair; }
+.circ-term:hover { fill: var(--primary); r: 7; }
+.circ-live-dot { fill: var(--border-strong); }
+.circ-live-dot.on { fill: var(--green); }
+.circ-switch { fill: var(--card); stroke: var(--border-strong); stroke-width: 2; cursor: pointer; }
+.circ-switch.on { fill: color-mix(in srgb, var(--primary) 22%, var(--card)); stroke: var(--primary); }
+.circ-switch-label { fill: var(--fg); font-family: var(--mono); font-size: 13px; font-weight: 700; pointer-events: none; }
+.circ-switch-val { fill: var(--fg-dim); font-family: var(--mono); font-size: 12px; pointer-events: none; }
+.circ-del { fill: var(--fg-dim); font-size: 14px; cursor: pointer; opacity: .55; }
+.circ-del:hover { fill: var(--red); opacity: 1; }
+.circ-outlabel { fill: var(--primary); font-family: var(--mono); font-size: 13px; font-weight: 700; }
+.circ-readout { display: flex; gap: 12px; align-items: center; justify-content: space-between;
+  padding: 8px 12px; border-top: 1px solid var(--border); background: var(--card); font-size: .8rem; }
+.circ-readout .circ-out { color: var(--primary); font-size: 1rem; }
+.circ-status { color: var(--fg-dim); }
+.circ-static { display: block; width: 100%; height: auto; }
+@media print { .circ-palette, .circ-readout { display: none !important; } }
