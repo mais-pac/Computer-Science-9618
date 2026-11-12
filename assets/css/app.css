@@ -50,6 +50,7 @@ html[data-theme="light"] {
 * { box-sizing: border-box; }
 
 html, body { height: 100%; }
+html { --nav-h: 61px; scroll-padding-top: calc(var(--nav-h, 61px) + 14px); scroll-behavior: smooth; }
 
 body {
   margin: 0;
@@ -105,9 +106,17 @@ main { padding: 28px 0 72px; }
 .hide { display: none !important; }
 
 /* ---------------- nav ---------------- */
-#nav { position: sticky; top: 0; z-index: 50; backdrop-filter: blur(14px);
-  background: color-mix(in srgb, var(--bg) 78%, transparent);
+/* Pinned for every page: fixed to the top of the viewport so no scroll
+   container, transform or overflow rule on an ancestor can unpin it.
+   #nav sets --nav-h (measured in JS) and body is padded by the same
+   amount, so the bar never covers page content. */
+#nav { position: fixed; top: 0; left: 0; right: 0; width: 100%; z-index: 9999;
+  --nav-h: 61px;
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
   border-bottom: 1px solid var(--border); }
+body { padding-top: var(--nav-h, 61px); }
+body.nav-measured { transition: padding-top .15s ease; }
 .nav-inner { max-width: var(--wrap); margin: 0 auto; padding: 10px 20px; display: flex; align-items: center; gap: 18px; }
 .brand { display: flex; align-items: center; gap: 10px; color: var(--fg); text-decoration: none; }
 .brand:hover { text-decoration: none; }
@@ -206,7 +215,7 @@ label.field > span { display: block; font-size: .78rem; color: var(--fg-dim); ma
 .progress-bar > i { display: block; height: 100%; background: linear-gradient(90deg, var(--primary), #44f5c0); transition: width .25s; }
 
 .split { display: grid; grid-template-columns: 240px minmax(0, 1fr); gap: 20px; align-items: start; }
-.qnav { position: sticky; top: 74px; }
+.qnav { position: sticky; top: calc(var(--nav-h, 61px) + 12px); }
 .qnav .qgrid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; }
 .qnav .qgrid button { aspect-ratio: 1; border-radius: 7px; border: 1px solid var(--border); background: var(--bg-2);
   color: var(--fg-dim); font-family: var(--mono); font-size: .78rem; cursor: pointer; }
@@ -281,7 +290,7 @@ table.tbl tr.flagged td { background: rgba(231, 183, 0, .06); }
 
 /* ---------------- notes ---------------- */
 .notes-layout { display: grid; grid-template-columns: 270px minmax(0, 1fr); gap: 24px; align-items: start; }
-.notes-side { position: sticky; top: 74px; max-height: calc(100vh - 100px); overflow: auto; padding-right: 4px; }
+.notes-side { position: sticky; top: calc(var(--nav-h, 61px) + 12px); max-height: calc(100vh - var(--nav-h, 61px) - 34px); overflow: auto; padding-right: 4px; }
 .notes-side a { display: block; padding: 6px 9px; border-radius: 7px; color: var(--fg-dim); font-size: .84rem; text-decoration: none; }
 .notes-side a:hover { background: var(--muted); color: var(--fg); }
 .notes-side a.on { background: color-mix(in srgb, var(--primary) 14%, transparent); color: var(--primary); }
@@ -290,6 +299,7 @@ table.tbl tr.flagged td { background: rgba(231, 183, 0, .06); }
 .notes-side a .dot { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--green); margin-left: 6px; vertical-align: middle; }
 
 .note-body { max-width: 76ch; }
+.note-body h2, .note-body h3, #noteBody h2, #noteBody h3 { scroll-margin-top: calc(var(--nav-h, 61px) + 16px); }
 .note-body h2 { margin-top: 2rem; padding-top: .4rem; border-top: 1px solid var(--border); }
 .note-body h2:first-of-type { margin-top: 0; border-top: 0; }
 .note-body h3 { margin-top: 1.4rem; color: var(--primary); }

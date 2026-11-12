@@ -12,296 +12,220 @@
   "durationMin": 45,
   "totalMarks": 50,
   "examDate": "2026-10-08",
-  "instructions": "Answer all questions. Write pseudocode in Cambridge style. Use RECORD … ENDRECORD for record types. Calculators are not permitted.",
+  "instructions": "Answer all questions. Write pseudocode in Cambridge style. Part labels (1a, 1b, 2a \u2026) match the original paper. For circuit questions, self-mark against the structure described in the mark scheme. Calculators are not permitted.",
   "questions": [
     {
-      "id": "q1",
-      "type": "mcq",
-      "marks": 1,
-      "topic": "data-types",
-      "section": "10.1",
-      "text": "Which **data type** would be most suitable for storing the price of an item in a shop database?",
-      "options": [
-        {
-          "id": "A",
-          "text": "INTEGER"
-        },
-        {
-          "id": "B",
-          "text": "REAL"
-        },
-        {
-          "id": "C",
-          "text": "STRING"
-        },
-        {
-          "id": "D",
-          "text": "BOOLEAN"
-        }
-      ],
-      "answer": "B",
-      "explanation": "Money has a fractional part (e.g. 4.99), so a REAL is needed. A STRING keeps the digits but cannot be used in calculations."
-    },
-    {
-      "id": "q2",
-      "type": "mcq",
-      "marks": 1,
-      "topic": "data-types",
-      "section": "10.1",
-      "text": "What is a **record** data type?",
-      "options": [
-        {
-          "id": "A",
-          "text": "A collection of items of the same data type stored under one identifier"
-        },
-        {
-          "id": "B",
-          "text": "A collection of related data items that may have different data types, stored under one identifier"
-        },
-        {
-          "id": "C",
-          "text": "A single value that can only be TRUE or FALSE"
-        },
-        {
-          "id": "D",
-          "text": "A value stored in a text file"
-        }
-      ],
-      "answer": "B",
-      "explanation": "A record groups fields of mixed types (e.g. StudentID: INTEGER, Name: STRING). Option A describes an array."
-    },
-    {
-      "id": "q3",
+      "id": "1a",
       "type": "text",
       "marks": 4,
       "topic": "data-types",
       "section": "10.1",
-      "text": "A school stores data about students in a record. Each student has a 4-digit ID, a name, a date of birth and whether they are a boarder.\n\nWrite pseudocode to **define the record type** `Student` and **declare** one variable `newStudent` of this type.",
+      "text": "**Question 1 (a)** \u2014 Define a user-defined record data type called `TStudent` to store the information shown in the table. Use pseudocode.\n\n> **Table cropped:** the screenshot of this paper starts below the field table. The fields are known from your marked answer and are listed in the mark scheme.",
       "answer": [
         {
-          "text": "TYPE Student",
+          "text": "Encloses the definition in `TYPE TStudent` \u2026 `ENDTYPE`",
           "marks": 1
         },
         {
-          "text": "DECLARE StudentID : INTEGER (or STRING) / DECLARE Name : STRING",
+          "text": "`DECLARE StudentID : INTEGER` (STRING accepted, e.g. if the ID keeps a leading zero)",
           "marks": 1
         },
         {
-          "text": "DECLARE DateOfBirth : DATE / DECLARE IsBoarder : BOOLEAN",
+          "text": "`DECLARE StudentName : STRING`",
           "marks": 1
         },
         {
-          "text": "ENDTYPE then DECLARE newStudent : Student",
+          "text": "`DECLARE ExamScore : INTEGER` **and** `DECLARE Passed : BOOLEAN`",
           "marks": 1
         }
       ],
       "selfMark": true,
-      "explanation": "Cambridge form:\n\nTYPE Student\n    DECLARE StudentID : INTEGER\n    DECLARE Name : STRING\n    DECLARE DateOfBirth : DATE\n    DECLARE IsBoarder : BOOLEAN\nENDTYPE\nDECLARE newStudent : Student"
+      "explanation": "```\nTYPE TStudent\n    DECLARE StudentID : INTEGER\n    DECLARE StudentName : STRING\n    DECLARE ExamScore : INTEGER\n    DECLARE Passed : BOOLEAN\nENDTYPE\n```\nEach field needs its own `DECLARE` with a sensible data type, and the whole block must be wrapped in `TYPE \u2026 ENDTYPE`. A user-defined type is not a variable \u2014 nothing is stored until you declare a variable of that type (part b)."
     },
     {
-      "id": "q4",
-      "type": "mcq",
+      "id": "1b",
+      "type": "text",
       "marks": 1,
       "topic": "data-types",
       "section": "10.1",
-      "text": "A **user-defined enumerated type** is BEST described as:",
-      "options": [
+      "text": "**Question 1 (b)** \u2014 Declare a variable called `Student1` using the record data type `TStudent`.",
+      "answer": [
         {
-          "id": "A",
-          "text": "A list of all possible values that a variable of that type may take"
-        },
-        {
-          "id": "B",
-          "text": "A record containing several fields"
-        },
-        {
-          "id": "C",
-          "text": "An array of integers"
-        },
-        {
-          "id": "D",
-          "text": "A pointer to another variable"
+          "text": "`DECLARE Student1 : TStudent`",
+          "marks": 1
         }
       ],
-      "answer": "A",
-      "explanation": "e.g. TYPE Colour = (Red, Green, Blue) — the variable may only hold one of the listed values, which makes the code easier to read and validate."
+      "selfMark": true,
+      "explanation": "`DECLARE Student1 : TStudent`\n\nThe variable name comes first, then a colon, then the type name. Writing the fields again here would be wrong \u2014 that is what the type definition in (a) is for."
     },
     {
-      "id": "q5",
-      "type": "mcq",
-      "marks": 1,
-      "topic": "programming",
-      "section": "11.3",
-      "text": "Which statement about **procedures** and **functions** is correct?",
-      "options": [
-        {
-          "id": "A",
-          "text": "A function must always return a value; a procedure does not return a value"
-        },
-        {
-          "id": "B",
-          "text": "A procedure must always return a value; a function does not"
-        },
-        {
-          "id": "C",
-          "text": "Both must return exactly one value"
-        },
-        {
-          "id": "D",
-          "text": "Neither can take parameters"
-        }
-      ],
-      "answer": "A",
-      "explanation": "A function is used in an expression and returns a single value via RETURN. A procedure performs a task and is called as a statement."
-    },
-    {
-      "id": "q6",
+      "id": "1c",
       "type": "text",
       "marks": 3,
-      "topic": "programming",
-      "section": "11.3",
-      "text": "Explain the difference between **passing a parameter by value** and **passing a parameter by reference**, and state which one must be used if a subroutine is to change the value of the calling variable.",
+      "topic": "data-types",
+      "section": "10.1",
+      "text": "**Question 1 (c)** \u2014 Write pseudocode to input the student's ID, name and examination score into the appropriate fields of `Student1`.",
       "answer": [
         {
-          "text": "By value: a copy of the data is passed, so changes made inside the subroutine do not affect the original variable.",
+          "text": "`INPUT Student1.StudentID` (input straight into the record field, not into a temp variable only)",
           "marks": 1
         },
         {
-          "text": "By reference: the address of the variable is passed, so changes made inside the subroutine modify the original variable.",
+          "text": "`INPUT Student1.StudentName`",
           "marks": 1
         },
         {
-          "text": "By reference must be used (Cambridge pseudocode: BYREF).",
+          "text": "`INPUT Student1.ExamScore`",
           "marks": 1
         }
       ],
       "selfMark": true,
-      "explanation": "In Cambridge pseudocode this is written as PROCEDURE Update(BYREF Score : INTEGER) for reference and BYVAL for value."
+      "explanation": "```\nINPUT Student1.StudentID\nINPUT Student1.StudentName\nINPUT Student1.ExamScore\n```\nOne `INPUT` per field, addressed with dot notation `RecordName.FieldName`. Do not input into `Passed` \u2014 part (d) works that out. Cambridge mark schemes also accept `INPUT Student1.StudentID, Student1.StudentName, Student1.ExamScore` in a single statement."
     },
     {
-      "id": "q7",
+      "id": "1d",
       "type": "text",
-      "marks": 5,
-      "topic": "programming",
-      "section": "11.3",
-      "text": "Write a pseudocode **function** `CalcAverage` that takes an array `Marks` of 10 integers and returns the average of the ten marks, rounded to **one decimal place**.",
-      "answer": [
-        {
-          "text": "Correct function header: FUNCTION CalcAverage(Marks : ARRAY[1:10] OF INTEGER) RETURNS REAL",
-          "marks": 1
-        },
-        {
-          "text": "Declares a running total and sets it to 0",
-          "marks": 1
-        },
-        {
-          "text": "Loop from 1 to 10, adding each mark to the total",
-          "marks": 1
-        },
-        {
-          "text": "Calculates total / 10 and rounds (e.g. ROUND(Total / 10, 1))",
-          "marks": 1
-        },
-        {
-          "text": "Returns the result with RETURN; ENDFUNCTION",
-          "marks": 1
-        }
-      ],
-      "selfMark": true,
-      "explanation": "FUNCTION CalcAverage(Marks : ARRAY[1:10] OF INTEGER) RETURNS REAL\n    DECLARE Total : INTEGER\n    DECLARE Index : INTEGER\n    Total ← 0\n    FOR Index ← 1 TO 10\n        Total ← Total + Marks[Index]\n    NEXT Index\n    RETURN ROUND(Total / 10, 1)\nENDFUNCTION"
-    },
-    {
-      "id": "q8",
-      "type": "trace",
       "marks": 4,
       "topic": "programming",
-      "section": "11.2",
-      "text": "Trace the procedure below when called as `Change(X)` with `X = 5`.\n\n```\nPROCEDURE Change(BYVAL N : INTEGER)\n    N ← N * 2\n    OUTPUT N\nENDPROCEDURE\n```\n\nComplete the trace table and state the final value of `X` in the calling program.",
-      "columns": [
-        "N (inside procedure)",
-        "Output",
-        "X (after call)"
-      ],
-      "given": [
-        [
-          "",
-          "",
-          ""
-        ]
-      ],
-      "answer": [
-        [
-          "10",
-          "10",
-          "5"
-        ]
-      ],
-      "explanation": "BYVAL passes a copy, so N becomes 10 and 10 is output, but the original X stays 5. Swap in BYREF and see the difference: X would also become 10."
-    },
-    {
-      "id": "q9",
-      "type": "text",
-      "marks": 3,
-      "topic": "programming",
       "section": "11.3",
-      "text": "Trace the pseudocode and state the **output**.\n\n```\nDECLARE A : INTEGER\nDECLARE B : INTEGER\nA ← 3\nB ← 4\nCALL Swap(A, B)\nOUTPUT A, B\n\nPROCEDURE Swap(BYREF P : INTEGER, BYREF Q : INTEGER)\n    DECLARE Temp : INTEGER\n    Temp ← P\n    P ← Q\n    Q ← Temp\nENDPROCEDURE\n```",
+      "text": "**Question 1 (d)** \u2014 A student passes the examination if their examination score is 50 or above. Write a named pseudocode subroutine called `CheckPass` that accepts an examination score as a parameter and returns a Boolean value indicating whether the student has passed. Use the returned value to update the examination status of `Student1`.",
       "answer": [
         {
-          "text": "Recognises the parameters are passed by reference",
+          "text": "`FUNCTION CheckPass(...) RETURNS BOOLEAN` \u2014 a function, because a value is returned",
           "marks": 1
         },
         {
-          "text": "P and Q swap: P = 4, Q = 3, and these are the same storage locations as A and B",
+          "text": "Parameter declared with a type, e.g. `(Score : INTEGER)`",
           "marks": 1
         },
         {
-          "text": "Output: 4 3",
+          "text": "Correct condition `IF Score >= 50 THEN RETURN TRUE ELSE RETURN FALSE ENDIF` (`>=` not `>`)",
+          "marks": 1
+        },
+        {
+          "text": "Return value used to update the record: `Student1.Passed \u2190 CheckPass(Student1.ExamScore)`",
           "marks": 1
         }
       ],
       "selfMark": true,
-      "explanation": "Answer = 4 3. If the header had BYVAL the output would be 3 4."
+      "explanation": "```\nFUNCTION CheckPass(Score : INTEGER) RETURNS BOOLEAN\n    IF Score >= 50 THEN\n        RETURN TRUE\n    ELSE\n        RETURN FALSE\n    ENDIF\nENDFUNCTION\n\nStudent1.Passed \u2190 CheckPass(Student1.ExamScore)\n```\nTwo marks are commonly dropped here: returning a value from a `PROCEDURE` (wrong \u2014 the question says *returns*), and forgetting to actually assign the result back into `Student1.Passed`. Note `>=` \u2014 a score of exactly 50 is a pass."
     },
     {
-      "id": "q10",
-      "type": "mcq",
-      "marks": 1,
-      "topic": "hardware",
-      "section": "3.2",
-      "text": "A logic circuit's output is 1 only when **exactly one** of its two inputs is 1. Which gate is it?",
-      "options": [
+      "id": "1e",
+      "type": "text",
+      "marks": 4,
+      "topic": "programming",
+      "section": "11.3",
+      "text": "**Question 1 (e)** \u2014 The school requires a message to be displayed for each student based on their examination result. Write a named pseudocode subroutine called `DisplayResult` that accepts a student's name and examination status as parameters. The subroutine must display the appropriate message immediately, without returning a value. If passed: \"Congratulations, you have passed.\" Otherwise: \"You have failed the examination.\" Use this subroutine to display the result for `Student1`.",
+      "answer": [
         {
-          "id": "A",
-          "text": "AND"
+          "text": "`PROCEDURE DisplayResult(...)` \u2014 no `RETURNS`",
+          "marks": 1
         },
         {
-          "id": "B",
-          "text": "OR"
+          "text": "Two typed parameters, e.g. `(Name : STRING, Passed : BOOLEAN)`",
+          "marks": 1
         },
         {
-          "id": "C",
-          "text": "XOR"
+          "text": "`IF Passed THEN OUTPUT \"Congratulations, you have passed.\" ELSE OUTPUT \"You have failed the examination.\" ENDIF` \u2014 both message strings exact",
+          "marks": 1
         },
         {
-          "id": "D",
-          "text": "NOR"
+          "text": "Called with the record's fields: `CALL DisplayResult(Student1.StudentName, Student1.Passed)`",
+          "marks": 1
         }
       ],
-      "answer": "C",
-      "explanation": "XOR (exclusive OR) gives 1 when the inputs are different: 0,1 and 1,0."
+      "selfMark": true,
+      "explanation": "```\nPROCEDURE DisplayResult(Name : STRING, Passed : BOOLEAN)\n    IF Passed THEN\n        OUTPUT \"Congratulations, you have passed.\"\n    ELSE\n        OUTPUT \"You have failed the examination.\"\n    ENDIF\nENDPROCEDURE\n\nCALL DisplayResult(Student1.StudentName, Student1.Passed)\n```\nThe question says *display \u2026 without returning a value*, so it must be a `PROCEDURE`. The messages must match the paper's wording exactly \u2014 Cambridge awards the mark for the quoted strings. The parameter `Name` is passed but not used in the message here; that is fine, it is what the paper asks for."
     },
     {
-      "id": "q11",
+      "id": "2a",
+      "type": "text",
+      "marks": 4,
+      "topic": "hardware",
+      "section": "3.2",
+      "text": "**Question 2 (a)** \u2014 Write a Boolean expression for X using the rows where X = 1.\n\n> **Figure cropped:** this part refers to a truth table / circuit printed above it on the paper that is not in the screenshot. The answer key below is the version confirmed by your marked script.",
+      "answer": [
+        {
+          "text": "Selects the rows where X = 1 and reads off the input combination (e.g. A and C differ)",
+          "marks": 1
+        },
+        {
+          "text": "Recognises the pattern: X is 1 exactly when the two inputs are different, 0 when they are the same",
+          "marks": 1
+        },
+        {
+          "text": "Identifies the gate as XOR",
+          "marks": 1
+        },
+        {
+          "text": "Writes the expression: `X = A XOR C`",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "**X = A XOR C**\n\nThe method the question wants:\n1. Find every row where X = 1.\n2. In each of those rows, look at the inputs \u2014 here they are never equal (one 0 and one 1).\n3. In every row where X = 0 the inputs are equal.\n4. \"Different inputs \u2192 1\" is exactly XOR.\n\nA useful cross-check: XOR is the sum-of-products `(A AND NOT C) OR (NOT A AND C)` \u2014 unsimplified, but correct. Do not confuse XOR with OR: they only differ in the row where both inputs are 1 (OR gives 1, XOR gives 0)."
+    },
+    {
+      "id": "2b",
+      "type": "text",
+      "marks": 3,
+      "topic": "hardware",
+      "section": "3.2",
+      "text": "**Question 2 (b)** \u2014 Draw a logic circuit that implements your expression.",
+      "answer": [
+        {
+          "text": "Single XOR gate used",
+          "marks": 1
+        },
+        {
+          "text": "The two inputs of the XOR gate connected to the correct variables (A and C)",
+          "marks": 1
+        },
+        {
+          "text": "Output labelled X",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "A straight **XOR gate** is the whole circuit: inputs \u2192 XOR \u2192 X.\n\nTick the marks against what you drew: (1) the gate shape has the extra curved input line (the exclusive-OR symbol), (2) both wires go to the right variables \u2014 check you did not use B, (3) the output is labelled X.\n\nIf you drew `(A AND NOT C) OR (NOT A AND C)` with four gates, it is still *logically* correct, so tick the structure mark \u2014 but Cambridge accepts the single-gate version as the expected answer."
+    },
+    {
+      "id": "3a",
+      "type": "text",
+      "marks": 3,
+      "topic": "hardware",
+      "section": "3.2",
+      "text": "**Question 3 (a)** \u2014 Draw the logic circuit.\n\n> **Figure cropped:** the expression given on the paper is not in the screenshot. Part (a) is therefore answered from the truth table in (b), which your marked script shows is correct.",
+      "answer": [
+        {
+          "text": "Correct overall gate topology for the expression (input stage \u2192 intermediate stage \u2192 final gate)",
+          "marks": 1
+        },
+        {
+          "text": "Correct gate types at each stage, including the NOT gate(s)",
+          "marks": 1
+        },
+        {
+          "text": "Every input variable and the output X labelled, with no unconnected inputs",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "Your marked script shows this drew the exact required **unsimplified** structure, so treat your drawing as the model answer.\n\nWhat the mark scheme rewards:\n- one gate per operation in the expression \u2014 *do not simplify* unless asked;\n- `NOT` gates drawn explicitly on any complemented input;\n- grading of inputs that feed two gates (the line must fork, not stop);\n- every input variable labelled and the output labelled X.\n\nThe examiner's phrase for losing this mark is \"circuit does not implement the unsimplified expression\" \u2014 usually a missing NOT or two gates collapsed into one."
+    },
+    {
+      "id": "3b",
       "type": "trace",
       "marks": 5,
       "topic": "hardware",
       "section": "3.2",
-      "text": "Complete the truth table for **X = (A XOR B) AND C**.",
+      "text": "**Question 3 (b)** \u2014 Construct the complete truth table, including intermediate columns.",
       "columns": [
         "A",
         "B",
         "C",
-        "A XOR B",
+        "Working space",
         "X"
       ],
       "given": [
@@ -309,56 +233,48 @@
           "0",
           "0",
           "0",
-          "",
           ""
         ],
         [
           "0",
           "0",
           "1",
-          "",
           ""
         ],
         [
           "0",
           "1",
           "0",
-          "",
           ""
         ],
         [
           "0",
           "1",
           "1",
-          "",
           ""
         ],
         [
           "1",
           "0",
           "0",
-          "",
           ""
         ],
         [
           "1",
           "0",
           "1",
-          "",
           ""
         ],
         [
           "1",
           "1",
           "0",
-          "",
           ""
         ],
         [
           "1",
           "1",
           "1",
-          "",
           ""
         ]
       ],
@@ -367,244 +283,304 @@
           "0",
           "0",
           "0",
-          "0",
-          "0"
+          "",
+          "1"
         ],
         [
           "0",
           "0",
           "1",
-          "0",
-          "0"
+          "",
+          "1"
         ],
         [
           "0",
           "1",
           "0",
-          "1",
-          "0"
+          "",
+          "1"
         ],
         [
           "0",
           "1",
           "1",
+          "",
+          "0"
+        ],
+        [
           "1",
+          "0",
+          "0",
+          "",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "1",
+          "",
           "1"
         ],
         [
           "1",
-          "0",
-          "0",
-          "1",
-          "0"
-        ],
-        [
           "1",
           "0",
-          "1",
-          "1",
+          "",
           "1"
         ],
         [
           "1",
           "1",
-          "0",
-          "0",
-          "0"
-        ],
-        [
           "1",
-          "1",
-          "1",
-          "0",
+          "",
           "0"
         ]
       ],
-      "explanation": "X is 1 only when A and B differ AND C is 1."
+      "explanation": "The X column your script produced is correct (5/5). The 8 rows of A, B, C are pre-filled here \u2014 fill in the intermediate working and X.\n\nHow to not lose marks on truth tables:\n- list **every** combination of inputs: 2^n rows \u2014 8 for three inputs;\n- always work left to right through the intermediate columns, one gate at a time;\n- keep the rows in binary order (000, 001, 010, 011, 100, 101, 110, 111) so the examiner can follow it;\n- the final column must be labelled with the output letter, here X."
     },
     {
-      "id": "q12",
+      "id": "4a",
+      "type": "text",
+      "marks": 3,
+      "topic": "hardware",
+      "section": "3.2",
+      "text": "**Question 4 (a)** \u2014 Write the Boolean expression for alarm X.\n\n> **Figure cropped:** this part refers to a truth table / circuit printed above it on the paper that is not in the screenshot. The answer key below is the version confirmed by your marked script.",
+      "answer": [
+        {
+          "text": "Identifies the two parallel branches of the circuit joined by an OR",
+          "marks": 1
+        },
+        {
+          "text": "First branch: `A AND B`",
+          "marks": 1
+        },
+        {
+          "text": "Second branch: `C AND NOT D`, and the whole expression bracketed correctly: `X = (A AND B) OR (C AND NOT D)`",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "**X = (A AND B) OR (C AND NOT D)**\n\nThis is the expression your marked script gave and it is confirmed by part (c): with A = 1, B = 0, C = 1, D = 0 the teacher's feedback works from `A AND B = 0` and `C AND NOT D = 1` to X = 1.\n\nMarks are lost for unbracketed answers such as `A AND B OR C AND NOT D` when the structure is ambiguous, and for writing `D'` without saying what it means if the paper asked for named gates."
+    },
+    {
+      "id": "4b",
+      "type": "text",
+      "marks": 3,
+      "topic": "hardware",
+      "section": "3.2",
+      "text": "**Question 4 (b)** \u2014 Draw the logic circuit.",
+      "answer": [
+        {
+          "text": "Two AND gates, an OR gate and a NOT gate, connected in the right order",
+          "marks": 1
+        },
+        {
+          "text": "NOT applied to D before it reaches its AND gate, and A/B wired to their AND gate",
+          "marks": 1
+        },
+        {
+          "text": "Both AND outputs feed the OR, whose output is labelled X",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "Structure to draw (left to right):\n\n1. `A` and `B` \u2192 **AND** gate.\n2. `D` \u2192 **NOT** gate \u2192 with `C` \u2192 **AND** gate.\n3. Both AND outputs \u2192 **OR** gate \u2192 `X`.\n\nYour marked script scored 1/3: the top AND gate was there but the branch with the NOT gate and the final OR were missing or incomplete. Tick only the marks you genuinely drew this time \u2014 the feedback line \"full marks require the exact unsimplified structure\" is the key hint: no simplifying, no sharing gates between inputs."
+    },
+    {
+      "id": "4c",
+      "type": "text",
+      "marks": 2,
+      "topic": "hardware",
+      "section": "3.2",
+      "text": "**Question 4 (c)** \u2014 Determine whether the alarm activates when A = 1, B = 0, C = 1, D = 0. Explain your answer.",
+      "answer": [
+        {
+          "text": "Substitutes into both branches: `A AND B = 1 AND 0 = 0`, `NOT D = NOT 0 = 1`, so `C AND NOT D = 1 AND 1 = 1`",
+          "marks": 1
+        },
+        {
+          "text": "Concludes `X = 0 OR 1 = 1`, therefore **the alarm activates**",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "Show the working for each branch, then combine:\n\n- `A AND B` = 1 AND 0 = **0**\n- `NOT D` = NOT 0 = **1**\n- `C AND NOT D` = 1 AND 1 = **1**\n- `X = 0 OR 1` = **1** \u2192 the alarm activates.\n\nYou left this blank on the paper. The mark is not for the final answer alone: half of it is the intermediate substitution. Never write just \"yes\" \u2014 write the two branch values and then the conclusion."
+    },
+    {
+      "id": "5a",
+      "type": "text",
+      "marks": 3,
+      "topic": "hardware",
+      "section": "3.2",
+      "text": "**Question 5 (a)** \u2014 Write the Boolean expression for X.\n\n> **Figure cropped:** this part refers to a truth table / circuit printed above it on the paper that is not in the screenshot. The answer key below is the version confirmed by your marked script.",
+      "answer": [
+        {
+          "text": "Identifies that `B` must be 1 for X to be 1 (B is ANDed with the rest)",
+          "marks": 1
+        },
+        {
+          "text": "Identifies the bracket `A OR C` \u2014 X is 1 when B is 1 and either A or C (or both) is 1",
+          "marks": 1
+        },
+        {
+          "text": "Writes it fully bracketed: `X = B AND (A OR C)`",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "**X = B AND (A OR C)**\n\nYou wrote exactly this on the paper and were awarded 1/3 \u2014 almost certainly for the missing brackets, because `B AND A OR C` is ambiguous and reads as `(B AND A) OR C`, which is a different function.\n\nBrackets are not decoration in Boolean algebra: AND binds tighter than OR, so any OR that must happen *first* needs brackets around it."
+    },
+    {
+      "id": "5b",
+      "type": "trace",
+      "marks": 4,
+      "topic": "hardware",
+      "section": "3.2",
+      "text": "**Question 5 (b)** \u2014 Construct the complete truth table for X.",
+      "columns": [
+        "A",
+        "B",
+        "C",
+        "Working space",
+        "X"
+      ],
+      "given": [
+        [
+          "0",
+          "0",
+          "0",
+          ""
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          ""
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          ""
+        ],
+        [
+          "0",
+          "1",
+          "1",
+          ""
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          ""
+        ],
+        [
+          "1",
+          "0",
+          "1",
+          ""
+        ],
+        [
+          "1",
+          "1",
+          "0",
+          ""
+        ],
+        [
+          "1",
+          "1",
+          "1",
+          ""
+        ]
+      ],
+      "answer": [
+        [
+          "0",
+          "0",
+          "0",
+          "",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "",
+          "1"
+        ],
+        [
+          "0",
+          "1",
+          "1",
+          "",
+          "1"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "1",
+          "",
+          "0"
+        ],
+        [
+          "1",
+          "1",
+          "0",
+          "",
+          "1"
+        ],
+        [
+          "1",
+          "1",
+          "1",
+          "",
+          "1"
+        ]
+      ],
+      "explanation": "For **X = B AND (A OR C)**, work out the bracket first, then AND it with B:\n\n| A | B | C | A OR C | X |\n|---|---|---|---|---|\n| 0 | 0 | 0 | 0 | 0 |\n| 0 | 0 | 1 | 1 | 0 |\n| 0 | 1 | 0 | 0 | 0 |\n| 0 | 1 | 1 | 1 | 1 |\n| 1 | 0 | 0 | 1 | 0 |\n| 1 | 0 | 1 | 1 | 0 |\n| 1 | 1 | 0 | 1 | 1 |\n| 1 | 1 | 1 | 1 | 1 |\n\nRow-by-row traps to watch:\n\n- **010** \u2192 `A OR C` = 0, so `B AND 0` = **0**. It is tempting to answer 1 because B is 1, but B is not ORed with anything \u2014 it only gates the bracket.\n- **101** \u2192 the bracket is 1 but **B is 0**, so X = **0**.\n\nThe X column is therefore `0 0 0 1 0 0 1 1` for rows 000, 001, 010, 011, 100, 101, 110, 111. Mark yourself against that column."
+    },
+    {
+      "id": "5c",
       "type": "text",
       "marks": 4,
       "topic": "hardware",
       "section": "3.2",
-      "text": "Draw / describe a logic circuit that implements **X = (A AND B) OR (NOT C)** using AND, OR and NOT gates, and state the output when A = 1, B = 0, C = 0.",
+      "text": "**Question 5 (c)** \u2014 Draw the logic circuit using appropriate gates.",
       "answer": [
         {
-          "text": "AND gate with inputs A and B",
+          "text": "OR gate fed by A and C (the bracketed `A OR C`)",
           "marks": 1
         },
         {
-          "text": "NOT gate with input C",
+          "text": "AND gate taking the OR output and B",
           "marks": 1
         },
         {
-          "text": "OR gate taking the outputs of both as inputs, producing X",
+          "text": "Correct unsimplified structure \u2014 no gates merged, no simplification",
           "marks": 1
         },
         {
-          "text": "When A = 1, B = 0, C = 0: (1 AND 0) OR (NOT 0) = 0 OR 1 = 1",
+          "text": "All inputs and the output X labelled, every gate input connected",
           "marks": 1
         }
       ],
       "selfMark": true,
-      "explanation": "Two sub-expressions feeding one final OR gate. Always evaluate each bracket separately before combining."
-    },
-    {
-      "id": "q13",
-      "type": "text",
-      "marks": 3,
-      "topic": "data-types",
-      "section": "10.1",
-      "text": "A record type has been defined as:\n\n```\nTYPE Book\n    DECLARE Title : STRING\n    DECLARE Pages : INTEGER\nENDTYPE\nDECLARE myBook : Book\n```\n\nWrite pseudocode statements to **assign** the title \"CS Basics\" and the value 240 to the fields of `myBook`.",
-      "answer": [
-        {
-          "text": "myBook.Title ← \"CS Basics\"",
-          "marks": 2
-        },
-        {
-          "text": "myBook.Pages ← 240",
-          "marks": 1
-        }
-      ],
-      "selfMark": true,
-      "explanation": "Fields are accessed with dot notation: recordName.fieldName."
-    },
-    {
-      "id": "q14",
-      "type": "mcq",
-      "marks": 1,
-      "topic": "programming",
-      "section": "11.3",
-      "text": "What is the main advantage of using **subroutines** in a program?",
-      "options": [
-        {
-          "id": "A",
-          "text": "The program runs without needing variables"
-        },
-        {
-          "id": "B",
-          "text": "Code can be reused and the program is easier to test and maintain"
-        },
-        {
-          "id": "C",
-          "text": "The program will always be shorter than 100 lines"
-        },
-        {
-          "id": "D",
-          "text": "Subroutines remove the need for comments"
-        }
-      ],
-      "answer": "B",
-      "explanation": "Subroutines avoid duplication (reusability), make code easier to read, debug, test and maintain — one change fixes every call."
-    },
-    {
-      "id": "q15",
-      "type": "text",
-      "marks": 4,
-      "topic": "programming",
-      "section": "11.3",
-      "text": "Write a pseudocode **procedure** `PrintDetails` that takes a `Student` record **by value** and outputs the student's name and ID on one line, then explain why passing the record by value is appropriate here.",
-      "answer": [
-        {
-          "text": "PROCEDURE PrintDetails(StudentRecord : Student) with correct parameter",
-          "marks": 1
-        },
-        {
-          "text": "OUTPUT StudentRecord.Name, StudentRecord.StudentID",
-          "marks": 1
-        },
-        {
-          "text": "Correct ENDPROCEDURE and use of dot notation",
-          "marks": 1
-        },
-        {
-          "text": "By value is appropriate because the procedure only reads/displays the data and must not change the original record (protects the original data).",
-          "marks": 1
-        }
-      ],
-      "selfMark": true,
-      "explanation": "Passing a record BYVAL also prevents accidental corruption of the stored data."
-    },
-    {
-      "id": "q16",
-      "type": "text",
-      "marks": 5,
-      "topic": "data-types",
-      "section": "10.2",
-      "text": "An array `Scores` of 8 integers already contains data.\n\nWrite pseudocode to find and output the **highest** score and the **position (index)** at which it occurs.",
-      "answer": [
-        {
-          "text": "Initialises Highest ← Scores[1] and Position ← 1",
-          "marks": 1
-        },
-        {
-          "text": "FOR loop from 2 TO 8",
-          "marks": 1
-        },
-        {
-          "text": "IF Scores[Index] > Highest THEN updates Highest",
-          "marks": 1
-        },
-        {
-          "text": "Also updates Position ← Index inside the IF",
-          "marks": 1
-        },
-        {
-          "text": "Outputs both Highest and Position after the loop",
-          "marks": 1
-        }
-      ],
-      "selfMark": true,
-      "explanation": "DECLARE Highest : INTEGER\nDECLARE Position : INTEGER\nHighest ← Scores[1]\nPosition ← 1\nFOR Index ← 2 TO 8\n    IF Scores[Index] > Highest THEN\n        Highest ← Scores[Index]\n        Position ← Index\n    ENDIF\nNEXT Index\nOUTPUT \"Highest: \", Highest, \" at position \", Position"
-    },
-    {
-      "id": "q17",
-      "type": "mcq",
-      "marks": 2,
-      "topic": "data-types",
-      "section": "10.1",
-      "text": "Which is a valid reason for using a **user-defined data type**?",
-      "options": [
-        {
-          "id": "A",
-          "text": "It makes the program run faster"
-        },
-        {
-          "id": "B",
-          "text": "It makes the code self-documenting and restricts a variable to sensible values"
-        },
-        {
-          "id": "C",
-          "text": "It removes the need for validation"
-        },
-        {
-          "id": "D",
-          "text": "It reduces the size of the executable file"
-        }
-      ],
-      "answer": "B",
-      "explanation": "User-defined types improve readability and make the programmer's intent clear; they can also help validation but do not replace it."
-    },
-    {
-      "id": "q18",
-      "type": "text",
-      "marks": 2,
-      "topic": "programming",
-      "section": "11.3",
-      "text": "The following function contains an error:\n\n```\nFUNCTION GetTotal(A : INTEGER, B : INTEGER)\n    DECLARE Sum : INTEGER\n    Sum ← A + B\nENDFUNCTION\n```\n\nIdentify the error and write the corrected line.",
-      "answer": [
-        {
-          "text": "The function does not return a value.",
-          "marks": 1
-        },
-        {
-          "text": "Add RETURN Sum before ENDFUNCTION.",
-          "marks": 1
-        }
-      ],
-      "selfMark": true,
-      "explanation": "A FUNCTION must return a value; otherwise it should be written as a PROCEDURE."
+      "explanation": "Left to right: `A` and `C` \u2192 **OR** gate; that output and `B` \u2192 **AND** gate; output \u2192 `X`.\n\nYour paper attempt scored 1/4. The giveaway line was \"0/3 correct gate sub-structure(s) found\": the shape drawn had the OR in the wrong position relative to B, giving `(A OR B) \u2026` rather than `B AND (A OR C)`.\n\nBuild it from the brackets, never from left-to-right reading of the characters: `B AND (A OR C)` means the OR gate is built **first**, and its output goes into the AND with B."
     }
   ]
 }

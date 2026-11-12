@@ -58,6 +58,7 @@
         const givenRow = (q.given && q.given[r]) || [];
         row.forEach((cell, c) => {
           if (givenRow[c] != null && String(givenRow[c]).trim() !== '') return; // pre-filled
+          if (String(cell == null ? '' : cell).trim() === '') return; // free-form column ("working space") — nothing to mark
           cells++;
           const mine = String(((ans || [])[r] || [])[c] == null ? '' : ans[r][c]).trim().toUpperCase().replace(/\s+/g, '');
           const want = String(cell).trim().toUpperCase().replace(/\s+/g, '');
@@ -632,6 +633,7 @@
             const mine = (ans && ans[r] && ans[r][ci] != null) ? ans[r][ci] : '';
             if (given != null) return `<td class="mono">${CS.esc(given)}</td>`;
             const want = String(row[ci] || '');
+            if (!want.trim()) return `<td class="mono">${CS.esc(mine || '')}</td>`; // free-form column
             const ok = String(mine).trim().toUpperCase() === want.trim().toUpperCase();
             return `<td class="${ok ? 'ok' : 'bad'}"><span class="mono">${CS.esc(mine || '—')}</span>
               ${ok ? '' : `<div class="mono" style="font-size:.72rem;color:var(--red)">${CS.esc(want)}</div>`}</td>`;

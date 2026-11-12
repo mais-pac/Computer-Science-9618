@@ -33,7 +33,7 @@
       <section class="hero">
         <div class="eyebrow">Cambridge 9618 · AS Level · Personal platform</div>
         <h1>Every chapter test, on demand.</h1>
-        <p class="lede">Your teacher's class tests replicated in full, AI-generated mocks in the same style,
+        <p class="lede">Practice papers on every class-test topic, AI-generated mocks in the same style,
         and concise notes for both papers. No login, no closing time, no leaderboard — just you, the paper and the mark scheme.</p>
         <div class="row" style="margin-top:16px">
           <a class="btn btn-primary btn-lg" href="exams.html">${CS.icon('clipboard')} Take an exam</a>
@@ -63,7 +63,7 @@
       </section>` : ''}
 
       <section class="section">
-        <div class="section-head"><h2>${results.length ? 'Pick up where you left off' : 'Your class exams'}</h2>
+        <div class="section-head"><h2>${results.length ? 'Pick up where you left off' : 'Exam practice'}</h2>
           <span class="sub"><a href="exams.html">See all ${exams.length} →</a></span></div>
         <div class="grid grid-2">
           ${exams.slice(0, 4).map((e) => {
@@ -96,7 +96,7 @@
         <div class="section-head"><h2>What is inside</h2></div>
         <div class="grid grid-3">
           <div class="card"><h3>${CS.icon('clipboard')} Exams</h3>
-            <p class="small" style="color:var(--fg-dim)">Every class test replicated with its real marks, timing and mark scheme — plus AI mocks for the chapters you have not been tested on.</p></div>
+            <p class="small" style="color:var(--fg-dim)">Teacher-topic reconstructions with a full mark scheme (not the original papers) — plus AI mocks for the chapters you have not been tested on.</p></div>
           <div class="card"><h3>${CS.icon('book')} Notes</h3>
             <p class="small" style="color:var(--fg-dim)">Condensed Paper 1 theory and Paper 2 programming notes, with the exam traps and rapid-recall tables that actually earn marks.</p></div>
           <div class="card"><h3>${CS.icon('code')} Pseudocode</h3>
@@ -279,7 +279,7 @@
         a.onclick = (ev) => {
           ev.preventDefault();
           const el = document.getElementById(a.dataset.nav);
-          if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 70, behavior: 'smooth' });
+          if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - (CS.navOffset() + 8), behavior: 'smooth' });
         };
       });
 
@@ -289,7 +289,7 @@
         const el = document.getElementById(hash) ||
           document.getElementById(hash.replace(/^(\d+)-/, '')) ||
           [...document.querySelectorAll('#noteBody h2')].find((h) => h.id.includes(hash));
-        if (el) setTimeout(() => window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 70 }), 60);
+        if (el) setTimeout(() => window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - (CS.navOffset() + 8) }), 60);
       }
     }
 
