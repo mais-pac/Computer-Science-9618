@@ -4,8 +4,24 @@ A personal, offline-first exam platform for **Cambridge International AS Level C
 It mirrors the class exam portal ([shalgalt.online](https://www.shalgalt.online)) — same dark card layout, same
 "marks · duration / result available / ready" language — but rebuilt for one student:
 
-- **Every class test replicated**, with the real marks, timing and a mark scheme, so you can re-take it any time, as many times as you like.
+- **Practise every class-test topic**, with a matching mark scheme, so you can re-take a paper any time, as many times as you like.
 - **AI-generated mocks** in the same style for the chapters your teacher has not tested yet.
+
+> ### ⚠️ Read this before you trust a "teacher test"
+>
+> The `teacher` exams in this repo are **reconstructions**, not the papers your teacher handed out.
+> Their wording, marks and mark schemes were written from the class portal's *exam list* (titles,
+> durations, marks, chapters) and the 9618 syllabus — never from the real question papers.
+>
+> Only the **Chapter 4 Assessment** is based on the real thing, and even there what exists is: the
+> **exact question text and part marks** copied from a marked result screen, plus the model answers
+> derived from that. Two figures were **cropped out of those screenshots** and are marked as such in
+> the paper itself — Q2(b)/Q3 rely on a truth table and circuit that were not captured, and Q3's
+> original expression is unknown (only its truth-table output was visible).
+>
+> Treat every "teacher" paper as high-quality practice built on the right syllabus points — **not**
+> as a copy of what you were actually given. Mark yourself honestly and correct anything you have
+> the real wording for.
 - **Concise notes** for Paper 1 (theory) and Paper 2 (pseudocode/programming), with the exam traps and rapid-recall tables.
 - **Pseudocode training**: Cambridge syntax reference + 10 graded drills with model answers.
 - **Progress tracking**: marks, percentages, per-topic mastery, weakest-topic ranking, attempt history.
@@ -59,13 +75,13 @@ Keyboard while sitting an exam: `←` `→` move, `A`–`D` pick an option, `F` 
 
 ## Content included
 
-**Teacher tests (replicated)** — 5 exams
+**Teacher-topic papers (reconstructions — see the warning above)** — 5 exams
 
 | Exam | Paper | Marks | Time |
 |---|---|---|---|
 | Chapter 3 – Hardware | 1 | 40 | 50 min |
 | AS Computer Science – Chapters 1 & 2 Test | 1 | 40 | 40 min |
-| Chapter 4 Assessment: Record Data Types, Subroutines and Logic Circuits | 2 | 50 | 45 min |
+| Chapter 4 Assessment: Record Data Types, Subroutines and Logic Circuits | 2 | 50 | 45 min |  ← real question text, 2 figures missing
 | Assembly Language – Question Paper | 1 | 46 | 40 min |
 | Processor Fundamentals + Parameter Passing | 1 | 45 | 45 min |
 
@@ -78,9 +94,11 @@ Keyboard while sitting an exam: `←` `→` move, `A`–`D` pick an option, `F` 
 - `trace` — trace table / truth table, partially marked, cell by cell
 - `text` — extended answer, **self-marked** against the mark scheme (tick what you actually wrote)
 
-> The teacher tests are reconstructed from what was asked in class. Where the original wording or a
-> diagram is not available, the question is a faithful stand-in on the same syllabus point, and every
-> question carries a full mark scheme + explanation. Correct any question you have the exact text for —
+> The teacher papers are reconstructions built from the class portal's exam list and the 9618 syllabus.
+> Where the original wording or a diagram is not available, the question is a faithful stand-in on the
+> same syllabus point, and every question carries a full mark scheme + explanation. The Chapter 4
+> Assessment is the exception: its question text and part marks come from a real marked result screen,
+> with cropped figures flagged inline. Correct any question you have the exact text for —
 > see **HOW-TO-ADD-EXAMS.md**, it takes one minute per question.
 
 ---
@@ -169,8 +187,9 @@ docs: README.md · HOW-TO-ADD-EXAMS.md · EXAM-FORMAT.md · SYLLABUS-CHECKLIST.m
 
 - The class portal is login-protected, so its real questions were never downloadable. The teacher tests here
   are **reconstructions** built from the exam list in the portal (titles, marks, durations, chapters) and the
-  9618 syllabus — not leaked originals. Overwrite any question with the exact wording; the platform is
-  designed for that.
+  9618 syllabus — not leaked originals. The Chapter 4 Assessment is the one paper whose wording comes from a
+  marked result screen (with cropped figures flagged). Overwrite any question with the exact wording; the
+  platform is designed for that.
 - Everything is client-side, so results do not sync between devices by themselves (use backup/restore).
 - Grade bands are indicative; Cambridge boundaries move every series.
 - Not affiliated with Cambridge Assessment International Education. Cambridge, 9618 and the syllabus

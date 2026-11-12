@@ -332,6 +332,45 @@ window.CS = window.CS || {};
     const eb = document.getElementById('exportBtn');
     if (eb) eb.onclick = () => CS.openBackup();
     CS.applyTheme();
+    CS.syncNavHeight();
+  };
+
+  /* ---------- pinned nav: keep body padding in sync with the bar ----------
+   * The nav is position:fixed (see app.css) so it stays put regardless of
+   * scroll, scroll containers or ancestor transforms. Its height varies with
+   * font metrics and viewport width, so we measure it and publish it as
+   * --nav-h on :root for body padding plus any sticky siblings that need to
+   * sit below the bar (question navigator, notes sidebar, anchor offsets).
+   */
+  /* current pinned-nav height in px (fallback 61) — use for scroll offsets */
+  CS.navOffset = function () {
+    const cs = getComputedStyle(document.documentElement);
+    const v = parseInt(cs.getPropertyValue('--nav-h'), 10);
+    return isNaN(v) ? 61 : v;
+  };
+
+  CS.syncNavHeight = function () {
+    const host = document.getElementById('nav');
+    if (!host) return;
+    const apply = () => {
+      const h = Math.round(host.getBoundingClientRect().height || 0);
+      if (h > 0) {
+        document.documentElement.style.setProperty('--nav-h', h + 'px');
+        document.body.classList.add('nav-measured');
+      }
+    };
+    apply();
+    /* re-measure after webfonts settle and whenever the bar reflows */
+    if (typeof requestAnimationFrame === 'function') requestAnimationFrame(apply);
+    if (typeof ResizeObserver === 'function') {
+      try {
+        const ro = new ResizeObserver(apply);
+        ro.observe(host);
+        CS._navRO = ro;
+      } catch (e) { /* ignore */ }
+    } else {
+      window.addEventListener('resize', apply);
+    }
   };
 
   /* ---------- tiny icon set (inline SVG) ---------- */
