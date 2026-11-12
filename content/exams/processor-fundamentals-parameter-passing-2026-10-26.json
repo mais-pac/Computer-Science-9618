@@ -1,0 +1,495 @@
+{
+  "id": "processor-fundamentals-parameter-passing-2026-10-26",
+  "title": "Processor Fundamentals + Parameter Passing",
+  "origin": "teacher",
+  "paper": "paper-1",
+  "chapter": 4,
+  "topics": [
+    "processor",
+    "programming"
+  ],
+  "durationMin": 45,
+  "totalMarks": 45,
+  "examDate": "2026-10-26",
+  "instructions": "Answer all questions. Section A covers processor fundamentals, Section B covers parameter passing. Calculators are not permitted.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "processor",
+      "section": "4.1",
+      "text": "What is the function of the **program counter (PC)**?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It stores the address of the next instruction to be fetched"
+        },
+        {
+          "id": "B",
+          "text": "It stores the instruction currently being executed"
+        },
+        {
+          "id": "C",
+          "text": "It stores the result of arithmetic operations"
+        },
+        {
+          "id": "D",
+          "text": "It counts the number of clock cycles"
+        }
+      ],
+      "answer": "A",
+      "explanation": "PC holds the address of the next instruction; it is incremented after each fetch (unless a jump/branch changes it)."
+    },
+    {
+      "id": "q2",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "processor",
+      "section": "4.1",
+      "text": "Which bus carries control signals such as read/write and clock pulses?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Address bus"
+        },
+        {
+          "id": "B",
+          "text": "Data bus"
+        },
+        {
+          "id": "C",
+          "text": "Control bus"
+        },
+        {
+          "id": "D",
+          "text": "USB"
+        }
+      ],
+      "answer": "C",
+      "explanation": "The control bus is bidirectional and carries signals such as memory read/write, interrupt requests and clock."
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 5,
+      "topic": "processor",
+      "section": "4.1",
+      "text": "Describe the role of the **control unit** and the **ALU** in the processor.",
+      "answer": [
+        {
+          "text": "Control unit: fetches and decodes instructions and generates the control signals that coordinate the other components.",
+          "marks": 2
+        },
+        {
+          "text": "ALU: performs arithmetic operations (add, subtract) and logical operations (AND, OR, NOT, comparisons/shifts) on data in registers.",
+          "marks": 2
+        }
+      ],
+      "selfMark": true,
+      "explanation": "CU = 'director' of the CPU; ALU = 'calculator'. Two marks each require two clear functions."
+    },
+    {
+      "id": "q4",
+      "type": "numeric",
+      "marks": 1,
+      "topic": "processor",
+      "section": "4.1",
+      "text": "A processor has an address bus that is **24 bits** wide. How many memory locations can it address? Give your answer in **MiB** (use 1 Mi = 2²⁰).",
+      "answer": 16,
+      "unit": "MiB",
+      "explanation": "2²⁴ = 16 777 216 locations; 2²⁴ / 2²⁰ = 2⁴ = 16 Mi."
+    },
+    {
+      "id": "q5",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "processor",
+      "section": "4.1",
+      "text": "The **clock speed** of a CPU is measured in which unit?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hertz (GHz)"
+        },
+        {
+          "id": "B",
+          "text": "Bytes"
+        },
+        {
+          "id": "C",
+          "text": "Bits per second"
+        },
+        {
+          "id": "D",
+          "text": "Watts"
+        }
+      ],
+      "answer": "A",
+      "explanation": "Clock speed is the number of cycles per second — typically GHz. Higher clock speed usually means more instructions per second."
+    },
+    {
+      "id": "q6",
+      "type": "text",
+      "marks": 3,
+      "topic": "processor",
+      "section": "4.1",
+      "text": "Explain how **cache memory** improves processor performance.",
+      "answer": [
+        {
+          "text": "Cache is fast memory close to the CPU that stores frequently used instructions and data.",
+          "marks": 1
+        },
+        {
+          "text": "It reduces the need to access slower main memory (RAM), reducing average access time.",
+          "marks": 1
+        },
+        {
+          "text": "Because the FDE cycle can get data from cache much faster than from RAM, the CPU waits less and throughput increases.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "Levels: L1 (fastest, smallest, on-chip), L2, L3 (larger, slower)."
+    },
+    {
+      "id": "q7",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "processor",
+      "section": "4.1",
+      "text": "What is the purpose of **pipelining** in a processor?",
+      "options": [
+        {
+          "id": "A",
+          "text": "To allow multiple instructions to be at different stages of the FDE cycle at the same time"
+        },
+        {
+          "id": "B",
+          "text": "To increase the size of the RAM"
+        },
+        {
+          "id": "C",
+          "text": "To compress the program before it is executed"
+        },
+        {
+          "id": "D",
+          "text": "To translate assembly language into machine code"
+        }
+      ],
+      "answer": "A",
+      "explanation": "While one instruction is executed, the next is decoded and the one after is fetched — improving throughput (though branches can cause pipeline stalls)."
+    },
+    {
+      "id": "q8",
+      "type": "text",
+      "marks": 2,
+      "topic": "processor",
+      "section": "4.1",
+      "text": "State **two** factors, other than clock speed, that affect the performance of a processor.",
+      "answer": [
+        {
+          "text": "Number of cores (more cores can process more instructions in parallel).",
+          "marks": 1
+        },
+        {
+          "text": "Size/type of cache and bus width (or word length) — affects how much data can be handled at once.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "Other valid: instruction set design (RISC/CISC), pipelining, amount of RAM installed."
+    },
+    {
+      "id": "q9",
+      "type": "text",
+      "marks": 4,
+      "topic": "processor",
+      "section": "4.1",
+      "text": "Explain, in order, what the **decode** and **execute** stages of the FDE cycle do.",
+      "answer": [
+        {
+          "text": "Decode: the control unit interprets the opcode/operand in the CIR and works out what operation is required.",
+          "marks": 1
+        },
+        {
+          "text": "Execute: the control unit sends signals to the relevant components; the ALU carries out the arithmetic/logic operation or data is moved.",
+          "marks": 1
+        },
+        {
+          "text": "The result is stored in a register (usually the accumulator), and the cycle repeats.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "The FDE order is: PC→MAR→memory→MDR→CIR, decode, then execute."
+    },
+    {
+      "id": "q10",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "processor",
+      "section": "4.1",
+      "text": "Which is the **fastest** type of storage in a computer system?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hard disk drive"
+        },
+        {
+          "id": "B",
+          "text": "RAM"
+        },
+        {
+          "id": "C",
+          "text": "L1 cache"
+        },
+        {
+          "id": "D",
+          "text": "SSD"
+        }
+      ],
+      "answer": "C",
+      "explanation": "Order (fastest → slowest, smallest → largest): registers → L1 → L2 → L3 cache → RAM → SSD/HDD."
+    },
+    {
+      "id": "q11",
+      "type": "text",
+      "marks": 4,
+      "topic": "processor",
+      "section": "4.4",
+      "text": "Explain **how the scheduling of threads** on a multi-core processor speeds up a program such as video editing.",
+      "answer": [
+        {
+          "text": "A program can be split into multiple threads that each perform a separate part of the task.",
+          "marks": 1
+        },
+        {
+          "text": "The threads are distributed across different cores so tasks run in parallel rather than sequentially.",
+          "marks": 1
+        },
+        {
+          "text": "Each core can execute its thread at the same time as the others, so the total time is reduced.",
+          "marks": 1
+        },
+        {
+          "text": "The operating system schedules the threads and balances the load between the cores.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "Parallelism requires the task to be divisible into independent pieces; otherwise speed-up is limited."
+    },
+    {
+      "id": "q12",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "programming",
+      "section": "11.3",
+      "text": "`PROCEDURE Double(BYREF N : INTEGER)` receives `X` where `X = 6`. The procedure executes `N ← N * 2`. What is the value of `X` afterwards?",
+      "options": [
+        {
+          "id": "A",
+          "text": "6"
+        },
+        {
+          "id": "B",
+          "text": "12"
+        },
+        {
+          "id": "C",
+          "text": "3"
+        },
+        {
+          "id": "D",
+          "text": "0"
+        }
+      ],
+      "answer": "B",
+      "explanation": "BYREF passes the address, so the change is made to the original variable X, which becomes 12."
+    },
+    {
+      "id": "q13",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "programming",
+      "section": "11.3",
+      "text": "`PROCEDURE Change(BYVAL N : INTEGER)` receives `X` where `X = 6`, then executes `N ← 99`. What is the value of `X` afterwards?",
+      "options": [
+        {
+          "id": "A",
+          "text": "6"
+        },
+        {
+          "id": "B",
+          "text": "99"
+        },
+        {
+          "id": "C",
+          "text": "105"
+        },
+        {
+          "id": "D",
+          "text": "It is an error"
+        }
+      ],
+      "answer": "A",
+      "explanation": "BYVAL sends a copy, so N becomes 99 but the original X is untouched."
+    },
+    {
+      "id": "q14",
+      "type": "text",
+      "marks": 4,
+      "topic": "programming",
+      "section": "11.3",
+      "text": "Explain, using an example, the difference between **passing by value** and **passing by reference**, including **one advantage of each**.",
+      "answer": [
+        {
+          "text": "By value: the subroutine receives a copy of the value; the original variable is not changed.",
+          "marks": 1
+        },
+        {
+          "text": "Advantage: the original data is protected (no side effects), which makes debugging easier.",
+          "marks": 1
+        },
+        {
+          "text": "By reference: the subroutine receives the address of the variable, so it can modify the original variable.",
+          "marks": 1
+        },
+        {
+          "text": "Advantage: allows more than one value to be 'returned' / avoids copying large data, so it is more memory efficient.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "Classic exam example: a Swap procedure must use BYREF, otherwise the original values are unchanged."
+    },
+    {
+      "id": "q15",
+      "type": "trace",
+      "marks": 4,
+      "topic": "programming",
+      "section": "11.3",
+      "text": "Trace the following code and complete the table.\n\n```\nDECLARE A : INTEGER\nDECLARE B : INTEGER\nA ← 10\nB ← 20\nCALL Update(A, B)\nOUTPUT A, B\n\nPROCEDURE Update(BYREF X : INTEGER, BYVAL Y : INTEGER)\n    X ← X + 5\n    Y ← Y + 5\n    OUTPUT X, Y\nENDPROCEDURE\n```",
+      "columns": [
+        "Output inside procedure",
+        "A after call",
+        "B after call",
+        "Final OUTPUT"
+      ],
+      "given": [
+        [
+          "",
+          "",
+          "",
+          ""
+        ]
+      ],
+      "answer": [
+        [
+          "15 25",
+          "15",
+          "20",
+          "15 20"
+        ]
+      ],
+      "explanation": "X is by reference → A becomes 15. Y is by value → B stays 20 (only the copy is changed). Final output is '15 20'."
+    },
+    {
+      "id": "q16",
+      "type": "text",
+      "marks": 3,
+      "topic": "programming",
+      "section": "11.3",
+      "text": "Write a procedure `UpdateScore` that takes a score **by reference** and a bonus **by value**, adds the bonus to the score (to a maximum of 100), and does not allow the score to become negative.",
+      "answer": [
+        {
+          "text": "PROCEDURE UpdateScore(BYREF Score : INTEGER, Bonus : INTEGER)",
+          "marks": 1
+        },
+        {
+          "text": "Score ← Score + Bonus",
+          "marks": 1
+        },
+        {
+          "text": "Validation: IF Score > 100 THEN Score ← 100 / IF Score < 0 THEN Score ← 0, with ENDPROCEDURE",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "PROCEDURE UpdateScore(BYREF Score : INTEGER, Bonus : INTEGER)\n    Score ← Score + Bonus\n    IF Score > 100 THEN\n        Score ← 100\n    ENDIF\n    IF Score < 0 THEN\n        Score ← 0\n    ENDIF\nENDPROCEDURE"
+    },
+    {
+      "id": "q17",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "programming",
+      "section": "11.3",
+      "text": "Why is passing a large array **by reference** usually preferable?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It copies every element, which is faster"
+        },
+        {
+          "id": "B",
+          "text": "It passes only the address, so it uses less memory and avoids copying time"
+        },
+        {
+          "id": "C",
+          "text": "It prevents the subroutine from reading the array"
+        },
+        {
+          "id": "D",
+          "text": "It automatically sorts the array"
+        }
+      ],
+      "answer": "B",
+      "explanation": "Copying a large array is expensive; passing the address is efficient. The trade-off is that the subroutine can modify the original."
+    },
+    {
+      "id": "q18",
+      "type": "text",
+      "marks": 3,
+      "topic": "programming",
+      "section": "11.3",
+      "text": "The procedure below is intended to swap two array elements but does not work.\n\n```\nPROCEDURE SwapItems(BYVAL P : INTEGER, BYVAL Q : INTEGER)\n    DECLARE Temp : INTEGER\n    Temp ← P\n    P ← Q\n    Q ← Temp\nENDPROCEDURE\n```\n\nState why it fails and write the corrected header.",
+      "answer": [
+        {
+          "text": "Both parameters are passed BYVAL, so only local copies are swapped — the calling variables are unchanged.",
+          "marks": 2
+        },
+        {
+          "text": "Corrected header: PROCEDURE SwapItems(BYREF P : INTEGER, BYREF Q : INTEGER)",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "Swapping is the canonical example of needing BYREF."
+    },
+    {
+      "id": "q19",
+      "type": "text",
+      "marks": 4,
+      "topic": "processor",
+      "section": "4.1",
+      "text": "Describe the purpose of **registers** in the processor and explain why they are needed instead of just using RAM.",
+      "answer": [
+        {
+          "text": "Registers are small storage locations inside the CPU used to hold data, addresses and instructions currently in use.",
+          "marks": 1
+        },
+        {
+          "text": "They are much faster than RAM because they are on the CPU and accessed directly (no bus transfer delay).",
+          "marks": 1
+        },
+        {
+          "text": "Using registers reduces the number of slow memory accesses, speeding up the FDE cycle.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "Registers are the fastest storage in the memory hierarchy."
+    }
+  ]
+}

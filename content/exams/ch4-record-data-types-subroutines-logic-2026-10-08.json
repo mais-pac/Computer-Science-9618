@@ -1,0 +1,610 @@
+{
+  "id": "ch4-record-data-types-subroutines-logic-2026-10-08",
+  "title": "Chapter 4 Assessment: Record Data Types, Subroutines and Logic Circuits",
+  "origin": "teacher",
+  "paper": "paper-2",
+  "chapter": 4,
+  "topics": [
+    "data-types",
+    "programming",
+    "hardware"
+  ],
+  "durationMin": 45,
+  "totalMarks": 50,
+  "examDate": "2026-10-08",
+  "instructions": "Answer all questions. Write pseudocode in Cambridge style. Use RECORD … ENDRECORD for record types. Calculators are not permitted.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "data-types",
+      "section": "10.1",
+      "text": "Which **data type** would be most suitable for storing the price of an item in a shop database?",
+      "options": [
+        {
+          "id": "A",
+          "text": "INTEGER"
+        },
+        {
+          "id": "B",
+          "text": "REAL"
+        },
+        {
+          "id": "C",
+          "text": "STRING"
+        },
+        {
+          "id": "D",
+          "text": "BOOLEAN"
+        }
+      ],
+      "answer": "B",
+      "explanation": "Money has a fractional part (e.g. 4.99), so a REAL is needed. A STRING keeps the digits but cannot be used in calculations."
+    },
+    {
+      "id": "q2",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "data-types",
+      "section": "10.1",
+      "text": "What is a **record** data type?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A collection of items of the same data type stored under one identifier"
+        },
+        {
+          "id": "B",
+          "text": "A collection of related data items that may have different data types, stored under one identifier"
+        },
+        {
+          "id": "C",
+          "text": "A single value that can only be TRUE or FALSE"
+        },
+        {
+          "id": "D",
+          "text": "A value stored in a text file"
+        }
+      ],
+      "answer": "B",
+      "explanation": "A record groups fields of mixed types (e.g. StudentID: INTEGER, Name: STRING). Option A describes an array."
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 4,
+      "topic": "data-types",
+      "section": "10.1",
+      "text": "A school stores data about students in a record. Each student has a 4-digit ID, a name, a date of birth and whether they are a boarder.\n\nWrite pseudocode to **define the record type** `Student` and **declare** one variable `newStudent` of this type.",
+      "answer": [
+        {
+          "text": "TYPE Student",
+          "marks": 1
+        },
+        {
+          "text": "DECLARE StudentID : INTEGER (or STRING) / DECLARE Name : STRING",
+          "marks": 1
+        },
+        {
+          "text": "DECLARE DateOfBirth : DATE / DECLARE IsBoarder : BOOLEAN",
+          "marks": 1
+        },
+        {
+          "text": "ENDTYPE then DECLARE newStudent : Student",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "Cambridge form:\n\nTYPE Student\n    DECLARE StudentID : INTEGER\n    DECLARE Name : STRING\n    DECLARE DateOfBirth : DATE\n    DECLARE IsBoarder : BOOLEAN\nENDTYPE\nDECLARE newStudent : Student"
+    },
+    {
+      "id": "q4",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "data-types",
+      "section": "10.1",
+      "text": "A **user-defined enumerated type** is BEST described as:",
+      "options": [
+        {
+          "id": "A",
+          "text": "A list of all possible values that a variable of that type may take"
+        },
+        {
+          "id": "B",
+          "text": "A record containing several fields"
+        },
+        {
+          "id": "C",
+          "text": "An array of integers"
+        },
+        {
+          "id": "D",
+          "text": "A pointer to another variable"
+        }
+      ],
+      "answer": "A",
+      "explanation": "e.g. TYPE Colour = (Red, Green, Blue) — the variable may only hold one of the listed values, which makes the code easier to read and validate."
+    },
+    {
+      "id": "q5",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "programming",
+      "section": "11.3",
+      "text": "Which statement about **procedures** and **functions** is correct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A function must always return a value; a procedure does not return a value"
+        },
+        {
+          "id": "B",
+          "text": "A procedure must always return a value; a function does not"
+        },
+        {
+          "id": "C",
+          "text": "Both must return exactly one value"
+        },
+        {
+          "id": "D",
+          "text": "Neither can take parameters"
+        }
+      ],
+      "answer": "A",
+      "explanation": "A function is used in an expression and returns a single value via RETURN. A procedure performs a task and is called as a statement."
+    },
+    {
+      "id": "q6",
+      "type": "text",
+      "marks": 3,
+      "topic": "programming",
+      "section": "11.3",
+      "text": "Explain the difference between **passing a parameter by value** and **passing a parameter by reference**, and state which one must be used if a subroutine is to change the value of the calling variable.",
+      "answer": [
+        {
+          "text": "By value: a copy of the data is passed, so changes made inside the subroutine do not affect the original variable.",
+          "marks": 1
+        },
+        {
+          "text": "By reference: the address of the variable is passed, so changes made inside the subroutine modify the original variable.",
+          "marks": 1
+        },
+        {
+          "text": "By reference must be used (Cambridge pseudocode: BYREF).",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "In Cambridge pseudocode this is written as PROCEDURE Update(BYREF Score : INTEGER) for reference and BYVAL for value."
+    },
+    {
+      "id": "q7",
+      "type": "text",
+      "marks": 5,
+      "topic": "programming",
+      "section": "11.3",
+      "text": "Write a pseudocode **function** `CalcAverage` that takes an array `Marks` of 10 integers and returns the average of the ten marks, rounded to **one decimal place**.",
+      "answer": [
+        {
+          "text": "Correct function header: FUNCTION CalcAverage(Marks : ARRAY[1:10] OF INTEGER) RETURNS REAL",
+          "marks": 1
+        },
+        {
+          "text": "Declares a running total and sets it to 0",
+          "marks": 1
+        },
+        {
+          "text": "Loop from 1 to 10, adding each mark to the total",
+          "marks": 1
+        },
+        {
+          "text": "Calculates total / 10 and rounds (e.g. ROUND(Total / 10, 1))",
+          "marks": 1
+        },
+        {
+          "text": "Returns the result with RETURN; ENDFUNCTION",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "FUNCTION CalcAverage(Marks : ARRAY[1:10] OF INTEGER) RETURNS REAL\n    DECLARE Total : INTEGER\n    DECLARE Index : INTEGER\n    Total ← 0\n    FOR Index ← 1 TO 10\n        Total ← Total + Marks[Index]\n    NEXT Index\n    RETURN ROUND(Total / 10, 1)\nENDFUNCTION"
+    },
+    {
+      "id": "q8",
+      "type": "trace",
+      "marks": 4,
+      "topic": "programming",
+      "section": "11.2",
+      "text": "Trace the procedure below when called as `Change(X)` with `X = 5`.\n\n```\nPROCEDURE Change(BYVAL N : INTEGER)\n    N ← N * 2\n    OUTPUT N\nENDPROCEDURE\n```\n\nComplete the trace table and state the final value of `X` in the calling program.",
+      "columns": [
+        "N (inside procedure)",
+        "Output",
+        "X (after call)"
+      ],
+      "given": [
+        [
+          "",
+          "",
+          ""
+        ]
+      ],
+      "answer": [
+        [
+          "10",
+          "10",
+          "5"
+        ]
+      ],
+      "explanation": "BYVAL passes a copy, so N becomes 10 and 10 is output, but the original X stays 5. Swap in BYREF and see the difference: X would also become 10."
+    },
+    {
+      "id": "q9",
+      "type": "text",
+      "marks": 3,
+      "topic": "programming",
+      "section": "11.3",
+      "text": "Trace the pseudocode and state the **output**.\n\n```\nDECLARE A : INTEGER\nDECLARE B : INTEGER\nA ← 3\nB ← 4\nCALL Swap(A, B)\nOUTPUT A, B\n\nPROCEDURE Swap(BYREF P : INTEGER, BYREF Q : INTEGER)\n    DECLARE Temp : INTEGER\n    Temp ← P\n    P ← Q\n    Q ← Temp\nENDPROCEDURE\n```",
+      "answer": [
+        {
+          "text": "Recognises the parameters are passed by reference",
+          "marks": 1
+        },
+        {
+          "text": "P and Q swap: P = 4, Q = 3, and these are the same storage locations as A and B",
+          "marks": 1
+        },
+        {
+          "text": "Output: 4 3",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "Answer = 4 3. If the header had BYVAL the output would be 3 4."
+    },
+    {
+      "id": "q10",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "hardware",
+      "section": "3.2",
+      "text": "A logic circuit's output is 1 only when **exactly one** of its two inputs is 1. Which gate is it?",
+      "options": [
+        {
+          "id": "A",
+          "text": "AND"
+        },
+        {
+          "id": "B",
+          "text": "OR"
+        },
+        {
+          "id": "C",
+          "text": "XOR"
+        },
+        {
+          "id": "D",
+          "text": "NOR"
+        }
+      ],
+      "answer": "C",
+      "explanation": "XOR (exclusive OR) gives 1 when the inputs are different: 0,1 and 1,0."
+    },
+    {
+      "id": "q11",
+      "type": "trace",
+      "marks": 5,
+      "topic": "hardware",
+      "section": "3.2",
+      "text": "Complete the truth table for **X = (A XOR B) AND C**.",
+      "columns": [
+        "A",
+        "B",
+        "C",
+        "A XOR B",
+        "X"
+      ],
+      "given": [
+        [
+          "0",
+          "0",
+          "0",
+          "",
+          ""
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "",
+          ""
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "",
+          ""
+        ],
+        [
+          "0",
+          "1",
+          "1",
+          "",
+          ""
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "",
+          ""
+        ],
+        [
+          "1",
+          "0",
+          "1",
+          "",
+          ""
+        ],
+        [
+          "1",
+          "1",
+          "0",
+          "",
+          ""
+        ],
+        [
+          "1",
+          "1",
+          "1",
+          "",
+          ""
+        ]
+      ],
+      "answer": [
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "1",
+          "1",
+          "1"
+        ],
+        [
+          "1",
+          "0",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "1",
+          "0",
+          "1",
+          "1",
+          "1"
+        ],
+        [
+          "1",
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "1",
+          "1",
+          "0",
+          "0"
+        ]
+      ],
+      "explanation": "X is 1 only when A and B differ AND C is 1."
+    },
+    {
+      "id": "q12",
+      "type": "text",
+      "marks": 4,
+      "topic": "hardware",
+      "section": "3.2",
+      "text": "Draw / describe a logic circuit that implements **X = (A AND B) OR (NOT C)** using AND, OR and NOT gates, and state the output when A = 1, B = 0, C = 0.",
+      "answer": [
+        {
+          "text": "AND gate with inputs A and B",
+          "marks": 1
+        },
+        {
+          "text": "NOT gate with input C",
+          "marks": 1
+        },
+        {
+          "text": "OR gate taking the outputs of both as inputs, producing X",
+          "marks": 1
+        },
+        {
+          "text": "When A = 1, B = 0, C = 0: (1 AND 0) OR (NOT 0) = 0 OR 1 = 1",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "Two sub-expressions feeding one final OR gate. Always evaluate each bracket separately before combining."
+    },
+    {
+      "id": "q13",
+      "type": "text",
+      "marks": 3,
+      "topic": "data-types",
+      "section": "10.1",
+      "text": "A record type has been defined as:\n\n```\nTYPE Book\n    DECLARE Title : STRING\n    DECLARE Pages : INTEGER\nENDTYPE\nDECLARE myBook : Book\n```\n\nWrite pseudocode statements to **assign** the title \"CS Basics\" and the value 240 to the fields of `myBook`.",
+      "answer": [
+        {
+          "text": "myBook.Title ← \"CS Basics\"",
+          "marks": 2
+        },
+        {
+          "text": "myBook.Pages ← 240",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "Fields are accessed with dot notation: recordName.fieldName."
+    },
+    {
+      "id": "q14",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "programming",
+      "section": "11.3",
+      "text": "What is the main advantage of using **subroutines** in a program?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The program runs without needing variables"
+        },
+        {
+          "id": "B",
+          "text": "Code can be reused and the program is easier to test and maintain"
+        },
+        {
+          "id": "C",
+          "text": "The program will always be shorter than 100 lines"
+        },
+        {
+          "id": "D",
+          "text": "Subroutines remove the need for comments"
+        }
+      ],
+      "answer": "B",
+      "explanation": "Subroutines avoid duplication (reusability), make code easier to read, debug, test and maintain — one change fixes every call."
+    },
+    {
+      "id": "q15",
+      "type": "text",
+      "marks": 4,
+      "topic": "programming",
+      "section": "11.3",
+      "text": "Write a pseudocode **procedure** `PrintDetails` that takes a `Student` record **by value** and outputs the student's name and ID on one line, then explain why passing the record by value is appropriate here.",
+      "answer": [
+        {
+          "text": "PROCEDURE PrintDetails(StudentRecord : Student) with correct parameter",
+          "marks": 1
+        },
+        {
+          "text": "OUTPUT StudentRecord.Name, StudentRecord.StudentID",
+          "marks": 1
+        },
+        {
+          "text": "Correct ENDPROCEDURE and use of dot notation",
+          "marks": 1
+        },
+        {
+          "text": "By value is appropriate because the procedure only reads/displays the data and must not change the original record (protects the original data).",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "Passing a record BYVAL also prevents accidental corruption of the stored data."
+    },
+    {
+      "id": "q16",
+      "type": "text",
+      "marks": 5,
+      "topic": "data-types",
+      "section": "10.2",
+      "text": "An array `Scores` of 8 integers already contains data.\n\nWrite pseudocode to find and output the **highest** score and the **position (index)** at which it occurs.",
+      "answer": [
+        {
+          "text": "Initialises Highest ← Scores[1] and Position ← 1",
+          "marks": 1
+        },
+        {
+          "text": "FOR loop from 2 TO 8",
+          "marks": 1
+        },
+        {
+          "text": "IF Scores[Index] > Highest THEN updates Highest",
+          "marks": 1
+        },
+        {
+          "text": "Also updates Position ← Index inside the IF",
+          "marks": 1
+        },
+        {
+          "text": "Outputs both Highest and Position after the loop",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "DECLARE Highest : INTEGER\nDECLARE Position : INTEGER\nHighest ← Scores[1]\nPosition ← 1\nFOR Index ← 2 TO 8\n    IF Scores[Index] > Highest THEN\n        Highest ← Scores[Index]\n        Position ← Index\n    ENDIF\nNEXT Index\nOUTPUT \"Highest: \", Highest, \" at position \", Position"
+    },
+    {
+      "id": "q17",
+      "type": "mcq",
+      "marks": 2,
+      "topic": "data-types",
+      "section": "10.1",
+      "text": "Which is a valid reason for using a **user-defined data type**?",
+      "options": [
+        {
+          "id": "A",
+          "text": "It makes the program run faster"
+        },
+        {
+          "id": "B",
+          "text": "It makes the code self-documenting and restricts a variable to sensible values"
+        },
+        {
+          "id": "C",
+          "text": "It removes the need for validation"
+        },
+        {
+          "id": "D",
+          "text": "It reduces the size of the executable file"
+        }
+      ],
+      "answer": "B",
+      "explanation": "User-defined types improve readability and make the programmer's intent clear; they can also help validation but do not replace it."
+    },
+    {
+      "id": "q18",
+      "type": "text",
+      "marks": 2,
+      "topic": "programming",
+      "section": "11.3",
+      "text": "The following function contains an error:\n\n```\nFUNCTION GetTotal(A : INTEGER, B : INTEGER)\n    DECLARE Sum : INTEGER\n    Sum ← A + B\nENDFUNCTION\n```\n\nIdentify the error and write the corrected line.",
+      "answer": [
+        {
+          "text": "The function does not return a value.",
+          "marks": 1
+        },
+        {
+          "text": "Add RETURN Sum before ENDFUNCTION.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "A FUNCTION must return a value; otherwise it should be written as a PROCEDURE."
+    }
+  ]
+}

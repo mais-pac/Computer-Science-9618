@@ -1,0 +1,76 @@
+{
+  "id": "my-new-exam-2026-00-00",
+  "title": "Chapter X – Your Test Title",
+  "origin": "teacher",
+  "paper": "paper-1",
+  "chapter": 5,
+  "topics": ["system-software"],
+  "durationMin": 40,
+  "totalMarks": 6,
+  "examDate": "2026-11-12",
+  "instructions": "Answer all questions. Calculators are not permitted.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "system-software",
+      "section": "5.1",
+      "text": "Which of the following is **not** a function of an operating system?",
+      "options": [
+        { "id": "A", "text": "Memory management" },
+        { "id": "B", "text": "Compiling source code" },
+        { "id": "C", "text": "File management" },
+        { "id": "D", "text": "Handling interrupts" }
+      ],
+      "answer": "B",
+      "explanation": "Compiling is done by a translator (compiler), which is software the OS may run — but it is not a function of the OS itself."
+    },
+    {
+      "id": "q2",
+      "type": "numeric",
+      "marks": 1,
+      "topic": "system-software",
+      "section": "5.1",
+      "text": "A system has 4 processes and 3 processors. A perfect scheduler could run how many processes at the same moment?",
+      "answer": 3,
+      "explanation": "One process per processor — 3 in parallel, the fourth waits in the ready queue."
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 2,
+      "topic": "system-software",
+      "section": "5.2",
+      "text": "State **two** differences between a compiler and an interpreter.",
+      "answer": [
+        { "text": "A compiler translates the whole program at once and produces an executable; an interpreter translates and executes line by line.", "marks": 1 },
+        { "text": "A compiled program runs faster (no translation at run time); an interpreted program stops at the first error it reaches.", "marks": 1 }
+      ],
+      "selfMark": true,
+      "explanation": "Also valid: the compiler reports all syntax errors after compilation; an interpreter needs the source code and interpreter present at run time."
+    },
+    {
+      "id": "q4",
+      "type": "trace",
+      "marks": 2,
+      "topic": "system-software",
+      "section": "5.1",
+      "text": "Complete the table for **X = A AND (NOT B)**.",
+      "columns": ["A", "B", "X"],
+      "given": [
+        ["0", "0", ""],
+        ["0", "1", ""],
+        ["1", "0", ""],
+        ["1", "1", ""]
+      ],
+      "answer": [
+        ["0", "0", "0"],
+        ["0", "1", "0"],
+        ["1", "0", "1"],
+        ["1", "1", "0"]
+      ],
+      "explanation": "X is 1 only when A is 1 and B is 0."
+    }
+  ]
+}

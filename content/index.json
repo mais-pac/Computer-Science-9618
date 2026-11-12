@@ -1,0 +1,264 @@
+{
+  "app": "CS9618 Topical Quiz",
+  "syllabus": "Cambridge International AS & A Level Computer Science 9618",
+  "level": "AS Level (Year 12)",
+  "papers": [
+    {
+      "id": "paper-1",
+      "code": "Paper 1",
+      "title": "Theory Fundamentals",
+      "desc": "Sections 1–8 — data representation, communication, hardware, processors, system software, security, ethics, databases.",
+      "sections": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "id": "paper-2",
+      "code": "Paper 2",
+      "title": "Fundamental Problem-solving & Programming",
+      "desc": "Sections 9–12 — algorithm design, data types & structures, programming, software development. All answers in Cambridge pseudocode.",
+      "sections": [
+        9,
+        10,
+        11,
+        12
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "n": 1,
+      "paper": "paper-1",
+      "title": "Information Representation",
+      "short": "Info Rep",
+      "topic": "info-rep"
+    },
+    {
+      "n": 2,
+      "paper": "paper-1",
+      "title": "Communication",
+      "short": "Communication",
+      "topic": "communication"
+    },
+    {
+      "n": 3,
+      "paper": "paper-1",
+      "title": "Hardware",
+      "short": "Hardware",
+      "topic": "hardware"
+    },
+    {
+      "n": 4,
+      "paper": "paper-1",
+      "title": "Processor Fundamentals",
+      "short": "Processors",
+      "topic": "processor"
+    },
+    {
+      "n": 5,
+      "paper": "paper-1",
+      "title": "System Software",
+      "short": "System SW",
+      "topic": "system-software"
+    },
+    {
+      "n": 6,
+      "paper": "paper-1",
+      "title": "Security, Privacy & Data Integrity",
+      "short": "Security",
+      "topic": "security"
+    },
+    {
+      "n": 7,
+      "paper": "paper-1",
+      "title": "Ethics & Ownership",
+      "short": "Ethics",
+      "topic": "ethics"
+    },
+    {
+      "n": 8,
+      "paper": "paper-1",
+      "title": "Databases",
+      "short": "Databases",
+      "topic": "databases"
+    },
+    {
+      "n": 9,
+      "paper": "paper-2",
+      "title": "Algorithm Design & Problem-solving",
+      "short": "Algorithms",
+      "topic": "algorithms"
+    },
+    {
+      "n": 10,
+      "paper": "paper-2",
+      "title": "Data Types & Structures",
+      "short": "Data Types",
+      "topic": "data-types"
+    },
+    {
+      "n": 11,
+      "paper": "paper-2",
+      "title": "Programming",
+      "short": "Programming",
+      "topic": "programming"
+    },
+    {
+      "n": 12,
+      "paper": "paper-2",
+      "title": "Software Development",
+      "short": "Software Dev",
+      "topic": "software-dev"
+    }
+  ],
+  "exams": [
+    {
+      "id": "ch3-hardware-hardware-2026-09-30",
+      "title": "Chapter 3 – Hardware",
+      "origin": "teacher",
+      "paper": "paper-1",
+      "chapter": 3,
+      "topics": [
+        "hardware"
+      ],
+      "status": "ready",
+      "opensAt": "2026-09-30T15:35:00+08:00",
+      "durationMin": 50,
+      "totalMarks": 40,
+      "examDate": "2026-09-30",
+      "description": "Class test set on Chapter 3 (Computers and their components + Logic gates and logic circuits). Replicated so you can re-take it any time.",
+      "questionsFile": "ch3-hardware-hardware-2026-09-30.json"
+    },
+    {
+      "id": "as-chapters-1-2-test-2026-09-21",
+      "title": "AS Computer Science – Chapters 1 & 2 Test",
+      "origin": "teacher",
+      "paper": "paper-1",
+      "chapter": null,
+      "topics": [
+        "info-rep",
+        "communication"
+      ],
+      "status": "closed",
+      "opensAt": "2026-09-21T11:17:00+08:00",
+      "durationMin": 40,
+      "totalMarks": 40,
+      "examDate": "2026-09-21",
+      "description": "Combined test on Section 1 (Information representation) and Section 2 (Communication).",
+      "questionsFile": "as-chapters-1-2-test-2026-09-21.json"
+    },
+    {
+      "id": "ch4-record-data-types-subroutines-logic-2026-10-08",
+      "title": "Chapter 4 Assessment: Record Data Types, Subroutines and Logic Circuits",
+      "origin": "teacher",
+      "paper": "paper-2",
+      "chapter": 4,
+      "topics": [
+        "data-types",
+        "programming",
+        "hardware"
+      ],
+      "status": "result",
+      "opensAt": "2026-10-08T14:40:00+08:00",
+      "durationMin": 45,
+      "totalMarks": 50,
+      "examDate": "2026-10-08",
+      "description": "Class assessment covering record data types, user-defined subroutines (procedures/functions, parameters) and logic circuits.",
+      "questionsFile": "ch4-record-data-types-subroutines-logic-2026-10-08.json"
+    },
+    {
+      "id": "assembly-language-question-paper-2026-10-10",
+      "title": "Assembly Language – Question Paper",
+      "origin": "teacher",
+      "paper": "paper-1",
+      "chapter": 4,
+      "topics": [
+        "processor"
+      ],
+      "status": "result",
+      "opensAt": "2026-10-10T09:10:00+08:00",
+      "durationMin": 40,
+      "totalMarks": 46,
+      "examDate": "2026-10-10",
+      "description": "Section 4.2 Assembly language — instruction sets, addressing modes, register transfer notation and tracing assembly.",
+      "questionsFile": "assembly-language-question-paper-2026-10-10.json"
+    },
+    {
+      "id": "processor-fundamentals-parameter-passing-2026-10-26",
+      "title": "Processor Fundamentals + Parameter Passing",
+      "origin": "teacher",
+      "paper": "paper-1",
+      "chapter": 4,
+      "topics": [
+        "processor",
+        "programming"
+      ],
+      "status": "result",
+      "opensAt": "2026-10-26T19:00:00+08:00",
+      "durationMin": 45,
+      "totalMarks": 45,
+      "examDate": "2026-10-26",
+      "description": "Combined test: FDE cycle, registers, buses, interrupts, RISC/CISC, plus by-value / by-reference parameter passing.",
+      "questionsFile": "processor-fundamentals-parameter-passing-2026-10-26.json"
+    },
+    {
+      "id": "mix-ai-paper1-sections-1-4",
+      "title": "AI Mock — Paper 1 (Sections 1–4)",
+      "origin": "ai",
+      "paper": "paper-1",
+      "chapter": null,
+      "topics": [
+        "info-rep",
+        "communication",
+        "hardware",
+        "processor"
+      ],
+      "status": "ready",
+      "opensAt": null,
+      "durationMin": 45,
+      "totalMarks": 40,
+      "examDate": null,
+      "description": "AI-generated mixed exam in the style of a Paper 1 progress test covering Sections 1–4.",
+      "questionsFile": "mix-ai-paper1-sections-1-4.json"
+    },
+    {
+      "id": "mix-ai-paper2-sections-9-12",
+      "title": "AI Mock — Paper 2 (Sections 9–12)",
+      "origin": "ai",
+      "paper": "paper-2",
+      "chapter": null,
+      "topics": [
+        "algorithms",
+        "data-types",
+        "programming",
+        "software-dev"
+      ],
+      "status": "ready",
+      "opensAt": null,
+      "durationMin": 40,
+      "totalMarks": 50,
+      "examDate": null,
+      "description": "AI-generated pseudocode-heavy exam: trace tables, algorithm writing, array/file processing, testing.",
+      "questionsFile": "mix-ai-paper2-sections-9-12.json"
+    }
+  ],
+  "notes": [
+    {
+      "paper": "paper-1",
+      "title": "Paper 1 — Theory Notes",
+      "file": "content/notes/paper-1.md"
+    },
+    {
+      "paper": "paper-2",
+      "title": "Paper 2 — Pseudocode & Programming Notes",
+      "file": "content/notes/paper-2.md"
+    }
+  ]
+}
