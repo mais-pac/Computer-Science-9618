@@ -290,6 +290,50 @@ Both can take **parameters**, which make them general-purpose and reusable.
 - **BYREF** — the address is passed; changes **do** affect the caller. Advantage: the subroutine can return more than one value and it is memory efficient for large arrays.
 - A **call by value** swap does nothing — always use BYREF for a swap.
 
+**How the examiner phrases it, and the keyword to answer with**
+
+| The question says… | Use | Because |
+|---|---|---|
+| "must **not** change the original" | `BYVAL` | a copy is passed, the caller is protected |
+| "must **permanently update** / modify the original" | `BYREF` | the address is passed, the change is written through |
+| "passing a large array" | `BYREF` | no copy is made, so it is memory- and time-efficient |
+| "return two or more values" | `BYREF` | a function can only `RETURN` one value |
+| "swap two values" | `BYREF` ×2 | swapping copies swaps nothing |
+
+**Trace it — the same code, two answers**
+
+```
+PROCEDURE Bump(BYVAL A : INTEGER)
+    A ← A + 5
+    OUTPUT A
+ENDPROCEDURE
+
+PROCEDURE Boost(BYREF B : INTEGER)
+    B ← B + 10
+ENDPROCEDURE
+
+DECLARE Score : INTEGER
+Score ← 60
+CALL Bump(Score)      // prints 65, Score is still 60
+CALL Boost(Score)     // Score becomes 70
+OUTPUT Score          // prints 70
+```
+
+If that trace feels obvious, then the marks are already yours — this exact pattern appears in almost every 9618 Paper 2.
+
+**Structure marks you get for free (memorise this list)**
+
+Paper 2 marks are awarded per structural element, not only for a correct solution. On any "write a procedure/subroutine" question, these earn marks even when the logic is shaky:
+
+1. the `PROCEDURE`/`FUNCTION` header with **typed parameters**
+2. `BYVAL`/`BYREF` chosen correctly for the wording
+3. the variable declaration and its initial value
+4. each `INPUT`, each `OUTPUT`
+5. `ENDPROCEDURE` / `ENDFUNCTION` / `ENDIF` / `NEXT` closing everything
+6. correct indentation — examiners reward readable structure
+
+**Never leave a pseudocode question blank.** A lone header plus declarations plus the closing keyword is worth about 3 marks. A blank is worth zero, every time.
+
 ```text
 PROCEDURE Bump(BYREF Score : INTEGER, Bonus : INTEGER)
     Score ← Score + Bonus
@@ -319,6 +363,45 @@ FUNCTION Factorial(N : INTEGER) RETURNS INTEGER
     ENDIF
 ENDFUNCTION
 ```
+
+---
+
+## Exam technique that actually moves the grade
+
+This section is not syllabus content — it is what repeatedly separates a C from an A on 9618 scripts.
+
+### Before you write a line of pseudocode
+
+1. **Underline the command word.** *State* → one line. *Explain* → reason with technical detail. *Describe* → stages in order. Answering "explain" with a fact earns half.
+2. **List the modules the question names.** Parameters, their types, what is returned. This is where `BYVAL`/`BYREF` is decided, before any code.
+3. **Plan in structured English first**, then translate to pseudocode. Thinking in Python is the most common way to lose syntax marks.
+4. **Answer the scenario, not the textbook.** Use the names the question gave you (`StudentScore`, not `X`).
+
+### The syntax traps that silently cost marks
+
+| Wrong | Right | Why it matters |
+|---|---|---|
+| `x = 5` | `x ← 5` | Python habits are an automatic error |
+| `"a" + "b"` | `"a" & "b"` | `+` is arithmetic; concatenation is `&` |
+| `OPENFILE data.txt FOR READ` | `OPENFILE "data.txt" FOR READ` | filenames are **always** in quotes |
+| `CLOSEFILE()` | `CLOSEFILE "data.txt"` | the filename argument is required |
+| `EOF()` | `EOF("data.txt")` | same — always takes the filename |
+| missing `NUM_TO_STR` / `STR_TO_NUM` | explicit conversions on file I/O | numbers written to text files must be converted |
+| `RETURN` in a procedure | `FUNCTION` if it returns | a procedure cannot return a value |
+| dropping `BYREF` on a modified array | `BYREF` | the caller never sees the change |
+
+### The four habits of high scorers
+
+- **Attempt, compare, diagnose, log.** Do a past-paper question under time, mark it against the scheme *and the examiner report*, then write down **why** you lost each mark. Re-reading notes is not revision; this loop is.
+- **Keep a mistake log.** The same 5–6 errors repeat. Fixing those is worth more than learning new content.
+- **Drill the standard algorithms until they are automatic** — linear search, bubble sort, and both on 2-D arrays. They appear relentlessly.
+- **Use the insert paper only for panic**, not for planning. Learn the syntax beforehand.
+
+### The night before
+
+- Re-read this page's syntax table, not the whole syllabus.
+- Do one full Paper 2 in time, on paper, with the mark scheme closed.
+- Sleep. Timed practice on a tired brain teaches you to make mistakes faster.
 
 ---
 

@@ -3,7 +3,7 @@
   "title": "Processor Fundamentals + Parameter Passing",
   "origin": "teacher",
   "paper": "paper-1",
-  "chapter": 4,
+  "chapter": 5,
   "topics": [
     "processor",
     "programming"
@@ -11,43 +11,183 @@
   "durationMin": 45,
   "totalMarks": 45,
   "examDate": "2026-10-26",
-  "instructions": "Answer all questions. Section A covers processor fundamentals, Section B covers parameter passing. Calculators are not permitted.",
+  "instructions": "Answer all questions. Section A covers processor fundamentals, Section B covers parameter passing. Part labels match the original paper. Calculators are not permitted.",
   "questions": [
     {
-      "id": "q1",
+      "id": "1",
       "type": "mcq",
       "marks": 1,
       "topic": "processor",
       "section": "4.1",
-      "text": "What is the function of the **program counter (PC)**?",
+      "text": "**Question 1** \u2014 Which statement describes the **stored-program concept** in the von Neumann model?",
       "options": [
         {
           "id": "A",
-          "text": "It stores the address of the next instruction to be fetched"
+          "text": "Program instructions and data are both stored in memory."
         },
         {
           "id": "B",
-          "text": "It stores the instruction currently being executed"
+          "text": "Program instructions are stored in the control unit and data in the ALU."
         },
         {
           "id": "C",
-          "text": "It stores the result of arithmetic operations"
+          "text": "Programs are stored on permanent ROM and data in RAM."
         },
         {
           "id": "D",
-          "text": "It counts the number of clock cycles"
+          "text": "Instructions are stored in registers and data on the hard disk."
         }
       ],
       "answer": "A",
-      "explanation": "PC holds the address of the next instruction; it is incremented after each fetch (unless a jump/branch changes it)."
+      "explanation": "**A.** Both instructions *and* data live in the same memory \u2014 that is the defining feature of von Neumann. It is why a program can be treated as data (loaded, moved, even modified).\n\nYou picked this and the portal's feedback said \"not the accepted answer\" \u2014 that feedback is wrong; your answer is correct. The distractor it probably wanted was B (instructions in the control unit), which confuses *execution* with *storage*: the CU decodes the instruction in the CIR, it does not store the program."
     },
     {
-      "id": "q2",
+      "id": "2",
       "type": "mcq",
       "marks": 1,
       "topic": "processor",
       "section": "4.1",
-      "text": "Which bus carries control signals such as read/write and clock pulses?",
+      "text": "**Question 2** \u2014 Which component is responsible for **arithmetic and logical operations**?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Control Unit (CU)"
+        },
+        {
+          "id": "B",
+          "text": "Arithmetic and Logic Unit (ALU)"
+        },
+        {
+          "id": "C",
+          "text": "Memory Data Register (MDR)"
+        },
+        {
+          "id": "D",
+          "text": "Program Counter (PC)"
+        }
+      ],
+      "answer": "B",
+      "explanation": "**B.** The ALU performs arithmetic (add, subtract, multiply) and logic (AND, OR, NOT, comparisons, shifts).\n\nThe CU only *directs* operations: it decodes the instruction and sends control signals telling the ALU what to do. Again the portal's \"not accepted\" feedback is wrong for this answer."
+    },
+    {
+      "id": "3",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "processor",
+      "section": "4.1",
+      "text": "**Question 3** \u2014 Which register stores the address of the **next instruction** to be fetched?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Memory Address Register (MAR)"
+        },
+        {
+          "id": "B",
+          "text": "Current Instruction Register (CIR)"
+        },
+        {
+          "id": "C",
+          "text": "Program Counter (PC)"
+        },
+        {
+          "id": "D",
+          "text": "Status Register (SR)"
+        }
+      ],
+      "answer": "C",
+      "explanation": "**C.** The PC holds the address of the next instruction; it is incremented during the fetch stage.\n\nMAR holds the address currently *being* accessed (they are equal for one moment during fetch \u2014 that is Q14(a)(i): `MAR \u2190 [PC]`). CIR holds the instruction itself, not its address."
+    },
+    {
+      "id": "4",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "processor",
+      "section": "4.1",
+      "text": "**Question 4** \u2014 Which **system bus** is **unidirectional**?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Data bus"
+        },
+        {
+          "id": "B",
+          "text": "Control bus"
+        },
+        {
+          "id": "C",
+          "text": "Address bus"
+        },
+        {
+          "id": "D",
+          "text": "Expansion bus"
+        }
+      ],
+      "answer": "C",
+      "explanation": "**C \u2014 the address bus.** The CPU puts an address onto it and memory responds; nothing travels back along it, so it is unidirectional.\n\nThe data bus is **bidirectional** (data is both read and written). The control bus is often described as bidirectional too, because signals like *interrupt request* travel from devices to the CPU while *read/write* travel from the CPU outward \u2014 individual lines are one-way, but the bus as a whole carries both directions."
+    },
+    {
+      "id": "5",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "processor",
+      "section": "4.1",
+      "text": "**Question 5** \u2014 Which change **directly increases the number of memory locations** that can be addressed?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Increasing the width of the data bus"
+        },
+        {
+          "id": "B",
+          "text": "Increasing the width of the address bus"
+        },
+        {
+          "id": "C",
+          "text": "Increasing the clock speed"
+        },
+        {
+          "id": "D",
+          "text": "Increasing the size of the MDR"
+        }
+      ],
+      "answer": "B",
+      "explanation": "**B.** Addressable locations = 2^(address bus width). A 24-bit address bus gives 2^24 = 16 777 216 locations.\n\nData bus width controls how many bits move *per transfer*, not how many locations exist. Clock speed only affects how fast you reach them."
+    },
+    {
+      "id": "6",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "processor",
+      "section": "4.1",
+      "text": "**Question 6** \u2014 The register that stores the instruction currently being **decoded and executed** is the:",
+      "options": [
+        {
+          "id": "A",
+          "text": "MAR"
+        },
+        {
+          "id": "B",
+          "text": "CIR"
+        },
+        {
+          "id": "C",
+          "text": "MDR"
+        },
+        {
+          "id": "D",
+          "text": "SR"
+        }
+      ],
+      "answer": "B",
+      "explanation": "**B \u2014 CIR (Current Instruction Register).** The instruction is copied from the MDR into the CIR at the end of the fetch stage, then the CU decodes it from there."
+    },
+    {
+      "id": "7",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "processor",
+      "section": "4.1",
+      "text": "**Question 7** \u2014 The system bus that carries **read/write and timing signals** is the:",
       "options": [
         {
           "id": "A",
@@ -63,433 +203,455 @@
         },
         {
           "id": "D",
-          "text": "USB"
+          "text": "I/O bus"
         }
       ],
       "answer": "C",
-      "explanation": "The control bus is bidirectional and carries signals such as memory read/write, interrupt requests and clock."
+      "explanation": "**C \u2014 Control bus.** It carries the CU's command and timing signals: read/write, clock pulses, interrupt requests and acknowledgements."
     },
     {
-      "id": "q3",
-      "type": "text",
-      "marks": 5,
-      "topic": "processor",
-      "section": "4.1",
-      "text": "Describe the role of the **control unit** and the **ALU** in the processor.",
-      "answer": [
-        {
-          "text": "Control unit: fetches and decodes instructions and generates the control signals that coordinate the other components.",
-          "marks": 2
-        },
-        {
-          "text": "ALU: performs arithmetic operations (add, subtract) and logical operations (AND, OR, NOT, comparisons/shifts) on data in registers.",
-          "marks": 2
-        }
-      ],
-      "selfMark": true,
-      "explanation": "CU = 'director' of the CPU; ALU = 'calculator'. Two marks each require two clear functions."
-    },
-    {
-      "id": "q4",
-      "type": "numeric",
-      "marks": 1,
-      "topic": "processor",
-      "section": "4.1",
-      "text": "A processor has an address bus that is **24 bits** wide. How many memory locations can it address? Give your answer in **MiB** (use 1 Mi = 2²⁰).",
-      "answer": 16,
-      "unit": "MiB",
-      "explanation": "2²⁴ = 16 777 216 locations; 2²⁴ / 2²⁰ = 2⁴ = 16 Mi."
-    },
-    {
-      "id": "q5",
+      "id": "8",
       "type": "mcq",
       "marks": 1,
       "topic": "processor",
       "section": "4.1",
-      "text": "The **clock speed** of a CPU is measured in which unit?",
+      "text": "**Question 8** \u2014 The register used to hold data **read from memory or about to be written** to memory is the:",
       "options": [
         {
           "id": "A",
-          "text": "Hertz (GHz)"
+          "text": "MAR"
         },
         {
           "id": "B",
-          "text": "Bytes"
+          "text": "CIR"
         },
         {
           "id": "C",
-          "text": "Bits per second"
+          "text": "MDR"
         },
         {
           "id": "D",
-          "text": "Watts"
+          "text": "PC"
         }
       ],
-      "answer": "A",
-      "explanation": "Clock speed is the number of cycles per second — typically GHz. Higher clock speed usually means more instructions per second."
+      "answer": "C",
+      "explanation": "**C \u2014 MDR (Memory Data Register)** \u2014 sometimes called the MBR (Memory Buffer Register). It is the bidirectional buffer between the CPU and memory, and it sits directly on the data bus.\n\nQuick way to keep MAR and MDR apart: **MAR = address, MDR = data**."
     },
     {
-      "id": "q6",
-      "type": "text",
-      "marks": 3,
-      "topic": "processor",
-      "section": "4.1",
-      "text": "Explain how **cache memory** improves processor performance.",
-      "answer": [
-        {
-          "text": "Cache is fast memory close to the CPU that stores frequently used instructions and data.",
-          "marks": 1
-        },
-        {
-          "text": "It reduces the need to access slower main memory (RAM), reducing average access time.",
-          "marks": 1
-        },
-        {
-          "text": "Because the FDE cycle can get data from cache much faster than from RAM, the CPU waits less and throughput increases.",
-          "marks": 1
-        }
-      ],
-      "selfMark": true,
-      "explanation": "Levels: L1 (fastest, smallest, on-chip), L2, L3 (larger, slower)."
-    },
-    {
-      "id": "q7",
+      "id": "9",
       "type": "mcq",
       "marks": 1,
       "topic": "processor",
       "section": "4.1",
-      "text": "What is the purpose of **pipelining** in a processor?",
+      "text": "**Question 9** \u2014 The interface that transmits **both high-quality video and audio** to a display is:",
       "options": [
         {
           "id": "A",
-          "text": "To allow multiple instructions to be at different stages of the FDE cycle at the same time"
+          "text": "VGA"
         },
         {
           "id": "B",
-          "text": "To increase the size of the RAM"
+          "text": "USB"
         },
         {
           "id": "C",
-          "text": "To compress the program before it is executed"
+          "text": "HDMI"
         },
         {
           "id": "D",
-          "text": "To translate assembly language into machine code"
+          "text": "Ethernet"
         }
       ],
-      "answer": "A",
-      "explanation": "While one instruction is executed, the next is decoded and the one after is fetched — improving throughput (though branches can cause pipeline stalls)."
+      "answer": "C",
+      "explanation": "**C \u2014 HDMI.** It carries digital video *and* audio on one cable.\n\nVGA is analogue video only, with no audio \u2014 that is the distinction examiners test. USB and Ethernet are general data interfaces, not display standards."
     },
     {
-      "id": "q8",
+      "id": "10a",
+      "type": "text",
+      "marks": 1,
+      "topic": "processor",
+      "section": "4.1",
+      "text": "**Question 10 (a)** \u2014 State the purpose of the **Memory Address Register (MAR)**.",
+      "answer": [
+        {
+          "text": "Holds the address of the memory location currently being read from or written to",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "The MAR holds the **address** of the location currently being accessed \u2014 for either a data item or an instruction.\n\nOne-line answers are fine here: 1 mark for \"address of the location being accessed\". Do not write \"stores data\" \u2014 that is the MDR."
+    },
+    {
+      "id": "10b",
+      "type": "text",
+      "marks": 1,
+      "topic": "processor",
+      "section": "4.1",
+      "text": "**Question 10 (b)** \u2014 State the purpose of the **Program Counter (PC)**.",
+      "answer": [
+        {
+          "text": "Holds the address of the next instruction to be fetched",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "The PC holds the **address of the next instruction** to be fetched from memory, and is incremented as part of the fetch stage.\n\n\"Next\" is the mark-earning word. Saying \"the current instruction\" loses the mark \u2014 that is the CIR."
+    },
+    {
+      "id": "10c",
+      "type": "text",
+      "marks": 1,
+      "topic": "processor",
+      "section": "4.1",
+      "text": "**Question 10 (c)** \u2014 State the purpose of the **Status Register (SR)**.",
+      "answer": [
+        {
+          "text": "Stores flags / status bits that record the result of arithmetic or logical operations (e.g. overflow, zero, negative, carry)",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "The SR (also called the flag register) holds **condition flags** set by the ALU \u2014 carry, overflow, zero, sign \u2014 which later conditional instructions (e.g. a branch) test.\n\nMentioning a named flag (overflow/zero/carry) is what separates a full-mark answer from a vague one."
+    },
+    {
+      "id": "11a",
+      "type": "text",
+      "marks": 1,
+      "topic": "processor",
+      "section": "4.1",
+      "text": "**Question 11 (a)** \u2014 Explain how **increasing the processor clock speed** improves performance.",
+      "answer": [
+        {
+          "text": "More clock cycles per second, so more fetch-decode-execute cycles complete each second",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "Clock speed is cycles per second. Each F-E cycle needs a fixed number of cycles, so a higher clock rate \u2192 more instructions completed per second.\n\nThe trap is writing \"the CPU works faster\" \u2014 that restates the question. Name the **F-E cycle** and the mark is secure."
+    },
+    {
+      "id": "11b",
+      "type": "text",
+      "marks": 1,
+      "topic": "processor",
+      "section": "4.1",
+      "text": "**Question 11 (b)** \u2014 Explain how **increasing cache memory capacity** improves performance.",
+      "answer": [
+        {
+          "text": "Cache is faster than main memory (RAM), so more frequently used data/instructions can be held there, reducing waiting for slower main memory",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "Cache is built from SRAM and sits close to (often on) the CPU, so it is much faster than RAM. A **larger** cache holds **more** frequently used instructions and data, so proportionally more accesses hit the cache instead of waiting on main memory.\n\nNote the portal's own feedback: your answer matched the rubric but didn't explicitly say *larger cache holds more data* \u2014 include that phrase to be safe."
+    },
+    {
+      "id": "11c",
+      "type": "text",
+      "marks": 1,
+      "topic": "processor",
+      "section": "4.1",
+      "text": "**Question 11 (c)** \u2014 Explain how **increasing the number of processor cores** improves performance.",
+      "answer": [
+        {
+          "text": "Multiple instruction streams can be processed simultaneously (in parallel), increasing overall throughput",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "Each core can execute its own instruction stream, so independent tasks/threads run **in parallel** rather than time-sliced, raising throughput.\n\nDon't claim that a single program automatically runs N times faster \u2014 only parallelisable work benefits."
+    },
+    {
+      "id": "12a",
+      "type": "text",
+      "marks": 1,
+      "topic": "processor",
+      "section": "4.1",
+      "text": "**Question 12 (a)** \u2014 State what is meant by a **port** in a computer system.",
+      "answer": [
+        {
+          "text": "A connection/interface point that allows a peripheral device to be attached and to communicate/transfer data with the computer",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "A port is the **interface/socket** where a peripheral connects \u2014 the physical and logical point where data enters or leaves the system.\n\nAlternative mark point: a numbered logical channel used to route data to a specific process (e.g. port 80) \u2014 also acceptable if the question is about networking."
+    },
+    {
+      "id": "12b",
       "type": "text",
       "marks": 2,
       "topic": "processor",
       "section": "4.1",
-      "text": "State **two** factors, other than clock speed, that affect the performance of a processor.",
+      "text": "**Question 12 (b)** \u2014 Explain **two features of USB** that make it suitable for connecting peripheral devices.",
       "answer": [
         {
-          "text": "Number of cores (more cores can process more instructions in parallel).",
+          "text": "Plug-and-play: the device is detected automatically and the driver is loaded without a reboot / no configuration needed",
           "marks": 1
         },
         {
-          "text": "Size/type of cache and bus width (or word length) — affects how much data can be handled at once.",
+          "text": "It can supply power to the device, so a separate power supply is not needed",
           "marks": 1
         }
       ],
       "selfMark": true,
-      "explanation": "Other valid: instruction set design (RISC/CISC), pipelining, amount of RAM installed."
+      "explanation": "Any **two distinct, explained** features. Reliable pairs to memorise:\n\n| Feature | Why it makes USB suitable |\n|---|---|\n| Plug-and-play / hot-swappable | OS detects the device and loads the driver automatically, no reboot |\n| Provides power | Many devices need no separate power supply |\n| Universal standard | One connector type works across many device types and manufacturers |\n| Serial, asynchronous transfer | Fewer wires, cheap cable, reliable over short distance |\n| Backwards compatible | Versions interoperate (USB 2.0 device in a 3.0 port) |\n\n**Two features, each explained** \u2014 a bare list earns at most half. Your paper answer used plug-and-play + asynchronous serial, which is why it got 2/2."
     },
     {
-      "id": "q9",
+      "id": "13a",
+      "type": "text",
+      "marks": 1,
+      "topic": "processor",
+      "section": "4.1",
+      "text": "**Question 13 (a)** \u2014 State the register that **initially** contains the address of the next instruction.",
+      "answer": [
+        {
+          "text": "Program Counter (PC)",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "**Program Counter.** \"Initially\" is the hint: the PC holds it before the fetch stage copies it to the MAR."
+    },
+    {
+      "id": "13b",
+      "type": "text",
+      "marks": 3,
+      "topic": "processor",
+      "section": "4.1",
+      "text": "**Question 13 (b)** \u2014 Describe how the instruction is transferred from memory into the **Current Instruction Register (CIR)** during the fetch stage.",
+      "answer": [
+        {
+          "text": "The address in the PC is copied to the MAR",
+          "marks": 1
+        },
+        {
+          "text": "The instruction at that address is fetched from memory into the MDR (data travels on the data bus)",
+          "marks": 1
+        },
+        {
+          "text": "The instruction is then copied from the MDR into the CIR",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "Three stages, in order:\n\n1. `MAR \u2190 [PC]` \u2014 the PC's address goes to the MAR, and is placed on the address bus.\n2. `MDR \u2190 [[MAR]]` \u2014 memory returns the instruction on the data bus into the MDR.\n3. `CIR \u2190 [MDR]` \u2014 the instruction is copied into the CIR, ready to be decoded.\n\nThe \"one mark per stage\" pattern is deliberate. Write all three even if you are unsure \u2014 partial credit is generous."
+    },
+    {
+      "id": "14a",
       "type": "text",
       "marks": 4,
       "topic": "processor",
       "section": "4.1",
-      "text": "Explain, in order, what the **decode** and **execute** stages of the FDE cycle do.",
+      "text": "**Question 14 (a)** \u2014 Write the register transfer notation for each step of the fetch stage.\n\n(i) The address of the next instruction is copied from the PC to the MAR.\n\n(ii) The PC is incremented by 1.\n\n(iii) The instruction stored at the memory address held in the MAR is copied into the MDR.\n\n(iv) The instruction in the MDR is copied into the CIR.",
       "answer": [
         {
-          "text": "Decode: the control unit interprets the opcode/operand in the CIR and works out what operation is required.",
+          "text": "(i) MAR \u2190 [PC]",
           "marks": 1
         },
         {
-          "text": "Execute: the control unit sends signals to the relevant components; the ALU carries out the arithmetic/logic operation or data is moved.",
+          "text": "(ii) PC \u2190 [PC] + 1",
           "marks": 1
         },
         {
-          "text": "The result is stored in a register (usually the accumulator), and the cycle repeats.",
+          "text": "(iii) MDR \u2190 [[MAR]]",
+          "marks": 1
+        },
+        {
+          "text": "(iv) CIR \u2190 [MDR]",
           "marks": 1
         }
       ],
       "selfMark": true,
-      "explanation": "The FDE order is: PC→MAR→memory→MDR→CIR, decode, then execute."
+      "explanation": "The four lines, exactly:\n\n```\nMAR \u2190 [PC]\nPC  \u2190 [PC] + 1\nMDR \u2190 [[MAR]]\nCIR \u2190 [MDR]\n```\n\n**Notation rules the examiner enforces:**\n- `\u2190` for assignment, never `=`.\n- `[X]` means *contents of* X. So `[PC]` = contents of the PC = an address; `[[MAR]]` = contents of the location whose address is in MAR = the instruction itself. The **double brackets** are the bit most candidates miss.\n- In (iii) the destination is the **MDR**, not the CIR \u2014 the instruction moves MDR \u2192 CIR only in step (iv)."
     },
     {
-      "id": "q10",
-      "type": "mcq",
+      "id": "14b",
+      "type": "text",
       "marks": 1,
       "topic": "processor",
       "section": "4.1",
-      "text": "Which is the **fastest** type of storage in a computer system?",
-      "options": [
+      "text": "**Question 14 (b)** \u2014 Rewrite operations (a)(ii) and (a)(iii) on a **single line** using the correct notation to indicate that they occur **simultaneously**.",
+      "answer": [
         {
-          "id": "A",
-          "text": "Hard disk drive"
-        },
-        {
-          "id": "B",
-          "text": "RAM"
-        },
-        {
-          "id": "C",
-          "text": "L1 cache"
-        },
-        {
-          "id": "D",
-          "text": "SSD"
+          "text": "PC \u2190 [PC] + 1; MDR \u2190 [[MAR]]",
+          "marks": 1
         }
       ],
-      "answer": "C",
-      "explanation": "Order (fastest → slowest, smallest → largest): registers → L1 → L2 → L3 cache → RAM → SSD/HDD."
+      "selfMark": true,
+      "explanation": "`PC \u2190 [PC] + 1 ; MDR \u2190 [[MAR]]`\n\nA **semicolon** separates two register transfers that happen in the same clock cycle. This matters because incrementing the PC does not depend on the memory read, so the hardware performs both at once \u2014 the reason fetch takes fewer cycles than you would expect."
     },
     {
-      "id": "q11",
+      "id": "15a",
       "type": "text",
-      "marks": 4,
+      "marks": 1,
       "topic": "processor",
-      "section": "4.4",
-      "text": "Explain **how the scheduling of threads** on a multi-core processor speeds up a program such as video editing.",
+      "section": "4.1",
+      "text": "**Question 15 (a)** \u2014 State **one** possible cause of an **interrupt**.",
       "answer": [
         {
-          "text": "A program can be split into multiple threads that each perform a separate part of the task.",
-          "marks": 1
-        },
-        {
-          "text": "The threads are distributed across different cores so tasks run in parallel rather than sequentially.",
-          "marks": 1
-        },
-        {
-          "text": "Each core can execute its thread at the same time as the others, so the total time is reduced.",
-          "marks": 1
-        },
-        {
-          "text": "The operating system schedules the threads and balances the load between the cores.",
+          "text": "A hardware fault or event \u2014 e.g. a printer running out of paper, a device completing an I/O transfer, a timer signal, or a software error such as division by zero",
           "marks": 1
         }
       ],
       "selfMark": true,
-      "explanation": "Parallelism requires the task to be divisible into independent pieces; otherwise speed-up is limited."
+      "explanation": "Any one valid cause. Good examples: printer out of paper, I/O transfer complete, hardware timer tick, power failure, division by zero (software interrupt).\n\nName a **specific** device or event; \"a problem\" alone is too vague for the mark."
     },
     {
-      "id": "q12",
-      "type": "mcq",
-      "marks": 1,
-      "topic": "programming",
-      "section": "11.3",
-      "text": "`PROCEDURE Double(BYREF N : INTEGER)` receives `X` where `X = 6`. The procedure executes `N ← N * 2`. What is the value of `X` afterwards?",
-      "options": [
-        {
-          "id": "A",
-          "text": "6"
-        },
-        {
-          "id": "B",
-          "text": "12"
-        },
-        {
-          "id": "C",
-          "text": "3"
-        },
-        {
-          "id": "D",
-          "text": "0"
-        }
-      ],
-      "answer": "B",
-      "explanation": "BYREF passes the address, so the change is made to the original variable X, which becomes 12."
-    },
-    {
-      "id": "q13",
-      "type": "mcq",
-      "marks": 1,
-      "topic": "programming",
-      "section": "11.3",
-      "text": "`PROCEDURE Change(BYVAL N : INTEGER)` receives `X` where `X = 6`, then executes `N ← 99`. What is the value of `X` afterwards?",
-      "options": [
-        {
-          "id": "A",
-          "text": "6"
-        },
-        {
-          "id": "B",
-          "text": "99"
-        },
-        {
-          "id": "C",
-          "text": "105"
-        },
-        {
-          "id": "D",
-          "text": "It is an error"
-        }
-      ],
-      "answer": "A",
-      "explanation": "BYVAL sends a copy, so N becomes 99 but the original X is untouched."
-    },
-    {
-      "id": "q14",
+      "id": "15b",
       "type": "text",
-      "marks": 4,
-      "topic": "programming",
-      "section": "11.3",
-      "text": "Explain, using an example, the difference between **passing by value** and **passing by reference**, including **one advantage of each**.",
+      "marks": 3,
+      "topic": "processor",
+      "section": "4.1",
+      "text": "**Question 15 (b)** \u2014 Describe the sequence of actions taken by the processor to **handle an interrupt and resume** the original program.",
       "answer": [
         {
-          "text": "By value: the subroutine receives a copy of the value; the original variable is not changed.",
+          "text": "The processor finishes the current F-E cycle and checks the status register / interrupt flags",
           "marks": 1
         },
         {
-          "text": "Advantage: the original data is protected (no side effects), which makes debugging easier.",
+          "text": "The current register contents and the return address (PC) are saved to a stack",
           "marks": 1
         },
         {
-          "text": "By reference: the subroutine receives the address of the variable, so it can modify the original variable.",
-          "marks": 1
-        },
-        {
-          "text": "Advantage: allows more than one value to be 'returned' / avoids copying large data, so it is more memory efficient.",
+          "text": "It identifies the interrupt priority and runs the relevant Interrupt Service Routine (ISR); when finished, the saved register values are restored from the stack so the main program resumes",
           "marks": 1
         }
       ],
       "selfMark": true,
-      "explanation": "Classic exam example: a Swap procedure must use BYREF, otherwise the original values are unchanged."
+      "explanation": "Three mark-worthy stages:\n\n1. **Complete the current instruction** (never abandon it mid-execution), then check for interrupts.\n2. **Save state** \u2014 push register contents and the return address onto the stack.\n3. **Identify and service** \u2014 find which device interrupted (highest priority first), run its ISR, then **restore** the registers from the stack and continue.\n\nThe words that earn marks: *current instruction completed*, *stack*, *ISR*, *priority*, *restore*. An answer that jumps straight to \"runs the ISR\" loses the state-saving mark."
     },
     {
-      "id": "q15",
-      "type": "trace",
-      "marks": 4,
+      "id": "16a",
+      "type": "text",
+      "marks": 2,
       "topic": "programming",
       "section": "11.3",
-      "text": "Trace the following code and complete the table.\n\n```\nDECLARE A : INTEGER\nDECLARE B : INTEGER\nA ← 10\nB ← 20\nCALL Update(A, B)\nOUTPUT A, B\n\nPROCEDURE Update(BYREF X : INTEGER, BYVAL Y : INTEGER)\n    X ← X + 5\n    Y ← Y + 5\n    OUTPUT X, Y\nENDPROCEDURE\n```",
-      "columns": [
-        "Output inside procedure",
-        "A after call",
-        "B after call",
-        "Final OUTPUT"
-      ],
-      "given": [
-        [
-          "",
-          "",
-          "",
-          ""
-        ]
-      ],
+      "text": "**Question 16 (a)** \u2014 State the values output for **A** and **B**.",
       "answer": [
-        [
-          "15 25",
-          "15",
-          "20",
-          "15 20"
-        ]
+        {
+          "text": "A = 5",
+          "marks": 1
+        },
+        {
+          "text": "B = 10",
+          "marks": 1
+        }
       ],
-      "explanation": "X is by reference → A becomes 15. Y is by value → B stays 20 (only the copy is changed). Final output is '15 20'."
+      "selfMark": true,
+      "explanation": "**A = 5, B = 10.**\n\nThis is the classic BYVAL/BYREF contrast: the BYVAL parameter changes only its local copy (so the original stays 5), while the BYREF parameter is changed in place (so the original becomes 10).\n\nThe portal marked your 5/10 as \"0/0 response(s) correct\" \u2014 that is a bug in its marking, not an error in your answer."
     },
     {
-      "id": "q16",
+      "id": "16b",
+      "type": "text",
+      "marks": 2,
+      "topic": "programming",
+      "section": "11.3",
+      "text": "**Question 16 (b)** \u2014 Explain the difference between passing a parameter **BYVAL** and **BYREF**.",
+      "answer": [
+        {
+          "text": "BYVAL passes a copy of the value, so changes inside the procedure do not affect the original variable",
+          "marks": 1
+        },
+        {
+          "text": "BYREF passes the address/reference of the original variable, so changes inside the procedure directly update the original",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "Two halves, and you need both:\n\n- **BYVAL** \u2014 a *copy* of the value is passed. The subroutine works on its own local copy; the caller's variable is protected from change.\n- **BYREF** \u2014 the *address* is passed. The subroutine works on the original storage, so changes are visible to the caller.\n\nSay what happens **to the original**, not just the mechanism. \"BYREF passes the address\" alone gets half a mark; add \"so the original is modified\"."
+    },
+    {
+      "id": "16c",
+      "type": "text",
+      "marks": 2,
+      "topic": "programming",
+      "section": "11.3",
+      "text": "**Question 16 (c)** \u2014 A student wants `ChangeValue` to modify the **original** value of `A`. State the change required to the procedure declaration and explain why this change works.",
+      "answer": [
+        {
+          "text": "Change `BYVAL` to `BYREF` in the parameter header, e.g. `PROCEDURE ChangeValue(BYREF Num : INTEGER)`",
+          "marks": 1
+        },
+        {
+          "text": "Passing by reference gives the procedure the actual memory address of A, so any change to Num inside the procedure updates the original variable rather than a copy",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "The change: **`BYVAL` \u2192 `BYREF`** in the parameter header.\n\n```\nPROCEDURE ChangeValue(BYREF Num : INTEGER)\n```\n\nWhy it works: BYREF passes the *address* of `A`, so `Num` and `A` refer to the same storage location. Assigning to `Num` therefore writes straight through to `A`.\n\nThe explanation must mention **the original variable being updated directly** (or \"the address is passed\") \u2014 that is the second mark."
+    },
+    {
+      "id": "17a",
       "type": "text",
       "marks": 3,
       "topic": "programming",
       "section": "11.3",
-      "text": "Write a procedure `UpdateScore` that takes a score **by reference** and a bonus **by value**, adds the bonus to the score (to a maximum of 100), and does not allow the score to become negative.",
+      "text": "**Question 17 (a)** \u2014 Write a procedure named `DisplayBonus` that:\n\n\u2022 accepts an **INTEGER** parameter named `Score`\n\u2022 adds **5** to `Score` and outputs the updated score\n\u2022 must **not** change the original value of the variable passed to the procedure",
       "answer": [
         {
-          "text": "PROCEDURE UpdateScore(BYREF Score : INTEGER, Bonus : INTEGER)",
+          "text": "Correct header using **BYVAL**, typed: `PROCEDURE DisplayBonus(BYVAL Score : INTEGER)`",
           "marks": 1
         },
         {
-          "text": "Score ← Score + Bonus",
+          "text": "`Score \u2190 Score + 5`",
           "marks": 1
         },
         {
-          "text": "Validation: IF Score > 100 THEN Score ← 100 / IF Score < 0 THEN Score ← 0, with ENDPROCEDURE",
+          "text": "`OUTPUT Score` and a matching `ENDPROCEDURE`",
           "marks": 1
         }
       ],
       "selfMark": true,
-      "explanation": "PROCEDURE UpdateScore(BYREF Score : INTEGER, Bonus : INTEGER)\n    Score ← Score + Bonus\n    IF Score > 100 THEN\n        Score ← 100\n    ENDIF\n    IF Score < 0 THEN\n        Score ← 0\n    ENDIF\nENDPROCEDURE"
+      "explanation": "```\nPROCEDURE DisplayBonus(BYVAL Score : INTEGER)\n    Score \u2190 Score + 5\n    OUTPUT Score\nENDPROCEDURE\n```\n\n\"Must not change the original\" is the instruction to use **BYVAL** \u2014 that single keyword is worth a mark on its own. Then the update, the output, and the `ENDPROCEDURE`.\n\nNotice how many marks come from structure rather than logic: header (1), update (1), output + close (1)."
     },
     {
-      "id": "q17",
-      "type": "mcq",
-      "marks": 1,
-      "topic": "programming",
-      "section": "11.3",
-      "text": "Why is passing a large array **by reference** usually preferable?",
-      "options": [
-        {
-          "id": "A",
-          "text": "It copies every element, which is faster"
-        },
-        {
-          "id": "B",
-          "text": "It passes only the address, so it uses less memory and avoids copying time"
-        },
-        {
-          "id": "C",
-          "text": "It prevents the subroutine from reading the array"
-        },
-        {
-          "id": "D",
-          "text": "It automatically sorts the array"
-        }
-      ],
-      "answer": "B",
-      "explanation": "Copying a large array is expensive; passing the address is efficient. The trade-off is that the subroutine can modify the original."
-    },
-    {
-      "id": "q18",
+      "id": "17b",
       "type": "text",
       "marks": 3,
       "topic": "programming",
       "section": "11.3",
-      "text": "The procedure below is intended to swap two array elements but does not work.\n\n```\nPROCEDURE SwapItems(BYVAL P : INTEGER, BYVAL Q : INTEGER)\n    DECLARE Temp : INTEGER\n    Temp ← P\n    P ← Q\n    Q ← Temp\nENDPROCEDURE\n```\n\nState why it fails and write the corrected header.",
+      "text": "**Question 17 (b)** \u2014 Write a procedure named `ApplyBonus` that:\n\n\u2022 accepts an **INTEGER** parameter named `Score`\n\u2022 adds **10** to `Score` and must **permanently update** the original variable passed to the procedure\n\u2022 does **not** output a value",
       "answer": [
         {
-          "text": "Both parameters are passed BYVAL, so only local copies are swapped — the calling variables are unchanged.",
-          "marks": 2
+          "text": "Correct header using **BYREF**, typed: `PROCEDURE ApplyBonus(BYREF Score : INTEGER)`",
+          "marks": 1
         },
         {
-          "text": "Corrected header: PROCEDURE SwapItems(BYREF P : INTEGER, BYREF Q : INTEGER)",
+          "text": "`Score \u2190 Score + 10`",
+          "marks": 1
+        },
+        {
+          "text": "Correct `ENDPROCEDURE` with **no** `OUTPUT` statement",
           "marks": 1
         }
       ],
       "selfMark": true,
-      "explanation": "Swapping is the canonical example of needing BYREF."
+      "explanation": "```\nPROCEDURE ApplyBonus(BYREF Score : INTEGER)\n    Score \u2190 Score + 10\nENDPROCEDURE\n```\n\n\"Permanently update the original\" \u2192 **BYREF**. \"Does not output\" \u2192 no `OUTPUT` at all; adding one loses that mark.\n\nPair 17(a) and 17(b) in your head: **BYVAL = display a calculated copy, BYREF = change the real thing.**"
     },
     {
-      "id": "q19",
+      "id": "17c",
       "type": "text",
-      "marks": 4,
-      "topic": "processor",
-      "section": "4.1",
-      "text": "Describe the purpose of **registers** in the processor and explain why they are needed instead of just using RAM.",
+      "marks": 2,
+      "topic": "programming",
+      "section": "11.3",
+      "text": "**Question 17 (c)** \u2014 Write a main program that:\n\n\u2022 declares an INTEGER variable named `StudentScore` and assigns it the value **60**\n\u2022 calls `DisplayBonus`, followed by `ApplyBonus`, passing `StudentScore` to both procedures\n\u2022 outputs the **final** value of `StudentScore`\n\n> **Note on the mark scheme:** this part is worth 2 marks on the paper but has 3 criteria (declaration + value, the two calls in order, the final output). The scorer caps your ticks at 2 \u2014 tick the two you are most confident about.",
       "answer": [
         {
-          "text": "Registers are small storage locations inside the CPU used to hold data, addresses and instructions currently in use.",
+          "text": "`DECLARE StudentScore : INTEGER` and `StudentScore \u2190 60`",
           "marks": 1
         },
         {
-          "text": "They are much faster than RAM because they are on the CPU and accessed directly (no bus transfer delay).",
+          "text": "`CALL DisplayBonus(StudentScore)` then `CALL ApplyBonus(StudentScore)`, in that order",
           "marks": 1
         },
         {
-          "text": "Using registers reduces the number of slow memory accesses, speeding up the FDE cycle.",
+          "text": "`OUTPUT StudentScore` at the end",
           "marks": 1
         }
       ],
       "selfMark": true,
-      "explanation": "Registers are the fastest storage in the memory hierarchy."
+      "explanation": "```\nDECLARE StudentScore : INTEGER\nStudentScore \u2190 60\n\nCALL DisplayBonus(StudentScore)\nCALL ApplyBonus(StudentScore)\n\nOUTPUT StudentScore\n```\n\n**Trace it through** \u2014 this is the whole point of the question:\n\n| Step | StudentScore | Output |\n|---|---|---|\n| `StudentScore \u2190 60` | 60 | \u2014 |\n| `DisplayBonus` (BYVAL) | **60** (unchanged \u2014 it edited a copy) | prints 65 |\n| `ApplyBonus` (BYREF) | **70** (real change: 60 + 10) | \u2014 |\n| `OUTPUT StudentScore` | 70 | prints **70** |\n\nYou left this blank on the paper, which cost 2 free marks. Even without the exact arithmetic you would have earned the declaration mark and probably the calls mark.\n\n**The biggest Paper 2 lesson in this paper:** a blank scores zero, but `DECLARE` + a value + two `CALL` lines + an `OUTPUT` earn most of the marks even when the logic is imperfect. Always write something."
     }
   ]
 }
