@@ -242,7 +242,6 @@ That is the first MCQ of the real 2026 paper — learn the sentence, not the vib
 | Status/flag register | Holds flags: zero, negative, carry, overflow |
 | IX (index register) | Used in indexed addressing (arrays) |
 | GPRs | **General purpose** registers — the programmer decides what they hold (a counter, a partial result). *not* fixed by the hardware |
-| IX | index register — added to an operand in indexed addressing, used to walk arrays |
 
 **Buses**
 
@@ -259,7 +258,7 @@ That is the first MCQ of the real 2026 paper — learn the sentence, not the vib
 **Two facts that earn marks on almost every FDE question:**
 
 - **The fetch stage is identical for every instruction.** It has to be — the processor does not yet know what the instruction *is*. Only execute varies. Say this explicitly when asked to "describe the fetch–decode–execute cycle".
-- **The PC is incremented *during* fetch**, not at the end of the cycle. That is precisely why a `JMP` works: execute **overwrites** a PC value that has already been advanced.
+- **The PC is incremented during fetch**, not at the end of the cycle — that is precisely why a `JMP` works: execute overwrites a PC value that has already been advanced.
 - Finish with "**and the cycle then repeats**" — one clause, one insight, free mark.
 
 **Register transfer notation** — learn the punctuation, it is worth whole marks:
