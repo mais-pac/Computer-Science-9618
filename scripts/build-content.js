@@ -137,7 +137,7 @@ function markdownToHtml(md) {
  * Exam validation
  * ------------------------------------------------------------------ */
 const problems = [];
-const okTypes = ['mcq', 'text', 'numeric', 'trace'];
+const okTypes = ['mcq', 'text', 'numeric', 'trace', 'circuit'];
 
 function validateExam(exam, file) {
   const bad = (m) => problems.push(`${file}: ${m}`);
@@ -158,6 +158,10 @@ function validateExam(exam, file) {
     }
     if (q.type === 'numeric' && typeof q.answer !== 'number') bad(`${at}: numeric answer must be a number`);
     if (q.type === 'text' && !Array.isArray(q.answer)) bad(`${at}: text answer should be array of points`);
+    if (q.type === 'circuit') {
+      if (!Array.isArray(q.answer)) bad(`${at}: circuit needs an answer array of mark-scheme points`);
+      if (q.solution && (!Array.isArray(q.solution.parts) || !Array.isArray(q.solution.wires))) bad(`${at}: circuit solution must be {parts, wires}`);
+    }
     if (q.type === 'trace') {
       if (!Array.isArray(q.columns)) bad(`${at}: trace needs columns`);
       if (!Array.isArray(q.answer)) bad(`${at}: trace needs answer rows`);

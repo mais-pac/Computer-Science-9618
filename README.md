@@ -16,14 +16,19 @@ It mirrors the class exam portal ([shalgalt.online](https://www.shalgalt.online)
 > Only the **Chapter 4 Assessment** is based on the real thing, and even there what exists is: the
 > **exact question text and part marks** copied from a marked result screen, plus the model answers
 > derived from that. Two figures were **cropped out of those screenshots** and are marked as such in
-> the paper itself — Q2(b)/Q3 rely on a truth table and circuit that were not captured, and Q3's
-> original expression is unknown (only its truth-table output was visible).
+> the paper itself. The circuit-drawing parts (2b, 4b, 5c) are now **interactive simulator questions** whose
+> model circuits are verified against every input combination. Two figures were cropped out of the screenshots
+> and are flagged inline: Q3's original expression is unknown (only its truth-table output was visible), and
+> the truth table above Q2 was never captured.
 >
 > Treat every "teacher" paper as high-quality practice built on the right syllabus points — **not**
 > as a copy of what you were actually given. Mark yourself honestly and correct anything you have
 > the real wording for.
 - **Concise notes** for Paper 1 (theory) and Paper 2 (pseudocode/programming), with the exam traps and rapid-recall tables.
 - **Pseudocode training**: Cambridge syntax reference + 10 graded drills with model answers.
+- **Circuit simulator**: drag gates onto a grid, wire them up, toggle the inputs and watch the output — the same
+  way you build circuits in the class portal. "Check my circuit" compares your drawing with the model answer
+  by truth table, so any correctly-wired equivalent passes.
 - **Progress tracking**: marks, percentages, per-topic mastery, weakest-topic ranking, attempt history.
 - **No login, no server, no trackers.** Everything runs from static files; your answers and results live in your browser.
 
@@ -66,6 +71,7 @@ npx serve .
 | `result.html?attempt=…` | Score ring, grade, topic breakdown, **self-marked** written answers, full review with "why" |
 | `notes.html?paper=…` | Paper 1 / Paper 2 notes, contents sidebar, "mark revised" per section, print to PDF |
 | `code.html` | Cambridge pseudocode reference (copy buttons) + 10 drills with hidden model answers |
+| *in-exam* | Logic-circuit simulator for `circuit` questions: palette of gates, drag to move, drag between pins to wire, click an INPUT to toggle 0/1, live X readout |
 | `progress.html` | Attempt history, average, topic mastery bars, exam coverage, backup/restore |
 | `builder.html` | Paste a new exam as JSON → validate → save to this browser (no rebuild needed) |
 
@@ -93,6 +99,8 @@ Keyboard while sitting an exam: `←` `→` move, `A`–`D` pick an option, `F` 
 - `numeric` — number with tolerance, auto-marked
 - `trace` — trace table / truth table, partially marked, cell by cell
 - `text` — extended answer, **self-marked** against the mark scheme (tick what you actually wrote)
+- `circuit` — draw a logic circuit in the simulator, **self-marked** against the structure; an optional
+  `solution` graph powers the automatic "check my circuit" truth-table comparison
 
 > The teacher papers are reconstructions built from the class portal's exam list and the 9618 syllabus.
 > Where the original wording or a diagram is not available, the question is a faithful stand-in on the
@@ -118,6 +126,34 @@ Three ways, easiest first:
    ```
 3. **AI assist** — paste the question paper into any chatbot with the schema from
    `EXAM-FORMAT.md` and ask it to output the JSON; then use option 1 or 2.
+
+### Circuit questions
+
+Use `"type": "circuit"`. The answer is an array of mark-scheme points, exactly like a `text` question. Add an
+optional `"solution"` so students can press **Check my circuit**:
+
+```json
+{
+  "id": "5c", "type": "circuit", "marks": 4, "topic": "hardware", "section": "3.2",
+  "text": "Draw the logic circuit for X = B AND (A OR C).",
+  "answer": [{ "text": "OR gate fed by A and C", "marks": 1 }],
+  "solution": {
+    "parts": [
+      { "id": "p1", "type": "SWITCH", "x": 40, "y": 70,  "label": "A" },
+      { "id": "g1", "type": "OR",     "x": 230, "y": 150 },
+      { "id": "g2", "type": "AND",    "x": 420, "y": 140 }
+    ],
+    "wires": [
+      { "from": "p1", "to": "g1", "term": 0 },
+      { "from": "g1", "to": "g2", "term": 0 }
+    ]
+  }
+}
+```
+
+`type` is one of `SWITCH`, `NOT`, `AND`, `OR`, `XOR`, `NAND`, `NOR`, `XNOR`. `term` is the gate input
+index (0 = top, 1 = bottom); a gate's output is referenced by using its id as `from`. The easiest way to get a
+`solution` is to build it once in the simulator, then copy the JSON out of the saved attempt.
 
 `npm run build` **fails loudly** if a question is malformed (missing answer, marks mismatch, trace row
 length mismatch…). Fix the error it prints and run it again.
@@ -167,6 +203,7 @@ index.html  exams.html  exam.html  result.html  notes.html  code.html  progress.
 assets/
   css/app.css          one stylesheet, dark + light themes, print styles
   js/store.js          storage, helpers, nav, icons, content loading
+  js/circuit.js        logic-circuit simulator + equivalence checker
   js/exam.js           exam player, scoring, result/review, exam builder
   js/app.js            home / exams / notes / pseudocode / progress controllers
 content/
