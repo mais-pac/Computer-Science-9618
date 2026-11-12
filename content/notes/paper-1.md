@@ -224,7 +224,11 @@ sensor → ADC → microprocessor (compares reading with stored value, runs the 
 
 ### 4.1 CPU architecture
 
-**Von Neumann:** one memory holds **both** instructions and data, connected by a single set of buses (the "Von Neumann bottleneck"). **Harvard:** separate instruction and data memories (used in embedded/DSP chips).
+**Stored-program concept (the definition the examiner wants):** *program instructions and data are held in the
+same memory*, so a program is just data that can be loaded, replaced and executed without rewiring the machine.
+That is the first MCQ of the real 2026 paper — learn the sentence, not the vibe.
+
+**Von Neumann:** one memory holds **both** instructions and data, connected by a single set of buses (the "Von Neumann bottleneck"). **Harvard:** separate instruction and data memories (used in embedded/DSP chips), so an instruction fetch and a data fetch can happen at the same time.
 
 **Registers**
 
@@ -237,7 +241,8 @@ sensor → ADC → microprocessor (compares reading with stored value, runs the 
 | ACC (accumulator) | Stores results of ALU operations |
 | Status/flag register | Holds flags: zero, negative, carry, overflow |
 | IX (index register) | Used in indexed addressing (arrays) |
-| GPRs | General purpose registers for temporary data |
+| GPRs | **General purpose** registers — the programmer decides what they hold (a counter, a partial result). *not* fixed by the hardware |
+| IX | index register — added to an operand in indexed addressing, used to walk arrays |
 
 **Buses**
 
@@ -250,6 +255,12 @@ sensor → ADC → microprocessor (compares reading with stored value, runs the 
 1. **Fetch:** the address in the PC is copied to the MAR → the instruction is fetched from memory into the MDR → copied into the CIR → the PC is incremented.
 2. **Decode:** the control unit decodes the opcode in the CIR and works out what to do.
 3. **Execute:** control signals are sent; the ALU performs the operation, the result is stored in a register, and flags/memory may be updated.
+
+**Two facts that earn marks on almost every FDE question:**
+
+- **The fetch stage is identical for every instruction.** It has to be — the processor does not yet know what the instruction *is*. Only execute varies. Say this explicitly when asked to "describe the fetch–decode–execute cycle".
+- **The PC is incremented *during* fetch**, not at the end of the cycle. That is precisely why a `JMP` works: execute **overwrites** a PC value that has already been advanced.
+- Finish with "**and the cycle then repeats**" — one clause, one insight, free mark.
 
 **Register transfer notation** — learn the punctuation, it is worth whole marks:
 
@@ -275,11 +286,31 @@ sensor → ADC → microprocessor (compares reading with stored value, runs the 
 
 Memory aid: **MAR = address, MDR = data, PC = pointer to next, CIR = the instruction itself.**
 
+**General purpose vs special purpose** — a one-mark distinction that is asked as a definition:
+
+| | General purpose | Special purpose |
+|---|---|---|
+| Who decides its job | the **programmer** | the **hardware designer** (fixed) |
+| Examples | ACC, GPRs | PC, MAR, MDR, CIR, SR |
+| Typical content | operands and intermediate results | addresses, instructions, flags |
+
+You do not "choose" to put an address in the MAR — the fetch stage does it for you, every cycle.
+
 **Interrupts**
 
 - **Hardware interrupt** (device: key press, I/O complete, printer out of paper) or **software interrupt** (error, division by zero, service request).
 - On interrupt the CPU finishes the current instruction, saves PC and register values to the **stack**, loads the address of the **ISR** from the interrupt vector table, runs the ISR, restores the registers and resumes.
 - Interrupts have **priorities**; a higher priority can interrupt a lower-priority ISR.
+
+**The three phrases that carry most interrupt marks** — use them almost verbatim:
+
+1. "**at the end of the fetch–execute cycle the interrupt register is checked**" — never "the CPU stops immediately";
+2. "**the priority of the interrupt is compared with that of the current process**" and it is serviced only if higher;
+3. "**the contents of the registers (including the PC) are stored on the stack**" — say *stack*, not "saved somewhere".
+
+Then: the ISR address is loaded into the PC, the ISR runs, the registers are **popped back off the stack** and the
+original program resumes where it left off. A **stack** is **LIFO** (last in, first out) — which is exactly why it
+restores state in the reverse order it was saved.
 
 **Performance factors — one mark each, and the *mechanism* is the mark**
 
@@ -297,6 +328,24 @@ Memory aid: **MAR = address, MDR = data, PC = pointer to next, CIR = the instruc
 - **Address bus: unidirectional** (CPU → memory). Nothing comes back on it.
 - **Data bus: bidirectional** — data is both read and written.
 - **Control bus:** individual lines are one-way, but the bus as a whole carries signals **both** ways (read/write out; interrupt request in). If asked "which bus is unidirectional", the answer is the **address bus**.
+
+**Memory hierarchy — and why it exists**
+
+| Level | Speed | Size | Cost/bit | Volatile? | Holds |
+|---|---|---|---|---|---|
+| Registers (in the CPU) | fastest | bytes | highest | yes | the current operands and addresses |
+| Cache (L1/L2/L3, in/near the CPU) | very fast | KB–MB | high | yes | recently/frequently used instructions and data |
+| Main memory (RAM) | fast | GB | medium | yes | the running program and its data |
+| Secondary storage (SSD/HDD/optical) | slow | TB | lowest | **no** | programs and files at rest |
+
+Each level is a **trade-off between speed, capacity and cost**. The hierarchy works because programs show
+**locality of reference** — they reuse the same instructions and data repeatedly, so a small fast cache absorbs
+most of the accesses that would otherwise hit slow RAM.
+
+- **RAM** is volatile and holds programs/data currently in use; **ROM** is non-volatile and holds the
+  bootstrap/firmware (BIOS); **flash** (SSD) is non-volatile, fast and has no moving parts.
+- **Cache** works by copying recently used data from RAM. A **cache hit** is fast; a **cache miss** forces a
+  slower fetch from RAM — that is why "bigger cache" scores (see the performance table below).
 
 **Peripherals, ports and USB**
 
