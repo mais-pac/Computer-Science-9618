@@ -1,0 +1,64 @@
+{
+  "id": "ai-chapter-1-practice-4",
+  "title": "Chapter 1 — AI practice mock 4",
+  "origin": "ai",
+  "paper": "paper-1",
+  "chapter": 1,
+  "topics": [
+    "info-rep"
+  ],
+  "durationMin": 10,
+  "totalMarks": 3,
+  "examDate": null,
+  "instructions": "Short original AI-authored practice, inspired by the teacher-topic questions; not an official or full-length mock. Self-mark using the guidance.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "text",
+      "marks": 1,
+      "topic": "info-rep",
+      "section": "1",
+      "text": "A mono recording is sampled 8000 times per second at 8 bits per sample for 2 seconds. Calculate its size in bits, ignoring metadata.",
+      "answer": [
+        {
+          "text": "128000",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "8000 × 8 × 2 = 128,000 bits."
+    },
+    {
+      "id": "q2",
+      "type": "text",
+      "marks": 1,
+      "topic": "info-rep",
+      "section": "1",
+      "text": "Define sample rate.",
+      "answer": [
+        {
+          "text": "The number of audio samples taken per second.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "Measured in hertz."
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 1,
+      "topic": "info-rep",
+      "section": "1",
+      "text": "Explain the effect of increasing sample resolution.",
+      "answer": [
+        {
+          "text": "More bits per sample allow more amplitude levels and increase file size.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "Do not confuse resolution with sample rate."
+    }
+  ]
+}

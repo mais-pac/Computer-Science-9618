@@ -16,6 +16,7 @@
 .papers-kicker { font-family: var(--mono); font-size: .74rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--primary); margin: 32px 0 0; }
 .papers-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
 .papers-section { margin-top: 48px; }
+.papers-series { display: grid; align-content: start; gap: 14px; }
 .papers-card {
   display: flex; align-items: center; justify-content: space-between; gap: 20px;
   min-height: 112px; padding: 23px 25px;

@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: computer-science-9618
+    runtime: node
+    plan: free
+    buildCommand: node scripts/build-private-site.mjs
+    startCommand: node server.mjs
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: SITE_USERNAME
+        value: MN01428025
+      - key: SITE_PASSWORD
+        sync: false

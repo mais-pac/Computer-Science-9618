@@ -10,6 +10,11 @@ for (const n of [1, 2, 3, 4]) {
   assert.strictEqual(doc.querySelectorAll('.papers-year').length, 6);
   assert(doc.querySelector('#year-2025').textContent.includes(`9618/${n}1 · May/June 2025`));
   assert(doc.querySelector('#year-2025').textContent.includes(`9618/${n}3 · October/November 2025`));
+  const series = doc.querySelectorAll('#year-2025 .papers-series');
+  assert.strictEqual(series.length, 2);
+  assert.deepStrictEqual(Array.from(series[0].querySelectorAll('strong'), el => el.textContent), [1, 2, 3].map(v => `9618/${n}${v} · May/June 2025`));
+  assert.deepStrictEqual(Array.from(series[1].querySelectorAll('strong'), el => el.textContent), [1, 2, 3].map(v => `9618/${n}${v} · October/November 2025`));
+  assert.strictEqual(doc.querySelectorAll('#year-2025 .papers-card small').length, 0);
   assert(doc.querySelector('.papers-card').href.startsWith('https://'));
   dom.window.close();
 }

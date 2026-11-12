@@ -3,3 +3,10 @@ node_modules/
 *.log
 .venv/
 __pycache__/
+
+# Private deployment output and local secrets
+build/
+.env
+.env.*
+.dev.vars*
+.wrangler/
