@@ -163,7 +163,7 @@
         <div class="stack">
           <div class="row" style="gap:8px">
             <a class="btn btn-sm btn-ghost" href="exams.html">${CS.icon('arrowLeft')} All exams</a>
-            <span class="badge ${exam.origin === 'teacher' ? 'outline' : 'purple'}">${exam.origin === 'teacher' ? 'Teacher test' : 'AI generated'}</span>
+            <span class="badge ${exam.origin === 'teacher' ? 'outline' : 'purple'}">${exam.provenance === 'teacher-topic-reconstruction' ? 'AI reconstruction' : exam.origin === 'teacher' ? 'Teacher test' : 'AI generated'}</span>
             ${exam.chapter ? `<span class="badge outline">Chapter ${exam.chapter}</span>` : ''}
             <span class="badge outline">${exam.paper === 'paper-1' ? 'Paper 1 · Theory' : 'Paper 2 · Programming'}</span>
           </div>

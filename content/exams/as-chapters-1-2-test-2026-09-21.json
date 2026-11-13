@@ -1,7 +1,8 @@
 {
   "id": "as-chapters-1-2-test-2026-09-21",
   "title": "AS Computer Science – Chapters 1 & 2 Test",
-  "origin": "teacher",
+  "origin": "ai",
+  "provenance": "teacher-topic-reconstruction",
   "paper": "paper-1",
   "chapter": null,
   "topics": [

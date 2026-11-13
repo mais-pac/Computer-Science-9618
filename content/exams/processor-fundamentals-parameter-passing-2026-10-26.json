@@ -1,7 +1,8 @@
 {
   "id": "processor-fundamentals-parameter-passing-2026-10-26",
   "title": "Processor Fundamentals + Parameter Passing",
-  "origin": "teacher",
+  "origin": "ai",
+  "provenance": "teacher-topic-reconstruction",
   "paper": "paper-1",
   "chapter": 5,
   "topics": [

@@ -1,7 +1,8 @@
 {
   "id": "ch3-hardware-hardware-2026-09-30",
   "title": "Chapter 3 – Hardware",
-  "origin": "teacher",
+  "origin": "ai",
+  "provenance": "teacher-topic-reconstruction",
   "paper": "paper-1",
   "chapter": 3,
   "topics": [

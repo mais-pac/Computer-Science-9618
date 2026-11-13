@@ -40,12 +40,14 @@ for (const paper of [1, 2]) for (const year of [2021,2022,2023,2024,2025,2026]) 
   const d = new JSDOM(fs.readFileSync(filename,'utf8'), {url:`https://example.test/${route}`,runScripts:'dangerously'});
   d.window.eval(files); d.window.eval(detail);
   assert.strictEqual(d.window.document.querySelectorAll('.paper-action').length, 4);
-  const red = d.window.document.querySelector('.paper-action.red');
-  const green = d.window.document.querySelector('.paper-action.green');
+  const red = d.window.document.querySelector('.paper-action.mark-scheme');
+  const green = d.window.document.querySelector('.paper-action.question-paper');
   assert(red.href?.startsWith('https://drive.google.com/file/d/'), filename + ' mark scheme');
   assert(green.href?.startsWith('https://drive.google.com/file/d/'), filename + ' question paper');
-  assert.strictEqual(d.window.document.querySelector('.paper-action.yellow').getAttribute('aria-disabled'), 'true');
-  assert.strictEqual(d.window.document.querySelector('.paper-action.blue').getAttribute('aria-disabled'), 'true');
+  assert.strictEqual(d.window.document.querySelector('.paper-action.exam').getAttribute('aria-disabled'), 'true');
+  assert.strictEqual(d.window.document.querySelector('.paper-action.worked').getAttribute('aria-disabled'), 'true');
+  assert(d.window.document.querySelector('.paper-heading .paper-actions'));
+  assert(d.window.document.querySelector('.paper-content').textContent.includes('not available yet'));
   d.window.close();
   }
 }
