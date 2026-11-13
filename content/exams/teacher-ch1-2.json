@@ -1,0 +1,398 @@
+{
+  "id": "teacher-ch1-2",
+  "title": "Chapters 1 & 2 — Teacher Quiz",
+  "origin": "teacher",
+  "provenance": "teacher-source-transcription",
+  "paper": "paper-1",
+  "chapter": 1,
+  "chapters": [
+    1,
+    2
+  ],
+  "topics": [
+    "info-rep"
+  ],
+  "durationMin": 40,
+  "totalMarks": 40,
+  "instructions": "Answer all questions. Show all working for conversions and calculations. Calculators are not permitted. This is a partial reconstruction from the supplied screenshots, not a complete replica. Some original question material is missing. Mark yourself using your own reference: no official mark scheme is supplied.",
+  "description": "Questions transcribed from teacher result screenshots. Some original context or options are missing; answers are self-assessed without an official mark scheme.",
+  "selfAssessedWithoutScheme": true,
+  "questions": [
+    {
+      "id": "q1a",
+      "type": "text",
+      "marks": 2,
+      "topic": "info-rep",
+      "text": "**Original question 1(a)**\n\nConvert the binary number 11010110 to denary.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 2 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q1b",
+      "type": "text",
+      "marks": 2,
+      "topic": "info-rep",
+      "text": "**Original question 1(b)**\n\nConvert denary 173 to hexadecimal.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 2 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q2a",
+      "type": "text",
+      "marks": 3,
+      "topic": "info-rep",
+      "text": "**Original question 2(a)**\n\nRepresent denary -53 as an 8-bit two's complement binary number. Show your working.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 2 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 3 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q2b",
+      "type": "text",
+      "marks": 1,
+      "topic": "info-rep",
+      "text": "**Original question 2(b)**\n\nThe 8-bit binary number 11010110 is stored using two's complement. Convert it to denary.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q3a",
+      "type": "text",
+      "marks": 1,
+      "topic": "info-rep",
+      "text": "**Original question 3(a)**\n\nWrite denary 507 using Binary Coded Decimal (BCD).",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q3b",
+      "type": "text",
+      "marks": 1,
+      "topic": "info-rep",
+      "text": "**Original question 3(b)**\n\nState one difference between ASCII and UTF-8 Unicode.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q4a",
+      "type": "text",
+      "marks": 3,
+      "topic": "info-rep",
+      "text": "**Original question 4(a)**\n\nCalculate the minimum storage required for the pixel data. Give your answer in bytes and KiB. Show your working.\n\n**Source limitation:** The original image specifications are not shown in the supplied question screenshot.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 2 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 3 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q4b",
+      "type": "text",
+      "marks": 1,
+      "topic": "info-rep",
+      "text": "**Original question 4(b)**\n\nState one advantage of storing a graphic as a vector graphic when the image needs to be enlarged.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q5a",
+      "type": "text",
+      "marks": 1,
+      "topic": "info-rep",
+      "text": "**Original question 5(a)**\n\nDefine sampling rate.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q5b",
+      "type": "text",
+      "marks": 1,
+      "topic": "info-rep",
+      "text": "**Original question 5(b)**\n\nState the requirement given by Nyquist's theorem when choosing a sampling rate.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q5c",
+      "type": "text",
+      "marks": 1,
+      "topic": "info-rep",
+      "text": "**Original question 5(c)**\n\nState one difference between lossless compression and lossy compression.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "type": "text",
+      "marks": 7,
+      "topic": "info-rep",
+      "text": "**Original question 6**\n\nA program is required to convert a denary integer into an 8-bit binary number. The program must: input an integer Number; check that Number is between 0 and 255 inclusive; output \"Invalid input\" if the value is outside this range; otherwise convert the number to an 8-bit binary representation; use DIV and MOD; not use a built-in binary conversion function. Write pseudocode to perform this task.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 2 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 3 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 4 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 5 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 6 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 7 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q7a",
+      "type": "text",
+      "marks": 2,
+      "topic": "info-rep",
+      "text": "**Original question 7(a)**\n\nState two differences between a LAN and a WAN.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 2 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q7b",
+      "type": "text",
+      "marks": 1,
+      "topic": "info-rep",
+      "text": "**Original question 7(b)**\n\nState one difference between a thin client and a thick client.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q8a",
+      "type": "text",
+      "marks": 1,
+      "topic": "info-rep",
+      "text": "**Original question 8(a)**\n\nName this network topology.\n\n**Source limitation:** The original topology diagram is not shown in the supplied question screenshot.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q8b",
+      "type": "text",
+      "marks": 1,
+      "topic": "info-rep",
+      "text": "**Original question 8(b)**\n\nName the device most commonly used as the central device in a modern wired LAN.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q8c",
+      "type": "text",
+      "marks": 1,
+      "topic": "info-rep",
+      "text": "**Original question 8(c)**\n\nState one disadvantage of using this topology.\n\n**Source limitation:** The referenced topology diagram is not shown in the supplied question screenshot.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q9",
+      "type": "text",
+      "marks": 2,
+      "topic": "info-rep",
+      "text": "**Original question 9**\n\nFibre-optic cable is being considered instead of twisted-pair cable. State: (i) one advantage of fibre-optic cable (ii) one disadvantage of fibre-optic cable.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 2 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q10a",
+      "type": "text",
+      "marks": 1,
+      "topic": "info-rep",
+      "text": "**Original question 10(a)**\n\nState the purpose of an Internet Service Provider (ISP).",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q10b",
+      "type": "text",
+      "marks": 1,
+      "topic": "info-rep",
+      "text": "**Original question 10(b)**\n\nState the purpose of an Internet Exchange Point (IXP).",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q10c",
+      "type": "text",
+      "marks": 2,
+      "topic": "info-rep",
+      "text": "**Original question 10(c)**\n\nExplain the function of a router in the Internet infrastructure.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 2 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q11a",
+      "type": "text",
+      "marks": 2,
+      "topic": "info-rep",
+      "text": "**Original question 11(a)**\n\nConvert the following IPv4 binary address to dotted decimal notation: 11000000 10101000 00000001 00011110",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 2 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q11b",
+      "type": "text",
+      "marks": 1,
+      "topic": "info-rep",
+      "text": "**Original question 11(b)**\n\nExplain the purpose of Network Address Translation (NAT).",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q11c",
+      "type": "text",
+      "marks": 1,
+      "topic": "info-rep",
+      "text": "**Original question 11(c)**\n\nState the purpose of the Domain Name System (DNS).",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,489 @@
+{
+  "id": "teacher-ch5",
+  "title": "Processor Fundamentals + Parameter Passing",
+  "origin": "teacher",
+  "provenance": "teacher-source-transcription",
+  "paper": "paper-1",
+  "chapter": 5,
+  "chapters": [
+    5
+  ],
+  "topics": [
+    "processor"
+  ],
+  "durationMin": 45,
+  "totalMarks": 45,
+  "instructions": "Answer the available questions. This is a partial reconstruction from the supplied screenshots, not a complete replica. Some original question material is missing. Mark yourself using your own reference: no official mark scheme is supplied.",
+  "description": "Questions transcribed from teacher result screenshots. Some original context or options are missing; answers are self-assessed without an official mark scheme.",
+  "selfAssessedWithoutScheme": true,
+  "questions": [
+    {
+      "id": "q1",
+      "type": "text",
+      "marks": 1,
+      "topic": "processor",
+      "text": "**Original question 1**\n\nWhich statement describes the stored-program concept in the von Neumann model?",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "type": "text",
+      "marks": 1,
+      "topic": "processor",
+      "text": "**Original question 2**\n\nWhich component is responsible for arithmetic and logical operations?",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 1,
+      "topic": "processor",
+      "text": "**Original question 3**\n\nWhich register stores the address of the next instruction to be fetched?",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "type": "text",
+      "marks": 1,
+      "topic": "processor",
+      "text": "**Original question 4**\n\nWhich system bus is unidirectional?",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "type": "text",
+      "marks": 1,
+      "topic": "processor",
+      "text": "**Original question 5**\n\nWhich change directly increases the number of memory locations that can be addressed?",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "type": "text",
+      "marks": 1,
+      "topic": "processor",
+      "text": "**Original question 6**\n\nThe register that stores the instruction currently being decoded and executed is the:",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "type": "text",
+      "marks": 1,
+      "topic": "processor",
+      "text": "**Original question 7**\n\nThe system bus that carries read/write and timing signals is the:",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q8",
+      "type": "text",
+      "marks": 1,
+      "topic": "processor",
+      "text": "**Original question 8**\n\nThe register used to hold data read from memory or about to be written to memory is the:",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q9",
+      "type": "text",
+      "marks": 1,
+      "topic": "processor",
+      "text": "**Original question 9**\n\nThe interface that transmits both high-quality video and audio to a display is:",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q10a",
+      "type": "text",
+      "marks": 1,
+      "topic": "processor",
+      "text": "**Original question 10(a)**\n\nState the purpose of the Memory Address Register (MAR).",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q10b",
+      "type": "text",
+      "marks": 1,
+      "topic": "processor",
+      "text": "**Original question 10(b)**\n\nState the purpose of the Program Counter (PC).",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q10c",
+      "type": "text",
+      "marks": 1,
+      "topic": "processor",
+      "text": "**Original question 10(c)**\n\nState the purpose of the Status Register (SR).",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q11a",
+      "type": "text",
+      "marks": 1,
+      "topic": "processor",
+      "text": "**Original question 11(a)**\n\nIncreasing the processor clock speed.\n\n**Source limitation:** The shared instruction is not shown in the supplied screenshot.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q11b",
+      "type": "text",
+      "marks": 1,
+      "topic": "processor",
+      "text": "**Original question 11(b)**\n\nIncreasing cache memory capacity.\n\n**Source limitation:** The shared instruction is not shown in the supplied screenshot.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q11c",
+      "type": "text",
+      "marks": 1,
+      "topic": "processor",
+      "text": "**Original question 11(c)**\n\nIncreasing the number of processor cores.\n\n**Source limitation:** The shared instruction is not shown in the supplied screenshot.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q12a",
+      "type": "text",
+      "marks": 1,
+      "topic": "processor",
+      "text": "**Original question 12(a)**\n\nState what is meant by a port in a computer system.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q12b",
+      "type": "text",
+      "marks": 2,
+      "topic": "processor",
+      "text": "**Original question 12(b)**\n\nExplain two features of USB that make it suitable for connecting peripheral devices.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 2 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q13a",
+      "type": "text",
+      "marks": 1,
+      "topic": "processor",
+      "text": "**Original question 13(a)**\n\nState the register that initially contains the address of the next instruction.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q13b",
+      "type": "text",
+      "marks": 3,
+      "topic": "processor",
+      "text": "**Original question 13(b)**\n\nDescribe how the instruction is transferred from memory into the Current Instruction Register (CIR) during the fetch stage.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 2 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 3 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q14ai",
+      "type": "text",
+      "marks": 1,
+      "topic": "processor",
+      "text": "**Original question 14(a)(i)**\n\nThe address of the next instruction is copied from the PC to the MAR.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q14aii",
+      "type": "text",
+      "marks": 1,
+      "topic": "processor",
+      "text": "**Original question 14(a)(ii)**\n\nThe PC is incremented by 1.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q14aiii",
+      "type": "text",
+      "marks": 1,
+      "topic": "processor",
+      "text": "**Original question 14(a)(iii)**\n\nThe instruction stored at the memory address held in the MAR is copied into the MDR.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q14aiv",
+      "type": "text",
+      "marks": 1,
+      "topic": "processor",
+      "text": "**Original question 14(a)(iv)**\n\nThe instruction in the MDR is copied into the CIR.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q14b",
+      "type": "text",
+      "marks": 1,
+      "topic": "processor",
+      "text": "**Original question 14(b)**\n\nRewrite operations (a)(ii) and (a)(iii) on a single line using the correct notation to indicate that they occur simultaneously.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q15a",
+      "type": "text",
+      "marks": 1,
+      "topic": "processor",
+      "text": "**Original question 15(a)**\n\nState one possible cause of an interrupt.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q15b",
+      "type": "text",
+      "marks": 3,
+      "topic": "processor",
+      "text": "**Original question 15(b)**\n\nDescribe the sequence of actions taken by the processor to handle the interrupt and resume the original program.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 2 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 3 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q16a",
+      "type": "text",
+      "marks": 2,
+      "topic": "processor",
+      "text": "**Original question 16(a)**\n\nState the values output for A and B.\n\n**Source limitation:** The referenced program is not shown in the supplied screenshot.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 2 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q16b",
+      "type": "text",
+      "marks": 2,
+      "topic": "processor",
+      "text": "**Original question 16(b)**\n\nExplain the difference between passing a parameter BYVAL and passing a parameter BYREF.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 2 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q16c",
+      "type": "text",
+      "marks": 2,
+      "topic": "processor",
+      "text": "**Original question 16(c)**\n\nA student wants ChangeValue to modify the original value of A. State the change required to the procedure declaration and explain why this change works.\n\n**Source limitation:** The referenced program is not shown in the supplied screenshot.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 2 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q17a",
+      "type": "text",
+      "marks": 3,
+      "topic": "processor",
+      "text": "**Original question 17(a)**\n\nWrite a procedure named DisplayBonus that:\n- Accepts an INTEGER parameter named Score.\n- Adds 5 to Score and outputs the updated score.\n- Must not change the original value of the variable passed to the procedure.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 2 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 3 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q17b",
+      "type": "text",
+      "marks": 3,
+      "topic": "processor",
+      "text": "**Original question 17(b)**\n\nWrite a procedure named ApplyBonus that:\n- Accepts an INTEGER parameter named Score.\n- Adds 10 to Score and must permanently update the original variable passed to the procedure.\n- Does not output a value.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 2 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 3 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q17c",
+      "type": "text",
+      "marks": 2,
+      "topic": "processor",
+      "text": "**Original question 17(c)**\n\nWrite a main program that:\n- Declares an INTEGER variable named StudentScore and assigns it the value 60.\n- Calls DisplayBonus, followed by ApplyBonus, passing StudentScore to both procedures.\n- Outputs the final value of StudentScore.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 2 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    }
+  ]
+}

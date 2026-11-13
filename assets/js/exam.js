@@ -35,6 +35,24 @@
     return out.join('');
   };
 
+  /* SVG borders remain crisp at any zoom; native inputs retain keyboard and screen-reader support. */
+  function vectorTable(table, values, readonly) {
+    const columns = table.columns, rows = table.rows;
+    const border = '<svg class="answer-grid-border" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><rect x="0" y="0" width="100" height="100" fill="none" stroke="currentColor" stroke-width="1" vector-effect="non-scaling-stroke"/></svg>';
+    const cell = (content, role, header) => `<div class="answer-grid-cell${header ? ' answer-grid-heading' : ''}" role="${role}">${border}<div class="answer-grid-content">${content}</div></div>`;
+    const rowStyle = `grid-template-columns:repeat(${columns.length}, minmax(115px, 1fr))`;
+    const head = `<div class="answer-grid-row" role="row" style="${rowStyle}">${columns.map(c => cell(CS.esc(c), 'columnheader', true)).join('')}</div>`;
+    const body = rows.map((row, r) => `<div class="answer-grid-row" role="row" style="${rowStyle}">${columns.map((column, c) => {
+      const fixed = row[c];
+      if (fixed !== null && fixed !== undefined) return cell(CS.esc(String(fixed)), 'cell', false);
+      const value = (values && values[r] && values[r][c]) || '';
+      const label = CS.esc(`Row ${r + 1}, ${column}`);
+      const input = readonly ? `<span>${CS.esc(value || '—')}</span>` : `<input type="text" data-table-row="${r}" data-table-col="${c}" aria-label="${label}" value="${CS.esc(value)}" autocomplete="off">`;
+      return cell(input, 'cell', false);
+    }).join('')}</div>`).join('');
+    return `<div class="answer-grid-scroll"><div class="answer-grid" role="table" aria-label="Question answer table">${head}${body}</div></div>`;
+  }
+
   /* ---------- scoring ---------- */
   function normNumber(v, tol) {
     const n = parseFloat(String(v).replace(/[,\s]/g, ''));
@@ -79,7 +97,8 @@
   }
   CS.scoreQuestion = scoreQuestion;
 
-  function hasAnswer(q, ans) {
+  function hasAnswer(q, ans, tableValues) {
+    if (tableValues && tableValues.some(row => row && row.some(value => String(value || '').trim()))) return true;
     if (ans == null) return false;
     if (q.type === 'trace') return Array.isArray(ans) && ans.some((r) => (r || []).some((c) => String(c || '').trim() !== ''));
     if (q.type === 'circuit') return !!(ans && Array.isArray(ans.parts) && ans.wires && ans.wires.length);
@@ -151,6 +170,17 @@
     const draftKey = exam.id;
     let attempt = null;
     let timerId = null;
+    const needsFullscreen = exam.origin === 'teacher';
+    let fullscreenWasActive = false;
+    if (needsFullscreen) document.addEventListener('fullscreenchange', () => {
+      if (!attempt) return;
+      if (document.fullscreenElement) fullscreenWasActive = true;
+      else if (fullscreenWasActive) {
+        fullscreenWasActive = false;
+        (attempt.fullscreenExits ||= []).push(new Date().toISOString());
+        CS.saveDraft(attempt);
+      }
+    });
 
     /* ---------- intro screen ---------- */
     const past = CS.resultsFor(exam.id);
@@ -185,9 +215,12 @@
             <div class="card">
               <h3>Instructions</h3>
               <p style="color:var(--fg-dim);font-size:.9rem">${CS.md(exam.instructions || 'Answer all questions.')}</p>
+              ${needsFullscreen ? `<p><strong>This exam requires fullscreen mode.</strong></p>
+              <p style="color:var(--fg-dim);font-size:.9rem">Starting the exam will try to switch your browser to fullscreen automatically. If it doesn't, press F11 (Windows/Chrome, Edge, Firefox) or Cmd+Ctrl+F (Mac Safari) before you begin. Leaving fullscreen during the exam is recorded.</p>
+              <p class="small" style="color:var(--fg-dim)">Recorded on this device only when the browser reports a fullscreen exit; browser or operating-system fullscreen may not be detectable. Some phones and embedded previews do not support fullscreen.</p>` : ''}
               <ul style="font-size:.88rem;color:var(--fg-dim);padding-left:18px">
                 <li>Answers are saved automatically — you can close the tab and resume.</li>
-                <li>Written answers are <strong>self-marked</strong> against the mark scheme after you submit.</li>
+                <li>${exam.selfAssessedWithoutScheme ? 'No official mark scheme is supplied. You may award your own marks after submitting.' : 'Written answers are <strong>self-marked</strong> against the mark scheme after you submit.'}</li>
                 <li>Timer: <span class="mono">${exam.durationMin}:00</span> — when it runs out the exam submits itself.</li>
               </ul>
               <div class="row" style="margin-top:10px">
@@ -211,6 +244,15 @@
 
       document.getElementById('startBtn').onclick = () => {
         attempt = CS.getDraft(draftKey) || newAttempt(exam);
+        if (needsFullscreen) {
+          fullscreenWasActive = !!document.fullscreenElement;
+          if (!fullscreenWasActive && document.documentElement.requestFullscreen) {
+            try {
+              const request = document.documentElement.requestFullscreen();
+              if (request && request.catch) request.catch(() => CS.toast('Fullscreen unavailable; you can continue with your browser fullscreen controls.', 'warn'));
+            } catch (_) { CS.toast('Fullscreen unavailable; you can continue with your browser fullscreen controls.', 'warn'); }
+          }
+        }
         startTimer();
         render();
       };
@@ -262,7 +304,7 @@
         if (reveal) body += `<div class="explain"><h4>Correct answer</h4><p class="mono">${q.answer}${q.unit ? ' ' + CS.esc(q.unit) : ''}</p></div>`;
       } else if (q.type === 'text') {
         const val = typeof ans === 'string' ? ans : '';
-        body = `<label class="field"><span>Your answer</span>
+        body = `${q.table ? vectorTable(q.table, (attempt.tableAnswers || {})[q.id], reveal) : ''}<label class="field"><span>${q.table ? 'Additional working (optional)' : 'Your answer'}</span>
           <textarea id="textAns" placeholder="Write your answer in full sentences (Cambridge mark scheme style)…" ${reveal ? 'disabled' : ''}>${CS.esc(val)}</textarea></label>`;
       } else if (q.type === 'circuit') {
         body = `<div class="circ-mount" data-qid="${q.id}"${reveal ? ' data-locked="1"' : ''}></div>
@@ -308,7 +350,7 @@
 
     /* ---------- main exam UI ---------- */
     function answeredCount() {
-      return exam.questions.filter((q) => hasAnswer(q, attempt.answers[q.id])).length;
+      return exam.questions.filter((q) => hasAnswer(q, attempt.answers[q.id], (attempt.tableAnswers || {})[q.id])).length;
     }
 
     function render() {
@@ -336,7 +378,7 @@
             <div class="qgrid" id="qgrid">
               ${attempt.order.map((id, i) => {
                 const qq = qById(id);
-                return `<button data-i="${i}" class="${i === attempt.index ? 'cur' : ''} ${hasAnswer(qq, attempt.answers[id]) ? 'answered' : ''} ${attempt.flags.includes(id) ? 'flagged' : ''}">${i + 1}</button>`;
+                return `<button data-i="${i}" class="${i === attempt.index ? 'cur' : ''} ${hasAnswer(qq, attempt.answers[id], (attempt.tableAnswers || {})[id]) ? 'answered' : ''} ${attempt.flags.includes(id) ? 'flagged' : ''}">${i + 1}</button>`;
               }).join('')}
             </div>
             <div class="legend">
@@ -399,6 +441,18 @@
         ta.oninput = () => { attempt.answers[qid] = ta.value; saveLight(); };
         ta.onblur = () => save();
       }
+      card.querySelectorAll('input[data-table-row]').forEach((input) => {
+        input.oninput = () => {
+          const r = Number(input.dataset.tableRow), c = Number(input.dataset.tableCol);
+          attempt.tableAnswers = attempt.tableAnswers || {};
+          const rows = attempt.tableAnswers[qid] || [];
+          rows[r] = rows[r] || [];
+          rows[r][c] = input.value;
+          attempt.tableAnswers[qid] = rows;
+          saveLight();
+        };
+        input.onblur = () => save();
+      });
       if (q.type === 'circuit') {
         const mount = card.querySelector('.circ-mount');
         if (mount && CS.CircuitEditor) {
@@ -463,7 +517,7 @@
     }
 
     let saveTimer = null;
-    function save() { CS.saveDraft(attempt); }
+    function save() { clearTimeout(saveTimer); CS.saveDraft(attempt); }
     function saveLight() {
       clearTimeout(saveTimer);
       saveTimer = setTimeout(() => CS.saveDraft(attempt), 400);
@@ -496,7 +550,7 @@
         <h3>Submit exam?</h3>
         <p style="color:var(--fg-dim)">You have answered <strong>${done}</strong> of <strong>${total}</strong> questions
         and have <span class="mono">${CS.mmss(left)}</span> left. ${done < total ? 'Unanswered questions score 0.' : ''}</p>
-        <p class="small" style="color:var(--fg-dim)">Written questions will be self-marked on the next screen using the mark scheme.</p>
+        <p class="small" style="color:var(--fg-dim)">${exam.selfAssessedWithoutScheme ? 'You can review your answers and assign your own marks; no mark scheme is supplied.' : 'Written questions will be self-marked on the next screen using the mark scheme.'}</p>
         <div class="row" style="justify-content:flex-end;margin-top:14px">
           <button class="btn btn-ghost" data-close>Keep working</button>
           <button class="btn btn-primary" data-submit>Submit now</button>
@@ -509,6 +563,7 @@
 
     function submit(auto) {
       clearInterval(timerId);
+      clearTimeout(saveTimer);
       const finishedAt = new Date().toISOString();
       const durationUsedSec = Math.round((Date.now() - new Date(attempt.startedAt).getTime()) / 1000);
       const ticks = {};
@@ -525,8 +580,10 @@
         startedAt: attempt.startedAt,
         finishedAt,
         autoSubmitted: !!auto,
+        fullscreenExits: attempt.fullscreenExits || [],
         durationUsedSec,
         answers: attempt.answers,
+        tableAnswers: attempt.tableAnswers || {},
         flags: attempt.flags,
         order: attempt.order,
         ticks,
@@ -602,11 +659,11 @@
                 <div class="big">${pct}%</div><div class="lbl">${result.marks} / ${result.total}</div>
               </div></div>
               <div class="stack" style="flex:1">
-                <div><span class="badge ${grade[1]}">Grade ${grade[0]}</span></div>
+                <div>${exam.selfAssessedWithoutScheme ? '<span class="badge outline">Self-assessed · no official grade</span>' : `<span class="badge ${grade[1]}">Grade ${grade[0]}</span>`}</div>
                 <div class="small" style="color:var(--fg-dim)">
                   MCQs &amp; traces: <span class="mono">${result.autoMarks}/${result.autoTotal}</span><br>
                   Written (self-marked): <span class="mono">${result.selfMarks}/${result.selfTotal}</span><br>
-                  Time used: <span class="mono">${CS.mmss(result.durationUsedSec || 0)}</span>
+                  Time used: <span class="mono">${CS.mmss(result.durationUsedSec || 0)}</span>${exam.origin === 'teacher' ? `<br>Detected fullscreen exits: <span class="mono">${(result.fullscreenExits || []).length}</span> (stored in this browser)` : ''}
                   ${prev ? `<br>Previous: <span class="mono">${prev.marks}/${prev.total}</span> (${CS.pct(prev.marks, prev.total)}%)` : ''}
                 </div>
                 <div class="row">
@@ -630,7 +687,7 @@
           </div>
           ${result.selfTotal ? `<div class="card" style="border-color:color-mix(in srgb,var(--yellow) 45%,transparent)">
             <h3>${CS.icon('check')} Self-mark your written answers</h3>
-            <p class="small" style="color:var(--fg-dim)">Tick every mark-scheme point you actually wrote (not what you meant). Your total updates instantly — this is how you find the difference between "I knew it" and "I can score it".</p>
+            <p class="small" style="color:var(--fg-dim)">${exam.selfAssessedWithoutScheme ? 'No official mark scheme is provided. Use an external reference to award your own marks; the score is not automatically graded.' : 'Tick every mark-scheme point you actually wrote (not what you meant). Your total updates instantly — this is how you find the difference between &quot;I knew it&quot; and &quot;I can score it&quot;.'}</p>
           </div>` : ''}
           <div class="section-head"><h2>Question review</h2><span class="sub">${exam.questions.length} questions · ${result.total} marks</span></div>
           <div class="stack" id="reviewList">${exam.questions.map((q, i) => reviewCard(q, i)).join('')}</div>
@@ -683,9 +740,9 @@
         body = `<p class="mono small">Your answer: <strong style="color:${full ? 'var(--green)' : 'var(--red)'}">${CS.esc(ans == null ? '—' : ans)}</strong>
           &nbsp;·&nbsp; Correct: <strong style="color:var(--green)">${q.answer}${q.unit ? ' ' + CS.esc(q.unit) : ''}</strong></p>`;
       } else if (q.type === 'text') {
-        body = `<div class="card tight" style="background:var(--bg-2)"><div class="card-meta">YOUR ANSWER</div>
+        body = `${q.table ? vectorTable(q.table, (result.tableAnswers || {})[q.id], true) : ''}<div class="card tight" style="background:var(--bg-2)"><div class="card-meta">${q.table ? 'ADDITIONAL WORKING' : 'YOUR ANSWER'}</div>
           <p style="white-space:pre-wrap;margin:6px 0 0;font-size:.9rem">${CS.esc(ans || '(no answer)')}</p></div>
-          <div class="msbox"><h4>Mark scheme — tick what you wrote (${q.marks} marks)</h4>
+          <div class="msbox"><h4>${exam.selfAssessedWithoutScheme ? 'Self-assessment — no mark scheme supplied' : 'Mark scheme — tick what you wrote'} (${q.marks} marks)</h4>
             ${(q.answer || []).map((pt, ti) => `<label class="row" style="align-items:flex-start;gap:9px;margin:6px 0;cursor:pointer">
               <input type="checkbox" data-qid="${q.id}" data-tick="${ti}" ${((result.ticks[q.id] || [])[ti] ? 'checked' : '')}
                 style="width:auto;margin-top:3px">

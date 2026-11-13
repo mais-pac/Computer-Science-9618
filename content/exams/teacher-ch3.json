@@ -1,0 +1,381 @@
+{
+  "id": "teacher-ch3",
+  "title": "Chapter 3 — Hardware",
+  "origin": "teacher",
+  "provenance": "teacher-source-transcription",
+  "paper": "paper-1",
+  "chapter": 3,
+  "chapters": [
+    3
+  ],
+  "topics": [
+    "hardware"
+  ],
+  "durationMin": 50,
+  "totalMarks": 40,
+  "instructions": "Answer the available questions. This is a partial reconstruction from the supplied screenshots, not a complete replica. Some original question material is missing. Mark yourself using your own reference: no official mark scheme is supplied.",
+  "description": "Questions transcribed from teacher result screenshots. Some original context or options are missing; answers are self-assessed without an official mark scheme.",
+  "selfAssessedWithoutScheme": true,
+  "questions": [
+    {
+      "id": "q1a",
+      "type": "text",
+      "marks": 1,
+      "topic": "hardware",
+      "text": "**Original question 1(a)**\n\nWhich component provides the fastest access to data?",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q1b",
+      "type": "text",
+      "marks": 1,
+      "topic": "hardware",
+      "text": "**Original question 1(b)**\n\nState two of the three major operational capabilities that a computer system must support.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q1c",
+      "type": "text",
+      "marks": 2,
+      "topic": "hardware",
+      "text": "**Original question 1(c)**\n\nExplain why secondary storage is required even when a computer has primary storage.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 2 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q2a",
+      "type": "text",
+      "marks": 1,
+      "topic": "hardware",
+      "text": "**Original question 2(a)**\n\nState what is meant by an embedded system.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q2b",
+      "type": "text",
+      "marks": 1,
+      "topic": "hardware",
+      "text": "**Original question 2(b)**\n\nA microcontroller may be used in the washing machine. State the three main components or capabilities that can be constructed on a single microcontroller chip.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q2c",
+      "type": "text",
+      "marks": 2,
+      "topic": "hardware",
+      "text": "**Original question 2(c)**\n\nThe washing machine can connect to the Internet. Explain one benefit and one security concern of this network connection.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 2 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q3a",
+      "type": "text",
+      "marks": 2,
+      "topic": "hardware",
+      "text": "**Original question 3(a)**\n\nDescribe two differences between RAM and ROM.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 2 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q3b",
+      "type": "text",
+      "marks": 3,
+      "topic": "hardware",
+      "text": "**Original question 3(b)**\n\nState three differences between DRAM and SRAM.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 2 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 3 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q3c",
+      "type": "text",
+      "marks": 1,
+      "topic": "hardware",
+      "text": "**Original question 3(c)**\n\nWhich type of RAM is normally used for cache memory?",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q3d",
+      "type": "text",
+      "marks": 2,
+      "topic": "hardware",
+      "text": "**Original question 3(d)**\n\nData is being transferred from one part of a computer faster than the destination can receive it. Explain how a buffer helps with this problem.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 2 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q4a",
+      "type": "text",
+      "marks": 3,
+      "topic": "hardware",
+      "text": "**Original question 4(a)**\n\nFor each device, identify the type of storage medium used.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 2 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 3 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ],
+      "table": {
+        "columns": [
+          "Device",
+          "Storage medium"
+        ],
+        "rows": [
+          [
+            "Hard disk drive",
+            null
+          ],
+          [
+            "DVD-RW",
+            null
+          ],
+          [
+            "USB flash drive",
+            null
+          ]
+        ]
+      }
+    },
+    {
+      "id": "q4b",
+      "type": "text",
+      "marks": 3,
+      "topic": "hardware",
+      "text": "**Original question 4(b)**\n\nDescribe how data is stored and accessed on a magnetic hard disk.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 2 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 3 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q4c",
+      "type": "text",
+      "marks": 2,
+      "topic": "hardware",
+      "text": "**Original question 4(c)**\n\nA student is replacing the internal hard disk drive in a laptop with an SSD. Explain two advantages of using solid-state storage in this situation.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 2 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q5a",
+      "type": "text",
+      "marks": 1,
+      "topic": "hardware",
+      "text": "**Original question 5(a)**\n\nA screen pixel normally contains three sub-pixels. State the three colours.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q5b",
+      "type": "text",
+      "marks": 3,
+      "topic": "hardware",
+      "text": "**Original question 5(b)**\n\nDescribe how an inkjet printer produces a printed page.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 2 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 3 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q5c",
+      "type": "text",
+      "marks": 2,
+      "topic": "hardware",
+      "text": "**Original question 5(c)**\n\nDescribe how a 3D printer creates a physical object from a 3D design.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 2 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q6a",
+      "type": "text",
+      "marks": 3,
+      "topic": "hardware",
+      "text": "**Original question 6(a)**\n\nDescribe how pressing a key on a keyboard results in a character being identified.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 2 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 3 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q6b",
+      "type": "text",
+      "marks": 3,
+      "topic": "hardware",
+      "text": "**Original question 6(b)**\n\nModern smartphones commonly use capacitive touch screens. Describe how a capacitive touch screen detects user input.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 2 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 3 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q7a",
+      "type": "text",
+      "marks": 2,
+      "topic": "hardware",
+      "text": "**Original question 7(a)**\n\nExplain how the student's voice is converted into data that can be processed by the computer.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 2 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q7b",
+      "type": "text",
+      "marks": 2,
+      "topic": "hardware",
+      "text": "**Original question 7(b)**\n\nExplain how digital sound data from the computer is converted into sound from a speaker.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 2 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    }
+  ]
+}
