@@ -1,6 +1,6 @@
 (function () {
   'use strict';
-  const match = location.pathname.split('/').pop().match(/^9618-([1-4])([1-3])-(mj|on)-(202[1-6])\.html$/);
+  const match = location.pathname.split('/').pop().match(/^9618-([1-4])([1-3])-(mj|on)-(202[1-6])(?:\.html)?$/);
   const page = document.getElementById('paper-detail');
   if (!match) { page.textContent = 'Paper not found.'; return; }
   const [, paper, variant, series, year] = match;

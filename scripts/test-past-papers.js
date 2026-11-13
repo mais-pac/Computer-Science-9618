@@ -36,7 +36,8 @@ const files = fs.readFileSync('assets/js/paper-files.js', 'utf8');
 const detail = fs.readFileSync('assets/js/paper-page.js', 'utf8');
 for (const paper of [1, 2]) for (const year of [2021,2022,2023,2024,2025,2026]) for (const series of (year === 2026 ? ['mj'] : ['mj','on'])) for (const v of [1,2,3]) {
   const filename = `papers/9618-${paper}${v}-${series}-${year}.html`;
-  const d = new JSDOM(fs.readFileSync(filename,'utf8'), {url:`https://example.test/${filename}`,runScripts:'dangerously'});
+  for (const route of [filename, filename.replace(/\.html$/, '')]) {
+  const d = new JSDOM(fs.readFileSync(filename,'utf8'), {url:`https://example.test/${route}`,runScripts:'dangerously'});
   d.window.eval(files); d.window.eval(detail);
   assert.strictEqual(d.window.document.querySelectorAll('.paper-action').length, 4);
   const red = d.window.document.querySelector('.paper-action.red');
@@ -46,5 +47,6 @@ for (const paper of [1, 2]) for (const year of [2021,2022,2023,2024,2025,2026]) 
   assert.strictEqual(d.window.document.querySelector('.paper-action.yellow').getAttribute('aria-disabled'), 'true');
   assert.strictEqual(d.window.document.querySelector('.paper-action.blue').getAttribute('aria-disabled'), 'true');
   d.window.close();
+  }
 }
 console.log('66 AS paper pages and Drive links verified against index mapping.');
