@@ -44,7 +44,7 @@
 
       <section class="section">
         <div class="grid grid-4">
-          <div class="stat"><div class="k">Exams ready</div><div class="v">${exams.length}<small> · ${exams.filter((e) => e.origin === 'teacher').length} from class</small></div></div>
+          <div class="stat"><div class="k">Exams ready</div><div class="v">${exams.length}<small> · ${exams.filter((e) => e.provenance === 'teacher-topic-reconstruction').length} class-topic reconstructions</small></div></div>
           <div class="stat"><div class="k">Question bank</div><div class="v">${questionCount}<small> · ${totalMarks} marks</small></div></div>
           <div class="stat"><div class="k">Attempts logged</div><div class="v">${results.length}<small> · ${results.length ? CS.relTime(results[results.length - 1].finishedAt) : 'none yet'}</small></div></div>
           <div class="stat"><div class="k">Notes revised</div><div class="v">${revised}<small> sections ticked</small></div></div>
@@ -117,14 +117,14 @@
 
     host.innerHTML = `
       <nav class="chips" aria-label="Exam sections"><a class="chip" href="#teacher-quizzes">Teacher</a><a class="chip" href="#ai-section">AI</a><a class="chip" href="#ai-quizzes">AI Quiz</a><a class="chip" href="#ai-mocks">AI Mock</a></nav>
-      <section class="section" id="teacher-quizzes"><h2>Teacher</h2><h3>Teacher quizzes</h3><p class="small">Teacher-topic reconstructions, not original papers. Teacher chapter labels may differ from syllabus section numbers. Chapters without a supplied quiz are unavailable.</p><div class="grid grid-2">${Array.from({length: 12}, (_, i) => {
+      <section class="section" id="teacher-quizzes"><h2>Teacher</h2><h3>Teacher quizzes</h3><p class="small">No teacher quizzes are available yet. Class-topic reconstructions are listed under AI Quiz.</p><div class="grid grid-2">${Array.from({length: 12}, (_, i) => {
         const chapter = i + 1;
-        const existing = exams.filter(e => e.origin === 'teacher' && (e.chapter === chapter || (chapter <= 2 && e.id === 'as-chapters-1-2-test-2026-09-21')));
+        const existing = []; // Teacher papers are unavailable until supplied.
         return `<div class="card"><h3>Chapter ${chapter}</h3>${existing.length ? existing.map(e => `<p><a href="exam.html?id=${encodeURIComponent(e.id)}">${CS.esc(e.title)} →</a></p>`).join('') : '<p class="small">No teacher quiz available yet</p>'}</div>`;
       }).join('')}</div></section>
-      <section class="section" id="ai-section"><h2>AI</h2><div id="ai-quizzes"><h3>AI Quiz</h3><p class="small">Existing AI practice sets are listed here. The Chapter 1 sets are short, self-marked exercises, not full mocks. Other chapter quizzes are not yet available.</p><div class="grid grid-2">${Array.from({length: 12}, (_, i) => {
+      <section class="section" id="ai-section"><h2>AI</h2><div id="ai-quizzes"><h3>AI Quiz</h3><p class="small">AI practice and class-topic reconstructions are listed here. Reconstructions are not original teacher papers. Chapter 1 practice sets are short self-marked exercises, not full mocks.</p><div class="grid grid-2">${Array.from({length: 12}, (_, i) => {
         const chapter = i + 1;
-        const sets = exams.filter(e => e.origin === 'ai' && e.id.startsWith(`ai-chapter-${chapter}-practice-`));
+        const sets = exams.filter(e => e.origin === 'ai' && (e.chapter === chapter || (chapter <= 2 && e.id === 'as-chapters-1-2-test-2026-09-21')));
         return `<div class="card"><h3>Chapter ${chapter}</h3>${sets.length ? sets.map(e => `<p><a href="exam.html?id=${encodeURIComponent(e.id)}">${CS.esc(e.title.replace('practice mock', 'practice quiz'))} →</a></p>`).join('') : '<p class="small">Quiz not available yet</p>'}</div>`;
       }).join('')}</div><div class="card" style="margin-top:16px"><h3>Mixed AI practice</h3>${exams.filter(e => e.origin === 'ai' && e.id.startsWith('mix-ai-')).map(e => `<p><a href="exam.html?id=${encodeURIComponent(e.id)}">${CS.esc(e.title)} →</a></p>`).join('')}</div>
       </div>
@@ -143,7 +143,7 @@
         <div class="chips" id="kindChips">
           <button class="chip on" data-kind="all">All exams</button>
           <button class="chip" data-kind="teacher">Teacher tests</button>
-          <button class="chip" data-kind="ai">AI mocks</button>
+          <button class="chip" data-kind="ai">AI practice</button>
         </div>
         <span class="spacer"></span>
         <div class="chips" id="paperChips">
@@ -171,7 +171,7 @@
       const list = exams.filter((e) => {
         if (filt.kind !== 'all' && e.origin !== filt.kind) return false;
         if (filt.paper !== 'all' && e.paper !== filt.paper) return false;
-        if (filt.chap && filt.chap !== 'all' && String(e.chapter) !== String(filt.chap) && !(e.origin === 'teacher' && e.id === 'as-chapters-1-2-test-2026-09-21' && ['1','2'].includes(String(filt.chap)))) return false;
+        if (filt.chap && filt.chap !== 'all' && String(e.chapter) !== String(filt.chap) && !(e.id === 'as-chapters-1-2-test-2026-09-21' && ['1','2'].includes(String(filt.chap)))) return false;
         if (!q) return true;
         const hay = (e.title + ' ' + (e.description || '') + ' ' + (e.topics || []).join(' ')).toLowerCase();
         return hay.includes(q);
