@@ -4,12 +4,19 @@
   "private": true,
   "description": "Personal Cambridge 9618 AS Level topical exam platform: every class test, AI mocks, concise notes and pseudocode drills — offline, no login.",
   "scripts": {
-    "build": "node scripts/build-content.js",
+    "build": "node scripts/build-content.js && node scripts/build-private-site.mjs",
     "test": "node scripts/smoke-test.js",
     "serve": "python3 -m http.server 8080",
     "start": "python3 -m http.server 8080"
   },
-  "keywords": ["9618", "cambridge", "computer-science", "revision", "exam", "as-level"],
+  "keywords": [
+    "9618",
+    "cambridge",
+    "computer-science",
+    "revision",
+    "exam",
+    "as-level"
+  ],
   "license": "MIT",
   "devDependencies": {
     "jsdom": "^25.0.0"

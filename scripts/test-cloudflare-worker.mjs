@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';
+import worker from '../worker/index.mjs';
+const request = new Request('https://example.test/papers/9618-11-mj-2026.html');
+assert.equal((await worker.fetch(request, {})).status, 503);
+let called = false;
+const response = await worker.fetch(request, { ASSETS: { fetch: async r => { called = true; assert.equal(r, request); return new Response('site'); } } });
+assert.equal(response.status, 200);
+assert.equal(await response.text(), 'site');
+assert(called);
+console.log('Public Worker asset routing tests passed');

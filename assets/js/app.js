@@ -116,6 +116,23 @@
     const chapters = [...new Set(exams.map((e) => e.chapter).filter(Boolean))].sort((a, b) => a - b);
 
     host.innerHTML = `
+      <nav class="chips" aria-label="Exam sections"><a class="chip" href="#teacher-quizzes">Teacher</a><a class="chip" href="#ai-section">AI</a><a class="chip" href="#ai-quizzes">AI Quiz</a><a class="chip" href="#ai-mocks">AI Mock</a></nav>
+      <section class="section" id="teacher-quizzes"><h2>Teacher</h2><h3>Teacher quizzes</h3><p class="small">Teacher-topic reconstructions, not original papers. Teacher chapter labels may differ from syllabus section numbers. Chapters without a supplied quiz are unavailable.</p><div class="grid grid-2">${Array.from({length: 12}, (_, i) => {
+        const chapter = i + 1;
+        const existing = exams.filter(e => e.origin === 'teacher' && (e.chapter === chapter || (chapter <= 2 && e.id === 'as-chapters-1-2-test-2026-09-21')));
+        return `<div class="card"><h3>Chapter ${chapter}</h3>${existing.length ? existing.map(e => `<p><a href="exam.html?id=${encodeURIComponent(e.id)}">${CS.esc(e.title)} →</a></p>`).join('') : '<p class="small">No teacher quiz available yet</p>'}</div>`;
+      }).join('')}</div></section>
+      <section class="section" id="ai-section"><h2>AI</h2><div id="ai-quizzes"><h3>AI Quiz</h3><p class="small">Existing AI practice sets are listed here. The Chapter 1 sets are short, self-marked exercises, not full mocks. Other chapter quizzes are not yet available.</p><div class="grid grid-2">${Array.from({length: 12}, (_, i) => {
+        const chapter = i + 1;
+        const sets = exams.filter(e => e.origin === 'ai' && e.id.startsWith(`ai-chapter-${chapter}-practice-`));
+        return `<div class="card"><h3>Chapter ${chapter}</h3>${sets.length ? sets.map(e => `<p><a href="exam.html?id=${encodeURIComponent(e.id)}">${CS.esc(e.title.replace('practice mock', 'practice quiz'))} →</a></p>`).join('') : '<p class="small">Quiz not available yet</p>'}</div>`;
+      }).join('')}</div><div class="card" style="margin-top:16px"><h3>Mixed AI practice</h3>${exams.filter(e => e.origin === 'ai' && e.id.startsWith('mix-ai-')).map(e => `<p><a href="exam.html?id=${encodeURIComponent(e.id)}">${CS.esc(e.title)} →</a></p>`).join('')}</div>
+      </div>
+      <div class="section" id="ai-mocks"><h3>AI Mock</h3><p class="small">Teacher-quiz-inspired mocks are planned but not yet available, including Chapter 1. Existing short AI exercises are listed under AI Quiz above.</p><div class="grid grid-2">${Array.from({length: 12}, (_, i) => {
+        const chapter = i + 1;
+        return `<div class="card"><h3>Chapter ${chapter}</h3>${Array.from({length: 5}, (_, j) => `<p class="small">Chapter ${chapter} · Mock ${j + 1} — not available yet</p>`).join('')}</div>`;
+      }).join('')}</div></div></section>
+      <section class="section"><h2>All available exams</h2></section>
       <div class="row" style="margin-bottom:14px">
         <label class="field" style="flex:1;min-width:220px;margin:0">
           <span>Search</span>
@@ -154,7 +171,7 @@
       const list = exams.filter((e) => {
         if (filt.kind !== 'all' && e.origin !== filt.kind) return false;
         if (filt.paper !== 'all' && e.paper !== filt.paper) return false;
-        if (filt.chap && filt.chap !== 'all' && String(e.chapter) !== String(filt.chap)) return false;
+        if (filt.chap && filt.chap !== 'all' && String(e.chapter) !== String(filt.chap) && !(e.origin === 'teacher' && e.id === 'as-chapters-1-2-test-2026-09-21' && ['1','2'].includes(String(filt.chap)))) return false;
         if (!q) return true;
         const hay = (e.title + ' ' + (e.description || '') + ' ' + (e.topics || []).join(' ')).toLowerCase();
         return hay.includes(q);
@@ -180,8 +197,7 @@
           <div class="card-foot row">
             <a class="btn btn-sm ${st.best ? '' : 'btn-primary'}" href="exam.html?id=${encodeURIComponent(e.id)}">${st.best ? 'Retake' : 'Start exam'}</a>
             ${st.best ? `<a class="btn btn-sm btn-ghost" href="result.html?attempt=${st.best.id}">View result</a>` : ''}
-            <span class="spacer"></span>
-            <span class="badge outline">${e.origin === 'teacher' ? 'Teacher' : e.origin === 'ai' ? 'AI' : 'Custom'}</span>
+
           </div>
         </div>`;
       }).join('');

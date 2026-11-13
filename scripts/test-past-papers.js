@@ -10,7 +10,13 @@ for (const n of [1, 2, 3, 4]) {
   assert.strictEqual(doc.querySelectorAll('.papers-year').length, 6);
   assert(doc.querySelector('#year-2025').textContent.includes(`9618/${n}1 · May/June 2025`));
   assert(doc.querySelector('#year-2025').textContent.includes(`9618/${n}3 · October/November 2025`));
-  assert(doc.querySelector('.papers-card').href.startsWith('https://'));
+  const series = doc.querySelectorAll('#year-2025 .papers-series');
+  assert.strictEqual(series.length, 2);
+  assert.deepStrictEqual(Array.from(series[0].querySelectorAll('strong'), el => el.textContent), [1, 2, 3].map(v => `9618/${n}${v} · May/June 2025`));
+  assert.deepStrictEqual(Array.from(series[1].querySelectorAll('strong'), el => el.textContent), [1, 2, 3].map(v => `9618/${n}${v} · October/November 2025`));
+  assert.strictEqual(doc.querySelectorAll('#year-2025 .papers-card small').length, 0);
+  assert(doc.querySelector('.papers-year .papers-card').getAttribute('href').startsWith('papers/9618-'));
+  for (const link of doc.querySelectorAll('.papers-year .papers-card')) assert(fs.existsSync(link.getAttribute('href')));
   dom.window.close();
 }
 const css = fs.readFileSync('assets/css/past-papers.css', 'utf8');
@@ -25,3 +31,20 @@ assert.notStrictEqual(root.dataset.theme,before);
 dom.window.document.getElementById('themeBtn').click(); assert.strictEqual(root.dataset.theme,before);
 dom.window.close();
 console.log('Past paper index and theme toggle tests passed.');
+
+const files = fs.readFileSync('assets/js/paper-files.js', 'utf8');
+const detail = fs.readFileSync('assets/js/paper-page.js', 'utf8');
+for (const paper of [1, 2]) for (const year of [2021,2022,2023,2024,2025,2026]) for (const series of (year === 2026 ? ['mj'] : ['mj','on'])) for (const v of [1,2,3]) {
+  const filename = `papers/9618-${paper}${v}-${series}-${year}.html`;
+  const d = new JSDOM(fs.readFileSync(filename,'utf8'), {url:`https://example.test/${filename}`,runScripts:'dangerously'});
+  d.window.eval(files); d.window.eval(detail);
+  assert.strictEqual(d.window.document.querySelectorAll('.paper-action').length, 4);
+  const red = d.window.document.querySelector('.paper-action.red');
+  const green = d.window.document.querySelector('.paper-action.green');
+  assert(red.href?.startsWith('https://drive.google.com/file/d/'), filename + ' mark scheme');
+  assert(green.href?.startsWith('https://drive.google.com/file/d/'), filename + ' question paper');
+  assert.strictEqual(d.window.document.querySelector('.paper-action.yellow').getAttribute('aria-disabled'), 'true');
+  assert.strictEqual(d.window.document.querySelector('.paper-action.blue').getAttribute('aria-disabled'), 'true');
+  d.window.close();
+}
+console.log('66 AS paper pages and Drive links verified against index mapping.');

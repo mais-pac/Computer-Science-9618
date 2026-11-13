@@ -1,0 +1,64 @@
+{
+  "id": "ai-chapter-1-practice-5",
+  "title": "Chapter 1 — AI practice mock 5",
+  "origin": "ai",
+  "paper": "paper-1",
+  "chapter": 1,
+  "topics": [
+    "info-rep"
+  ],
+  "durationMin": 10,
+  "totalMarks": 3,
+  "examDate": null,
+  "instructions": "Short original AI-authored practice, inspired by the teacher-topic questions; not an official or full-length mock. Self-mark using the guidance.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "text",
+      "marks": 1,
+      "topic": "info-rep",
+      "section": "1",
+      "text": "Explain lossless compression.",
+      "answer": [
+        {
+          "text": "Compression from which the original data can be reconstructed exactly.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "Lossless compression is reversible."
+    },
+    {
+      "id": "q2",
+      "type": "text",
+      "marks": 1,
+      "topic": "info-rep",
+      "section": "1",
+      "text": "Explain lossy compression.",
+      "answer": [
+        {
+          "text": "Compression discards some information so the original cannot be reconstructed exactly.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "Useful when some loss of fidelity is acceptable."
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 1,
+      "topic": "info-rep",
+      "section": "1",
+      "text": "Why is a parity check insufficient to detect every transmission error?",
+      "answer": [
+        {
+          "text": "An even number of changed bits can leave the parity unchanged.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "Parity detects odd numbers of bit changes in the checked unit."
+    }
+  ]
+}

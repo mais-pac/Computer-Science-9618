@@ -7,7 +7,7 @@
       "id": "paper-1",
       "code": "Paper 1",
       "title": "Theory Fundamentals",
-      "desc": "Sections 1\u20138 \u2014 data representation, communication, hardware, processors, system software, security, ethics, databases.",
+      "desc": "Sections 1–8 — data representation, communication, hardware, processors, system software, security, ethics, databases.",
       "sections": [
         1,
         2,
@@ -23,7 +23,7 @@
       "id": "paper-2",
       "code": "Paper 2",
       "title": "Fundamental Problem-solving & Programming",
-      "desc": "Sections 9\u201312 \u2014 algorithm design, data types & structures, programming, software development. All answers in Cambridge pseudocode.",
+      "desc": "Sections 9–12 — algorithm design, data types & structures, programming, software development. All answers in Cambridge pseudocode.",
       "sections": [
         9,
         10,
@@ -121,7 +121,7 @@
   "exams": [
     {
       "id": "ch3-hardware-hardware-2026-09-30",
-      "title": "Chapter 3 \u2013 Hardware",
+      "title": "Chapter 3 – Hardware",
       "origin": "teacher",
       "paper": "paper-1",
       "chapter": 3,
@@ -138,7 +138,7 @@
     },
     {
       "id": "as-chapters-1-2-test-2026-09-21",
-      "title": "AS Computer Science \u2013 Chapters 1 & 2 Test",
+      "title": "AS Computer Science – Chapters 1 & 2 Test",
       "origin": "teacher",
       "paper": "paper-1",
       "chapter": null,
@@ -175,10 +175,10 @@
     },
     {
       "id": "assembly-language-question-paper-2026-10-10",
-      "title": "Assembly Language \u2013 Question Paper",
+      "title": "Assembly Language – Question Paper",
       "origin": "teacher",
       "paper": "paper-1",
-      "chapter": 4,
+      "chapter": 6,
       "topics": [
         "processor"
       ],
@@ -187,7 +187,7 @@
       "durationMin": 40,
       "totalMarks": 46,
       "examDate": "2026-10-10",
-      "description": "Section 4.2 Assembly language \u2014 instruction sets, addressing modes, register transfer notation and tracing assembly.",
+      "description": "Section 4.2 Assembly language — instruction sets, addressing modes, register transfer notation and tracing assembly.",
       "questionsFile": "assembly-language-question-paper-2026-10-10.json"
     },
     {
@@ -210,7 +210,7 @@
     },
     {
       "id": "mix-ai-paper1-sections-1-4",
-      "title": "AI Mock \u2014 Paper 1 (Sections 1\u20134)",
+      "title": "AI Mock — Paper 1 (Sections 1–4)",
       "origin": "ai",
       "paper": "paper-1",
       "chapter": null,
@@ -225,12 +225,12 @@
       "durationMin": 45,
       "totalMarks": 40,
       "examDate": null,
-      "description": "AI-generated mixed exam in the style of a Paper 1 progress test covering Sections 1\u20134.",
+      "description": "AI-generated mixed exam in the style of a Paper 1 progress test covering Sections 1–4.",
       "questionsFile": "mix-ai-paper1-sections-1-4.json"
     },
     {
       "id": "mix-ai-paper2-sections-9-12",
-      "title": "AI Mock \u2014 Paper 2 (Sections 9\u201312)",
+      "title": "AI Mock — Paper 2 (Sections 9–12)",
       "origin": "ai",
       "paper": "paper-2",
       "chapter": null,
@@ -247,17 +247,97 @@
       "examDate": null,
       "description": "AI-generated pseudocode-heavy exam: trace tables, algorithm writing, array/file processing, testing.",
       "questionsFile": "mix-ai-paper2-sections-9-12.json"
+    },
+    {
+      "id": "ai-chapter-1-practice-1",
+      "title": "Chapter 1 — AI practice mock 1",
+      "origin": "ai",
+      "paper": "paper-1",
+      "chapter": 1,
+      "topics": [
+        "info-rep"
+      ],
+      "status": "ready",
+      "durationMin": 10,
+      "totalMarks": 3,
+      "examDate": null,
+      "description": "Short original self-marked practice set on information representation.",
+      "questionsFile": "ai-chapter-1-practice-1.json"
+    },
+    {
+      "id": "ai-chapter-1-practice-2",
+      "title": "Chapter 1 — AI practice mock 2",
+      "origin": "ai",
+      "paper": "paper-1",
+      "chapter": 1,
+      "topics": [
+        "info-rep"
+      ],
+      "status": "ready",
+      "durationMin": 10,
+      "totalMarks": 3,
+      "examDate": null,
+      "description": "Short original self-marked practice set on information representation.",
+      "questionsFile": "ai-chapter-1-practice-2.json"
+    },
+    {
+      "id": "ai-chapter-1-practice-3",
+      "title": "Chapter 1 — AI practice mock 3",
+      "origin": "ai",
+      "paper": "paper-1",
+      "chapter": 1,
+      "topics": [
+        "info-rep"
+      ],
+      "status": "ready",
+      "durationMin": 10,
+      "totalMarks": 3,
+      "examDate": null,
+      "description": "Short original self-marked practice set on information representation.",
+      "questionsFile": "ai-chapter-1-practice-3.json"
+    },
+    {
+      "id": "ai-chapter-1-practice-4",
+      "title": "Chapter 1 — AI practice mock 4",
+      "origin": "ai",
+      "paper": "paper-1",
+      "chapter": 1,
+      "topics": [
+        "info-rep"
+      ],
+      "status": "ready",
+      "durationMin": 10,
+      "totalMarks": 3,
+      "examDate": null,
+      "description": "Short original self-marked practice set on information representation.",
+      "questionsFile": "ai-chapter-1-practice-4.json"
+    },
+    {
+      "id": "ai-chapter-1-practice-5",
+      "title": "Chapter 1 — AI practice mock 5",
+      "origin": "ai",
+      "paper": "paper-1",
+      "chapter": 1,
+      "topics": [
+        "info-rep"
+      ],
+      "status": "ready",
+      "durationMin": 10,
+      "totalMarks": 3,
+      "examDate": null,
+      "description": "Short original self-marked practice set on information representation.",
+      "questionsFile": "ai-chapter-1-practice-5.json"
     }
   ],
   "notes": [
     {
       "paper": "paper-1",
-      "title": "Paper 1 \u2014 Theory Notes",
+      "title": "Paper 1 — Theory Notes",
       "file": "content/notes/paper-1.md"
     },
     {
       "paper": "paper-2",
-      "title": "Paper 2 \u2014 Pseudocode & Programming Notes",
+      "title": "Paper 2 — Pseudocode & Programming Notes",
       "file": "content/notes/paper-2.md"
     }
   ]

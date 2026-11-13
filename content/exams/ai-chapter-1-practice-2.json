@@ -1,0 +1,64 @@
+{
+  "id": "ai-chapter-1-practice-2",
+  "title": "Chapter 1 — AI practice mock 2",
+  "origin": "ai",
+  "paper": "paper-1",
+  "chapter": 1,
+  "topics": [
+    "info-rep"
+  ],
+  "durationMin": 10,
+  "totalMarks": 3,
+  "examDate": null,
+  "instructions": "Short original AI-authored practice, inspired by the teacher-topic questions; not an official or full-length mock. Self-mark using the guidance.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "text",
+      "marks": 1,
+      "topic": "info-rep",
+      "section": "1",
+      "text": "Convert hexadecimal 3A to denary.",
+      "answer": [
+        {
+          "text": "58",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "3 × 16 + 10 = 58."
+    },
+    {
+      "id": "q2",
+      "type": "text",
+      "marks": 1,
+      "topic": "info-rep",
+      "section": "1",
+      "text": "Represent denary -5 in 8-bit two’s complement.",
+      "answer": [
+        {
+          "text": "11111011",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "Invert 00000101 and add 1."
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 1,
+      "topic": "info-rep",
+      "section": "1",
+      "text": "State the range of 8-bit two’s complement integers.",
+      "answer": [
+        {
+          "text": "-128 to 127",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "The range is −2⁷ to 2⁷−1."
+    }
+  ]
+}

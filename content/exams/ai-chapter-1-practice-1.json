@@ -1,0 +1,64 @@
+{
+  "id": "ai-chapter-1-practice-1",
+  "title": "Chapter 1 — AI practice mock 1",
+  "origin": "ai",
+  "paper": "paper-1",
+  "chapter": 1,
+  "topics": [
+    "info-rep"
+  ],
+  "durationMin": 10,
+  "totalMarks": 3,
+  "examDate": null,
+  "instructions": "Short original AI-authored practice, inspired by the teacher-topic questions; not an official or full-length mock. Self-mark using the guidance.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "text",
+      "marks": 1,
+      "topic": "info-rep",
+      "section": "1",
+      "text": "Convert denary 42 to 8-bit binary.",
+      "answer": [
+        {
+          "text": "00101010",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "42 = 32 + 8 + 2."
+    },
+    {
+      "id": "q2",
+      "type": "text",
+      "marks": 1,
+      "topic": "info-rep",
+      "section": "1",
+      "text": "State the range of unsigned 8-bit integers.",
+      "answer": [
+        {
+          "text": "0 to 255",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "Eight bits encode 256 values, from 0 to 255."
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 1,
+      "topic": "info-rep",
+      "section": "1",
+      "text": "Explain why hexadecimal is useful for representing binary data.",
+      "answer": [
+        {
+          "text": "Each hex digit represents four bits, making long binary values shorter and easier to read.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true,
+      "explanation": "Four bits correspond to one hexadecimal digit."
+    }
+  ]
+}
