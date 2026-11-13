@@ -1,0 +1,63 @@
+{
+  "id": "ai-chapter-extra-11-4",
+  "title": "Chapter 11 — AI practice quiz 5",
+  "origin": "ai",
+  "provenance": "ai-original-chapter-quiz",
+  "paper": "paper-2",
+  "chapter": 11,
+  "topics": [
+    "programming"
+  ],
+  "durationMin": 10,
+  "totalMarks": 3,
+  "examDate": null,
+  "instructions": "Short original AI-authored practice; not an official or teacher paper. Self-mark using the guidance after submission.",
+  "description": "Three original questions with self-marking guidance.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "text",
+      "marks": 1,
+      "topic": "programming",
+      "section": "11",
+      "text": "When does a REPEAT UNTIL loop test its condition?",
+      "answer": [
+        {
+          "text": "After the loop body, so the body runs at least once.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q2",
+      "type": "text",
+      "marks": 1,
+      "topic": "programming",
+      "section": "11",
+      "text": "Why use meaningful identifiers?",
+      "answer": [
+        {
+          "text": "They make code easier to understand and maintain.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 1,
+      "topic": "programming",
+      "section": "11",
+      "text": "What is modular programming?",
+      "answer": [
+        {
+          "text": "Organising a program into separate components or subroutines with defined roles.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "id": "ai-chapter-extra-03-3",
+  "title": "Chapter 3 — AI practice quiz 4",
+  "origin": "ai",
+  "provenance": "ai-original-chapter-quiz",
+  "paper": "paper-1",
+  "chapter": 3,
+  "topics": [
+    "hardware"
+  ],
+  "durationMin": 10,
+  "totalMarks": 3,
+  "examDate": null,
+  "instructions": "Short original AI-authored practice; not an official or teacher paper. Self-mark using the guidance after submission.",
+  "description": "Three original questions with self-marking guidance.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "text",
+      "marks": 1,
+      "topic": "hardware",
+      "section": "3",
+      "text": "Explain what an actuator does.",
+      "answer": [
+        {
+          "text": "It converts a control signal into a physical action, such as moving a valve.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q2",
+      "type": "text",
+      "marks": 1,
+      "topic": "hardware",
+      "section": "3",
+      "text": "Why is an ADC needed with an analogue sensor?",
+      "answer": [
+        {
+          "text": "It converts the analogue output to digital data the computer can process.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 1,
+      "topic": "hardware",
+      "section": "3",
+      "text": "What does resolution mean for a monitor?",
+      "answer": [
+        {
+          "text": "The number of pixels used to display an image, usually given as width by height.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    }
+  ]
+}

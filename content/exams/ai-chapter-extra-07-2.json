@@ -1,0 +1,63 @@
+{
+  "id": "ai-chapter-extra-07-2",
+  "title": "Chapter 7 — AI practice quiz 3",
+  "origin": "ai",
+  "provenance": "ai-original-chapter-quiz",
+  "paper": "paper-1",
+  "chapter": 7,
+  "topics": [
+    "ethics"
+  ],
+  "durationMin": 10,
+  "totalMarks": 3,
+  "examDate": null,
+  "instructions": "Short original AI-authored practice; not an official or teacher paper. Self-mark using the guidance after submission.",
+  "description": "Three original questions with self-marking guidance.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "text",
+      "marks": 1,
+      "topic": "ethics",
+      "section": "7",
+      "text": "What is a software licence?",
+      "answer": [
+        {
+          "text": "Terms specifying how software may be used, copied or modified.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q2",
+      "type": "text",
+      "marks": 1,
+      "topic": "ethics",
+      "section": "7",
+      "text": "What is open-source software?",
+      "answer": [
+        {
+          "text": "Software distributed under a licence allowing access to source code and specified rights to use, modify and redistribute.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 1,
+      "topic": "ethics",
+      "section": "7",
+      "text": "What is proprietary software?",
+      "answer": [
+        {
+          "text": "Software distributed under terms that restrict use, copying or modification as specified by its owner.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    }
+  ]
+}

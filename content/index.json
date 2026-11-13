@@ -428,6 +428,902 @@
       "examDate": null,
       "description": "Short original self-marked practice set on information representation.",
       "questionsFile": "ai-chapter-1-practice-5.json"
+    },
+    {
+      "id": "ai-chapter-quiz-01",
+      "title": "Chapter 1 — AI Quiz: Information Representation",
+      "origin": "ai",
+      "provenance": "ai-original-chapter-quiz",
+      "paper": "paper-1",
+      "chapter": 1,
+      "topics": [
+        "info-rep"
+      ],
+      "durationMin": 15,
+      "totalMarks": 8,
+      "description": "Original chapter practice: multiple-choice and written questions with self-marking guidance.",
+      "status": "ready",
+      "questionsFile": "ai-chapter-quiz-01.json"
+    },
+    {
+      "id": "ai-chapter-quiz-02",
+      "title": "Chapter 2 — AI Quiz: Communication",
+      "origin": "ai",
+      "provenance": "ai-original-chapter-quiz",
+      "paper": "paper-1",
+      "chapter": 2,
+      "topics": [
+        "communication"
+      ],
+      "durationMin": 15,
+      "totalMarks": 9,
+      "description": "Original chapter practice: multiple-choice and written questions with self-marking guidance.",
+      "status": "ready",
+      "questionsFile": "ai-chapter-quiz-02.json"
+    },
+    {
+      "id": "ai-chapter-quiz-03",
+      "title": "Chapter 3 — AI Quiz: Hardware",
+      "origin": "ai",
+      "provenance": "ai-original-chapter-quiz",
+      "paper": "paper-1",
+      "chapter": 3,
+      "topics": [
+        "hardware"
+      ],
+      "durationMin": 15,
+      "totalMarks": 10,
+      "description": "Original chapter practice: multiple-choice and written questions with self-marking guidance.",
+      "status": "ready",
+      "questionsFile": "ai-chapter-quiz-03.json"
+    },
+    {
+      "id": "ai-chapter-quiz-04",
+      "title": "Chapter 4 — AI Quiz: Processor Fundamentals",
+      "origin": "ai",
+      "provenance": "ai-original-chapter-quiz",
+      "paper": "paper-1",
+      "chapter": 4,
+      "topics": [
+        "processor"
+      ],
+      "durationMin": 15,
+      "totalMarks": 9,
+      "description": "Original chapter practice: multiple-choice and written questions with self-marking guidance.",
+      "status": "ready",
+      "questionsFile": "ai-chapter-quiz-04.json"
+    },
+    {
+      "id": "ai-chapter-quiz-05",
+      "title": "Chapter 5 — AI Quiz: System Software",
+      "origin": "ai",
+      "provenance": "ai-original-chapter-quiz",
+      "paper": "paper-1",
+      "chapter": 5,
+      "topics": [
+        "system-software"
+      ],
+      "durationMin": 15,
+      "totalMarks": 9,
+      "description": "Original chapter practice: multiple-choice and written questions with self-marking guidance.",
+      "status": "ready",
+      "questionsFile": "ai-chapter-quiz-05.json"
+    },
+    {
+      "id": "ai-chapter-quiz-06",
+      "title": "Chapter 6 — AI Quiz: Security, Privacy & Data Integrity",
+      "origin": "ai",
+      "provenance": "ai-original-chapter-quiz",
+      "paper": "paper-1",
+      "chapter": 6,
+      "topics": [
+        "security"
+      ],
+      "durationMin": 15,
+      "totalMarks": 10,
+      "description": "Original chapter practice: multiple-choice and written questions with self-marking guidance.",
+      "status": "ready",
+      "questionsFile": "ai-chapter-quiz-06.json"
+    },
+    {
+      "id": "ai-chapter-quiz-07",
+      "title": "Chapter 7 — AI Quiz: Ethics & Ownership",
+      "origin": "ai",
+      "provenance": "ai-original-chapter-quiz",
+      "paper": "paper-1",
+      "chapter": 7,
+      "topics": [
+        "ethics"
+      ],
+      "durationMin": 15,
+      "totalMarks": 8,
+      "description": "Original chapter practice: multiple-choice and written questions with self-marking guidance.",
+      "status": "ready",
+      "questionsFile": "ai-chapter-quiz-07.json"
+    },
+    {
+      "id": "ai-chapter-quiz-08",
+      "title": "Chapter 8 — AI Quiz: Databases",
+      "origin": "ai",
+      "provenance": "ai-original-chapter-quiz",
+      "paper": "paper-1",
+      "chapter": 8,
+      "topics": [
+        "databases"
+      ],
+      "durationMin": 15,
+      "totalMarks": 9,
+      "description": "Original chapter practice: multiple-choice and written questions with self-marking guidance.",
+      "status": "ready",
+      "questionsFile": "ai-chapter-quiz-08.json"
+    },
+    {
+      "id": "ai-chapter-quiz-09",
+      "title": "Chapter 9 — AI Quiz: Algorithm Design & Problem-solving",
+      "origin": "ai",
+      "provenance": "ai-original-chapter-quiz",
+      "paper": "paper-2",
+      "chapter": 9,
+      "topics": [
+        "algorithms"
+      ],
+      "durationMin": 15,
+      "totalMarks": 9,
+      "description": "Original chapter practice: multiple-choice and written questions with self-marking guidance.",
+      "status": "ready",
+      "questionsFile": "ai-chapter-quiz-09.json"
+    },
+    {
+      "id": "ai-chapter-quiz-10",
+      "title": "Chapter 10 — AI Quiz: Data Types & Structures",
+      "origin": "ai",
+      "provenance": "ai-original-chapter-quiz",
+      "paper": "paper-2",
+      "chapter": 10,
+      "topics": [
+        "data-types"
+      ],
+      "durationMin": 15,
+      "totalMarks": 8,
+      "description": "Original chapter practice: multiple-choice and written questions with self-marking guidance.",
+      "status": "ready",
+      "questionsFile": "ai-chapter-quiz-10.json"
+    },
+    {
+      "id": "ai-chapter-quiz-11",
+      "title": "Chapter 11 — AI Quiz: Programming",
+      "origin": "ai",
+      "provenance": "ai-original-chapter-quiz",
+      "paper": "paper-2",
+      "chapter": 11,
+      "topics": [
+        "programming"
+      ],
+      "durationMin": 15,
+      "totalMarks": 10,
+      "description": "Original chapter practice: multiple-choice and written questions with self-marking guidance.",
+      "status": "ready",
+      "questionsFile": "ai-chapter-quiz-11.json"
+    },
+    {
+      "id": "ai-chapter-quiz-12",
+      "title": "Chapter 12 — AI Quiz: Software Development",
+      "origin": "ai",
+      "provenance": "ai-original-chapter-quiz",
+      "paper": "paper-2",
+      "chapter": 12,
+      "topics": [
+        "software-dev"
+      ],
+      "durationMin": 15,
+      "totalMarks": 10,
+      "description": "Original chapter practice: multiple-choice and written questions with self-marking guidance.",
+      "status": "ready",
+      "questionsFile": "ai-chapter-quiz-12.json"
+    },
+    {
+      "id": "ai-chapter-extra-02-1",
+      "title": "Chapter 2 — AI practice quiz 2",
+      "origin": "ai",
+      "provenance": "ai-original-chapter-quiz",
+      "paper": "paper-1",
+      "chapter": 2,
+      "topics": [
+        "communication"
+      ],
+      "durationMin": 10,
+      "totalMarks": 3,
+      "description": "Three original questions with self-marking guidance.",
+      "status": "ready",
+      "questionsFile": "ai-chapter-extra-02-1.json"
+    },
+    {
+      "id": "ai-chapter-extra-02-2",
+      "title": "Chapter 2 — AI practice quiz 3",
+      "origin": "ai",
+      "provenance": "ai-original-chapter-quiz",
+      "paper": "paper-1",
+      "chapter": 2,
+      "topics": [
+        "communication"
+      ],
+      "durationMin": 10,
+      "totalMarks": 3,
+      "description": "Three original questions with self-marking guidance.",
+      "status": "ready",
+      "questionsFile": "ai-chapter-extra-02-2.json"
+    },
+    {
+      "id": "ai-chapter-extra-02-3",
+      "title": "Chapter 2 — AI practice quiz 4",
+      "origin": "ai",
+      "provenance": "ai-original-chapter-quiz",
+      "paper": "paper-1",
+      "chapter": 2,
+      "topics": [
+        "communication"
+      ],
+      "durationMin": 10,
+      "totalMarks": 3,
+      "description": "Three original questions with self-marking guidance.",
+      "status": "ready",
+      "questionsFile": "ai-chapter-extra-02-3.json"
+    },
+    {
+      "id": "ai-chapter-extra-02-4",
+      "title": "Chapter 2 — AI practice quiz 5",
+      "origin": "ai",
+      "provenance": "ai-original-chapter-quiz",
+      "paper": "paper-1",
+      "chapter": 2,
+      "topics": [
+        "communication"
+      ],
+      "durationMin": 10,
+      "totalMarks": 3,
+      "description": "Three original questions with self-marking guidance.",
+      "status": "ready",
+      "questionsFile": "ai-chapter-extra-02-4.json"
+    },
+    {
+      "id": "ai-chapter-extra-03-1",
+      "title": "Chapter 3 — AI practice quiz 2",
+      "origin": "ai",
+      "provenance": "ai-original-chapter-quiz",
+      "paper": "paper-1",
+      "chapter": 3,
+      "topics": [
+        "hardware"
+      ],
+      "durationMin": 10,
+      "totalMarks": 3,
+      "description": "Three original questions with self-marking guidance.",
+      "status": "ready",
+      "questionsFile": "ai-chapter-extra-03-1.json"
+    },
+    {
+      "id": "ai-chapter-extra-03-2",
+      "title": "Chapter 3 — AI practice quiz 3",
+      "origin": "ai",
+      "provenance": "ai-original-chapter-quiz",
+      "paper": "paper-1",
+      "chapter": 3,
+      "topics": [
+        "hardware"
+      ],
+      "durationMin": 10,
+      "totalMarks": 3,
+      "description": "Three original questions with self-marking guidance.",
+      "status": "ready",
+      "questionsFile": "ai-chapter-extra-03-2.json"
+    },
+    {
+      "id": "ai-chapter-extra-03-3",
+      "title": "Chapter 3 — AI practice quiz 4",
+      "origin": "ai",
+      "provenance": "ai-original-chapter-quiz",
+      "paper": "paper-1",
+      "chapter": 3,
+      "topics": [
+        "hardware"
+      ],
+      "durationMin": 10,
+      "totalMarks": 3,
+      "description": "Three original questions with self-marking guidance.",
+      "status": "ready",
+      "questionsFile": "ai-chapter-extra-03-3.json"
+    },
+    {
+      "id": "ai-chapter-extra-03-4",
+      "title": "Chapter 3 — AI practice quiz 5",
+      "origin": "ai",
+      "provenance": "ai-original-chapter-quiz",
+      "paper": "paper-1",
+      "chapter": 3,
+      "topics": [
+        "hardware"
+      ],
+      "durationMin": 10,
+      "totalMarks": 3,
+      "description": "Three original questions with self-marking guidance.",
+      "status": "ready",
+      "questionsFile": "ai-chapter-extra-03-4.json"
+    },
+    {
+      "id": "ai-chapter-extra-04-1",
+      "title": "Chapter 4 — AI practice quiz 2",
+      "origin": "ai",
+      "provenance": "ai-original-chapter-quiz",
+      "paper": "paper-1",
+      "chapter": 4,
+      "topics": [
+        "processor"
+      ],
+      "durationMin": 10,
+      "totalMarks": 3,
+      "description": "Three original questions with self-marking guidance.",
+      "status": "ready",
+      "questionsFile": "ai-chapter-extra-04-1.json"
+    },
+    {
+      "id": "ai-chapter-extra-04-2",
+      "title": "Chapter 4 — AI practice quiz 3",
+      "origin": "ai",
+      "provenance": "ai-original-chapter-quiz",
+      "paper": "paper-1",
+      "chapter": 4,
+      "topics": [
+        "processor"
+      ],
+      "durationMin": 10,
+      "totalMarks": 3,
+      "description": "Three original questions with self-marking guidance.",
+      "status": "ready",
+      "questionsFile": "ai-chapter-extra-04-2.json"
+    },
+    {
+      "id": "ai-chapter-extra-04-3",
+      "title": "Chapter 4 — AI practice quiz 4",
+      "origin": "ai",
+      "provenance": "ai-original-chapter-quiz",
+      "paper": "paper-1",
+      "chapter": 4,
+      "topics": [
+        "processor"
+      ],
+      "durationMin": 10,
+      "totalMarks": 3,
+      "description": "Three original questions with self-marking guidance.",
+      "status": "ready",
+      "questionsFile": "ai-chapter-extra-04-3.json"
+    },
+    {
+      "id": "ai-chapter-extra-04-4",
+      "title": "Chapter 4 — AI practice quiz 5",
+      "origin": "ai",
+      "provenance": "ai-original-chapter-quiz",
+      "paper": "paper-1",
+      "chapter": 4,
+      "topics": [
+        "processor"
+      ],
+      "durationMin": 10,
+      "totalMarks": 3,
+      "description": "Three original questions with self-marking guidance.",
+      "status": "ready",
+      "questionsFile": "ai-chapter-extra-04-4.json"
+    },
+    {
+      "id": "ai-chapter-extra-05-1",
+      "title": "Chapter 5 — AI practice quiz 2",
+      "origin": "ai",
+      "provenance": "ai-original-chapter-quiz",
+      "paper": "paper-1",
+      "chapter": 5,
+      "topics": [
+        "system-software"
+      ],
+      "durationMin": 10,
+      "totalMarks": 3,
+      "description": "Three original questions with self-marking guidance.",
+      "status": "ready",
+      "questionsFile": "ai-chapter-extra-05-1.json"
+    },
+    {
+      "id": "ai-chapter-extra-05-2",
+      "title": "Chapter 5 — AI practice quiz 3",
+      "origin": "ai",
+      "provenance": "ai-original-chapter-quiz",
+      "paper": "paper-1",
+      "chapter": 5,
+      "topics": [
+        "system-software"
+      ],
+      "durationMin": 10,
+      "totalMarks": 3,
+      "description": "Three original questions with self-marking guidance.",
+      "status": "ready",
+      "questionsFile": "ai-chapter-extra-05-2.json"
+    },
+    {
+      "id": "ai-chapter-extra-05-3",
+      "title": "Chapter 5 — AI practice quiz 4",
+      "origin": "ai",
+      "provenance": "ai-original-chapter-quiz",
+      "paper": "paper-1",
+      "chapter": 5,
+      "topics": [
+        "system-software"
+      ],
+      "durationMin": 10,
+      "totalMarks": 3,
+      "description": "Three original questions with self-marking guidance.",
+      "status": "ready",
+      "questionsFile": "ai-chapter-extra-05-3.json"
+    },
+    {
+      "id": "ai-chapter-extra-05-4",
+      "title": "Chapter 5 — AI practice quiz 5",
+      "origin": "ai",
+      "provenance": "ai-original-chapter-quiz",
+      "paper": "paper-1",
+      "chapter": 5,
+      "topics": [
+        "system-software"
+      ],
+      "durationMin": 10,
+      "totalMarks": 3,
+      "description": "Three original questions with self-marking guidance.",
+      "status": "ready",
+      "questionsFile": "ai-chapter-extra-05-4.json"
+    },
+    {
+      "id": "ai-chapter-extra-06-1",
+      "title": "Chapter 6 — AI practice quiz 2",
+      "origin": "ai",
+      "provenance": "ai-original-chapter-quiz",
+      "paper": "paper-1",
+      "chapter": 6,
+      "topics": [
+        "security"
+      ],
+      "durationMin": 10,
+      "totalMarks": 3,
+      "description": "Three original questions with self-marking guidance.",
+      "status": "ready",
+      "questionsFile": "ai-chapter-extra-06-1.json"
+    },
+    {
+      "id": "ai-chapter-extra-06-2",
+      "title": "Chapter 6 — AI practice quiz 3",
+      "origin": "ai",
+      "provenance": "ai-original-chapter-quiz",
+      "paper": "paper-1",
+      "chapter": 6,
+      "topics": [
+        "security"
+      ],
+      "durationMin": 10,
+      "totalMarks": 3,
+      "description": "Three original questions with self-marking guidance.",
+      "status": "ready",
+      "questionsFile": "ai-chapter-extra-06-2.json"
+    },
+    {
+      "id": "ai-chapter-extra-06-3",
+      "title": "Chapter 6 — AI practice quiz 4",
+      "origin": "ai",
+      "provenance": "ai-original-chapter-quiz",
+      "paper": "paper-1",
+      "chapter": 6,
+      "topics": [
+        "security"
+      ],
+      "durationMin": 10,
+      "totalMarks": 3,
+      "description": "Three original questions with self-marking guidance.",
+      "status": "ready",
+      "questionsFile": "ai-chapter-extra-06-3.json"
+    },
+    {
+      "id": "ai-chapter-extra-06-4",
+      "title": "Chapter 6 — AI practice quiz 5",
+      "origin": "ai",
+      "provenance": "ai-original-chapter-quiz",
+      "paper": "paper-1",
+      "chapter": 6,
+      "topics": [
+        "security"
+      ],
+      "durationMin": 10,
+      "totalMarks": 3,
+      "description": "Three original questions with self-marking guidance.",
+      "status": "ready",
+      "questionsFile": "ai-chapter-extra-06-4.json"
+    },
+    {
+      "id": "ai-chapter-extra-07-1",
+      "title": "Chapter 7 — AI practice quiz 2",
+      "origin": "ai",
+      "provenance": "ai-original-chapter-quiz",
+      "paper": "paper-1",
+      "chapter": 7,
+      "topics": [
+        "ethics"
+      ],
+      "durationMin": 10,
+      "totalMarks": 3,
+      "description": "Three original questions with self-marking guidance.",
+      "status": "ready",
+      "questionsFile": "ai-chapter-extra-07-1.json"
+    },
+    {
+      "id": "ai-chapter-extra-07-2",
+      "title": "Chapter 7 — AI practice quiz 3",
+      "origin": "ai",
+      "provenance": "ai-original-chapter-quiz",
+      "paper": "paper-1",
+      "chapter": 7,
+      "topics": [
+        "ethics"
+      ],
+      "durationMin": 10,
+      "totalMarks": 3,
+      "description": "Three original questions with self-marking guidance.",
+      "status": "ready",
+      "questionsFile": "ai-chapter-extra-07-2.json"
+    },
+    {
+      "id": "ai-chapter-extra-07-3",
+      "title": "Chapter 7 — AI practice quiz 4",
+      "origin": "ai",
+      "provenance": "ai-original-chapter-quiz",
+      "paper": "paper-1",
+      "chapter": 7,
+      "topics": [
+        "ethics"
+      ],
+      "durationMin": 10,
+      "totalMarks": 3,
+      "description": "Three original questions with self-marking guidance.",
+      "status": "ready",
+      "questionsFile": "ai-chapter-extra-07-3.json"
+    },
+    {
+      "id": "ai-chapter-extra-07-4",
+      "title": "Chapter 7 — AI practice quiz 5",
+      "origin": "ai",
+      "provenance": "ai-original-chapter-quiz",
+      "paper": "paper-1",
+      "chapter": 7,
+      "topics": [
+        "ethics"
+      ],
+      "durationMin": 10,
+      "totalMarks": 3,
+      "description": "Three original questions with self-marking guidance.",
+      "status": "ready",
+      "questionsFile": "ai-chapter-extra-07-4.json"
+    },
+    {
+      "id": "ai-chapter-extra-08-1",
+      "title": "Chapter 8 — AI practice quiz 2",
+      "origin": "ai",
+      "provenance": "ai-original-chapter-quiz",
+      "paper": "paper-1",
+      "chapter": 8,
+      "topics": [
+        "databases"
+      ],
+      "durationMin": 10,
+      "totalMarks": 3,
+      "description": "Three original questions with self-marking guidance.",
+      "status": "ready",
+      "questionsFile": "ai-chapter-extra-08-1.json"
+    },
+    {
+      "id": "ai-chapter-extra-08-2",
+      "title": "Chapter 8 — AI practice quiz 3",
+      "origin": "ai",
+      "provenance": "ai-original-chapter-quiz",
+      "paper": "paper-1",
+      "chapter": 8,
+      "topics": [
+        "databases"
+      ],
+      "durationMin": 10,
+      "totalMarks": 3,
+      "description": "Three original questions with self-marking guidance.",
+      "status": "ready",
+      "questionsFile": "ai-chapter-extra-08-2.json"
+    },
+    {
+      "id": "ai-chapter-extra-08-3",
+      "title": "Chapter 8 — AI practice quiz 4",
+      "origin": "ai",
+      "provenance": "ai-original-chapter-quiz",
+      "paper": "paper-1",
+      "chapter": 8,
+      "topics": [
+        "databases"
+      ],
+      "durationMin": 10,
+      "totalMarks": 3,
+      "description": "Three original questions with self-marking guidance.",
+      "status": "ready",
+      "questionsFile": "ai-chapter-extra-08-3.json"
+    },
+    {
+      "id": "ai-chapter-extra-08-4",
+      "title": "Chapter 8 — AI practice quiz 5",
+      "origin": "ai",
+      "provenance": "ai-original-chapter-quiz",
+      "paper": "paper-1",
+      "chapter": 8,
+      "topics": [
+        "databases"
+      ],
+      "durationMin": 10,
+      "totalMarks": 3,
+      "description": "Three original questions with self-marking guidance.",
+      "status": "ready",
+      "questionsFile": "ai-chapter-extra-08-4.json"
+    },
+    {
+      "id": "ai-chapter-extra-09-1",
+      "title": "Chapter 9 — AI practice quiz 2",
+      "origin": "ai",
+      "provenance": "ai-original-chapter-quiz",
+      "paper": "paper-2",
+      "chapter": 9,
+      "topics": [
+        "algorithms"
+      ],
+      "durationMin": 10,
+      "totalMarks": 3,
+      "description": "Three original questions with self-marking guidance.",
+      "status": "ready",
+      "questionsFile": "ai-chapter-extra-09-1.json"
+    },
+    {
+      "id": "ai-chapter-extra-09-2",
+      "title": "Chapter 9 — AI practice quiz 3",
+      "origin": "ai",
+      "provenance": "ai-original-chapter-quiz",
+      "paper": "paper-2",
+      "chapter": 9,
+      "topics": [
+        "algorithms"
+      ],
+      "durationMin": 10,
+      "totalMarks": 3,
+      "description": "Three original questions with self-marking guidance.",
+      "status": "ready",
+      "questionsFile": "ai-chapter-extra-09-2.json"
+    },
+    {
+      "id": "ai-chapter-extra-09-3",
+      "title": "Chapter 9 — AI practice quiz 4",
+      "origin": "ai",
+      "provenance": "ai-original-chapter-quiz",
+      "paper": "paper-2",
+      "chapter": 9,
+      "topics": [
+        "algorithms"
+      ],
+      "durationMin": 10,
+      "totalMarks": 3,
+      "description": "Three original questions with self-marking guidance.",
+      "status": "ready",
+      "questionsFile": "ai-chapter-extra-09-3.json"
+    },
+    {
+      "id": "ai-chapter-extra-09-4",
+      "title": "Chapter 9 — AI practice quiz 5",
+      "origin": "ai",
+      "provenance": "ai-original-chapter-quiz",
+      "paper": "paper-2",
+      "chapter": 9,
+      "topics": [
+        "algorithms"
+      ],
+      "durationMin": 10,
+      "totalMarks": 3,
+      "description": "Three original questions with self-marking guidance.",
+      "status": "ready",
+      "questionsFile": "ai-chapter-extra-09-4.json"
+    },
+    {
+      "id": "ai-chapter-extra-10-1",
+      "title": "Chapter 10 — AI practice quiz 2",
+      "origin": "ai",
+      "provenance": "ai-original-chapter-quiz",
+      "paper": "paper-2",
+      "chapter": 10,
+      "topics": [
+        "data-types"
+      ],
+      "durationMin": 10,
+      "totalMarks": 3,
+      "description": "Three original questions with self-marking guidance.",
+      "status": "ready",
+      "questionsFile": "ai-chapter-extra-10-1.json"
+    },
+    {
+      "id": "ai-chapter-extra-10-2",
+      "title": "Chapter 10 — AI practice quiz 3",
+      "origin": "ai",
+      "provenance": "ai-original-chapter-quiz",
+      "paper": "paper-2",
+      "chapter": 10,
+      "topics": [
+        "data-types"
+      ],
+      "durationMin": 10,
+      "totalMarks": 3,
+      "description": "Three original questions with self-marking guidance.",
+      "status": "ready",
+      "questionsFile": "ai-chapter-extra-10-2.json"
+    },
+    {
+      "id": "ai-chapter-extra-10-3",
+      "title": "Chapter 10 — AI practice quiz 4",
+      "origin": "ai",
+      "provenance": "ai-original-chapter-quiz",
+      "paper": "paper-2",
+      "chapter": 10,
+      "topics": [
+        "data-types"
+      ],
+      "durationMin": 10,
+      "totalMarks": 3,
+      "description": "Three original questions with self-marking guidance.",
+      "status": "ready",
+      "questionsFile": "ai-chapter-extra-10-3.json"
+    },
+    {
+      "id": "ai-chapter-extra-10-4",
+      "title": "Chapter 10 — AI practice quiz 5",
+      "origin": "ai",
+      "provenance": "ai-original-chapter-quiz",
+      "paper": "paper-2",
+      "chapter": 10,
+      "topics": [
+        "data-types"
+      ],
+      "durationMin": 10,
+      "totalMarks": 3,
+      "description": "Three original questions with self-marking guidance.",
+      "status": "ready",
+      "questionsFile": "ai-chapter-extra-10-4.json"
+    },
+    {
+      "id": "ai-chapter-extra-11-1",
+      "title": "Chapter 11 — AI practice quiz 2",
+      "origin": "ai",
+      "provenance": "ai-original-chapter-quiz",
+      "paper": "paper-2",
+      "chapter": 11,
+      "topics": [
+        "programming"
+      ],
+      "durationMin": 10,
+      "totalMarks": 3,
+      "description": "Three original questions with self-marking guidance.",
+      "status": "ready",
+      "questionsFile": "ai-chapter-extra-11-1.json"
+    },
+    {
+      "id": "ai-chapter-extra-11-2",
+      "title": "Chapter 11 — AI practice quiz 3",
+      "origin": "ai",
+      "provenance": "ai-original-chapter-quiz",
+      "paper": "paper-2",
+      "chapter": 11,
+      "topics": [
+        "programming"
+      ],
+      "durationMin": 10,
+      "totalMarks": 3,
+      "description": "Three original questions with self-marking guidance.",
+      "status": "ready",
+      "questionsFile": "ai-chapter-extra-11-2.json"
+    },
+    {
+      "id": "ai-chapter-extra-11-3",
+      "title": "Chapter 11 — AI practice quiz 4",
+      "origin": "ai",
+      "provenance": "ai-original-chapter-quiz",
+      "paper": "paper-2",
+      "chapter": 11,
+      "topics": [
+        "programming"
+      ],
+      "durationMin": 10,
+      "totalMarks": 3,
+      "description": "Three original questions with self-marking guidance.",
+      "status": "ready",
+      "questionsFile": "ai-chapter-extra-11-3.json"
+    },
+    {
+      "id": "ai-chapter-extra-11-4",
+      "title": "Chapter 11 — AI practice quiz 5",
+      "origin": "ai",
+      "provenance": "ai-original-chapter-quiz",
+      "paper": "paper-2",
+      "chapter": 11,
+      "topics": [
+        "programming"
+      ],
+      "durationMin": 10,
+      "totalMarks": 3,
+      "description": "Three original questions with self-marking guidance.",
+      "status": "ready",
+      "questionsFile": "ai-chapter-extra-11-4.json"
+    },
+    {
+      "id": "ai-chapter-extra-12-1",
+      "title": "Chapter 12 — AI practice quiz 2",
+      "origin": "ai",
+      "provenance": "ai-original-chapter-quiz",
+      "paper": "paper-2",
+      "chapter": 12,
+      "topics": [
+        "software-dev"
+      ],
+      "durationMin": 10,
+      "totalMarks": 3,
+      "description": "Three original questions with self-marking guidance.",
+      "status": "ready",
+      "questionsFile": "ai-chapter-extra-12-1.json"
+    },
+    {
+      "id": "ai-chapter-extra-12-2",
+      "title": "Chapter 12 — AI practice quiz 3",
+      "origin": "ai",
+      "provenance": "ai-original-chapter-quiz",
+      "paper": "paper-2",
+      "chapter": 12,
+      "topics": [
+        "software-dev"
+      ],
+      "durationMin": 10,
+      "totalMarks": 3,
+      "description": "Three original questions with self-marking guidance.",
+      "status": "ready",
+      "questionsFile": "ai-chapter-extra-12-2.json"
+    },
+    {
+      "id": "ai-chapter-extra-12-3",
+      "title": "Chapter 12 — AI practice quiz 4",
+      "origin": "ai",
+      "provenance": "ai-original-chapter-quiz",
+      "paper": "paper-2",
+      "chapter": 12,
+      "topics": [
+        "software-dev"
+      ],
+      "durationMin": 10,
+      "totalMarks": 3,
+      "description": "Three original questions with self-marking guidance.",
+      "status": "ready",
+      "questionsFile": "ai-chapter-extra-12-3.json"
+    },
+    {
+      "id": "ai-chapter-extra-12-4",
+      "title": "Chapter 12 — AI practice quiz 5",
+      "origin": "ai",
+      "provenance": "ai-original-chapter-quiz",
+      "paper": "paper-2",
+      "chapter": 12,
+      "topics": [
+        "software-dev"
+      ],
+      "durationMin": 10,
+      "totalMarks": 3,
+      "description": "Three original questions with self-marking guidance.",
+      "status": "ready",
+      "questionsFile": "ai-chapter-extra-12-4.json"
     }
   ],
   "notes": [

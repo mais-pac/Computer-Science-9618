@@ -1,0 +1,146 @@
+{
+  "id": "ai-chapter-quiz-04",
+  "title": "Chapter 4 — AI Quiz: Processor Fundamentals",
+  "origin": "ai",
+  "provenance": "ai-original-chapter-quiz",
+  "paper": "paper-1",
+  "chapter": 4,
+  "topics": [
+    "processor"
+  ],
+  "durationMin": 15,
+  "totalMarks": 9,
+  "examDate": null,
+  "instructions": "Original AI-authored practice, not an official Cambridge or teacher paper. Answer all questions; written responses are self-marked using the guidance after submission. You can retake the quiz.",
+  "description": "Original chapter practice: multiple-choice and written questions with self-marking guidance.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "processor",
+      "section": "4",
+      "text": "Which register holds the address of the next instruction?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Accumulator"
+        },
+        {
+          "text": "Program counter",
+          "id": "B"
+        },
+        {
+          "id": "C",
+          "text": "Current instruction register"
+        },
+        {
+          "id": "D",
+          "text": "Memory data register"
+        }
+      ],
+      "answer": "B",
+      "explanation": "Correct answer: Program counter."
+    },
+    {
+      "id": "q2",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "processor",
+      "section": "4",
+      "text": "Which bus carries the address of a memory location?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Data bus"
+        },
+        {
+          "id": "B",
+          "text": "Control bus"
+        },
+        {
+          "text": "Address bus",
+          "id": "C"
+        },
+        {
+          "id": "D",
+          "text": "USB"
+        }
+      ],
+      "answer": "C",
+      "explanation": "Correct answer: Address bus."
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 1,
+      "topic": "processor",
+      "section": "4",
+      "text": "State the purpose of the memory address register (MAR).",
+      "answer": [
+        {
+          "text": "Holds the address of the memory location currently being accessed.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q4",
+      "type": "text",
+      "marks": 2,
+      "topic": "processor",
+      "section": "4",
+      "text": "Describe two steps of the fetch stage.",
+      "answer": [
+        {
+          "text": "The address in the program counter is copied to the MAR.",
+          "marks": 1
+        },
+        {
+          "text": "The instruction is fetched from memory into the MDR and then copied to the CIR.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q5",
+      "type": "text",
+      "marks": 2,
+      "topic": "processor",
+      "section": "4",
+      "text": "Explain what an interrupt is and give one example.",
+      "answer": [
+        {
+          "text": "A signal that requests the processor’s attention, interrupting normal execution.",
+          "marks": 1
+        },
+        {
+          "text": "Example: input/output completion, timer or hardware fault.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q6",
+      "type": "text",
+      "marks": 2,
+      "topic": "processor",
+      "section": "4",
+      "text": "Describe one difference between an opcode and an operand.",
+      "answer": [
+        {
+          "text": "An opcode specifies the operation.",
+          "marks": 1
+        },
+        {
+          "text": "An operand supplies the data or address on which the operation acts.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    }
+  ]
+}

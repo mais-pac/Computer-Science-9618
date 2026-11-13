@@ -1,0 +1,63 @@
+{
+  "id": "ai-chapter-extra-03-4",
+  "title": "Chapter 3 — AI practice quiz 5",
+  "origin": "ai",
+  "provenance": "ai-original-chapter-quiz",
+  "paper": "paper-1",
+  "chapter": 3,
+  "topics": [
+    "hardware"
+  ],
+  "durationMin": 10,
+  "totalMarks": 3,
+  "examDate": null,
+  "instructions": "Short original AI-authored practice; not an official or teacher paper. Self-mark using the guidance after submission.",
+  "description": "Three original questions with self-marking guidance.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "text",
+      "marks": 1,
+      "topic": "hardware",
+      "section": "3",
+      "text": "State a benefit of solid-state storage in portable devices.",
+      "answer": [
+        {
+          "text": "It has no moving parts and is resistant to mechanical shock.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q2",
+      "type": "text",
+      "marks": 1,
+      "topic": "hardware",
+      "section": "3",
+      "text": "What is the function of primary memory?",
+      "answer": [
+        {
+          "text": "It holds instructions and data currently needed by the processor.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 1,
+      "topic": "hardware",
+      "section": "3",
+      "text": "Why might an output device need a buffer?",
+      "answer": [
+        {
+          "text": "It temporarily stores data while the slower device processes it.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    }
+  ]
+}

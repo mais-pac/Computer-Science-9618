@@ -1,0 +1,63 @@
+{
+  "id": "ai-chapter-extra-12-4",
+  "title": "Chapter 12 — AI practice quiz 5",
+  "origin": "ai",
+  "provenance": "ai-original-chapter-quiz",
+  "paper": "paper-2",
+  "chapter": 12,
+  "topics": [
+    "software-dev"
+  ],
+  "durationMin": 10,
+  "totalMarks": 3,
+  "examDate": null,
+  "instructions": "Short original AI-authored practice; not an official or teacher paper. Self-mark using the guidance after submission.",
+  "description": "Three original questions with self-marking guidance.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "text",
+      "marks": 1,
+      "topic": "software-dev",
+      "section": "12",
+      "text": "What is black-box testing?",
+      "answer": [
+        {
+          "text": "Testing external behaviour against requirements without using knowledge of internal implementation.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q2",
+      "type": "text",
+      "marks": 1,
+      "topic": "software-dev",
+      "section": "12",
+      "text": "What is white-box testing?",
+      "answer": [
+        {
+          "text": "Testing informed by the internal code, structure or execution paths.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 1,
+      "topic": "software-dev",
+      "section": "12",
+      "text": "What is technical documentation for?",
+      "answer": [
+        {
+          "text": "It helps developers understand, maintain and modify a system.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    }
+  ]
+}

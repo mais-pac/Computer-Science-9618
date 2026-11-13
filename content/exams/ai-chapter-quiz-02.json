@@ -1,0 +1,146 @@
+{
+  "id": "ai-chapter-quiz-02",
+  "title": "Chapter 2 — AI Quiz: Communication",
+  "origin": "ai",
+  "provenance": "ai-original-chapter-quiz",
+  "paper": "paper-1",
+  "chapter": 2,
+  "topics": [
+    "communication"
+  ],
+  "durationMin": 15,
+  "totalMarks": 9,
+  "examDate": null,
+  "instructions": "Original AI-authored practice, not an official Cambridge or teacher paper. Answer all questions; written responses are self-marked using the guidance after submission. You can retake the quiz.",
+  "description": "Original chapter practice: multiple-choice and written questions with self-marking guidance.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "communication",
+      "section": "2",
+      "text": "Which device forwards packets between different IP networks?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Switch"
+        },
+        {
+          "id": "B",
+          "text": "Keyboard"
+        },
+        {
+          "id": "C",
+          "text": "Monitor"
+        },
+        {
+          "text": "Router",
+          "id": "D"
+        }
+      ],
+      "answer": "D",
+      "explanation": "Correct answer: Router."
+    },
+    {
+      "id": "q2",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "communication",
+      "section": "2",
+      "text": "Which protocol commonly transfers web pages securely using TLS?",
+      "options": [
+        {
+          "text": "HTTPS",
+          "id": "A"
+        },
+        {
+          "id": "B",
+          "text": "FTP"
+        },
+        {
+          "id": "C",
+          "text": "SMTP"
+        },
+        {
+          "id": "D",
+          "text": "ARP"
+        }
+      ],
+      "answer": "A",
+      "explanation": "Correct answer: HTTPS."
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 2,
+      "topic": "communication",
+      "section": "2",
+      "text": "Explain the difference between a LAN and a WAN.",
+      "answer": [
+        {
+          "text": "A LAN covers a limited local area such as one site.",
+          "marks": 1
+        },
+        {
+          "text": "A WAN connects networks over a wider geographical area.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q4",
+      "type": "text",
+      "marks": 1,
+      "topic": "communication",
+      "section": "2",
+      "text": "State what DNS does.",
+      "answer": [
+        {
+          "text": "Translates a domain name into an IP address.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q5",
+      "type": "text",
+      "marks": 2,
+      "topic": "communication",
+      "section": "2",
+      "text": "Explain the purpose of a packet sequence number.",
+      "answer": [
+        {
+          "text": "It allows packets to be reassembled in the correct order.",
+          "marks": 1
+        },
+        {
+          "text": "It can help identify missing packets.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q6",
+      "type": "text",
+      "marks": 2,
+      "topic": "communication",
+      "section": "2",
+      "text": "Give two benefits of fibre-optic over copper cable.",
+      "answer": [
+        {
+          "text": "High bandwidth/data rate.",
+          "marks": 1
+        },
+        {
+          "text": "Immune to electromagnetic interference, or lower attenuation.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    }
+  ]
+}

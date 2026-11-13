@@ -1,0 +1,63 @@
+{
+  "id": "ai-chapter-extra-07-3",
+  "title": "Chapter 7 — AI practice quiz 4",
+  "origin": "ai",
+  "provenance": "ai-original-chapter-quiz",
+  "paper": "paper-1",
+  "chapter": 7,
+  "topics": [
+    "ethics"
+  ],
+  "durationMin": 10,
+  "totalMarks": 3,
+  "examDate": null,
+  "instructions": "Short original AI-authored practice; not an official or teacher paper. Self-mark using the guidance after submission.",
+  "description": "Three original questions with self-marking guidance.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "text",
+      "marks": 1,
+      "topic": "ethics",
+      "section": "7",
+      "text": "Give one accessibility feature.",
+      "answer": [
+        {
+          "text": "Screen reader support, keyboard navigation or captions; other suitable example accepted.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q2",
+      "type": "text",
+      "marks": 1,
+      "topic": "ethics",
+      "section": "7",
+      "text": "What is the digital divide?",
+      "answer": [
+        {
+          "text": "Inequality in access to digital technology or the skills to use it.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 1,
+      "topic": "ethics",
+      "section": "7",
+      "text": "Give one way to reduce electronic waste.",
+      "answer": [
+        {
+          "text": "Repair, reuse or recycle devices responsibly.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    }
+  ]
+}

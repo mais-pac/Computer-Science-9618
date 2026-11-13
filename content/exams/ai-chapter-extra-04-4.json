@@ -1,0 +1,63 @@
+{
+  "id": "ai-chapter-extra-04-4",
+  "title": "Chapter 4 — AI practice quiz 5",
+  "origin": "ai",
+  "provenance": "ai-original-chapter-quiz",
+  "paper": "paper-1",
+  "chapter": 4,
+  "topics": [
+    "processor"
+  ],
+  "durationMin": 10,
+  "totalMarks": 3,
+  "examDate": null,
+  "instructions": "Short original AI-authored practice; not an official or teacher paper. Self-mark using the guidance after submission.",
+  "description": "Three original questions with self-marking guidance.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "text",
+      "marks": 1,
+      "topic": "processor",
+      "section": "4",
+      "text": "Why is cache memory useful?",
+      "answer": [
+        {
+          "text": "It keeps frequently used data or instructions close to the processor for faster access.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q2",
+      "type": "text",
+      "marks": 1,
+      "topic": "processor",
+      "section": "4",
+      "text": "What is an interrupt service routine?",
+      "answer": [
+        {
+          "text": "Code executed to respond to a particular interrupt.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 1,
+      "topic": "processor",
+      "section": "4",
+      "text": "What happens to the processor state before an interrupt is serviced?",
+      "answer": [
+        {
+          "text": "Relevant state such as register contents is saved so execution can later resume.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    }
+  ]
+}

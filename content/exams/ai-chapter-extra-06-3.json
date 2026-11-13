@@ -1,0 +1,63 @@
+{
+  "id": "ai-chapter-extra-06-3",
+  "title": "Chapter 6 — AI practice quiz 4",
+  "origin": "ai",
+  "provenance": "ai-original-chapter-quiz",
+  "paper": "paper-1",
+  "chapter": 6,
+  "topics": [
+    "security"
+  ],
+  "durationMin": 10,
+  "totalMarks": 3,
+  "examDate": null,
+  "instructions": "Short original AI-authored practice; not an official or teacher paper. Self-mark using the guidance after submission.",
+  "description": "Three original questions with self-marking guidance.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "text",
+      "marks": 1,
+      "topic": "security",
+      "section": "6",
+      "text": "What is a brute-force attack?",
+      "answer": [
+        {
+          "text": "Systematically trying many possible passwords or keys to find the correct one.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q2",
+      "type": "text",
+      "marks": 1,
+      "topic": "security",
+      "section": "6",
+      "text": "Why should software be updated?",
+      "answer": [
+        {
+          "text": "Updates can fix security vulnerabilities and other faults.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 1,
+      "topic": "security",
+      "section": "6",
+      "text": "What is access control?",
+      "answer": [
+        {
+          "text": "Restricting resources and operations according to permissions.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    }
+  ]
+}

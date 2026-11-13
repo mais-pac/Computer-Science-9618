@@ -1,0 +1,146 @@
+{
+  "id": "ai-chapter-quiz-08",
+  "title": "Chapter 8 — AI Quiz: Databases",
+  "origin": "ai",
+  "provenance": "ai-original-chapter-quiz",
+  "paper": "paper-1",
+  "chapter": 8,
+  "topics": [
+    "databases"
+  ],
+  "durationMin": 15,
+  "totalMarks": 9,
+  "examDate": null,
+  "instructions": "Original AI-authored practice, not an official Cambridge or teacher paper. Answer all questions; written responses are self-marked using the guidance after submission. You can retake the quiz.",
+  "description": "Original chapter practice: multiple-choice and written questions with self-marking guidance.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "databases",
+      "section": "8",
+      "text": "Which key uniquely identifies each record in a table?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Foreign key"
+        },
+        {
+          "text": "Primary key",
+          "id": "B"
+        },
+        {
+          "id": "C",
+          "text": "Duplicate field"
+        },
+        {
+          "id": "D",
+          "text": "Text file"
+        }
+      ],
+      "answer": "B",
+      "explanation": "Correct answer: Primary key."
+    },
+    {
+      "id": "q2",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "databases",
+      "section": "8",
+      "text": "Which SQL clause filters rows before grouping?",
+      "options": [
+        {
+          "id": "A",
+          "text": "ORDER BY"
+        },
+        {
+          "id": "B",
+          "text": "SELECT"
+        },
+        {
+          "text": "WHERE",
+          "id": "C"
+        },
+        {
+          "id": "D",
+          "text": "FROM"
+        }
+      ],
+      "answer": "C",
+      "explanation": "Correct answer: WHERE."
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 1,
+      "topic": "databases",
+      "section": "8",
+      "text": "Explain the role of a foreign key.",
+      "answer": [
+        {
+          "text": "A field or set of fields referencing a key in another table, used to establish a relationship.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q4",
+      "type": "text",
+      "marks": 2,
+      "topic": "databases",
+      "section": "8",
+      "text": "Explain one advantage of normalisation.",
+      "answer": [
+        {
+          "text": "Reduces unnecessary duplication of data.",
+          "marks": 1
+        },
+        {
+          "text": "Reduces update anomalies and helps maintain consistency.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q5",
+      "type": "text",
+      "marks": 2,
+      "topic": "databases",
+      "section": "8",
+      "text": "Write SQL to select Name from Student where Mark is at least 50.",
+      "answer": [
+        {
+          "text": "SELECT Name FROM Student",
+          "marks": 1
+        },
+        {
+          "text": "WHERE Mark >= 50;",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q6",
+      "type": "text",
+      "marks": 2,
+      "topic": "databases",
+      "section": "8",
+      "text": "Distinguish validation from verification.",
+      "answer": [
+        {
+          "text": "Validation checks data against rules for acceptable values.",
+          "marks": 1
+        },
+        {
+          "text": "Verification checks data was copied or entered accurately from its source.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    }
+  ]
+}

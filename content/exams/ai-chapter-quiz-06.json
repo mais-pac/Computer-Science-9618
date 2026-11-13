@@ -1,0 +1,150 @@
+{
+  "id": "ai-chapter-quiz-06",
+  "title": "Chapter 6 — AI Quiz: Security, Privacy & Data Integrity",
+  "origin": "ai",
+  "provenance": "ai-original-chapter-quiz",
+  "paper": "paper-1",
+  "chapter": 6,
+  "topics": [
+    "security"
+  ],
+  "durationMin": 15,
+  "totalMarks": 10,
+  "examDate": null,
+  "instructions": "Original AI-authored practice, not an official Cambridge or teacher paper. Answer all questions; written responses are self-marked using the guidance after submission. You can retake the quiz.",
+  "description": "Original chapter practice: multiple-choice and written questions with self-marking guidance.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "security",
+      "section": "6",
+      "text": "Which control helps verify a user’s identity?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Encryption"
+        },
+        {
+          "id": "B",
+          "text": "Compression"
+        },
+        {
+          "id": "C",
+          "text": "Defragmentation"
+        },
+        {
+          "text": "Authentication",
+          "id": "D"
+        }
+      ],
+      "answer": "D",
+      "explanation": "Correct answer: Authentication."
+    },
+    {
+      "id": "q2",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "security",
+      "section": "6",
+      "text": "What does encryption primarily protect?",
+      "options": [
+        {
+          "text": "Confidentiality of data",
+          "id": "A"
+        },
+        {
+          "id": "B",
+          "text": "Physical availability of a server"
+        },
+        {
+          "id": "C",
+          "text": "Data entry speed"
+        },
+        {
+          "id": "D",
+          "text": "Screen resolution"
+        }
+      ],
+      "answer": "A",
+      "explanation": "Correct answer: Confidentiality of data."
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 2,
+      "topic": "security",
+      "section": "6",
+      "text": "Explain the difference between authentication and authorisation.",
+      "answer": [
+        {
+          "text": "Authentication checks identity.",
+          "marks": 1
+        },
+        {
+          "text": "Authorisation determines what an authenticated user may access or do.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q4",
+      "type": "text",
+      "marks": 2,
+      "topic": "security",
+      "section": "6",
+      "text": "State two precautions against phishing.",
+      "answer": [
+        {
+          "text": "Check the sender and destination independently; do not trust unexpected links or attachments.",
+          "marks": 1
+        },
+        {
+          "text": "Verify unexpected requests through a known contact channel.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q5",
+      "type": "text",
+      "marks": 2,
+      "topic": "security",
+      "section": "6",
+      "text": "Explain how a checksum can detect data corruption.",
+      "answer": [
+        {
+          "text": "A checksum is calculated from data before transmission or storage.",
+          "marks": 1
+        },
+        {
+          "text": "Recalculate it on receipt and compare; a mismatch indicates corruption.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q6",
+      "type": "text",
+      "marks": 2,
+      "topic": "security",
+      "section": "6",
+      "text": "Describe two features of a strong password policy.",
+      "answer": [
+        {
+          "text": "Require long, unique passwords or passphrases.",
+          "marks": 1
+        },
+        {
+          "text": "Prevent reuse of compromised passwords or use a password manager and multi-factor authentication.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    }
+  ]
+}

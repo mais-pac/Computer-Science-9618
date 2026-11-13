@@ -1,0 +1,146 @@
+{
+  "id": "ai-chapter-quiz-05",
+  "title": "Chapter 5 — AI Quiz: System Software",
+  "origin": "ai",
+  "provenance": "ai-original-chapter-quiz",
+  "paper": "paper-1",
+  "chapter": 5,
+  "topics": [
+    "system-software"
+  ],
+  "durationMin": 15,
+  "totalMarks": 9,
+  "examDate": null,
+  "instructions": "Original AI-authored practice, not an official Cambridge or teacher paper. Answer all questions; written responses are self-marked using the guidance after submission. You can retake the quiz.",
+  "description": "Original chapter practice: multiple-choice and written questions with self-marking guidance.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "system-software",
+      "section": "5",
+      "text": "Which software translates assembly language into machine code?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Web browser"
+        },
+        {
+          "id": "B",
+          "text": "Database"
+        },
+        {
+          "text": "Assembler",
+          "id": "C"
+        },
+        {
+          "id": "D",
+          "text": "Device driver"
+        }
+      ],
+      "answer": "C",
+      "explanation": "Correct answer: Assembler."
+    },
+    {
+      "id": "q2",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "system-software",
+      "section": "5",
+      "text": "What is a purpose of a device driver?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Compresses an image"
+        },
+        {
+          "id": "B",
+          "text": "Stores a password"
+        },
+        {
+          "id": "C",
+          "text": "Routes IP packets"
+        },
+        {
+          "text": "Enables an operating system to communicate with a device",
+          "id": "D"
+        }
+      ],
+      "answer": "D",
+      "explanation": "Correct answer: Enables an operating system to communicate with a device."
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 1,
+      "topic": "system-software",
+      "section": "5",
+      "text": "Explain one difference between a compiler and an interpreter.",
+      "answer": [
+        {
+          "text": "A compiler translates a whole program before execution; an interpreter translates and executes statements during execution.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q4",
+      "type": "text",
+      "marks": 2,
+      "topic": "system-software",
+      "section": "5",
+      "text": "State two functions of an operating system.",
+      "answer": [
+        {
+          "text": "Memory management.",
+          "marks": 1
+        },
+        {
+          "text": "Any other distinct function, e.g. process scheduling, file management or peripheral management.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q5",
+      "type": "text",
+      "marks": 2,
+      "topic": "system-software",
+      "section": "5",
+      "text": "Explain why a linker is needed when building an executable.",
+      "answer": [
+        {
+          "text": "Combines object code with required library routines or other object modules.",
+          "marks": 1
+        },
+        {
+          "text": "Resolves references between them.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q6",
+      "type": "text",
+      "marks": 2,
+      "topic": "system-software",
+      "section": "5",
+      "text": "Describe a purpose of utility software and give an example.",
+      "answer": [
+        {
+          "text": "Maintains, protects or manages a computer system.",
+          "marks": 1
+        },
+        {
+          "text": "Example: backup, anti-malware or file compression utility.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    }
+  ]
+}

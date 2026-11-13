@@ -1,0 +1,63 @@
+{
+  "id": "ai-chapter-extra-05-3",
+  "title": "Chapter 5 — AI practice quiz 4",
+  "origin": "ai",
+  "provenance": "ai-original-chapter-quiz",
+  "paper": "paper-1",
+  "chapter": 5,
+  "topics": [
+    "system-software"
+  ],
+  "durationMin": 10,
+  "totalMarks": 3,
+  "examDate": null,
+  "instructions": "Short original AI-authored practice; not an official or teacher paper. Self-mark using the guidance after submission.",
+  "description": "Three original questions with self-marking guidance.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "text",
+      "marks": 1,
+      "topic": "system-software",
+      "section": "5",
+      "text": "What does an assembler translate?",
+      "answer": [
+        {
+          "text": "Assembly language into machine code.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q2",
+      "type": "text",
+      "marks": 1,
+      "topic": "system-software",
+      "section": "5",
+      "text": "What is a syntax error?",
+      "answer": [
+        {
+          "text": "A statement that breaks the grammatical rules of the programming language.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 1,
+      "topic": "system-software",
+      "section": "5",
+      "text": "What is a linker used for?",
+      "answer": [
+        {
+          "text": "It combines object modules and library code and resolves references between them.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    }
+  ]
+}

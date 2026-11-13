@@ -1,0 +1,63 @@
+{
+  "id": "ai-chapter-extra-09-3",
+  "title": "Chapter 9 — AI practice quiz 4",
+  "origin": "ai",
+  "provenance": "ai-original-chapter-quiz",
+  "paper": "paper-2",
+  "chapter": 9,
+  "topics": [
+    "algorithms"
+  ],
+  "durationMin": 10,
+  "totalMarks": 3,
+  "examDate": null,
+  "instructions": "Short original AI-authored practice; not an official or teacher paper. Self-mark using the guidance after submission.",
+  "description": "Three original questions with self-marking guidance.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "text",
+      "marks": 1,
+      "topic": "algorithms",
+      "section": "9",
+      "text": "What is a linear search?",
+      "answer": [
+        {
+          "text": "Examining items one by one until the target is found or the list ends.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q2",
+      "type": "text",
+      "marks": 1,
+      "topic": "algorithms",
+      "section": "9",
+      "text": "What must be true before using binary search?",
+      "answer": [
+        {
+          "text": "The data must be sorted in the search order.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 1,
+      "topic": "algorithms",
+      "section": "9",
+      "text": "What is a dry run?",
+      "answer": [
+        {
+          "text": "Manually following an algorithm with sample data.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    }
+  ]
+}

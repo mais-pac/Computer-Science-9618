@@ -1,0 +1,142 @@
+{
+  "id": "ai-chapter-quiz-01",
+  "title": "Chapter 1 — AI Quiz: Information Representation",
+  "origin": "ai",
+  "provenance": "ai-original-chapter-quiz",
+  "paper": "paper-1",
+  "chapter": 1,
+  "topics": [
+    "info-rep"
+  ],
+  "durationMin": 15,
+  "totalMarks": 8,
+  "examDate": null,
+  "instructions": "Original AI-authored practice, not an official Cambridge or teacher paper. Answer all questions; written responses are self-marked using the guidance after submission. You can retake the quiz.",
+  "description": "Original chapter practice: multiple-choice and written questions with self-marking guidance.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "info-rep",
+      "section": "1",
+      "text": "Which hexadecimal number represents binary 10101100?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A6"
+        },
+        {
+          "id": "B",
+          "text": "BC"
+        },
+        {
+          "text": "AC",
+          "id": "C"
+        },
+        {
+          "id": "D",
+          "text": "CA"
+        }
+      ],
+      "answer": "C",
+      "explanation": "Correct answer: AC."
+    },
+    {
+      "id": "q2",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "info-rep",
+      "section": "1",
+      "text": "What is the range of an 8-bit unsigned integer?",
+      "options": [
+        {
+          "id": "A",
+          "text": "-128 to 127"
+        },
+        {
+          "id": "B",
+          "text": "0 to 256"
+        },
+        {
+          "id": "C",
+          "text": "-255 to 255"
+        },
+        {
+          "text": "0 to 255",
+          "id": "D"
+        }
+      ],
+      "answer": "D",
+      "explanation": "Correct answer: 0 to 255."
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 1,
+      "topic": "info-rep",
+      "section": "1",
+      "text": "Convert denary 45 to eight-bit binary.",
+      "answer": [
+        {
+          "text": "00101101",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q4",
+      "type": "text",
+      "marks": 1,
+      "topic": "info-rep",
+      "section": "1",
+      "text": "Explain one difference between lossy and lossless compression.",
+      "answer": [
+        {
+          "text": "Lossless compression permits exact reconstruction of the original data; lossy compression discards information and does not.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q5",
+      "type": "text",
+      "marks": 2,
+      "topic": "info-rep",
+      "section": "1",
+      "text": "An image has 200 × 100 pixels at 24 bits per pixel. Calculate the uncompressed pixel data size in bytes, ignoring metadata.",
+      "answer": [
+        {
+          "text": "200 × 100 × 24 = 480000 bits.",
+          "marks": 1
+        },
+        {
+          "text": "480000 ÷ 8 = 60000 bytes.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q6",
+      "type": "text",
+      "marks": 2,
+      "topic": "info-rep",
+      "section": "1",
+      "text": "Explain the effect of increasing sample rate on digital sound.",
+      "answer": [
+        {
+          "text": "More samples are taken per second.",
+          "marks": 1
+        },
+        {
+          "text": "This can represent higher frequencies more accurately, but increases the amount of data.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    }
+  ]
+}

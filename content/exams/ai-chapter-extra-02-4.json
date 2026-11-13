@@ -1,0 +1,63 @@
+{
+  "id": "ai-chapter-extra-02-4",
+  "title": "Chapter 2 — AI practice quiz 5",
+  "origin": "ai",
+  "provenance": "ai-original-chapter-quiz",
+  "paper": "paper-1",
+  "chapter": 2,
+  "topics": [
+    "communication"
+  ],
+  "durationMin": 10,
+  "totalMarks": 3,
+  "examDate": null,
+  "instructions": "Short original AI-authored practice; not an official or teacher paper. Self-mark using the guidance after submission.",
+  "description": "Three original questions with self-marking guidance.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "text",
+      "marks": 1,
+      "topic": "communication",
+      "section": "2",
+      "text": "What is the role of a web browser?",
+      "answer": [
+        {
+          "text": "It requests web resources and renders them for the user.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q2",
+      "type": "text",
+      "marks": 1,
+      "topic": "communication",
+      "section": "2",
+      "text": "What is the purpose of a URL?",
+      "answer": [
+        {
+          "text": "It identifies the location of a resource and how it can be accessed.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 1,
+      "topic": "communication",
+      "section": "2",
+      "text": "Explain what a firewall does.",
+      "answer": [
+        {
+          "text": "It monitors and filters network traffic according to security rules.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "id": "ai-chapter-quiz-10",
+  "title": "Chapter 10 — AI Quiz: Data Types & Structures",
+  "origin": "ai",
+  "provenance": "ai-original-chapter-quiz",
+  "paper": "paper-2",
+  "chapter": 10,
+  "topics": [
+    "data-types"
+  ],
+  "durationMin": 15,
+  "totalMarks": 8,
+  "examDate": null,
+  "instructions": "Original AI-authored practice, not an official Cambridge or teacher paper. Answer all questions; written responses are self-marked using the guidance after submission. You can retake the quiz.",
+  "description": "Original chapter practice: multiple-choice and written questions with self-marking guidance.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "data-types",
+      "section": "10",
+      "text": "Which data type represents true or false?",
+      "options": [
+        {
+          "id": "A",
+          "text": "INTEGER"
+        },
+        {
+          "id": "B",
+          "text": "CHAR"
+        },
+        {
+          "id": "C",
+          "text": "REAL"
+        },
+        {
+          "text": "BOOLEAN",
+          "id": "D"
+        }
+      ],
+      "answer": "D",
+      "explanation": "Correct answer: BOOLEAN."
+    },
+    {
+      "id": "q2",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "data-types",
+      "section": "10",
+      "text": "Which structure stores multiple values indexed by position?",
+      "options": [
+        {
+          "text": "Array",
+          "id": "A"
+        },
+        {
+          "id": "B",
+          "text": "Boolean"
+        },
+        {
+          "id": "C",
+          "text": "Constant"
+        },
+        {
+          "id": "D",
+          "text": "Operator"
+        }
+      ],
+      "answer": "A",
+      "explanation": "Correct answer: Array."
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 1,
+      "topic": "data-types",
+      "section": "10",
+      "text": "State one difference between an array and a record.",
+      "answer": [
+        {
+          "text": "An array contains indexed elements of the same type; a record groups named fields that may have different types.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q4",
+      "type": "text",
+      "marks": 1,
+      "topic": "data-types",
+      "section": "10",
+      "text": "Declare an array of 20 integers called Scores using Cambridge-style pseudocode.",
+      "answer": [
+        {
+          "text": "DECLARE Scores : ARRAY[1:20] OF INTEGER",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q5",
+      "type": "text",
+      "marks": 2,
+      "topic": "data-types",
+      "section": "10",
+      "text": "Explain why a record is useful for storing a student’s details.",
+      "answer": [
+        {
+          "text": "Related fields such as ID and name are grouped together.",
+          "marks": 1
+        },
+        {
+          "text": "Fields can have different data types.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q6",
+      "type": "text",
+      "marks": 2,
+      "topic": "data-types",
+      "section": "10",
+      "text": "Describe the difference between sequential and random file access.",
+      "answer": [
+        {
+          "text": "Sequential access processes records in sequence.",
+          "marks": 1
+        },
+        {
+          "text": "Random/direct access can locate a record without reading all preceding records.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    }
+  ]
+}

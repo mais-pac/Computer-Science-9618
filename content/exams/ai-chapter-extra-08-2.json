@@ -1,0 +1,63 @@
+{
+  "id": "ai-chapter-extra-08-2",
+  "title": "Chapter 8 — AI practice quiz 3",
+  "origin": "ai",
+  "provenance": "ai-original-chapter-quiz",
+  "paper": "paper-1",
+  "chapter": 8,
+  "topics": [
+    "databases"
+  ],
+  "durationMin": 10,
+  "totalMarks": 3,
+  "examDate": null,
+  "instructions": "Short original AI-authored practice; not an official or teacher paper. Self-mark using the guidance after submission.",
+  "description": "Three original questions with self-marking guidance.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "text",
+      "marks": 1,
+      "topic": "databases",
+      "section": "8",
+      "text": "What is a foreign key?",
+      "answer": [
+        {
+          "text": "A field or fields referencing a key in another table.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q2",
+      "type": "text",
+      "marks": 1,
+      "topic": "databases",
+      "section": "8",
+      "text": "What is data redundancy?",
+      "answer": [
+        {
+          "text": "Unnecessary duplication of data.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 1,
+      "topic": "databases",
+      "section": "8",
+      "text": "Give one benefit of reducing data redundancy.",
+      "answer": [
+        {
+          "text": "It reduces the risk of inconsistent copies and update anomalies.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    }
+  ]
+}

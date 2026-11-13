@@ -1,0 +1,63 @@
+{
+  "id": "ai-chapter-extra-11-3",
+  "title": "Chapter 11 — AI practice quiz 4",
+  "origin": "ai",
+  "provenance": "ai-original-chapter-quiz",
+  "paper": "paper-2",
+  "chapter": 11,
+  "topics": [
+    "programming"
+  ],
+  "durationMin": 10,
+  "totalMarks": 3,
+  "examDate": null,
+  "instructions": "Short original AI-authored practice; not an official or teacher paper. Self-mark using the guidance after submission.",
+  "description": "Three original questions with self-marking guidance.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "text",
+      "marks": 1,
+      "topic": "programming",
+      "section": "11",
+      "text": "What does BYREF allow?",
+      "answer": [
+        {
+          "text": "The subroutine can access and potentially modify the original variable.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q2",
+      "type": "text",
+      "marks": 1,
+      "topic": "programming",
+      "section": "11",
+      "text": "What is the role of an IF statement?",
+      "answer": [
+        {
+          "text": "It selects actions according to whether a condition is true.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 1,
+      "topic": "programming",
+      "section": "11",
+      "text": "When does a WHILE loop test its condition?",
+      "answer": [
+        {
+          "text": "Before each iteration, including before the first.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    }
+  ]
+}

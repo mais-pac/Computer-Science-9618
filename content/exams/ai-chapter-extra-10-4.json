@@ -1,0 +1,63 @@
+{
+  "id": "ai-chapter-extra-10-4",
+  "title": "Chapter 10 — AI practice quiz 5",
+  "origin": "ai",
+  "provenance": "ai-original-chapter-quiz",
+  "paper": "paper-2",
+  "chapter": 10,
+  "topics": [
+    "data-types"
+  ],
+  "durationMin": 10,
+  "totalMarks": 3,
+  "examDate": null,
+  "instructions": "Short original AI-authored practice; not an official or teacher paper. Self-mark using the guidance after submission.",
+  "description": "Three original questions with self-marking guidance.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "text",
+      "marks": 1,
+      "topic": "data-types",
+      "section": "10",
+      "text": "What does sequential file access mean?",
+      "answer": [
+        {
+          "text": "Records are processed in order, one after another.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q2",
+      "type": "text",
+      "marks": 1,
+      "topic": "data-types",
+      "section": "10",
+      "text": "What is direct file access?",
+      "answer": [
+        {
+          "text": "Accessing a record by its location or key without reading all preceding records.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 1,
+      "topic": "data-types",
+      "section": "10",
+      "text": "Why choose an appropriate data type?",
+      "answer": [
+        {
+          "text": "It ensures values are represented and operations applied appropriately.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    }
+  ]
+}

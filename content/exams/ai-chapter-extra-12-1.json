@@ -1,0 +1,63 @@
+{
+  "id": "ai-chapter-extra-12-1",
+  "title": "Chapter 12 — AI practice quiz 2",
+  "origin": "ai",
+  "provenance": "ai-original-chapter-quiz",
+  "paper": "paper-2",
+  "chapter": 12,
+  "topics": [
+    "software-dev"
+  ],
+  "durationMin": 10,
+  "totalMarks": 3,
+  "examDate": null,
+  "instructions": "Short original AI-authored practice; not an official or teacher paper. Self-mark using the guidance after submission.",
+  "description": "Three original questions with self-marking guidance.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "text",
+      "marks": 1,
+      "topic": "software-dev",
+      "section": "12",
+      "text": "What is a test plan?",
+      "answer": [
+        {
+          "text": "A documented set of tests, inputs and expected outcomes.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q2",
+      "type": "text",
+      "marks": 1,
+      "topic": "software-dev",
+      "section": "12",
+      "text": "What is normal test data?",
+      "answer": [
+        {
+          "text": "Typical valid input within the accepted range.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 1,
+      "topic": "software-dev",
+      "section": "12",
+      "text": "What is invalid test data?",
+      "answer": [
+        {
+          "text": "Input that does not satisfy the specified rules.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "id": "ai-chapter-extra-02-3",
+  "title": "Chapter 2 — AI practice quiz 4",
+  "origin": "ai",
+  "provenance": "ai-original-chapter-quiz",
+  "paper": "paper-1",
+  "chapter": 2,
+  "topics": [
+    "communication"
+  ],
+  "durationMin": 10,
+  "totalMarks": 3,
+  "examDate": null,
+  "instructions": "Short original AI-authored practice; not an official or teacher paper. Self-mark using the guidance after submission.",
+  "description": "Three original questions with self-marking guidance.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "text",
+      "marks": 1,
+      "topic": "communication",
+      "section": "2",
+      "text": "What is packet switching?",
+      "answer": [
+        {
+          "text": "Data is divided into packets that can be routed independently and reassembled at the destination.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q2",
+      "type": "text",
+      "marks": 1,
+      "topic": "communication",
+      "section": "2",
+      "text": "Why is a packet header needed?",
+      "answer": [
+        {
+          "text": "It contains control information such as source and destination addresses for delivery.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 1,
+      "topic": "communication",
+      "section": "2",
+      "text": "State a benefit of client-server networking.",
+      "answer": [
+        {
+          "text": "Centralised management of resources, accounts or backups.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    }
+  ]
+}
