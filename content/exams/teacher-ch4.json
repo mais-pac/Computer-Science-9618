@@ -1,0 +1,490 @@
+{
+  "id": "teacher-ch4",
+  "title": "Chapter 4 — Record Data Types, Subroutines and Logic Circuits",
+  "origin": "teacher",
+  "provenance": "teacher-source-transcription",
+  "paper": "paper-2",
+  "chapter": 4,
+  "chapters": [
+    4
+  ],
+  "topics": [
+    "data-types"
+  ],
+  "durationMin": 45,
+  "totalMarks": 50,
+  "instructions": "Answer the available questions. This is a partial reconstruction from the supplied screenshots, not a complete replica. Some original question material is missing. Mark yourself using your own reference: no official mark scheme is supplied.",
+  "description": "Questions transcribed from teacher result screenshots. Some original context or options are missing; answers are self-assessed without an official mark scheme.",
+  "selfAssessedWithoutScheme": true,
+  "questions": [
+    {
+      "id": "q1a",
+      "type": "text",
+      "marks": 4,
+      "topic": "data-types",
+      "text": "**Original question 1(a)**\n\nDefine a user-defined record data type called TStudent to store the information shown in the table. Use pseudocode.\n\n**Source limitation:** The referenced table is not shown in the supplied question screenshot.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 2 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 3 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 4 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q1b",
+      "type": "text",
+      "marks": 1,
+      "topic": "data-types",
+      "text": "**Original question 1(b)**\n\nDeclare a variable called Student1 using the record data type TStudent.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q1c",
+      "type": "text",
+      "marks": 3,
+      "topic": "data-types",
+      "text": "**Original question 1(c)**\n\nWrite pseudocode to input the student's ID, name and examination score into the appropriate fields of Student1.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 2 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 3 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q1d",
+      "type": "text",
+      "marks": 4,
+      "topic": "data-types",
+      "text": "**Original question 1(d)**\n\nA student passes the examination if their examination score is 50 or above. Write a named pseudocode subroutine called CheckPass that accepts an examination score as a parameter and returns a Boolean value indicating whether the student has passed. Use the returned value to update the examination status of Student1.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 2 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 3 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 4 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q1e",
+      "type": "text",
+      "marks": 4,
+      "topic": "data-types",
+      "text": "**Original question 1(e)**\n\nThe school requires a message to be displayed for each student based on their examination result. Write a named pseudocode subroutine called DisplayResult that accepts a student's name and examination status as parameters. The subroutine must display the appropriate message immediately, without returning a value. If passed: \"Congratulations, you have passed.\" Otherwise: \"You have failed the examination.\" Use this subroutine to display the result for Student1.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 2 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 3 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 4 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q2a",
+      "type": "text",
+      "marks": 4,
+      "topic": "data-types",
+      "text": "**Original question 2(a)**\n\nWrite a Boolean expression for X using the rows where X = 1.\n\n**Source limitation:** The referenced truth table is not shown in the supplied question screenshot.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 2 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 3 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 4 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q2b",
+      "type": "text",
+      "marks": 3,
+      "topic": "data-types",
+      "text": "**Original question 2(b)**\n\nDraw a logic circuit that implements your expression.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 2 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 3 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q3a",
+      "type": "text",
+      "marks": 3,
+      "topic": "data-types",
+      "text": "**Original question 3(a)**\n\nDraw the logic circuit.\n\n**Source limitation:** The referenced expression is not shown in the supplied question screenshot.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 2 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 3 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q3b",
+      "type": "text",
+      "marks": 5,
+      "topic": "data-types",
+      "text": "**Original question 3(b)**\n\nConstruct the complete truth table, including intermediate columns.\n\n**Source limitation:** The referenced expression is not shown in the supplied question screenshot.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 2 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 3 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 4 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 5 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ],
+      "table": {
+        "columns": [
+          "A",
+          "B",
+          "C",
+          "Working space",
+          "X"
+        ],
+        "rows": [
+          [
+            "0",
+            "0",
+            "0",
+            null,
+            null
+          ],
+          [
+            "0",
+            "0",
+            "1",
+            null,
+            null
+          ],
+          [
+            "0",
+            "1",
+            "0",
+            null,
+            null
+          ],
+          [
+            "0",
+            "1",
+            "1",
+            null,
+            null
+          ],
+          [
+            "1",
+            "0",
+            "0",
+            null,
+            null
+          ],
+          [
+            "1",
+            "0",
+            "1",
+            null,
+            null
+          ],
+          [
+            "1",
+            "1",
+            "0",
+            null,
+            null
+          ],
+          [
+            "1",
+            "1",
+            "1",
+            null,
+            null
+          ]
+        ]
+      }
+    },
+    {
+      "id": "q4a",
+      "type": "text",
+      "marks": 3,
+      "topic": "data-types",
+      "text": "**Original question 4(a)**\n\nWrite the Boolean expression for alarm X.\n\n**Source limitation:** The original alarm scenario is not shown in the supplied question screenshot.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 2 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 3 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q4b",
+      "type": "text",
+      "marks": 3,
+      "topic": "data-types",
+      "text": "**Original question 4(b)**\n\nDraw the logic circuit.\n\n**Source limitation:** The original alarm scenario is not shown in the supplied question screenshot.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 2 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 3 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q4c",
+      "type": "text",
+      "marks": 2,
+      "topic": "data-types",
+      "text": "**Original question 4(c)**\n\nDetermine whether the alarm activates when A = 1, B = 0, C = 1, D = 0. Explain your answer.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 2 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q5a",
+      "type": "text",
+      "marks": 3,
+      "topic": "data-types",
+      "text": "**Original question 5(a)**\n\nWrite the Boolean expression for X.\n\n**Source limitation:** The original logic scenario is not shown in the supplied question screenshot.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 2 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 3 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q5b",
+      "type": "text",
+      "marks": 4,
+      "topic": "data-types",
+      "text": "**Original question 5(b)**\n\nConstruct the complete truth table for X.\n\n**Source limitation:** The original logic scenario is not shown in the supplied question screenshot.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 2 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 3 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 4 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ],
+      "table": {
+        "columns": [
+          "A",
+          "B",
+          "C",
+          "Working space",
+          "X"
+        ],
+        "rows": [
+          [
+            "0",
+            "0",
+            "0",
+            null,
+            null
+          ],
+          [
+            "0",
+            "0",
+            "1",
+            null,
+            null
+          ],
+          [
+            "0",
+            "1",
+            "0",
+            null,
+            null
+          ],
+          [
+            "0",
+            "1",
+            "1",
+            null,
+            null
+          ],
+          [
+            "1",
+            "0",
+            "0",
+            null,
+            null
+          ],
+          [
+            "1",
+            "0",
+            "1",
+            null,
+            null
+          ],
+          [
+            "1",
+            "1",
+            "0",
+            null,
+            null
+          ],
+          [
+            "1",
+            "1",
+            "1",
+            null,
+            null
+          ]
+        ]
+      }
+    },
+    {
+      "id": "q5c",
+      "type": "text",
+      "marks": 4,
+      "topic": "data-types",
+      "text": "**Original question 5(c)**\n\nDraw the logic circuit using appropriate gates.\n\n**Source limitation:** The original logic scenario is not shown in the supplied question screenshot.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 2 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 3 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 4 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    }
+  ]
+}

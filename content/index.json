@@ -120,6 +120,26 @@
   ],
   "exams": [
     {
+      "id": "teacher-ch1-2",
+      "title": "Chapters 1 & 2 — Teacher Quiz",
+      "origin": "teacher",
+      "provenance": "teacher-source-transcription",
+      "paper": "paper-1",
+      "chapter": 1,
+      "chapters": [
+        1,
+        2
+      ],
+      "topics": [
+        "info-rep"
+      ],
+      "durationMin": 40,
+      "totalMarks": 40,
+      "description": "Questions transcribed from teacher result screenshots. Some original context or options are missing; answers are self-assessed without an official mark scheme.",
+      "status": "ready",
+      "questionsFile": "teacher-ch1-2.json"
+    },
+    {
       "id": "ch3-hardware-hardware-2026-09-30",
       "title": "Chapter 3 – Hardware",
       "origin": "ai",
@@ -136,6 +156,82 @@
       "description": "Class test set on Chapter 3 (Computers and their components + Logic gates and logic circuits). Replicated so you can re-take it any time.",
       "questionsFile": "ch3-hardware-hardware-2026-09-30.json",
       "provenance": "teacher-topic-reconstruction"
+    },
+    {
+      "id": "teacher-ch3",
+      "title": "Chapter 3 — Hardware",
+      "origin": "teacher",
+      "provenance": "teacher-source-transcription",
+      "paper": "paper-1",
+      "chapter": 3,
+      "chapters": [
+        3
+      ],
+      "topics": [
+        "hardware"
+      ],
+      "durationMin": 50,
+      "totalMarks": 37,
+      "description": "Questions transcribed from teacher result screenshots. Some original context or options are missing; answers are self-assessed without an official mark scheme.",
+      "status": "ready",
+      "questionsFile": "teacher-ch3.json"
+    },
+    {
+      "id": "teacher-ch4",
+      "title": "Chapter 4 — Record Data Types, Subroutines and Logic Circuits",
+      "origin": "teacher",
+      "provenance": "teacher-source-transcription",
+      "paper": "paper-2",
+      "chapter": 4,
+      "chapters": [
+        4
+      ],
+      "topics": [
+        "data-types"
+      ],
+      "durationMin": 45,
+      "totalMarks": 50,
+      "description": "Questions transcribed from teacher result screenshots. Some original context or options are missing; answers are self-assessed without an official mark scheme.",
+      "status": "ready",
+      "questionsFile": "teacher-ch4.json"
+    },
+    {
+      "id": "teacher-ch5",
+      "title": "Processor Fundamentals + Parameter Passing",
+      "origin": "teacher",
+      "provenance": "teacher-source-transcription",
+      "paper": "paper-1",
+      "chapter": 5,
+      "chapters": [
+        5
+      ],
+      "topics": [
+        "processor"
+      ],
+      "durationMin": 45,
+      "totalMarks": 45,
+      "description": "Questions transcribed from teacher result screenshots. Some original context or options are missing; answers are self-assessed without an official mark scheme.",
+      "status": "ready",
+      "questionsFile": "teacher-ch5.json"
+    },
+    {
+      "id": "teacher-ch6",
+      "title": "Assembly Language — Question Paper",
+      "origin": "teacher",
+      "provenance": "teacher-source-transcription",
+      "paper": "paper-1",
+      "chapter": 6,
+      "chapters": [
+        6
+      ],
+      "topics": [
+        "processor"
+      ],
+      "durationMin": 40,
+      "totalMarks": 46,
+      "description": "Questions transcribed from teacher result screenshots. Some original context or options are missing; answers are self-assessed without an official mark scheme.",
+      "status": "ready",
+      "questionsFile": "teacher-ch6.json"
     },
     {
       "id": "as-chapters-1-2-test-2026-09-21",

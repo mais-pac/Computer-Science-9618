@@ -1,0 +1,478 @@
+{
+  "id": "teacher-ch6",
+  "title": "Assembly Language — Question Paper",
+  "origin": "teacher",
+  "provenance": "teacher-source-transcription",
+  "paper": "paper-1",
+  "chapter": 6,
+  "chapters": [
+    6
+  ],
+  "topics": [
+    "processor"
+  ],
+  "durationMin": 40,
+  "totalMarks": 46,
+  "instructions": "Answer the available questions. This is a partial reconstruction from the supplied screenshots, not a complete replica. Some original question material is missing. Mark yourself using your own reference: no official mark scheme is supplied.",
+  "description": "Questions transcribed from teacher result screenshots. Some original context or options are missing; answers are self-assessed without an official mark scheme.",
+  "selfAssessedWithoutScheme": true,
+  "questions": [
+    {
+      "id": "q1a",
+      "type": "text",
+      "marks": 2,
+      "topic": "processor",
+      "text": "**Original question 1(a)**\n\nDefine assembly language.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 2 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q1b",
+      "type": "text",
+      "marks": 2,
+      "topic": "processor",
+      "text": "**Original question 1(b)**\n\nExplain the difference between an opcode and an operand.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 2 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q1c",
+      "type": "text",
+      "marks": 2,
+      "topic": "processor",
+      "text": "**Original question 1(c)**\n\nExplain why an assembler is required.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 2 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q2a",
+      "type": "text",
+      "marks": 6,
+      "topic": "processor",
+      "text": "**Original question 2(a)**\n\nIdentify the addressing mode used in each assembly language instruction.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 2 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 3 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 4 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 5 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 6 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ],
+      "table": {
+        "columns": [
+          "Part",
+          "Instruction",
+          "Addressing mode"
+        ],
+        "rows": [
+          [
+            "(i)",
+            "LDM #25",
+            null
+          ],
+          [
+            "(ii)",
+            "LDD 200",
+            null
+          ],
+          [
+            "(iii)",
+            "LDI 200",
+            null
+          ],
+          [
+            "(iv)",
+            "LDX 200",
+            null
+          ],
+          [
+            "(v)",
+            "JMR #5",
+            null
+          ],
+          [
+            "(vi)",
+            "LDD Total",
+            null
+          ]
+        ]
+      }
+    },
+    {
+      "id": "q2b",
+      "type": "text",
+      "marks": 4,
+      "topic": "processor",
+      "text": "**Original question 2(b)**\n\nEach instruction is executed independently. The index register IX contains 3. Memory address 100 contains the value 200, address 103 contains the value 25, and address 200 contains the value 15. State the value loaded into ACC by each instruction.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 2 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 3 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 4 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ],
+      "table": {
+        "columns": [
+          "Part",
+          "Instruction",
+          "ACC value"
+        ],
+        "rows": [
+          [
+            "(i)",
+            "LDM #100",
+            null
+          ],
+          [
+            "(ii)",
+            "LDD 100",
+            null
+          ],
+          [
+            "(iii)",
+            "LDI 100",
+            null
+          ],
+          [
+            "(iv)",
+            "LDX 100",
+            null
+          ]
+        ]
+      }
+    },
+    {
+      "id": "q2c",
+      "type": "text",
+      "marks": 2,
+      "topic": "processor",
+      "text": "**Original question 2(c)**\n\nExplain how the instruction LDI 100 obtains the value loaded into ACC.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 2 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q3a",
+      "type": "text",
+      "marks": 1,
+      "topic": "processor",
+      "text": "**Original question 3(a)**\n\nComplete the symbol table entry for Finish.\n\n**Source limitation:** The referenced source program is not shown in the supplied screenshot.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ],
+      "table": {
+        "columns": [
+          "Label",
+          "Memory address"
+        ],
+        "rows": [
+          [
+            "Finish",
+            null
+          ]
+        ]
+      }
+    },
+    {
+      "id": "q3b",
+      "type": "text",
+      "marks": 3,
+      "topic": "processor",
+      "text": "**Original question 3(b)**\n\nState whether Pass 1 or Pass 2 performs each operation.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 2 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 3 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ],
+      "table": {
+        "columns": [
+          "Operation",
+          "Pass 1 / Pass 2"
+        ],
+        "rows": [
+          [
+            "Checks whether LDM is a valid opcode",
+            null
+          ],
+          [
+            "Records the address of Finish in the symbol table",
+            null
+          ],
+          [
+            "Replaces Finish in JMP Finish with its memory address",
+            null
+          ]
+        ]
+      }
+    },
+    {
+      "id": "q3c",
+      "type": "text",
+      "marks": 2,
+      "topic": "processor",
+      "text": "**Original question 3(c)**\n\nExplain why the address of Finish is not yet known when the assembler first encounters JMP Finish during Pass 1.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 2 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "type": "text",
+      "marks": 8,
+      "topic": "processor",
+      "text": "**Original question 4**\n\nThe program adds two values, subtracts 3, then stores the result. Initially Result = 0.\n\n```text\n    LDD First\n    ADD Second\n    SUB #3\n    STO Result\n    END\nFirst: #7\nSecond: #4\nResult: #0\n```\n\nComplete the trace table. One mark is awarded for ACC and one for Result in each row.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 2 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 3 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 4 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 5 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 6 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 7 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 8 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ],
+      "table": {
+        "columns": [
+          "Instruction",
+          "ACC",
+          "Result"
+        ],
+        "rows": [
+          [
+            "LDD First",
+            null,
+            null
+          ],
+          [
+            "ADD Second",
+            null,
+            null
+          ],
+          [
+            "SUB #3",
+            null,
+            null
+          ],
+          [
+            "STO Result",
+            null,
+            null
+          ]
+        ]
+      }
+    },
+    {
+      "id": "q5",
+      "type": "text",
+      "marks": 8,
+      "topic": "processor",
+      "text": "**Original question 5**\n\nTwo numbers are stored in memory locations labelled First and Second. Write an assembly language program that:\n- loads First and adds Second;\n- compares the sum with 20;\n- stores 1 in Flag if the sum is exactly 20, otherwise stores 0;\n- ends after storing the result.\n\nAvailable instructions: LDD, LDM, ADD, CMP, JPE, JPN, JMP, STO, END. Use labels and conditional branching. Do not assume values for First or Second.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 2 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 3 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 4 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 5 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 6 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 7 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 8 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q6a",
+      "type": "text",
+      "marks": 1,
+      "topic": "processor",
+      "text": "**Original question 6(a)**\n\nCalculate the effective memory address used by LDX 300.\n\n**Source limitation:** The initial index register and memory values are not shown in the supplied question screenshot.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q6bi",
+      "type": "text",
+      "marks": 1,
+      "topic": "processor",
+      "text": "**Original question 6(b)(i)**\n\nState ACC after LDX 300.\n\n**Source limitation:** The initial index register and memory values are not shown in the supplied question screenshot.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q6bii",
+      "type": "text",
+      "marks": 1,
+      "topic": "processor",
+      "text": "**Original question 6(b)(ii)**\n\nState ACC after ADD #3.\n\n**Source limitation:** The initial index register and memory values are not shown in the supplied question screenshot.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q6c",
+      "type": "text",
+      "marks": 1,
+      "topic": "processor",
+      "text": "**Original question 6(c)**\n\nState Result after executing all three instructions.\n\n**Source limitation:** The initial state and complete instruction sequence are not shown in the supplied question screenshot.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    },
+    {
+      "id": "q6d",
+      "type": "text",
+      "marks": 2,
+      "topic": "processor",
+      "text": "**Original question 6(d)**\n\nExplain how IX is used during indexed addressing.",
+      "answer": [
+        {
+          "text": "Self-awarded mark 1 (no mark scheme supplied)",
+          "marks": 1
+        },
+        {
+          "text": "Self-awarded mark 2 (no mark scheme supplied)",
+          "marks": 1
+        }
+      ]
+    }
+  ]
+}

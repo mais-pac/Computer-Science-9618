@@ -117,9 +117,9 @@
 
     host.innerHTML = `
       <nav class="chips" aria-label="Exam sections"><a class="chip" href="#teacher-quizzes">Teacher</a><a class="chip" href="#ai-section">AI</a><a class="chip" href="#ai-quizzes">AI Quiz</a><a class="chip" href="#ai-mocks">AI Mock</a></nav>
-      <section class="section" id="teacher-quizzes"><h2>Teacher</h2><h3>Teacher quizzes</h3><p class="small">No teacher quizzes are available yet. Class-topic reconstructions are listed under AI Quiz.</p><div class="grid grid-2">${Array.from({length: 12}, (_, i) => {
+      <section class="section" id="teacher-quizzes"><h2>Teacher</h2><h3>Teacher quizzes</h3><p class="small">Teacher questions are transcribed from the supplied result screenshots. Some original context is missing; these are partial recreations and marks are self-assessed without a mark scheme.</p><div class="grid grid-2">${Array.from({length: 12}, (_, i) => {
         const chapter = i + 1;
-        const existing = []; // Teacher papers are unavailable until supplied.
+        const existing = exams.filter(e => e.origin === 'teacher' && (e.chapters || [e.chapter]).includes(chapter));
         return `<div class="card"><h3>Chapter ${chapter}</h3>${existing.length ? existing.map(e => `<p><a href="exam.html?id=${encodeURIComponent(e.id)}">${CS.esc(e.title)} →</a></p>`).join('') : '<p class="small">No teacher quiz available yet</p>'}</div>`;
       }).join('')}</div></section>
       <section class="section" id="ai-section"><h2>AI</h2><div id="ai-quizzes"><h3>AI Quiz</h3><p class="small">AI practice and class-topic reconstructions are listed here. Reconstructions are not original teacher papers. Chapter 1 practice sets are short self-marked exercises, not full mocks.</p><div class="grid grid-2">${Array.from({length: 12}, (_, i) => {
