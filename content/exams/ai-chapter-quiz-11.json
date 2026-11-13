@@ -1,0 +1,150 @@
+{
+  "id": "ai-chapter-quiz-11",
+  "title": "Chapter 11 — AI Quiz: Programming",
+  "origin": "ai",
+  "provenance": "ai-original-chapter-quiz",
+  "paper": "paper-2",
+  "chapter": 11,
+  "topics": [
+    "programming"
+  ],
+  "durationMin": 15,
+  "totalMarks": 10,
+  "examDate": null,
+  "instructions": "Original AI-authored practice, not an official Cambridge or teacher paper. Answer all questions; written responses are self-marked using the guidance after submission. You can retake the quiz.",
+  "description": "Original chapter practice: multiple-choice and written questions with self-marking guidance.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "programming",
+      "section": "11",
+      "text": "Which parameter mechanism can allow a procedure to update the original variable?",
+      "options": [
+        {
+          "text": "BYREF",
+          "id": "A"
+        },
+        {
+          "id": "B",
+          "text": "BYVAL"
+        },
+        {
+          "id": "C",
+          "text": "CONSTANT"
+        },
+        {
+          "id": "D",
+          "text": "LENGTH"
+        }
+      ],
+      "answer": "A",
+      "explanation": "Correct answer: BYREF."
+    },
+    {
+      "id": "q2",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "programming",
+      "section": "11",
+      "text": "Which construct repeats while a condition remains true?",
+      "options": [
+        {
+          "id": "A",
+          "text": "IF"
+        },
+        {
+          "text": "WHILE",
+          "id": "B"
+        },
+        {
+          "id": "C",
+          "text": "CASE"
+        },
+        {
+          "id": "D",
+          "text": "DECLARE"
+        }
+      ],
+      "answer": "B",
+      "explanation": "Correct answer: WHILE."
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 2,
+      "topic": "programming",
+      "section": "11",
+      "text": "Explain the difference between a function and a procedure.",
+      "answer": [
+        {
+          "text": "A function returns a value.",
+          "marks": 1
+        },
+        {
+          "text": "A procedure performs a task without returning a value in the same way.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q4",
+      "type": "text",
+      "marks": 2,
+      "topic": "programming",
+      "section": "11",
+      "text": "Write pseudocode to input an integer N and output its double.",
+      "answer": [
+        {
+          "text": "INPUT N",
+          "marks": 1
+        },
+        {
+          "text": "OUTPUT N * 2",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q5",
+      "type": "text",
+      "marks": 2,
+      "topic": "programming",
+      "section": "11",
+      "text": "Explain the difference between BYVAL and BYREF.",
+      "answer": [
+        {
+          "text": "BYVAL passes a copy of the value.",
+          "marks": 1
+        },
+        {
+          "text": "BYREF provides access to the original variable so changes can affect it.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q6",
+      "type": "text",
+      "marks": 2,
+      "topic": "programming",
+      "section": "11",
+      "text": "State two benefits of using meaningful variable names.",
+      "answer": [
+        {
+          "text": "Make code easier to understand.",
+          "marks": 1
+        },
+        {
+          "text": "Make testing, maintenance or collaboration easier.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    }
+  ]
+}

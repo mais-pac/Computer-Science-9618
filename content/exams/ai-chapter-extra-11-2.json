@@ -1,0 +1,63 @@
+{
+  "id": "ai-chapter-extra-11-2",
+  "title": "Chapter 11 — AI practice quiz 3",
+  "origin": "ai",
+  "provenance": "ai-original-chapter-quiz",
+  "paper": "paper-2",
+  "chapter": 11,
+  "topics": [
+    "programming"
+  ],
+  "durationMin": 10,
+  "totalMarks": 3,
+  "examDate": null,
+  "instructions": "Short original AI-authored practice; not an official or teacher paper. Self-mark using the guidance after submission.",
+  "description": "Three original questions with self-marking guidance.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "text",
+      "marks": 1,
+      "topic": "programming",
+      "section": "11",
+      "text": "What is a local variable?",
+      "answer": [
+        {
+          "text": "A variable whose scope is limited to its subroutine or block.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q2",
+      "type": "text",
+      "marks": 1,
+      "topic": "programming",
+      "section": "11",
+      "text": "What is a global variable?",
+      "answer": [
+        {
+          "text": "A variable accessible across multiple parts of a program, subject to language rules.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 1,
+      "topic": "programming",
+      "section": "11",
+      "text": "What does BYVAL mean?",
+      "answer": [
+        {
+          "text": "A copy of the argument value is passed to the subroutine.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    }
+  ]
+}

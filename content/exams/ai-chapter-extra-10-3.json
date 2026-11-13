@@ -1,0 +1,63 @@
+{
+  "id": "ai-chapter-extra-10-3",
+  "title": "Chapter 10 — AI practice quiz 4",
+  "origin": "ai",
+  "provenance": "ai-original-chapter-quiz",
+  "paper": "paper-2",
+  "chapter": 10,
+  "topics": [
+    "data-types"
+  ],
+  "durationMin": 10,
+  "totalMarks": 3,
+  "examDate": null,
+  "instructions": "Short original AI-authored practice; not an official or teacher paper. Self-mark using the guidance after submission.",
+  "description": "Three original questions with self-marking guidance.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "text",
+      "marks": 1,
+      "topic": "data-types",
+      "section": "10",
+      "text": "What is a record?",
+      "answer": [
+        {
+          "text": "A collection of named fields, potentially of different data types, describing an entity.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q2",
+      "type": "text",
+      "marks": 1,
+      "topic": "data-types",
+      "section": "10",
+      "text": "What is a string?",
+      "answer": [
+        {
+          "text": "A sequence of characters.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 1,
+      "topic": "data-types",
+      "section": "10",
+      "text": "What is a one-dimensional array index used for?",
+      "answer": [
+        {
+          "text": "Selecting an individual element by its position.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "id": "ai-chapter-extra-03-2",
+  "title": "Chapter 3 — AI practice quiz 3",
+  "origin": "ai",
+  "provenance": "ai-original-chapter-quiz",
+  "paper": "paper-1",
+  "chapter": 3,
+  "topics": [
+    "hardware"
+  ],
+  "durationMin": 10,
+  "totalMarks": 3,
+  "examDate": null,
+  "instructions": "Short original AI-authored practice; not an official or teacher paper. Self-mark using the guidance after submission.",
+  "description": "Three original questions with self-marking guidance.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "text",
+      "marks": 1,
+      "topic": "hardware",
+      "section": "3",
+      "text": "Give one advantage of optical storage for distribution.",
+      "answer": [
+        {
+          "text": "Discs are inexpensive to reproduce and distribute; other valid advantages accepted.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q2",
+      "type": "text",
+      "marks": 1,
+      "topic": "hardware",
+      "section": "3",
+      "text": "What is an embedded system?",
+      "answer": [
+        {
+          "text": "A computer system designed to perform a dedicated function within a larger device.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 1,
+      "topic": "hardware",
+      "section": "3",
+      "text": "State a typical use of a sensor.",
+      "answer": [
+        {
+          "text": "Measuring a physical quantity, for example temperature in a control system.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    }
+  ]
+}

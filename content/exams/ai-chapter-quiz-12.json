@@ -1,0 +1,150 @@
+{
+  "id": "ai-chapter-quiz-12",
+  "title": "Chapter 12 — AI Quiz: Software Development",
+  "origin": "ai",
+  "provenance": "ai-original-chapter-quiz",
+  "paper": "paper-2",
+  "chapter": 12,
+  "topics": [
+    "software-dev"
+  ],
+  "durationMin": 15,
+  "totalMarks": 10,
+  "examDate": null,
+  "instructions": "Original AI-authored practice, not an official Cambridge or teacher paper. Answer all questions; written responses are self-marked using the guidance after submission. You can retake the quiz.",
+  "description": "Original chapter practice: multiple-choice and written questions with self-marking guidance.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "software-dev",
+      "section": "12",
+      "text": "Which test uses data at the boundary of an allowed range?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Normal test"
+        },
+        {
+          "text": "Extreme test",
+          "id": "B"
+        },
+        {
+          "id": "C",
+          "text": "Live test"
+        },
+        {
+          "id": "D",
+          "text": "Alpha test"
+        }
+      ],
+      "answer": "B",
+      "explanation": "Correct answer: Extreme test."
+    },
+    {
+      "id": "q2",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "software-dev",
+      "section": "12",
+      "text": "Which phase identifies user needs and requirements?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Maintenance"
+        },
+        {
+          "id": "B",
+          "text": "Implementation"
+        },
+        {
+          "text": "Analysis",
+          "id": "C"
+        },
+        {
+          "id": "D",
+          "text": "Compilation"
+        }
+      ],
+      "answer": "C",
+      "explanation": "Correct answer: Analysis."
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 2,
+      "topic": "software-dev",
+      "section": "12",
+      "text": "Explain the difference between testing and debugging.",
+      "answer": [
+        {
+          "text": "Testing finds faults by executing/checking the system.",
+          "marks": 1
+        },
+        {
+          "text": "Debugging locates and corrects the causes of faults.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q4",
+      "type": "text",
+      "marks": 2,
+      "topic": "software-dev",
+      "section": "12",
+      "text": "For an integer range 1 to 100 inclusive, give one normal and one invalid test value.",
+      "answer": [
+        {
+          "text": "Normal: a value such as 50.",
+          "marks": 1
+        },
+        {
+          "text": "Invalid: a value such as 0 or 101.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q5",
+      "type": "text",
+      "marks": 2,
+      "topic": "software-dev",
+      "section": "12",
+      "text": "State two reasons for producing technical documentation.",
+      "answer": [
+        {
+          "text": "Helps programmers understand the system.",
+          "marks": 1
+        },
+        {
+          "text": "Supports later maintenance, debugging or modification.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q6",
+      "type": "text",
+      "marks": 2,
+      "topic": "software-dev",
+      "section": "12",
+      "text": "Explain the difference between black-box and white-box testing.",
+      "answer": [
+        {
+          "text": "Black-box tests external behaviour against the specification without relying on internal code.",
+          "marks": 1
+        },
+        {
+          "text": "White-box uses knowledge of internal code or paths.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    }
+  ]
+}

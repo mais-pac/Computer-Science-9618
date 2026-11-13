@@ -1,0 +1,146 @@
+{
+  "id": "ai-chapter-quiz-09",
+  "title": "Chapter 9 — AI Quiz: Algorithm Design & Problem-solving",
+  "origin": "ai",
+  "provenance": "ai-original-chapter-quiz",
+  "paper": "paper-2",
+  "chapter": 9,
+  "topics": [
+    "algorithms"
+  ],
+  "durationMin": 15,
+  "totalMarks": 9,
+  "examDate": null,
+  "instructions": "Original AI-authored practice, not an official Cambridge or teacher paper. Answer all questions; written responses are self-marked using the guidance after submission. You can retake the quiz.",
+  "description": "Original chapter practice: multiple-choice and written questions with self-marking guidance.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "algorithms",
+      "section": "9",
+      "text": "A binary search requires data to be:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Encrypted"
+        },
+        {
+          "id": "B",
+          "text": "Unique text only"
+        },
+        {
+          "text": "Sorted",
+          "id": "C"
+        },
+        {
+          "id": "D",
+          "text": "Stored on paper"
+        }
+      ],
+      "answer": "C",
+      "explanation": "Correct answer: Sorted."
+    },
+    {
+      "id": "q2",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "algorithms",
+      "section": "9",
+      "text": "A linear search can be used on:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Only a sorted list"
+        },
+        {
+          "id": "B",
+          "text": "Only a database index"
+        },
+        {
+          "id": "C",
+          "text": "Only a binary tree"
+        },
+        {
+          "text": "An unsorted list",
+          "id": "D"
+        }
+      ],
+      "answer": "D",
+      "explanation": "Correct answer: An unsorted list."
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 1,
+      "topic": "algorithms",
+      "section": "9",
+      "text": "State the output of: Total ← 0; FOR i ← 1 TO 3; Total ← Total + i; NEXT i; OUTPUT Total.",
+      "answer": [
+        {
+          "text": "6",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q4",
+      "type": "text",
+      "marks": 2,
+      "topic": "algorithms",
+      "section": "9",
+      "text": "Explain why a trace table is useful.",
+      "answer": [
+        {
+          "text": "It records variable values and outputs step by step.",
+          "marks": 1
+        },
+        {
+          "text": "It helps identify errors and check logic.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q5",
+      "type": "text",
+      "marks": 2,
+      "topic": "algorithms",
+      "section": "9",
+      "text": "Describe an algorithm to find the largest of ten input numbers.",
+      "answer": [
+        {
+          "text": "Set a maximum to the first input.",
+          "marks": 1
+        },
+        {
+          "text": "Read the remaining inputs and replace the maximum when a larger value is found; output the maximum.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q6",
+      "type": "text",
+      "marks": 2,
+      "topic": "algorithms",
+      "section": "9",
+      "text": "Explain one advantage of decomposition.",
+      "answer": [
+        {
+          "text": "Breaks a problem into manageable subproblems.",
+          "marks": 1
+        },
+        {
+          "text": "Modules can be developed, tested or reused separately.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    }
+  ]
+}

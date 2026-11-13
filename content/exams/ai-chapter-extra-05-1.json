@@ -1,0 +1,63 @@
+{
+  "id": "ai-chapter-extra-05-1",
+  "title": "Chapter 5 — AI practice quiz 2",
+  "origin": "ai",
+  "provenance": "ai-original-chapter-quiz",
+  "paper": "paper-1",
+  "chapter": 5,
+  "topics": [
+    "system-software"
+  ],
+  "durationMin": 10,
+  "totalMarks": 3,
+  "examDate": null,
+  "instructions": "Short original AI-authored practice; not an official or teacher paper. Self-mark using the guidance after submission.",
+  "description": "Three original questions with self-marking guidance.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "text",
+      "marks": 1,
+      "topic": "system-software",
+      "section": "5",
+      "text": "What does an operating system do?",
+      "answer": [
+        {
+          "text": "It manages hardware resources and provides services for programs and users.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q2",
+      "type": "text",
+      "marks": 1,
+      "topic": "system-software",
+      "section": "5",
+      "text": "State the purpose of memory management.",
+      "answer": [
+        {
+          "text": "It allocates and tracks memory used by processes.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 1,
+      "topic": "system-software",
+      "section": "5",
+      "text": "What is process scheduling?",
+      "answer": [
+        {
+          "text": "Selecting which process should use the CPU and when.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    }
+  ]
+}

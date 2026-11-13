@@ -1,0 +1,63 @@
+{
+  "id": "ai-chapter-extra-08-1",
+  "title": "Chapter 8 — AI practice quiz 2",
+  "origin": "ai",
+  "provenance": "ai-original-chapter-quiz",
+  "paper": "paper-1",
+  "chapter": 8,
+  "topics": [
+    "databases"
+  ],
+  "durationMin": 10,
+  "totalMarks": 3,
+  "examDate": null,
+  "instructions": "Short original AI-authored practice; not an official or teacher paper. Self-mark using the guidance after submission.",
+  "description": "Three original questions with self-marking guidance.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "text",
+      "marks": 1,
+      "topic": "databases",
+      "section": "8",
+      "text": "What is a database record?",
+      "answer": [
+        {
+          "text": "A collection of related fields describing one entity instance.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q2",
+      "type": "text",
+      "marks": 1,
+      "topic": "databases",
+      "section": "8",
+      "text": "What is a database field?",
+      "answer": [
+        {
+          "text": "An individual attribute stored for each record.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 1,
+      "topic": "databases",
+      "section": "8",
+      "text": "What is a primary key?",
+      "answer": [
+        {
+          "text": "A field or set of fields that uniquely identifies each record.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    }
+  ]
+}

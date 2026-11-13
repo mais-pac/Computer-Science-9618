@@ -1,0 +1,63 @@
+{
+  "id": "ai-chapter-extra-12-3",
+  "title": "Chapter 12 — AI practice quiz 4",
+  "origin": "ai",
+  "provenance": "ai-original-chapter-quiz",
+  "paper": "paper-2",
+  "chapter": 12,
+  "topics": [
+    "software-dev"
+  ],
+  "durationMin": 10,
+  "totalMarks": 3,
+  "examDate": null,
+  "instructions": "Short original AI-authored practice; not an official or teacher paper. Self-mark using the guidance after submission.",
+  "description": "Three original questions with self-marking guidance.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "text",
+      "marks": 1,
+      "topic": "software-dev",
+      "section": "12",
+      "text": "What is debugging?",
+      "answer": [
+        {
+          "text": "Locating and correcting causes of faults.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q2",
+      "type": "text",
+      "marks": 1,
+      "topic": "software-dev",
+      "section": "12",
+      "text": "What is a logic error?",
+      "answer": [
+        {
+          "text": "An error in program logic that produces an unintended result.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 1,
+      "topic": "software-dev",
+      "section": "12",
+      "text": "What is a runtime error?",
+      "answer": [
+        {
+          "text": "An error occurring while the program is executing.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    }
+  ]
+}

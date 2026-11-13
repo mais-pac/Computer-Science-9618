@@ -1,0 +1,63 @@
+{
+  "id": "ai-chapter-extra-02-2",
+  "title": "Chapter 2 — AI practice quiz 3",
+  "origin": "ai",
+  "provenance": "ai-original-chapter-quiz",
+  "paper": "paper-1",
+  "chapter": 2,
+  "topics": [
+    "communication"
+  ],
+  "durationMin": 10,
+  "totalMarks": 3,
+  "examDate": null,
+  "instructions": "Short original AI-authored practice; not an official or teacher paper. Self-mark using the guidance after submission.",
+  "description": "Three original questions with self-marking guidance.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "text",
+      "marks": 1,
+      "topic": "communication",
+      "section": "2",
+      "text": "State the role of a network switch.",
+      "answer": [
+        {
+          "text": "It forwards frames within a LAN using MAC addresses.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q2",
+      "type": "text",
+      "marks": 1,
+      "topic": "communication",
+      "section": "2",
+      "text": "What is a MAC address?",
+      "answer": [
+        {
+          "text": "A hardware address identifying a network interface on a local network.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 1,
+      "topic": "communication",
+      "section": "2",
+      "text": "State the purpose of an IP address.",
+      "answer": [
+        {
+          "text": "It identifies a device/interface on an IP network so packets can be routed.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    }
+  ]
+}

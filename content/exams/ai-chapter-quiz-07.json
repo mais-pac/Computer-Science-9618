@@ -1,0 +1,142 @@
+{
+  "id": "ai-chapter-quiz-07",
+  "title": "Chapter 7 — AI Quiz: Ethics & Ownership",
+  "origin": "ai",
+  "provenance": "ai-original-chapter-quiz",
+  "paper": "paper-1",
+  "chapter": 7,
+  "topics": [
+    "ethics"
+  ],
+  "durationMin": 15,
+  "totalMarks": 8,
+  "examDate": null,
+  "instructions": "Original AI-authored practice, not an official Cambridge or teacher paper. Answer all questions; written responses are self-marked using the guidance after submission. You can retake the quiz.",
+  "description": "Original chapter practice: multiple-choice and written questions with self-marking guidance.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "ethics",
+      "section": "7",
+      "text": "Which action is an example of software piracy?",
+      "options": [
+        {
+          "text": "Copying proprietary software without a licence",
+          "id": "A"
+        },
+        {
+          "id": "B",
+          "text": "Installing licensed software"
+        },
+        {
+          "id": "C",
+          "text": "Writing original code"
+        },
+        {
+          "id": "D",
+          "text": "Using an open-source licence as permitted"
+        }
+      ],
+      "answer": "A",
+      "explanation": "Correct answer: Copying proprietary software without a licence."
+    },
+    {
+      "id": "q2",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "ethics",
+      "section": "7",
+      "text": "What does copyright primarily protect?",
+      "options": [
+        {
+          "id": "A",
+          "text": "A physical network cable"
+        },
+        {
+          "text": "Original expression of a work",
+          "id": "B"
+        },
+        {
+          "id": "C",
+          "text": "All facts in a database regardless of law"
+        },
+        {
+          "id": "D",
+          "text": "The speed of a processor"
+        }
+      ],
+      "answer": "B",
+      "explanation": "Correct answer: Original expression of a work."
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 1,
+      "topic": "ethics",
+      "section": "7",
+      "text": "Describe one privacy risk from collecting personal data.",
+      "answer": [
+        {
+          "text": "Personal information could be disclosed, misused or accessed without consent.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q4",
+      "type": "text",
+      "marks": 1,
+      "topic": "ethics",
+      "section": "7",
+      "text": "State one difference between open-source and proprietary software.",
+      "answer": [
+        {
+          "text": "Open-source licences make source code available with specified rights to use, modify and redistribute; proprietary licences generally restrict those rights.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q5",
+      "type": "text",
+      "marks": 2,
+      "topic": "ethics",
+      "section": "7",
+      "text": "Explain one environmental impact of computing and one mitigation.",
+      "answer": [
+        {
+          "text": "Manufacturing and disposal create electronic waste or emissions.",
+          "marks": 1
+        },
+        {
+          "text": "Extend device lifetimes, reuse or recycle responsibly, or reduce energy use.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q6",
+      "type": "text",
+      "marks": 2,
+      "topic": "ethics",
+      "section": "7",
+      "text": "Explain one ethical concern about automated decisions.",
+      "answer": [
+        {
+          "text": "Biased data or design can produce unfair outcomes.",
+          "marks": 1
+        },
+        {
+          "text": "Decisions should be assessed, explained and subject to suitable human review.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    }
+  ]
+}

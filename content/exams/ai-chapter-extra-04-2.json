@@ -1,0 +1,63 @@
+{
+  "id": "ai-chapter-extra-04-2",
+  "title": "Chapter 4 — AI practice quiz 3",
+  "origin": "ai",
+  "provenance": "ai-original-chapter-quiz",
+  "paper": "paper-1",
+  "chapter": 4,
+  "topics": [
+    "processor"
+  ],
+  "durationMin": 10,
+  "totalMarks": 3,
+  "examDate": null,
+  "instructions": "Short original AI-authored practice; not an official or teacher paper. Self-mark using the guidance after submission.",
+  "description": "Three original questions with self-marking guidance.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "text",
+      "marks": 1,
+      "topic": "processor",
+      "section": "4",
+      "text": "What is held in the current instruction register?",
+      "answer": [
+        {
+          "text": "The instruction currently being decoded or executed.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q2",
+      "type": "text",
+      "marks": 1,
+      "topic": "processor",
+      "section": "4",
+      "text": "State the purpose of the data bus.",
+      "answer": [
+        {
+          "text": "It carries data and instructions between components.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 1,
+      "topic": "processor",
+      "section": "4",
+      "text": "What does the control bus carry?",
+      "answer": [
+        {
+          "text": "Control and timing signals between system components.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    }
+  ]
+}

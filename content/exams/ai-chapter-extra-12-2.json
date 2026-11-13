@@ -1,0 +1,63 @@
+{
+  "id": "ai-chapter-extra-12-2",
+  "title": "Chapter 12 — AI practice quiz 3",
+  "origin": "ai",
+  "provenance": "ai-original-chapter-quiz",
+  "paper": "paper-2",
+  "chapter": 12,
+  "topics": [
+    "software-dev"
+  ],
+  "durationMin": 10,
+  "totalMarks": 3,
+  "examDate": null,
+  "instructions": "Short original AI-authored practice; not an official or teacher paper. Self-mark using the guidance after submission.",
+  "description": "Three original questions with self-marking guidance.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "text",
+      "marks": 1,
+      "topic": "software-dev",
+      "section": "12",
+      "text": "What is boundary or extreme test data?",
+      "answer": [
+        {
+          "text": "Valid data at the edge of the permitted range.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q2",
+      "type": "text",
+      "marks": 1,
+      "topic": "software-dev",
+      "section": "12",
+      "text": "For a valid range 1 to 10 inclusive, give an invalid value.",
+      "answer": [
+        {
+          "text": "For example 0 or 11.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 1,
+      "topic": "software-dev",
+      "section": "12",
+      "text": "For a valid range 1 to 10 inclusive, give a boundary value.",
+      "answer": [
+        {
+          "text": "1 or 10.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    }
+  ]
+}

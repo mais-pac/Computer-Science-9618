@@ -1,0 +1,63 @@
+{
+  "id": "ai-chapter-extra-05-4",
+  "title": "Chapter 5 — AI practice quiz 5",
+  "origin": "ai",
+  "provenance": "ai-original-chapter-quiz",
+  "paper": "paper-1",
+  "chapter": 5,
+  "topics": [
+    "system-software"
+  ],
+  "durationMin": 10,
+  "totalMarks": 3,
+  "examDate": null,
+  "instructions": "Short original AI-authored practice; not an official or teacher paper. Self-mark using the guidance after submission.",
+  "description": "Three original questions with self-marking guidance.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "text",
+      "marks": 1,
+      "topic": "system-software",
+      "section": "5",
+      "text": "Give an advantage of high-level languages.",
+      "answer": [
+        {
+          "text": "They are generally easier for humans to write and maintain than machine code.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q2",
+      "type": "text",
+      "marks": 1,
+      "topic": "system-software",
+      "section": "5",
+      "text": "What is an interpreter?",
+      "answer": [
+        {
+          "text": "A translator that translates and executes source statements during execution.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 1,
+      "topic": "system-software",
+      "section": "5",
+      "text": "What does an IDE provide?",
+      "answer": [
+        {
+          "text": "Integrated development tools such as an editor, translator and debugger.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    }
+  ]
+}

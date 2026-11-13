@@ -1,0 +1,150 @@
+{
+  "id": "ai-chapter-quiz-03",
+  "title": "Chapter 3 — AI Quiz: Hardware",
+  "origin": "ai",
+  "provenance": "ai-original-chapter-quiz",
+  "paper": "paper-1",
+  "chapter": 3,
+  "topics": [
+    "hardware"
+  ],
+  "durationMin": 15,
+  "totalMarks": 10,
+  "examDate": null,
+  "instructions": "Original AI-authored practice, not an official Cambridge or teacher paper. Answer all questions; written responses are self-marked using the guidance after submission. You can retake the quiz.",
+  "description": "Original chapter practice: multiple-choice and written questions with self-marking guidance.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "hardware",
+      "section": "3",
+      "text": "Which memory is volatile?",
+      "options": [
+        {
+          "text": "RAM",
+          "id": "A"
+        },
+        {
+          "id": "B",
+          "text": "ROM"
+        },
+        {
+          "id": "C",
+          "text": "Optical disc"
+        },
+        {
+          "id": "D",
+          "text": "Flash memory"
+        }
+      ],
+      "answer": "A",
+      "explanation": "Correct answer: RAM."
+    },
+    {
+      "id": "q2",
+      "type": "mcq",
+      "marks": 1,
+      "topic": "hardware",
+      "section": "3",
+      "text": "Which component has no moving mechanical parts?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Magnetic hard disk drive"
+        },
+        {
+          "text": "SSD",
+          "id": "B"
+        },
+        {
+          "id": "C",
+          "text": "Optical drive"
+        },
+        {
+          "id": "D",
+          "text": "Impact printer"
+        }
+      ],
+      "answer": "B",
+      "explanation": "Correct answer: SSD."
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 2,
+      "topic": "hardware",
+      "section": "3",
+      "text": "Explain why a buffer is used when devices transfer data at different rates.",
+      "answer": [
+        {
+          "text": "Temporarily holds data.",
+          "marks": 1
+        },
+        {
+          "text": "Allows the receiving device to process it at its own rate.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q4",
+      "type": "text",
+      "marks": 2,
+      "topic": "hardware",
+      "section": "3",
+      "text": "Describe two differences between RAM and ROM.",
+      "answer": [
+        {
+          "text": "RAM is volatile; ROM is non-volatile.",
+          "marks": 1
+        },
+        {
+          "text": "RAM is normally read/write; ROM is normally read-only in normal operation.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q5",
+      "type": "text",
+      "marks": 2,
+      "topic": "hardware",
+      "section": "3",
+      "text": "State one advantage and one disadvantage of an SSD compared with a hard disk drive.",
+      "answer": [
+        {
+          "text": "Advantage: faster access or more resistant to shock due to no moving parts.",
+          "marks": 1
+        },
+        {
+          "text": "Disadvantage: generally higher cost per unit of storage.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q6",
+      "type": "text",
+      "marks": 2,
+      "topic": "hardware",
+      "section": "3",
+      "text": "Explain the role of an analogue-to-digital converter.",
+      "answer": [
+        {
+          "text": "Samples an analogue signal.",
+          "marks": 1
+        },
+        {
+          "text": "Converts samples into digital values which can be processed by a computer.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    }
+  ]
+}

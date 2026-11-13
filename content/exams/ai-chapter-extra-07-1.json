@@ -1,0 +1,63 @@
+{
+  "id": "ai-chapter-extra-07-1",
+  "title": "Chapter 7 — AI practice quiz 2",
+  "origin": "ai",
+  "provenance": "ai-original-chapter-quiz",
+  "paper": "paper-1",
+  "chapter": 7,
+  "topics": [
+    "ethics"
+  ],
+  "durationMin": 10,
+  "totalMarks": 3,
+  "examDate": null,
+  "instructions": "Short original AI-authored practice; not an official or teacher paper. Self-mark using the guidance after submission.",
+  "description": "Three original questions with self-marking guidance.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "text",
+      "marks": 1,
+      "topic": "ethics",
+      "section": "7",
+      "text": "What is personal data?",
+      "answer": [
+        {
+          "text": "Information relating to an identifiable individual.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q2",
+      "type": "text",
+      "marks": 1,
+      "topic": "ethics",
+      "section": "7",
+      "text": "Give one reason to minimise personal data collection.",
+      "answer": [
+        {
+          "text": "It reduces exposure if data is misused or compromised.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 1,
+      "topic": "ethics",
+      "section": "7",
+      "text": "What does copyright protect?",
+      "answer": [
+        {
+          "text": "Original expression such as software code, subject to applicable law.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    }
+  ]
+}

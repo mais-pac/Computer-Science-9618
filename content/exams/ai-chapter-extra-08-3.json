@@ -1,0 +1,63 @@
+{
+  "id": "ai-chapter-extra-08-3",
+  "title": "Chapter 8 — AI practice quiz 4",
+  "origin": "ai",
+  "provenance": "ai-original-chapter-quiz",
+  "paper": "paper-1",
+  "chapter": 8,
+  "topics": [
+    "databases"
+  ],
+  "durationMin": 10,
+  "totalMarks": 3,
+  "examDate": null,
+  "instructions": "Short original AI-authored practice; not an official or teacher paper. Self-mark using the guidance after submission.",
+  "description": "Three original questions with self-marking guidance.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "text",
+      "marks": 1,
+      "topic": "databases",
+      "section": "8",
+      "text": "What does SQL SELECT do?",
+      "answer": [
+        {
+          "text": "It specifies the columns or expressions to retrieve.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q2",
+      "type": "text",
+      "marks": 1,
+      "topic": "databases",
+      "section": "8",
+      "text": "What does SQL WHERE do?",
+      "answer": [
+        {
+          "text": "It filters rows using a condition.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 1,
+      "topic": "databases",
+      "section": "8",
+      "text": "What does ORDER BY do in SQL?",
+      "answer": [
+        {
+          "text": "It sorts the returned rows by specified column values.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    }
+  ]
+}

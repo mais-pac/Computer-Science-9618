@@ -1,0 +1,63 @@
+{
+  "id": "ai-chapter-extra-04-1",
+  "title": "Chapter 4 — AI practice quiz 2",
+  "origin": "ai",
+  "provenance": "ai-original-chapter-quiz",
+  "paper": "paper-1",
+  "chapter": 4,
+  "topics": [
+    "processor"
+  ],
+  "durationMin": 10,
+  "totalMarks": 3,
+  "examDate": null,
+  "instructions": "Short original AI-authored practice; not an official or teacher paper. Self-mark using the guidance after submission.",
+  "description": "Three original questions with self-marking guidance.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "text",
+      "marks": 1,
+      "topic": "processor",
+      "section": "4",
+      "text": "What is the role of the ALU?",
+      "answer": [
+        {
+          "text": "It performs arithmetic operations and logical comparisons.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q2",
+      "type": "text",
+      "marks": 1,
+      "topic": "processor",
+      "section": "4",
+      "text": "State the function of the control unit.",
+      "answer": [
+        {
+          "text": "It coordinates the execution of instructions and controls data flow.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 1,
+      "topic": "processor",
+      "section": "4",
+      "text": "What does the program counter contain?",
+      "answer": [
+        {
+          "text": "The address of the next instruction to fetch.",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    }
+  ]
+}
