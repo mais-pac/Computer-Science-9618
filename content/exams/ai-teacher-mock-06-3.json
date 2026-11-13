@@ -1,0 +1,93 @@
+{
+  "id": "ai-teacher-mock-06-3",
+  "title": "Chapter 6 · AI Mock 3",
+  "origin": "ai",
+  "provenance": "ai-teacher-inspired-mock",
+  "paper": "paper-2",
+  "chapter": 6,
+  "topics": [
+    "programming"
+  ],
+  "durationMin": 25,
+  "totalMarks": 8,
+  "instructions": "Original AI-authored challenging practice inspired by topics and style in the available teacher quizzes. Not a teacher paper or official mark scheme. Work independently under timed conditions; self-mark against the model points after submission.",
+  "description": "Timed teacher-inspired mock with written answers and model marking points.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "text",
+      "marks": 2,
+      "topic": "programming",
+      "section": "6",
+      "text": "What is the result of 10100000 OR 00000101? Explain a use.",
+      "answer": [
+        {
+          "text": "10100101",
+          "marks": 1
+        },
+        {
+          "text": "OR with a mask can set selected bits",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q2",
+      "type": "text",
+      "marks": 2,
+      "topic": "programming",
+      "section": "6",
+      "text": "Explain the effect of XOR with 1 on a bit and give one application.",
+      "answer": [
+        {
+          "text": "It flips the bit",
+          "marks": 1
+        },
+        {
+          "text": "A mask can toggle selected bits",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 2,
+      "topic": "programming",
+      "section": "6",
+      "text": "A loop starts with accumulator 3 and subtracts 1 each iteration until zero. How many iterations occur?",
+      "answer": [
+        {
+          "text": "Three",
+          "marks": 1
+        },
+        {
+          "text": "Values after iterations are 2, 1, 0",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q4",
+      "type": "text",
+      "marks": 2,
+      "topic": "programming",
+      "section": "6",
+      "text": "Explain one advantage and one disadvantage of assembly language.",
+      "answer": [
+        {
+          "text": "Close hardware control or potentially efficient code",
+          "marks": 1
+        },
+        {
+          "text": "Hardware-specific and harder to develop/maintain",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    }
+  ]
+}

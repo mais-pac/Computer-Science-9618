@@ -1,0 +1,101 @@
+{
+  "id": "ai-teacher-mock-03-3",
+  "title": "Chapter 3 · AI Mock 3",
+  "origin": "ai",
+  "provenance": "ai-teacher-inspired-mock",
+  "paper": "paper-1",
+  "chapter": 3,
+  "topics": [
+    "hardware"
+  ],
+  "durationMin": 25,
+  "totalMarks": 10,
+  "instructions": "Original AI-authored challenging practice inspired by topics and style in the available teacher quizzes. Not a teacher paper or official mark scheme. Work independently under timed conditions; self-mark against the model points after submission.",
+  "description": "Timed teacher-inspired mock with written answers and model marking points.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "text",
+      "marks": 2,
+      "topic": "hardware",
+      "section": "3",
+      "text": "Explain the function of an actuator in a computer-controlled system.",
+      "answer": [
+        {
+          "text": "Receives a control signal",
+          "marks": 1
+        },
+        {
+          "text": "Causes a physical action such as moving a motor or valve",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q2",
+      "type": "text",
+      "marks": 2,
+      "topic": "hardware",
+      "section": "3",
+      "text": "Explain why cache is faster to access than secondary storage and how it is used.",
+      "answer": [
+        {
+          "text": "Cache is small fast memory close to the CPU",
+          "marks": 1
+        },
+        {
+          "text": "Frequently used data/instructions are kept there to reduce slower accesses",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 3,
+      "topic": "hardware",
+      "section": "3",
+      "text": "Give two advantages and one disadvantage of a laser printer for an office.",
+      "answer": [
+        {
+          "text": "Fast for high-volume output",
+          "marks": 1
+        },
+        {
+          "text": "High-quality text",
+          "marks": 1
+        },
+        {
+          "text": "Initial cost or toner cost can be high",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q4",
+      "type": "text",
+      "marks": 3,
+      "topic": "hardware",
+      "section": "3",
+      "text": "Describe how a computer can output an analogue signal.",
+      "answer": [
+        {
+          "text": "Digital values are sent to a DAC",
+          "marks": 1
+        },
+        {
+          "text": "The DAC converts them to an analogue signal",
+          "marks": 1
+        },
+        {
+          "text": "The signal can drive a device such as a speaker through suitable amplification",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    }
+  ]
+}

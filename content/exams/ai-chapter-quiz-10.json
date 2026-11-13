@@ -1,10 +1,10 @@
 {
   "id": "ai-chapter-quiz-10",
-  "title": "Chapter 10 — AI Quiz: Data Types & Structures",
+  "title": "Chapter 13 — AI Quiz: Data Types & Structures",
   "origin": "ai",
   "provenance": "ai-original-chapter-quiz",
   "paper": "paper-2",
-  "chapter": 10,
+  "chapter": 13,
   "topics": [
     "data-types"
   ],

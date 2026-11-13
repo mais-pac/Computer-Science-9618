@@ -1,10 +1,10 @@
 {
   "id": "ai-chapter-quiz-04",
-  "title": "Chapter 4 — AI Quiz: Processor Fundamentals",
+  "title": "Chapter 5 — AI Quiz: Processor Fundamentals",
   "origin": "ai",
   "provenance": "ai-original-chapter-quiz",
   "paper": "paper-1",
-  "chapter": 4,
+  "chapter": 5,
   "topics": [
     "processor"
   ],

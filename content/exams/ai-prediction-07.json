@@ -1,0 +1,139 @@
+{
+  "id": "ai-prediction-07",
+  "title": "Chapter 7 — AI practice quiz 5: Prediction paper",
+  "origin": "ai",
+  "provenance": "ai-prediction-practice",
+  "paper": "paper-1",
+  "chapter": 7,
+  "topics": [
+    "hardware"
+  ],
+  "durationMin": 30,
+  "totalMarks": 14,
+  "instructions": "Speculative AI-generated revision paper based on chapter topics and the style of available teacher quizzes. We do not know or have access to your teacher’s upcoming questions. Work independently under timed exam conditions, then self-mark using the model points.",
+  "description": "Speculative timed revision, not a forecast of actual teacher questions.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "text",
+      "marks": 3,
+      "topic": "hardware",
+      "section": "7",
+      "text": "Describe the stages in a computer-controlled greenhouse temperature system.",
+      "answer": [
+        {
+          "text": "A sensor measures temperature and an ADC converts the signal",
+          "marks": 1
+        },
+        {
+          "text": "The computer compares the reading with the set point",
+          "marks": 1
+        },
+        {
+          "text": "It sends a signal to an actuator controlling a heater or ventilation",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q2",
+      "type": "text",
+      "marks": 2,
+      "topic": "hardware",
+      "section": "7",
+      "text": "A heater turns on below 18 °C and off above 20 °C. Explain why two thresholds can be useful.",
+      "answer": [
+        {
+          "text": "A gap provides hysteresis",
+          "marks": 1
+        },
+        {
+          "text": "It reduces frequent switching when readings fluctuate around a single threshold",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 3,
+      "topic": "hardware",
+      "section": "7",
+      "text": "Give pseudocode to repeatedly read Temperature and turn a heater ON when it is below 18, otherwise OFF.",
+      "answer": [
+        {
+          "text": "A loop repeatedly reads the sensor value",
+          "marks": 1
+        },
+        {
+          "text": "IF Temperature < 18 THEN heater ON ELSE heater OFF",
+          "marks": 1
+        },
+        {
+          "text": "The loop continues as required",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q4",
+      "type": "text",
+      "marks": 2,
+      "topic": "hardware",
+      "section": "7",
+      "text": "Distinguish monitoring from control.",
+      "answer": [
+        {
+          "text": "Monitoring measures and records/reports values",
+          "marks": 1
+        },
+        {
+          "text": "Control also changes the system using actuators based on the readings",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q5",
+      "type": "text",
+      "marks": 2,
+      "topic": "hardware",
+      "section": "7",
+      "text": "Explain why an ADC is required for an analogue temperature sensor.",
+      "answer": [
+        {
+          "text": "The sensor produces a continuous analogue signal",
+          "marks": 1
+        },
+        {
+          "text": "The ADC converts sampled values into digital form for processing",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q6",
+      "type": "text",
+      "marks": 2,
+      "topic": "hardware",
+      "section": "7",
+      "text": "Give two precautions against sensor failure in a safety-critical system.",
+      "answer": [
+        {
+          "text": "Plausibility checks or redundant sensors",
+          "marks": 1
+        },
+        {
+          "text": "Raise an alarm and move to a safe state if readings fail",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    }
+  ]
+}

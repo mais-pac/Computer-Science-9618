@@ -1,0 +1,105 @@
+{
+  "id": "ai-teacher-mock-02-1",
+  "title": "Chapter 2 · AI Mock 1",
+  "origin": "ai",
+  "provenance": "ai-teacher-inspired-mock",
+  "paper": "paper-1",
+  "chapter": 2,
+  "topics": [
+    "communication"
+  ],
+  "durationMin": 25,
+  "totalMarks": 11,
+  "instructions": "Original AI-authored challenging practice inspired by topics and style in the available teacher quizzes. Not a teacher paper or official mark scheme. Work independently under timed conditions; self-mark against the model points after submission.",
+  "description": "Timed teacher-inspired mock with written answers and model marking points.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "text",
+      "marks": 3,
+      "topic": "communication",
+      "section": "2",
+      "text": "Explain how packet switching allows a file to travel across a network.",
+      "answer": [
+        {
+          "text": "The file is split into addressed packets",
+          "marks": 1
+        },
+        {
+          "text": "Packets may take different routes",
+          "marks": 1
+        },
+        {
+          "text": "Sequence numbers allow reassembly and missing packets may be requested again",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q2",
+      "type": "text",
+      "marks": 3,
+      "topic": "communication",
+      "section": "2",
+      "text": "Compare circuit switching and packet switching for a voice call.",
+      "answer": [
+        {
+          "text": "Circuit switching reserves a dedicated path for the session",
+          "marks": 1
+        },
+        {
+          "text": "Packet switching shares links and routes individual packets",
+          "marks": 1
+        },
+        {
+          "text": "Packet delivery may be delayed or arrive out of order",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 3,
+      "topic": "communication",
+      "section": "2",
+      "text": "Describe how a browser uses DNS before requesting a page.",
+      "answer": [
+        {
+          "text": "The domain name is resolved to an IP address",
+          "marks": 1
+        },
+        {
+          "text": "The browser connects to the server at that address",
+          "marks": 1
+        },
+        {
+          "text": "It sends an HTTP or HTTPS request",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q4",
+      "type": "text",
+      "marks": 2,
+      "topic": "communication",
+      "section": "2",
+      "text": "Explain the roles of a switch and a router.",
+      "answer": [
+        {
+          "text": "A switch forwards frames within a LAN using MAC addresses",
+          "marks": 1
+        },
+        {
+          "text": "A router forwards packets between IP networks",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    }
+  ]
+}
