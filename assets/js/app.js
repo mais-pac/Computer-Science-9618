@@ -114,23 +114,25 @@
     const filt = { q: '', kind: 'all', paper: 'all' };
 
     const chapters = [...new Set(exams.map((e) => e.chapter).filter(Boolean))].sort((a, b) => a - b);
+    const chapterNames = ['Information representation', 'Communication and networking technologies', 'Hardware', 'Logic gates and logic circuits', 'Processor fundamentals', 'Assembly language programming', 'Monitoring and control systems', 'System software', 'Security, privacy and data integrity', 'Ethics and ownership', 'Databases', 'Algorithm design and problem-solving', 'Data types and structures', 'Programming and data representation', 'Software development'];
 
     host.innerHTML = `
       <nav class="chips" aria-label="Exam sections"><a class="chip" href="#teacher-quizzes">Teacher</a><a class="chip" href="#ai-section">AI</a><a class="chip" href="#ai-quizzes">AI Quiz</a><a class="chip" href="#ai-mocks">AI Mock</a></nav>
-      <section class="section" id="teacher-quizzes"><h2>Teacher</h2><h3>Teacher quizzes</h3><p class="small">Teacher questions are transcribed from the supplied result screenshots. Some original context is missing; these are partial recreations and marks are self-assessed without a mark scheme.</p><div class="grid grid-2">${Array.from({length: 12}, (_, i) => {
+      <section class="section" id="teacher-quizzes"><h2>Teacher</h2><h3>Teacher quizzes</h3><p class="small">Teacher questions are transcribed from the supplied result screenshots. Some original context is missing; these are partial recreations and marks are self-assessed without a mark scheme.</p><div class="grid grid-2">${Array.from({length: 15}, (_, i) => {
         const chapter = i + 1;
         const existing = exams.filter(e => e.origin === 'teacher' && (e.chapters || [e.chapter]).includes(chapter));
-        return `<div class="card"><h3>Chapter ${chapter}</h3>${existing.length ? existing.map(e => `<p><a href="exam.html?id=${encodeURIComponent(e.id)}">${CS.esc(e.title)} →</a></p>`).join('') : '<p class="small">No teacher quiz available yet</p>'}</div>`;
+        return `<div class="card"><h3>Chapter ${chapter} — ${CS.esc(chapterNames[i])}</h3>${existing.length ? existing.map(e => `<p><a href="exam.html?id=${encodeURIComponent(e.id)}">${CS.esc(e.title)} →</a></p>`).join('') : '<p class="small">No teacher quiz available yet</p>'}</div>`;
       }).join('')}</div></section>
-      <section class="section" id="ai-section"><h2>AI</h2><div id="ai-quizzes"><h3>AI Quiz</h3><p class="small">AI practice and class-topic reconstructions are listed here. Reconstructions are not original teacher papers. Chapter 1 practice sets are short self-marked exercises, not full mocks.</p><div class="grid grid-2">${Array.from({length: 12}, (_, i) => {
+      <section class="section" id="ai-section"><h2>AI</h2><div id="ai-quizzes"><h3>AI Quiz</h3><p class="small">AI practice and class-topic reconstructions are listed here. Reconstructions are not original teacher papers. Chapter 1 practice sets are short self-marked exercises, not full mocks. Prediction papers currently cover Chapters 7 and 8 only; other quiz 5 links remain short revision exercises.</p><div class="grid grid-2">${Array.from({length: 15}, (_, i) => {
         const chapter = i + 1;
-        const sets = exams.filter(e => e.origin === 'ai' && (e.chapter === chapter || (chapter <= 2 && e.id === 'as-chapters-1-2-test-2026-09-21')));
-        return `<div class="card"><h3>Chapter ${chapter}</h3>${sets.length ? sets.map(e => `<p><a href="exam.html?id=${encodeURIComponent(e.id)}">${CS.esc(e.title.replace('practice mock', 'practice quiz'))} →</a></p>`).join('') : '<p class="small">Quiz not available yet</p>'}</div>`;
+        const sets = exams.filter(e => e.origin === 'ai' && !e.id.startsWith('ai-teacher-mock-') && (e.chapter === chapter || (chapter <= 2 && e.id === 'as-chapters-1-2-test-2026-09-21')));
+        return `<div class="card"><h3>Chapter ${chapter} — ${CS.esc(chapterNames[i])}</h3>${sets.length ? sets.map(e => `<p><a href="exam.html?id=${encodeURIComponent(e.id)}">${CS.esc(e.title.replace('practice mock', 'practice quiz'))} →</a></p>`).join('') : '<p class="small">Quiz not available yet</p>'}</div>`;
       }).join('')}</div><div class="card" style="margin-top:16px"><h3>Mixed AI practice</h3>${exams.filter(e => e.origin === 'ai' && e.id.startsWith('mix-ai-')).map(e => `<p><a href="exam.html?id=${encodeURIComponent(e.id)}">${CS.esc(e.title)} →</a></p>`).join('')}</div>
       </div>
-      <div class="section" id="ai-mocks"><h3>AI Mock</h3><p class="small">Teacher-quiz-inspired mocks are planned but not yet available, including Chapter 1. Existing short AI exercises are listed under AI Quiz above.</p><div class="grid grid-2">${Array.from({length: 12}, (_, i) => {
+      <div class="section" id="ai-mocks"><h3>AI Mock</h3><p class="small">Timed original AI mocks inspired by the available teacher quizzes; not teacher papers or official mark schemes. Prediction papers for Chapters 7 and 8 are in AI Quiz. Actual teacher questions cannot be known in advance.</p><div class="grid grid-2">${Array.from({length: 15}, (_, i) => {
         const chapter = i + 1;
-        return `<div class="card"><h3>Chapter ${chapter}</h3>${Array.from({length: 5}, (_, j) => `<p class="small">Chapter ${chapter} · Mock ${j + 1} — not available yet</p>`).join('')}</div>`;
+        const mocks = exams.filter(e => e.id.startsWith('ai-teacher-mock-') && e.chapter === chapter);
+        return `<div class="card"><h3>Chapter ${chapter} — ${CS.esc(chapterNames[i])}</h3>${mocks.length ? mocks.map(e => `<p><a href="exam.html?id=${encodeURIComponent(e.id)}">${CS.esc(e.title)} →</a></p>`).join('') : '<p class="small">No teacher-inspired mock available yet</p>'}</div>`;
       }).join('')}</div></div></section>
       <section class="section"><h2>All available exams</h2></section>
       <div class="row" style="margin-bottom:14px">

@@ -1,0 +1,97 @@
+{
+  "id": "ai-teacher-mock-02-2",
+  "title": "Chapter 2 · AI Mock 2",
+  "origin": "ai",
+  "provenance": "ai-teacher-inspired-mock",
+  "paper": "paper-1",
+  "chapter": 2,
+  "topics": [
+    "communication"
+  ],
+  "durationMin": 25,
+  "totalMarks": 9,
+  "instructions": "Original AI-authored challenging practice inspired by topics and style in the available teacher quizzes. Not a teacher paper or official mark scheme. Work independently under timed conditions; self-mark against the model points after submission.",
+  "description": "Timed teacher-inspired mock with written answers and model marking points.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "text",
+      "marks": 2,
+      "topic": "communication",
+      "section": "2",
+      "text": "A file of 12 megabits is sent over a link at an effective 3 megabits per second. Calculate the ideal time and explain why actual time may differ.",
+      "answer": [
+        {
+          "text": "12 ÷ 3 = 4 seconds",
+          "marks": 1
+        },
+        {
+          "text": "Protocol overhead, congestion or retransmission can increase it",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q2",
+      "type": "text",
+      "marks": 3,
+      "topic": "communication",
+      "section": "2",
+      "text": "Explain how parity can detect an error and give a limitation.",
+      "answer": [
+        {
+          "text": "A parity bit makes the number of 1s match an agreed parity",
+          "marks": 1
+        },
+        {
+          "text": "The receiver recalculates/checks parity",
+          "marks": 1
+        },
+        {
+          "text": "An even number of changed bits may go undetected",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 2,
+      "topic": "communication",
+      "section": "2",
+      "text": "Compare serial and parallel transmission for long distances.",
+      "answer": [
+        {
+          "text": "Serial sends bits sequentially; parallel uses several lines simultaneously",
+          "marks": 1
+        },
+        {
+          "text": "Parallel lines may suffer skew/interference; serial is often preferable over long distances",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q4",
+      "type": "text",
+      "marks": 2,
+      "topic": "communication",
+      "section": "2",
+      "text": "Explain the purpose of HTTPS.",
+      "answer": [
+        {
+          "text": "HTTP is used for web requests and responses",
+          "marks": 1
+        },
+        {
+          "text": "TLS encrypts communication and authenticates the server when certificates are verified",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    }
+  ]
+}

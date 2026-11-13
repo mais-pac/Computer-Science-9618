@@ -1,0 +1,93 @@
+{
+  "id": "ai-teacher-mock-04-2",
+  "title": "Chapter 4 · AI Mock 2",
+  "origin": "ai",
+  "provenance": "ai-teacher-inspired-mock",
+  "paper": "paper-2",
+  "chapter": 4,
+  "topics": [
+    "data-types"
+  ],
+  "durationMin": 25,
+  "totalMarks": 8,
+  "instructions": "Original AI-authored challenging practice inspired by topics and style in the available teacher quizzes. Not a teacher paper or official mark scheme. Work independently under timed conditions; self-mark against the model points after submission.",
+  "description": "Timed teacher-inspired mock with written answers and model marking points.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "text",
+      "marks": 2,
+      "topic": "data-types",
+      "section": "4",
+      "text": "Explain the difference between XOR and OR.",
+      "answer": [
+        {
+          "text": "OR outputs 1 when at least one input is 1",
+          "marks": 1
+        },
+        {
+          "text": "XOR outputs 1 when inputs differ; for 1,1 it outputs 0",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q2",
+      "type": "text",
+      "marks": 2,
+      "topic": "data-types",
+      "section": "4",
+      "text": "Describe gates needed to implement Y = NOT (A OR B).",
+      "answer": [
+        {
+          "text": "An OR gate combines A and B",
+          "marks": 1
+        },
+        {
+          "text": "A NOT gate inverts the result; equivalent to a NOR gate",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 2,
+      "topic": "data-types",
+      "section": "4",
+      "text": "List outputs for a two-input XOR gate in input order 00, 01, 10, 11.",
+      "answer": [
+        {
+          "text": "0, 1, 1, 0",
+          "marks": 1
+        },
+        {
+          "text": "Exactly one input must be 1",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q4",
+      "type": "text",
+      "marks": 2,
+      "topic": "data-types",
+      "section": "4",
+      "text": "An alarm sounds when neither sensor A nor sensor B is active. Write an expression.",
+      "answer": [
+        {
+          "text": "Y = NOT (A OR B)",
+          "marks": 1
+        },
+        {
+          "text": "Equivalently NOT A AND NOT B",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "id": "ai-teacher-mock-04-1",
+  "title": "Chapter 4 · AI Mock 1",
+  "origin": "ai",
+  "provenance": "ai-teacher-inspired-mock",
+  "paper": "paper-2",
+  "chapter": 4,
+  "topics": [
+    "data-types"
+  ],
+  "durationMin": 25,
+  "totalMarks": 8,
+  "instructions": "Original AI-authored challenging practice inspired by topics and style in the available teacher quizzes. Not a teacher paper or official mark scheme. Work independently under timed conditions; self-mark against the model points after submission.",
+  "description": "Timed teacher-inspired mock with written answers and model marking points.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "text",
+      "marks": 2,
+      "topic": "data-types",
+      "section": "4",
+      "text": "Complete the truth table for Y = (A AND B) OR NOT A by listing Y for inputs 00, 01, 10, 11.",
+      "answer": [
+        {
+          "text": "1, 1, 0, 1 in that order",
+          "marks": 1
+        },
+        {
+          "text": "NOT A is 1 when A is 0; A AND B is 1 only when both inputs are 1",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q2",
+      "type": "text",
+      "marks": 2,
+      "topic": "data-types",
+      "section": "4",
+      "text": "A warning activates if temperature T is high and either door D is open or override O is active. Write a Boolean expression.",
+      "answer": [
+        {
+          "text": "Y = T AND (D OR O)",
+          "marks": 1
+        },
+        {
+          "text": "T must be true and at least one of D or O must be true",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 2,
+      "topic": "data-types",
+      "section": "4",
+      "text": "Simplify (A AND B) OR (A AND NOT B). Justify.",
+      "answer": [
+        {
+          "text": "A",
+          "marks": 1
+        },
+        {
+          "text": "Factor A; B OR NOT B is 1",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q4",
+      "type": "text",
+      "marks": 2,
+      "topic": "data-types",
+      "section": "4",
+      "text": "A NAND gate has inputs 1 and 1. State its output and explain.",
+      "answer": [
+        {
+          "text": "0",
+          "marks": 1
+        },
+        {
+          "text": "AND gives 1, then the output is inverted",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    }
+  ]
+}

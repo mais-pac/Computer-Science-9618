@@ -1,10 +1,10 @@
 {
   "id": "ai-chapter-quiz-09",
-  "title": "Chapter 9 — AI Quiz: Algorithm Design & Problem-solving",
+  "title": "Chapter 12 — AI Quiz: Algorithm Design & Problem-solving",
   "origin": "ai",
   "provenance": "ai-original-chapter-quiz",
   "paper": "paper-2",
-  "chapter": 9,
+  "chapter": 12,
   "topics": [
     "algorithms"
   ],

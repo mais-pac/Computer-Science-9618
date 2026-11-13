@@ -1,0 +1,97 @@
+{
+  "id": "ai-teacher-mock-06-1",
+  "title": "Chapter 6 · AI Mock 1",
+  "origin": "ai",
+  "provenance": "ai-teacher-inspired-mock",
+  "paper": "paper-2",
+  "chapter": 6,
+  "topics": [
+    "programming"
+  ],
+  "durationMin": 25,
+  "totalMarks": 9,
+  "instructions": "Original AI-authored challenging practice inspired by topics and style in the available teacher quizzes. Not a teacher paper or official mark scheme. Work independently under timed conditions; self-mark against the model points after submission.",
+  "description": "Timed teacher-inspired mock with written answers and model marking points.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "text",
+      "marks": 2,
+      "topic": "programming",
+      "section": "6",
+      "text": "Explain the difference between immediate and direct addressing, with examples.",
+      "answer": [
+        {
+          "text": "Immediate operand is the actual value, e.g. #5",
+          "marks": 1
+        },
+        {
+          "text": "Direct operand identifies a memory address whose contents are used",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q2",
+      "type": "text",
+      "marks": 2,
+      "topic": "programming",
+      "section": "6",
+      "text": "An accumulator contains 7. Execute ADD #5 then SUB #3. State the final accumulator value.",
+      "answer": [
+        {
+          "text": "7 + 5 = 12",
+          "marks": 1
+        },
+        {
+          "text": "12 − 3 = 9",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 3,
+      "topic": "programming",
+      "section": "6",
+      "text": "Write generic accumulator instructions to load the value at X, add 4 and store the result at Y.",
+      "answer": [
+        {
+          "text": "LOAD X",
+          "marks": 1
+        },
+        {
+          "text": "ADD #4",
+          "marks": 1
+        },
+        {
+          "text": "STORE Y; equivalent instruction names accepted",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q4",
+      "type": "text",
+      "marks": 2,
+      "topic": "programming",
+      "section": "6",
+      "text": "Explain what an assembler does.",
+      "answer": [
+        {
+          "text": "Translates assembly instructions into machine code",
+          "marks": 1
+        },
+        {
+          "text": "Resolves symbolic names/labels to addresses as appropriate",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    }
+  ]
+}

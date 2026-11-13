@@ -1,0 +1,101 @@
+{
+  "id": "ai-teacher-mock-05-2",
+  "title": "Chapter 5 · AI Mock 2",
+  "origin": "ai",
+  "provenance": "ai-teacher-inspired-mock",
+  "paper": "paper-1",
+  "chapter": 5,
+  "topics": [
+    "processor"
+  ],
+  "durationMin": 25,
+  "totalMarks": 10,
+  "instructions": "Original AI-authored challenging practice inspired by topics and style in the available teacher quizzes. Not a teacher paper or official mark scheme. Work independently under timed conditions; self-mark against the model points after submission.",
+  "description": "Timed teacher-inspired mock with written answers and model marking points.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "text",
+      "marks": 3,
+      "topic": "processor",
+      "section": "5",
+      "text": "Describe the roles of the address, data and control buses.",
+      "answer": [
+        {
+          "text": "Address bus identifies a location",
+          "marks": 1
+        },
+        {
+          "text": "Data bus carries data/instructions",
+          "marks": 1
+        },
+        {
+          "text": "Control bus carries control and timing signals",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q2",
+      "type": "text",
+      "marks": 3,
+      "topic": "processor",
+      "section": "5",
+      "text": "Explain how a larger cache may improve performance and give a limitation.",
+      "answer": [
+        {
+          "text": "More frequently needed data/instructions can be retained",
+          "marks": 1
+        },
+        {
+          "text": "Fewer slow main-memory accesses",
+          "marks": 1
+        },
+        {
+          "text": "Cache is expensive and benefit depends on locality",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 2,
+      "topic": "processor",
+      "section": "5",
+      "text": "Distinguish opcode and operand with an example.",
+      "answer": [
+        {
+          "text": "Opcode specifies the operation",
+          "marks": 1
+        },
+        {
+          "text": "Operand specifies data or an address, e.g. ADD 5",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q4",
+      "type": "text",
+      "marks": 2,
+      "topic": "processor",
+      "section": "5",
+      "text": "Explain why clock speed alone does not determine performance.",
+      "answer": [
+        {
+          "text": "Other factors include number of cores, cache and instruction architecture",
+          "marks": 1
+        },
+        {
+          "text": "Workload and memory delays affect performance",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    }
+  ]
+}

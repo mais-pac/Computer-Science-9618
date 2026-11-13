@@ -1,0 +1,101 @@
+{
+  "id": "ai-teacher-mock-05-1",
+  "title": "Chapter 5 · AI Mock 1",
+  "origin": "ai",
+  "provenance": "ai-teacher-inspired-mock",
+  "paper": "paper-1",
+  "chapter": 5,
+  "topics": [
+    "processor"
+  ],
+  "durationMin": 25,
+  "totalMarks": 10,
+  "instructions": "Original AI-authored challenging practice inspired by topics and style in the available teacher quizzes. Not a teacher paper or official mark scheme. Work independently under timed conditions; self-mark against the model points after submission.",
+  "description": "Timed teacher-inspired mock with written answers and model marking points.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "text",
+      "marks": 3,
+      "topic": "processor",
+      "section": "5",
+      "text": "Describe the fetch stage of the fetch-decode-execute cycle.",
+      "answer": [
+        {
+          "text": "Copy the PC address to the MAR",
+          "marks": 1
+        },
+        {
+          "text": "Read the instruction into the MDR and then the CIR",
+          "marks": 1
+        },
+        {
+          "text": "Increment the PC",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q2",
+      "type": "text",
+      "marks": 2,
+      "topic": "processor",
+      "section": "5",
+      "text": "Explain the roles of MAR and MDR.",
+      "answer": [
+        {
+          "text": "MAR holds the address of the location being accessed",
+          "marks": 1
+        },
+        {
+          "text": "MDR holds data or an instruction being transferred to or from memory",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 2,
+      "topic": "processor",
+      "section": "5",
+      "text": "Explain the stored-program concept.",
+      "answer": [
+        {
+          "text": "Instructions and data are stored in memory",
+          "marks": 1
+        },
+        {
+          "text": "Instructions are fetched and executed by the processor",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q4",
+      "type": "text",
+      "marks": 3,
+      "topic": "processor",
+      "section": "5",
+      "text": "Explain what happens when an interrupt is serviced.",
+      "answer": [
+        {
+          "text": "Current state is saved after the current instruction",
+          "marks": 1
+        },
+        {
+          "text": "The appropriate interrupt service routine runs",
+          "marks": 1
+        },
+        {
+          "text": "State is restored and execution resumes",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    }
+  ]
+}

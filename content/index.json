@@ -479,11 +479,11 @@
     },
     {
       "id": "ai-chapter-quiz-04",
-      "title": "Chapter 4 — AI Quiz: Processor Fundamentals",
+      "title": "Chapter 5 — AI Quiz: Processor Fundamentals",
       "origin": "ai",
       "provenance": "ai-original-chapter-quiz",
       "paper": "paper-1",
-      "chapter": 4,
+      "chapter": 5,
       "topics": [
         "processor"
       ],
@@ -495,11 +495,11 @@
     },
     {
       "id": "ai-chapter-quiz-05",
-      "title": "Chapter 5 — AI Quiz: System Software",
+      "title": "Chapter 8 — AI Quiz: System Software",
       "origin": "ai",
       "provenance": "ai-original-chapter-quiz",
       "paper": "paper-1",
-      "chapter": 5,
+      "chapter": 8,
       "topics": [
         "system-software"
       ],
@@ -511,11 +511,11 @@
     },
     {
       "id": "ai-chapter-quiz-06",
-      "title": "Chapter 6 — AI Quiz: Security, Privacy & Data Integrity",
+      "title": "Chapter 9 — AI Quiz: Security, Privacy & Data Integrity",
       "origin": "ai",
       "provenance": "ai-original-chapter-quiz",
       "paper": "paper-1",
-      "chapter": 6,
+      "chapter": 9,
       "topics": [
         "security"
       ],
@@ -527,11 +527,11 @@
     },
     {
       "id": "ai-chapter-quiz-07",
-      "title": "Chapter 7 — AI Quiz: Ethics & Ownership",
+      "title": "Chapter 10 — AI Quiz: Ethics & Ownership",
       "origin": "ai",
       "provenance": "ai-original-chapter-quiz",
       "paper": "paper-1",
-      "chapter": 7,
+      "chapter": 10,
       "topics": [
         "ethics"
       ],
@@ -543,11 +543,11 @@
     },
     {
       "id": "ai-chapter-quiz-08",
-      "title": "Chapter 8 — AI Quiz: Databases",
+      "title": "Chapter 11 — AI Quiz: Databases",
       "origin": "ai",
       "provenance": "ai-original-chapter-quiz",
       "paper": "paper-1",
-      "chapter": 8,
+      "chapter": 11,
       "topics": [
         "databases"
       ],
@@ -559,11 +559,11 @@
     },
     {
       "id": "ai-chapter-quiz-09",
-      "title": "Chapter 9 — AI Quiz: Algorithm Design & Problem-solving",
+      "title": "Chapter 12 — AI Quiz: Algorithm Design & Problem-solving",
       "origin": "ai",
       "provenance": "ai-original-chapter-quiz",
       "paper": "paper-2",
-      "chapter": 9,
+      "chapter": 12,
       "topics": [
         "algorithms"
       ],
@@ -575,11 +575,11 @@
     },
     {
       "id": "ai-chapter-quiz-10",
-      "title": "Chapter 10 — AI Quiz: Data Types & Structures",
+      "title": "Chapter 13 — AI Quiz: Data Types & Structures",
       "origin": "ai",
       "provenance": "ai-original-chapter-quiz",
       "paper": "paper-2",
-      "chapter": 10,
+      "chapter": 13,
       "topics": [
         "data-types"
       ],
@@ -591,11 +591,11 @@
     },
     {
       "id": "ai-chapter-quiz-11",
-      "title": "Chapter 11 — AI Quiz: Programming",
+      "title": "Chapter 14 — AI Quiz: Programming",
       "origin": "ai",
       "provenance": "ai-original-chapter-quiz",
       "paper": "paper-2",
-      "chapter": 11,
+      "chapter": 14,
       "topics": [
         "programming"
       ],
@@ -607,11 +607,11 @@
     },
     {
       "id": "ai-chapter-quiz-12",
-      "title": "Chapter 12 — AI Quiz: Software Development",
+      "title": "Chapter 15 — AI Quiz: Software Development",
       "origin": "ai",
       "provenance": "ai-original-chapter-quiz",
       "paper": "paper-2",
-      "chapter": 12,
+      "chapter": 15,
       "topics": [
         "software-dev"
       ],
@@ -751,11 +751,11 @@
     },
     {
       "id": "ai-chapter-extra-04-1",
-      "title": "Chapter 4 — AI practice quiz 2",
+      "title": "Chapter 5 — AI practice quiz 2",
       "origin": "ai",
       "provenance": "ai-original-chapter-quiz",
       "paper": "paper-1",
-      "chapter": 4,
+      "chapter": 5,
       "topics": [
         "processor"
       ],
@@ -767,11 +767,11 @@
     },
     {
       "id": "ai-chapter-extra-04-2",
-      "title": "Chapter 4 — AI practice quiz 3",
+      "title": "Chapter 5 — AI practice quiz 3",
       "origin": "ai",
       "provenance": "ai-original-chapter-quiz",
       "paper": "paper-1",
-      "chapter": 4,
+      "chapter": 5,
       "topics": [
         "processor"
       ],
@@ -783,11 +783,11 @@
     },
     {
       "id": "ai-chapter-extra-04-3",
-      "title": "Chapter 4 — AI practice quiz 4",
+      "title": "Chapter 5 — AI practice quiz 4",
       "origin": "ai",
       "provenance": "ai-original-chapter-quiz",
       "paper": "paper-1",
-      "chapter": 4,
+      "chapter": 5,
       "topics": [
         "processor"
       ],
@@ -799,11 +799,11 @@
     },
     {
       "id": "ai-chapter-extra-04-4",
-      "title": "Chapter 4 — AI practice quiz 5",
+      "title": "Chapter 5 — AI practice quiz 5",
       "origin": "ai",
       "provenance": "ai-original-chapter-quiz",
       "paper": "paper-1",
-      "chapter": 4,
+      "chapter": 5,
       "topics": [
         "processor"
       ],
@@ -815,11 +815,11 @@
     },
     {
       "id": "ai-chapter-extra-05-1",
-      "title": "Chapter 5 — AI practice quiz 2",
+      "title": "Chapter 8 — AI practice quiz 2",
       "origin": "ai",
       "provenance": "ai-original-chapter-quiz",
       "paper": "paper-1",
-      "chapter": 5,
+      "chapter": 8,
       "topics": [
         "system-software"
       ],
@@ -831,11 +831,11 @@
     },
     {
       "id": "ai-chapter-extra-05-2",
-      "title": "Chapter 5 — AI practice quiz 3",
+      "title": "Chapter 8 — AI practice quiz 3",
       "origin": "ai",
       "provenance": "ai-original-chapter-quiz",
       "paper": "paper-1",
-      "chapter": 5,
+      "chapter": 8,
       "topics": [
         "system-software"
       ],
@@ -847,11 +847,11 @@
     },
     {
       "id": "ai-chapter-extra-05-3",
-      "title": "Chapter 5 — AI practice quiz 4",
+      "title": "Chapter 8 — AI practice quiz 4",
       "origin": "ai",
       "provenance": "ai-original-chapter-quiz",
       "paper": "paper-1",
-      "chapter": 5,
+      "chapter": 8,
       "topics": [
         "system-software"
       ],
@@ -863,11 +863,11 @@
     },
     {
       "id": "ai-chapter-extra-05-4",
-      "title": "Chapter 5 — AI practice quiz 5",
+      "title": "Chapter 8 — AI practice: System software review",
       "origin": "ai",
       "provenance": "ai-original-chapter-quiz",
       "paper": "paper-1",
-      "chapter": 5,
+      "chapter": 8,
       "topics": [
         "system-software"
       ],
@@ -879,11 +879,11 @@
     },
     {
       "id": "ai-chapter-extra-06-1",
-      "title": "Chapter 6 — AI practice quiz 2",
+      "title": "Chapter 9 — AI practice quiz 2",
       "origin": "ai",
       "provenance": "ai-original-chapter-quiz",
       "paper": "paper-1",
-      "chapter": 6,
+      "chapter": 9,
       "topics": [
         "security"
       ],
@@ -895,11 +895,11 @@
     },
     {
       "id": "ai-chapter-extra-06-2",
-      "title": "Chapter 6 — AI practice quiz 3",
+      "title": "Chapter 9 — AI practice quiz 3",
       "origin": "ai",
       "provenance": "ai-original-chapter-quiz",
       "paper": "paper-1",
-      "chapter": 6,
+      "chapter": 9,
       "topics": [
         "security"
       ],
@@ -911,11 +911,11 @@
     },
     {
       "id": "ai-chapter-extra-06-3",
-      "title": "Chapter 6 — AI practice quiz 4",
+      "title": "Chapter 9 — AI practice quiz 4",
       "origin": "ai",
       "provenance": "ai-original-chapter-quiz",
       "paper": "paper-1",
-      "chapter": 6,
+      "chapter": 9,
       "topics": [
         "security"
       ],
@@ -927,11 +927,11 @@
     },
     {
       "id": "ai-chapter-extra-06-4",
-      "title": "Chapter 6 — AI practice quiz 5",
+      "title": "Chapter 9 — AI practice quiz 5",
       "origin": "ai",
       "provenance": "ai-original-chapter-quiz",
       "paper": "paper-1",
-      "chapter": 6,
+      "chapter": 9,
       "topics": [
         "security"
       ],
@@ -943,11 +943,11 @@
     },
     {
       "id": "ai-chapter-extra-07-1",
-      "title": "Chapter 7 — AI practice quiz 2",
+      "title": "Chapter 10 — AI practice quiz 2",
       "origin": "ai",
       "provenance": "ai-original-chapter-quiz",
       "paper": "paper-1",
-      "chapter": 7,
+      "chapter": 10,
       "topics": [
         "ethics"
       ],
@@ -959,11 +959,11 @@
     },
     {
       "id": "ai-chapter-extra-07-2",
-      "title": "Chapter 7 — AI practice quiz 3",
+      "title": "Chapter 10 — AI practice quiz 3",
       "origin": "ai",
       "provenance": "ai-original-chapter-quiz",
       "paper": "paper-1",
-      "chapter": 7,
+      "chapter": 10,
       "topics": [
         "ethics"
       ],
@@ -975,11 +975,11 @@
     },
     {
       "id": "ai-chapter-extra-07-3",
-      "title": "Chapter 7 — AI practice quiz 4",
+      "title": "Chapter 10 — AI practice quiz 4",
       "origin": "ai",
       "provenance": "ai-original-chapter-quiz",
       "paper": "paper-1",
-      "chapter": 7,
+      "chapter": 10,
       "topics": [
         "ethics"
       ],
@@ -991,11 +991,11 @@
     },
     {
       "id": "ai-chapter-extra-07-4",
-      "title": "Chapter 7 — AI practice quiz 5",
+      "title": "Chapter 10 — AI practice quiz 5",
       "origin": "ai",
       "provenance": "ai-original-chapter-quiz",
       "paper": "paper-1",
-      "chapter": 7,
+      "chapter": 10,
       "topics": [
         "ethics"
       ],
@@ -1007,11 +1007,11 @@
     },
     {
       "id": "ai-chapter-extra-08-1",
-      "title": "Chapter 8 — AI practice quiz 2",
+      "title": "Chapter 11 — AI practice quiz 2",
       "origin": "ai",
       "provenance": "ai-original-chapter-quiz",
       "paper": "paper-1",
-      "chapter": 8,
+      "chapter": 11,
       "topics": [
         "databases"
       ],
@@ -1023,11 +1023,11 @@
     },
     {
       "id": "ai-chapter-extra-08-2",
-      "title": "Chapter 8 — AI practice quiz 3",
+      "title": "Chapter 11 — AI practice quiz 3",
       "origin": "ai",
       "provenance": "ai-original-chapter-quiz",
       "paper": "paper-1",
-      "chapter": 8,
+      "chapter": 11,
       "topics": [
         "databases"
       ],
@@ -1039,11 +1039,11 @@
     },
     {
       "id": "ai-chapter-extra-08-3",
-      "title": "Chapter 8 — AI practice quiz 4",
+      "title": "Chapter 11 — AI practice quiz 4",
       "origin": "ai",
       "provenance": "ai-original-chapter-quiz",
       "paper": "paper-1",
-      "chapter": 8,
+      "chapter": 11,
       "topics": [
         "databases"
       ],
@@ -1055,11 +1055,11 @@
     },
     {
       "id": "ai-chapter-extra-08-4",
-      "title": "Chapter 8 — AI practice quiz 5",
+      "title": "Chapter 11 — AI practice quiz 5",
       "origin": "ai",
       "provenance": "ai-original-chapter-quiz",
       "paper": "paper-1",
-      "chapter": 8,
+      "chapter": 11,
       "topics": [
         "databases"
       ],
@@ -1071,11 +1071,11 @@
     },
     {
       "id": "ai-chapter-extra-09-1",
-      "title": "Chapter 9 — AI practice quiz 2",
+      "title": "Chapter 12 — AI practice quiz 2",
       "origin": "ai",
       "provenance": "ai-original-chapter-quiz",
       "paper": "paper-2",
-      "chapter": 9,
+      "chapter": 12,
       "topics": [
         "algorithms"
       ],
@@ -1087,11 +1087,11 @@
     },
     {
       "id": "ai-chapter-extra-09-2",
-      "title": "Chapter 9 — AI practice quiz 3",
+      "title": "Chapter 12 — AI practice quiz 3",
       "origin": "ai",
       "provenance": "ai-original-chapter-quiz",
       "paper": "paper-2",
-      "chapter": 9,
+      "chapter": 12,
       "topics": [
         "algorithms"
       ],
@@ -1103,11 +1103,11 @@
     },
     {
       "id": "ai-chapter-extra-09-3",
-      "title": "Chapter 9 — AI practice quiz 4",
+      "title": "Chapter 12 — AI practice quiz 4",
       "origin": "ai",
       "provenance": "ai-original-chapter-quiz",
       "paper": "paper-2",
-      "chapter": 9,
+      "chapter": 12,
       "topics": [
         "algorithms"
       ],
@@ -1119,11 +1119,11 @@
     },
     {
       "id": "ai-chapter-extra-09-4",
-      "title": "Chapter 9 — AI practice quiz 5",
+      "title": "Chapter 12 — AI practice quiz 5",
       "origin": "ai",
       "provenance": "ai-original-chapter-quiz",
       "paper": "paper-2",
-      "chapter": 9,
+      "chapter": 12,
       "topics": [
         "algorithms"
       ],
@@ -1135,11 +1135,11 @@
     },
     {
       "id": "ai-chapter-extra-10-1",
-      "title": "Chapter 10 — AI practice quiz 2",
+      "title": "Chapter 13 — AI practice quiz 2",
       "origin": "ai",
       "provenance": "ai-original-chapter-quiz",
       "paper": "paper-2",
-      "chapter": 10,
+      "chapter": 13,
       "topics": [
         "data-types"
       ],
@@ -1151,11 +1151,11 @@
     },
     {
       "id": "ai-chapter-extra-10-2",
-      "title": "Chapter 10 — AI practice quiz 3",
+      "title": "Chapter 13 — AI practice quiz 3",
       "origin": "ai",
       "provenance": "ai-original-chapter-quiz",
       "paper": "paper-2",
-      "chapter": 10,
+      "chapter": 13,
       "topics": [
         "data-types"
       ],
@@ -1167,11 +1167,11 @@
     },
     {
       "id": "ai-chapter-extra-10-3",
-      "title": "Chapter 10 — AI practice quiz 4",
+      "title": "Chapter 13 — AI practice quiz 4",
       "origin": "ai",
       "provenance": "ai-original-chapter-quiz",
       "paper": "paper-2",
-      "chapter": 10,
+      "chapter": 13,
       "topics": [
         "data-types"
       ],
@@ -1183,11 +1183,11 @@
     },
     {
       "id": "ai-chapter-extra-10-4",
-      "title": "Chapter 10 — AI practice quiz 5",
+      "title": "Chapter 13 — AI practice quiz 5",
       "origin": "ai",
       "provenance": "ai-original-chapter-quiz",
       "paper": "paper-2",
-      "chapter": 10,
+      "chapter": 13,
       "topics": [
         "data-types"
       ],
@@ -1199,11 +1199,11 @@
     },
     {
       "id": "ai-chapter-extra-11-1",
-      "title": "Chapter 11 — AI practice quiz 2",
+      "title": "Chapter 14 — AI practice quiz 2",
       "origin": "ai",
       "provenance": "ai-original-chapter-quiz",
       "paper": "paper-2",
-      "chapter": 11,
+      "chapter": 14,
       "topics": [
         "programming"
       ],
@@ -1215,11 +1215,11 @@
     },
     {
       "id": "ai-chapter-extra-11-2",
-      "title": "Chapter 11 — AI practice quiz 3",
+      "title": "Chapter 14 — AI practice quiz 3",
       "origin": "ai",
       "provenance": "ai-original-chapter-quiz",
       "paper": "paper-2",
-      "chapter": 11,
+      "chapter": 14,
       "topics": [
         "programming"
       ],
@@ -1231,11 +1231,11 @@
     },
     {
       "id": "ai-chapter-extra-11-3",
-      "title": "Chapter 11 — AI practice quiz 4",
+      "title": "Chapter 14 — AI practice quiz 4",
       "origin": "ai",
       "provenance": "ai-original-chapter-quiz",
       "paper": "paper-2",
-      "chapter": 11,
+      "chapter": 14,
       "topics": [
         "programming"
       ],
@@ -1247,11 +1247,11 @@
     },
     {
       "id": "ai-chapter-extra-11-4",
-      "title": "Chapter 11 — AI practice quiz 5",
+      "title": "Chapter 14 — AI practice quiz 5",
       "origin": "ai",
       "provenance": "ai-original-chapter-quiz",
       "paper": "paper-2",
-      "chapter": 11,
+      "chapter": 14,
       "topics": [
         "programming"
       ],
@@ -1263,11 +1263,11 @@
     },
     {
       "id": "ai-chapter-extra-12-1",
-      "title": "Chapter 12 — AI practice quiz 2",
+      "title": "Chapter 15 — AI practice quiz 2",
       "origin": "ai",
       "provenance": "ai-original-chapter-quiz",
       "paper": "paper-2",
-      "chapter": 12,
+      "chapter": 15,
       "topics": [
         "software-dev"
       ],
@@ -1279,11 +1279,11 @@
     },
     {
       "id": "ai-chapter-extra-12-2",
-      "title": "Chapter 12 — AI practice quiz 3",
+      "title": "Chapter 15 — AI practice quiz 3",
       "origin": "ai",
       "provenance": "ai-original-chapter-quiz",
       "paper": "paper-2",
-      "chapter": 12,
+      "chapter": 15,
       "topics": [
         "software-dev"
       ],
@@ -1295,11 +1295,11 @@
     },
     {
       "id": "ai-chapter-extra-12-3",
-      "title": "Chapter 12 — AI practice quiz 4",
+      "title": "Chapter 15 — AI practice quiz 4",
       "origin": "ai",
       "provenance": "ai-original-chapter-quiz",
       "paper": "paper-2",
-      "chapter": 12,
+      "chapter": 15,
       "topics": [
         "software-dev"
       ],
@@ -1311,11 +1311,11 @@
     },
     {
       "id": "ai-chapter-extra-12-4",
-      "title": "Chapter 12 — AI practice quiz 5",
+      "title": "Chapter 15 — AI practice quiz 5",
       "origin": "ai",
       "provenance": "ai-original-chapter-quiz",
       "paper": "paper-2",
-      "chapter": 12,
+      "chapter": 15,
       "topics": [
         "software-dev"
       ],
@@ -1324,6 +1324,326 @@
       "description": "Three original questions with self-marking guidance.",
       "status": "ready",
       "questionsFile": "ai-chapter-extra-12-4.json"
+    },
+    {
+      "id": "ai-teacher-mock-01-1",
+      "title": "Chapter 1 · AI Mock 1",
+      "origin": "ai",
+      "provenance": "ai-teacher-inspired-mock",
+      "paper": "paper-1",
+      "chapter": 1,
+      "topics": [
+        "info-rep"
+      ],
+      "durationMin": 25,
+      "totalMarks": 8,
+      "description": "Timed teacher-inspired mock with written answers and model marking points.",
+      "status": "ready",
+      "questionsFile": "ai-teacher-mock-01-1.json"
+    },
+    {
+      "id": "ai-teacher-mock-01-2",
+      "title": "Chapter 1 · AI Mock 2",
+      "origin": "ai",
+      "provenance": "ai-teacher-inspired-mock",
+      "paper": "paper-1",
+      "chapter": 1,
+      "topics": [
+        "info-rep"
+      ],
+      "durationMin": 25,
+      "totalMarks": 8,
+      "description": "Timed teacher-inspired mock with written answers and model marking points.",
+      "status": "ready",
+      "questionsFile": "ai-teacher-mock-01-2.json"
+    },
+    {
+      "id": "ai-teacher-mock-01-3",
+      "title": "Chapter 1 · AI Mock 3",
+      "origin": "ai",
+      "provenance": "ai-teacher-inspired-mock",
+      "paper": "paper-1",
+      "chapter": 1,
+      "topics": [
+        "info-rep"
+      ],
+      "durationMin": 25,
+      "totalMarks": 8,
+      "description": "Timed teacher-inspired mock with written answers and model marking points.",
+      "status": "ready",
+      "questionsFile": "ai-teacher-mock-01-3.json"
+    },
+    {
+      "id": "ai-teacher-mock-02-1",
+      "title": "Chapter 2 · AI Mock 1",
+      "origin": "ai",
+      "provenance": "ai-teacher-inspired-mock",
+      "paper": "paper-1",
+      "chapter": 2,
+      "topics": [
+        "communication"
+      ],
+      "durationMin": 25,
+      "totalMarks": 11,
+      "description": "Timed teacher-inspired mock with written answers and model marking points.",
+      "status": "ready",
+      "questionsFile": "ai-teacher-mock-02-1.json"
+    },
+    {
+      "id": "ai-teacher-mock-02-2",
+      "title": "Chapter 2 · AI Mock 2",
+      "origin": "ai",
+      "provenance": "ai-teacher-inspired-mock",
+      "paper": "paper-1",
+      "chapter": 2,
+      "topics": [
+        "communication"
+      ],
+      "durationMin": 25,
+      "totalMarks": 9,
+      "description": "Timed teacher-inspired mock with written answers and model marking points.",
+      "status": "ready",
+      "questionsFile": "ai-teacher-mock-02-2.json"
+    },
+    {
+      "id": "ai-teacher-mock-02-3",
+      "title": "Chapter 2 · AI Mock 3",
+      "origin": "ai",
+      "provenance": "ai-teacher-inspired-mock",
+      "paper": "paper-1",
+      "chapter": 2,
+      "topics": [
+        "communication"
+      ],
+      "durationMin": 25,
+      "totalMarks": 8,
+      "description": "Timed teacher-inspired mock with written answers and model marking points.",
+      "status": "ready",
+      "questionsFile": "ai-teacher-mock-02-3.json"
+    },
+    {
+      "id": "ai-teacher-mock-03-1",
+      "title": "Chapter 3 · AI Mock 1",
+      "origin": "ai",
+      "provenance": "ai-teacher-inspired-mock",
+      "paper": "paper-1",
+      "chapter": 3,
+      "topics": [
+        "hardware"
+      ],
+      "durationMin": 25,
+      "totalMarks": 11,
+      "description": "Timed teacher-inspired mock with written answers and model marking points.",
+      "status": "ready",
+      "questionsFile": "ai-teacher-mock-03-1.json"
+    },
+    {
+      "id": "ai-teacher-mock-03-2",
+      "title": "Chapter 3 · AI Mock 2",
+      "origin": "ai",
+      "provenance": "ai-teacher-inspired-mock",
+      "paper": "paper-1",
+      "chapter": 3,
+      "topics": [
+        "hardware"
+      ],
+      "durationMin": 25,
+      "totalMarks": 9,
+      "description": "Timed teacher-inspired mock with written answers and model marking points.",
+      "status": "ready",
+      "questionsFile": "ai-teacher-mock-03-2.json"
+    },
+    {
+      "id": "ai-teacher-mock-03-3",
+      "title": "Chapter 3 · AI Mock 3",
+      "origin": "ai",
+      "provenance": "ai-teacher-inspired-mock",
+      "paper": "paper-1",
+      "chapter": 3,
+      "topics": [
+        "hardware"
+      ],
+      "durationMin": 25,
+      "totalMarks": 10,
+      "description": "Timed teacher-inspired mock with written answers and model marking points.",
+      "status": "ready",
+      "questionsFile": "ai-teacher-mock-03-3.json"
+    },
+    {
+      "id": "ai-teacher-mock-04-1",
+      "title": "Chapter 4 · AI Mock 1",
+      "origin": "ai",
+      "provenance": "ai-teacher-inspired-mock",
+      "paper": "paper-2",
+      "chapter": 4,
+      "topics": [
+        "data-types"
+      ],
+      "durationMin": 25,
+      "totalMarks": 8,
+      "description": "Timed teacher-inspired mock with written answers and model marking points.",
+      "status": "ready",
+      "questionsFile": "ai-teacher-mock-04-1.json"
+    },
+    {
+      "id": "ai-teacher-mock-04-2",
+      "title": "Chapter 4 · AI Mock 2",
+      "origin": "ai",
+      "provenance": "ai-teacher-inspired-mock",
+      "paper": "paper-2",
+      "chapter": 4,
+      "topics": [
+        "data-types"
+      ],
+      "durationMin": 25,
+      "totalMarks": 8,
+      "description": "Timed teacher-inspired mock with written answers and model marking points.",
+      "status": "ready",
+      "questionsFile": "ai-teacher-mock-04-2.json"
+    },
+    {
+      "id": "ai-teacher-mock-04-3",
+      "title": "Chapter 4 · AI Mock 3",
+      "origin": "ai",
+      "provenance": "ai-teacher-inspired-mock",
+      "paper": "paper-2",
+      "chapter": 4,
+      "topics": [
+        "data-types"
+      ],
+      "durationMin": 25,
+      "totalMarks": 8,
+      "description": "Timed teacher-inspired mock with written answers and model marking points.",
+      "status": "ready",
+      "questionsFile": "ai-teacher-mock-04-3.json"
+    },
+    {
+      "id": "ai-teacher-mock-05-1",
+      "title": "Chapter 5 · AI Mock 1",
+      "origin": "ai",
+      "provenance": "ai-teacher-inspired-mock",
+      "paper": "paper-1",
+      "chapter": 5,
+      "topics": [
+        "processor"
+      ],
+      "durationMin": 25,
+      "totalMarks": 10,
+      "description": "Timed teacher-inspired mock with written answers and model marking points.",
+      "status": "ready",
+      "questionsFile": "ai-teacher-mock-05-1.json"
+    },
+    {
+      "id": "ai-teacher-mock-05-2",
+      "title": "Chapter 5 · AI Mock 2",
+      "origin": "ai",
+      "provenance": "ai-teacher-inspired-mock",
+      "paper": "paper-1",
+      "chapter": 5,
+      "topics": [
+        "processor"
+      ],
+      "durationMin": 25,
+      "totalMarks": 10,
+      "description": "Timed teacher-inspired mock with written answers and model marking points.",
+      "status": "ready",
+      "questionsFile": "ai-teacher-mock-05-2.json"
+    },
+    {
+      "id": "ai-teacher-mock-05-3",
+      "title": "Chapter 5 · AI Mock 3",
+      "origin": "ai",
+      "provenance": "ai-teacher-inspired-mock",
+      "paper": "paper-1",
+      "chapter": 5,
+      "topics": [
+        "processor"
+      ],
+      "durationMin": 25,
+      "totalMarks": 8,
+      "description": "Timed teacher-inspired mock with written answers and model marking points.",
+      "status": "ready",
+      "questionsFile": "ai-teacher-mock-05-3.json"
+    },
+    {
+      "id": "ai-teacher-mock-06-1",
+      "title": "Chapter 6 · AI Mock 1",
+      "origin": "ai",
+      "provenance": "ai-teacher-inspired-mock",
+      "paper": "paper-2",
+      "chapter": 6,
+      "topics": [
+        "programming"
+      ],
+      "durationMin": 25,
+      "totalMarks": 9,
+      "description": "Timed teacher-inspired mock with written answers and model marking points.",
+      "status": "ready",
+      "questionsFile": "ai-teacher-mock-06-1.json"
+    },
+    {
+      "id": "ai-teacher-mock-06-2",
+      "title": "Chapter 6 · AI Mock 2",
+      "origin": "ai",
+      "provenance": "ai-teacher-inspired-mock",
+      "paper": "paper-2",
+      "chapter": 6,
+      "topics": [
+        "programming"
+      ],
+      "durationMin": 25,
+      "totalMarks": 8,
+      "description": "Timed teacher-inspired mock with written answers and model marking points.",
+      "status": "ready",
+      "questionsFile": "ai-teacher-mock-06-2.json"
+    },
+    {
+      "id": "ai-teacher-mock-06-3",
+      "title": "Chapter 6 · AI Mock 3",
+      "origin": "ai",
+      "provenance": "ai-teacher-inspired-mock",
+      "paper": "paper-2",
+      "chapter": 6,
+      "topics": [
+        "programming"
+      ],
+      "durationMin": 25,
+      "totalMarks": 8,
+      "description": "Timed teacher-inspired mock with written answers and model marking points.",
+      "status": "ready",
+      "questionsFile": "ai-teacher-mock-06-3.json"
+    },
+    {
+      "id": "ai-prediction-07",
+      "title": "Chapter 7 — AI practice quiz 5: Prediction paper",
+      "origin": "ai",
+      "provenance": "ai-prediction-practice",
+      "paper": "paper-1",
+      "chapter": 7,
+      "topics": [
+        "hardware"
+      ],
+      "durationMin": 30,
+      "totalMarks": 14,
+      "description": "Speculative timed revision, not a forecast of actual teacher questions.",
+      "status": "ready",
+      "questionsFile": "ai-prediction-07.json"
+    },
+    {
+      "id": "ai-prediction-08",
+      "title": "Chapter 8 — AI practice quiz 5: Prediction paper",
+      "origin": "ai",
+      "provenance": "ai-prediction-practice",
+      "paper": "paper-1",
+      "chapter": 8,
+      "topics": [
+        "system-software"
+      ],
+      "durationMin": 30,
+      "totalMarks": 12,
+      "description": "Speculative timed revision, not a forecast of actual teacher questions.",
+      "status": "ready",
+      "questionsFile": "ai-prediction-08.json"
     }
   ],
   "notes": [

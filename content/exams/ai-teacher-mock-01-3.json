@@ -1,0 +1,93 @@
+{
+  "id": "ai-teacher-mock-01-3",
+  "title": "Chapter 1 · AI Mock 3",
+  "origin": "ai",
+  "provenance": "ai-teacher-inspired-mock",
+  "paper": "paper-1",
+  "chapter": 1,
+  "topics": [
+    "info-rep"
+  ],
+  "durationMin": 25,
+  "totalMarks": 8,
+  "instructions": "Original AI-authored challenging practice inspired by topics and style in the available teacher quizzes. Not a teacher paper or official mark scheme. Work independently under timed conditions; self-mark against the model points after submission.",
+  "description": "Timed teacher-inspired mock with written answers and model marking points.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "text",
+      "marks": 2,
+      "topic": "info-rep",
+      "section": "1",
+      "text": "Explain the difference between Unicode and ASCII.",
+      "answer": [
+        {
+          "text": "Both map characters to numeric codes",
+          "marks": 1
+        },
+        {
+          "text": "Unicode supports a much wider repertoire; ASCII has 128 codes",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q2",
+      "type": "text",
+      "marks": 2,
+      "topic": "info-rep",
+      "section": "1",
+      "text": "Convert hexadecimal 7D to denary and binary.",
+      "answer": [
+        {
+          "text": "125",
+          "marks": 1
+        },
+        {
+          "text": "01111101",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 2,
+      "topic": "info-rep",
+      "section": "1",
+      "text": "An image uses 8 bits per pixel. How many distinct colours are possible? Explain.",
+      "answer": [
+        {
+          "text": "2 to the power of 8",
+          "marks": 1
+        },
+        {
+          "text": "256 colours",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q4",
+      "type": "text",
+      "marks": 2,
+      "topic": "info-rep",
+      "section": "1",
+      "text": "Explain why lossy compression is unsuitable for an executable program.",
+      "answer": [
+        {
+          "text": "It discards information and cannot guarantee exact reconstruction",
+          "marks": 1
+        },
+        {
+          "text": "Changed instructions or data could prevent correct execution",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    }
+  ]
+}

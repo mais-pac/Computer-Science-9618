@@ -1,0 +1,105 @@
+{
+  "id": "ai-teacher-mock-03-1",
+  "title": "Chapter 3 · AI Mock 1",
+  "origin": "ai",
+  "provenance": "ai-teacher-inspired-mock",
+  "paper": "paper-1",
+  "chapter": 3,
+  "topics": [
+    "hardware"
+  ],
+  "durationMin": 25,
+  "totalMarks": 11,
+  "instructions": "Original AI-authored challenging practice inspired by topics and style in the available teacher quizzes. Not a teacher paper or official mark scheme. Work independently under timed conditions; self-mark against the model points after submission.",
+  "description": "Timed teacher-inspired mock with written answers and model marking points.",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "text",
+      "marks": 3,
+      "topic": "hardware",
+      "section": "3",
+      "text": "Explain how a buffer helps when sending data to a printer.",
+      "answer": [
+        {
+          "text": "Temporarily stores output data",
+          "marks": 1
+        },
+        {
+          "text": "Allows the CPU and printer to work at different speeds",
+          "marks": 1
+        },
+        {
+          "text": "The printer reads data as it becomes ready",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q2",
+      "type": "text",
+      "marks": 3,
+      "topic": "hardware",
+      "section": "3",
+      "text": "Compare an SSD and an HDD for a laptop.",
+      "answer": [
+        {
+          "text": "SSD has no moving parts and is more shock resistant",
+          "marks": 1
+        },
+        {
+          "text": "SSD normally has faster access",
+          "marks": 1
+        },
+        {
+          "text": "HDD commonly has lower cost per unit capacity",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q3",
+      "type": "text",
+      "marks": 2,
+      "topic": "hardware",
+      "section": "3",
+      "text": "Explain how a touchscreen can act as both input and output.",
+      "answer": [
+        {
+          "text": "Display presents information",
+          "marks": 1
+        },
+        {
+          "text": "Touch detection sends the position of user interaction as input",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    },
+    {
+      "id": "q4",
+      "type": "text",
+      "marks": 3,
+      "topic": "hardware",
+      "section": "3",
+      "text": "Describe how an analogue temperature sensor is used by a digital computer.",
+      "answer": [
+        {
+          "text": "The sensor outputs an analogue signal",
+          "marks": 1
+        },
+        {
+          "text": "An ADC samples and converts it to digital values",
+          "marks": 1
+        },
+        {
+          "text": "The computer processes the values",
+          "marks": 1
+        }
+      ],
+      "selfMark": true
+    }
+  ]
+}
